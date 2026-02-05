@@ -1,0 +1,209 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:33c3dd29-80f8-4bbd-9185-e7993ff92748",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-10-26T06:09:35+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.54.1"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:k8s/eks/k8s.io%2Fkubernetes@1.30.4-eks-a737599",
+      "type": "platform",
+      "name": "k8s.io/kubernetes",
+      "version": "1.30.4-eks-a737599",
+      "purl": "pkg:k8s/eks/k8s.io%2Fkubernetes@1.30.4-eks-a737599",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "arn:aws:eks:ap-southeast-1:851725219470:cluster/sit-cmts"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "cluster"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "0798fb67-ce66-4ce5-a3e3-a96374f275a7",
+      "type": "operating-system",
+      "name": "amazon linux",
+      "version": "2023.4.20240611",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "amazon linux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2e82de92-2e6f-4b0f-827d-30c09b51e972",
+      "type": "application",
+      "name": "kube-dns",
+      "purl": "pkg:k8s/kube-dns",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "coredns-878d47785-mwtht"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a0324719-bf05-4072-9ef3-213aacf16995",
+      "type": "platform",
+      "name": "ip-10-0-41-251.ap-southeast-1.compute.internal",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "aquasecurity:trivy:HostName",
+          "value": "ip-10-0-41-251.ap-southeast-1.compute.internal"
+        },
+        {
+          "name": "aquasecurity:trivy:KernelVersion",
+          "value": "6.1.92-99.174.amzn2023.x86_64"
+        },
+        {
+          "name": "aquasecurity:trivy:NodeRole",
+          "value": "worker"
+        },
+        {
+          "name": "aquasecurity:trivy:OperatingSystem",
+          "value": "linux"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "ip-10-0-41-251.ap-southeast-1.compute.internal"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e394e784-8822-48c1-8cd8-1636e4615013",
+      "type": "application",
+      "name": "node-core-components",
+      "properties": []
+    },
+    {
+      "bom-ref": "f42b37e5-247a-4813-bcf0-a6ba8e0c6df1",
+      "type": "application",
+      "name": "kube-dns",
+      "purl": "pkg:k8s/kube-dns",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "coredns-878d47785-6lbbq"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.7.11",
+      "type": "application",
+      "name": "github.com/containerd/containerd",
+      "version": "1.7.11",
+      "purl": "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.7.11",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "github.com/containerd/containerd"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/aws-node",
+      "type": "application",
+      "name": "aws-node",
+      "purl": "pkg:k8s/aws-node",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "aws-node-6h476"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/eks/k8s.io%2Fkubelet@1.30.0-eks-036c24b",
+      "type": "application",
+      "name": "k8s.io/kubelet",
+      "version": "1.30.0-eks-036c24b",
+      "purl": "pkg:k8s/eks/k8s.io%2Fkubelet@1.30.0-eks-036c24b",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "k8s.io/kubelet"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/k8s.io%2Fkube-proxy",
+      "type": "application",
+      "name": "k8s.io/kube-proxy",
+      "purl": "pkg:k8s/k8s.io%2Fkube-proxy",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "kube-proxy-rt8w6"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "a0324719-bf05-4072-9ef3-213aacf16995",
+      "dependsOn": [
+        "0798fb67-ce66-4ce5-a3e3-a96374f275a7",
+        "e394e784-8822-48c1-8cd8-1636e4615013"
+      ]
+    },
+    {
+      "ref": "e394e784-8822-48c1-8cd8-1636e4615013",
+      "dependsOn": [
+        "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.7.11",
+        "pkg:k8s/eks/k8s.io%2Fkubelet@1.30.0-eks-036c24b"
+      ]
+    },
+    {
+      "ref": "pkg:k8s/eks/k8s.io%2Fkubernetes@1.30.4-eks-a737599",
+      "dependsOn": [
+        "2e82de92-2e6f-4b0f-827d-30c09b51e972",
+        "a0324719-bf05-4072-9ef3-213aacf16995",
+        "f42b37e5-247a-4813-bcf0-a6ba8e0c6df1",
+        "pkg:k8s/aws-node",
+        "pkg:k8s/k8s.io%2Fkube-proxy"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}

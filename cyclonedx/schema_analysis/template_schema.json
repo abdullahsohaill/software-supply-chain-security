@@ -1,0 +1,1344 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://template.org/cyclonedx/prescriptive-bom-1.6.schema.json",
+  "title": "Prescriptive CycloneDX BOM Schema v1.6 (Derived from ECMA-424 Spec)",
+  "description": "A comprehensive and prescriptive JSON schema for the CycloneDX Bill of Materials (BOM) specification v1.6, derived directly from the normative language of the ECMA-424 standard. This schema enforces all REQUIRED/MUST constraints and embeds all RECOMMENDED/SHOULD best practices in descriptions.",
+  "type": "object",
+  "required": [
+    "bomFormat",
+    "specVersion"
+  ],
+  "properties": {
+    "bomFormat": {
+      "description": "Specifies the format of the BOM. This value MUST be 'CycloneDX'.",
+      "type": "string",
+      "enum": ["CycloneDX"]
+    },
+    "specVersion": {
+      "description": "The version of the CycloneDX specification the BOM conforms to. For this schema, the value MUST be '1.6'.",
+      "type": "string",
+      "const": "1.6"
+    },
+    "serialNumber": {
+      "description": "A unique serial number for the BOM. If specified, it MUST conform to RFC 4122 (urn:uuid:*). Recommendation: Every BOM generated SHOULD have a unique serial number, even if the contents have not changed. Use of serial numbers is recommended.",
+      "type": "string",
+      "pattern": "^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "version": {
+      "description": "The version of the BOM. Recommendation: Whenever an existing BOM is modified, the version of the BOM SHOULD be incremented by 1. When a system is presented with multiple BOMs with identical serial numbers, it SHOULD use the most recent version.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "metadata": {
+      "description": "Provides additional information about the BOM. This property is Optional.",
+      "$ref": "#/$defs/metadata"
+    },
+    "components": {
+      "description": "A list of software, hardware, and data components. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/component" },
+      "uniqueItems": true
+    },
+    "services": {
+      "description": "A list of services. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/service" },
+      "uniqueItems": true
+    },
+    "externalReferences": {
+      "description": "Provides the ability to document external references to the BOM. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/externalReference" }
+    },
+    "dependencies": {
+      "description": "A dependency graph of components and services. This property is Optional. Components or services that do not have their own dependencies MUST be declared as empty elements within the graph.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/dependency" }
+    },
+    "compositions": {
+      "description": "Compositions describe the completeness of the BOM. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/composition" }
+    },
+    "vulnerabilities": {
+      "description": "A list of known vulnerabilities. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/vulnerability" }
+    },
+    "annotations": {
+      "description": "Provides a mechanism to annotate the BOM with external information. This property is Optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/annotation" }
+    },
+    "formulation": {
+      "description": "Describes how the BOM was formulated. This property is Optional. Each item MUST be a Formula object.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/formula" }
+    },
+    "declarations": {
+      "description": "Provides a mechanism for making assertions about the BOM. This property is Optional.",
+      "$ref": "#/$defs/declarations"
+    },
+    "definitions": {
+      "description": "Provides a mechanism for defining custom definitions. This property is Optional.",
+      "$ref": "#/$defs/definitions"
+    },
+    "properties": {
+      "description": "Provides the ability to add custom properties to the BOM. Each item MUST be a Lightweight name-value pair object. Recommendation: Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/property" }
+    },
+    "signature": {
+      "description": "An optional digital signature of the BOM. All items MUST be unique.",
+      "$ref": "#/$defs/signature"
+    }
+  },
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "description": "Provides additional information about a BOM.",
+      "properties": {
+        "timestamp": {
+          "description": "The date and time (UTC) when the BOM was created. This property is Optional.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lifecycles": {
+          "description": "The lifecycle phase(s) in which data in the BOM was captured. Each item MUST be a Lifecycle object. This property is Optional.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/lifecycle" }
+        },
+        "tools": {
+          "description": "The tool(s) used in the creation, enrichment, and validation of the BOM. The object MUST be one of 'Tools' or 'Tools (legacy)'. This property is Optional.",
+          "oneOf": [
+            { "$ref": "#/$defs/tools" },
+            { "$ref": "#/$defs/toolsLegacy" }
+          ]
+        },
+        "authors": {
+          "description": "The person(s) who created the BOM. Each item MUST be an Organizational Contact object. This property is Optional.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/organizationalContact" }
+        },
+        "component": {
+          "description": "The component that the BOM describes. This property is Optional.",
+          "$ref": "#/$defs/component"
+        },
+        "manufacturer": {
+          "description": "The organization that created the BOM. This property is Optional.",
+          "$ref": "#/$defs/organizationalEntity"
+        },
+        "manufacture": {
+          "description": "[Deprecated] The organization that manufactured the component that the BOM describes. This property is Optional and Deprecated.",
+          "$ref": "#/$defs/organizationalEntity",
+          "deprecated": true
+        },
+        "supplier": {
+          "description": "The organization that supplied the component that the BOM describes. This property is Optional.",
+          "$ref": "#/$defs/organizationalEntity"
+        },
+        "licenses": {
+          "description": "The license information for the BOM document itself. This property is Optional.",
+          "$ref": "#/$defs/licenseChoice"
+        },
+        "properties": {
+          "description": "Provides the ability to add custom properties to the BOM metadata. Each item MUST be a Lightweight name-value pair object. Recommendation: Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/property" }
+        }
+      }
+    },
+    "lifecycle": {
+      "description": "Describes a phase of the product lifecycle. The object MUST be one of 'Pre-Defined Phase' or 'Custom Phase'.",
+      "oneOf": [
+        {
+          "title": "Pre-Defined Phase",
+          "type": "object",
+          "required": ["phase"],
+          "properties": {
+            "phase": {
+              "description": "A pre-defined phase in the product lifecycle. This property is Required.",
+              "type": "string",
+              "enum": [
+                "design", "pre-build", "build", "post-build", "operations", "discovery", "decommission"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Custom Phase",
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {
+              "description": "The name of the custom lifecycle phase. This property is Required.",
+              "type": "string"
+            },
+            "description": {
+              "description": "A description of the custom lifecycle phase. This property is Optional.",
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "tools": {
+      "description": "A container for component and service tools used to create the BOM.",
+      "type": "object",
+      "properties": {
+        "components": {
+          "description": "A list of software and hardware components used as tools. Each item MUST be a Component object and all items MUST be unique.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/component" }
+        },
+        "services": {
+          "description": "A list of services used as tools. Each item MUST be a Service object and all items MUST be unique.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/service" }
+        }
+      }
+    },
+    "toolsLegacy": {
+      "description": "[Deprecated] A list of legacy tool objects used to create the BOM. Each item MUST be a Tool object.",
+      "type": "array",
+      "deprecated": true,
+      "items": { "$ref": "#/$defs/tool" }
+    },
+    "tool": {
+      "description": "[Deprecated] Information about an automated or manual tool used. Use 'component' or 'service' instead.",
+      "type": "object",
+      "deprecated": true,
+      "properties": {
+        "vendor": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "hashes": {
+          "description": "The hashes of the tool. Each item MUST be a Hash object.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/hash" }
+        },
+        "externalReferences": {
+          "description": "External references for the tool. Each item MUST be an External Reference object.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/externalReference" }
+        }
+      }
+    },
+    "hash": {
+      "type": "object",
+      "description": "Specifies a cryptographic hash and its algorithm.",
+      "required": ["alg", "content"],
+      "properties": {
+        "alg": {
+          "description": "The algorithm that generated the hash value. The algorithm MUST be one of the enumerated values.",
+          "type": "string",
+          "enum": [
+            "MD5", "SHA-1", "SHA-256", "SHA-384", "SHA-512",
+            "SHA3-256", "SHA3-384", "SHA3-512",
+            "BLAKE2b-256", "BLAKE2b-384", "BLAKE2b-512", "BLAKE3"
+          ]
+        },
+        "content": {
+          "description": "The value of the hash. This property is Required.",
+          "type": "string",
+          "pattern": "^([a-fA-F0-9]{32}|[a-fA-F0-9]{40}|[a-fA-F0-9]{64}|[a-fA-F0-9]{96}|[a-fA-F0-9]{128})$"
+        }
+      }
+    },
+    "organizationalEntity": {
+      "type": "object",
+      "description": "Defines an organization.",
+      "properties": {
+        "bom-ref": {
+          "description": "An optional identifier which can be used to reference the object elsewhere in the BOM. Every bom-ref MUST be unique within the BOM. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links.",
+          "type": "string"
+        },
+        "name": { "type": "string" },
+        "address": { "$ref": "#/$defs/organizationAddress" },
+        "url": {
+          "description": "The URL(s) of the organization. Each item MUST be a string.",
+          "type": "array",
+          "items": { "type": "string", "format": "iri-reference" }
+        },
+        "contact": {
+          "description": "The contact(s) for the organization. Each item MUST be an Organizational Contact object.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/organizationalContact" }
+        }
+      }
+    },
+    "organizationalContact": {
+      "type": "object",
+      "description": "Defines a contact at an organization.",
+      "properties": {
+        "bom-ref": {
+          "description": "An optional identifier which can be used to reference the object elsewhere in the BOM. Every bom-ref MUST be unique within the BOM. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links.",
+          "type": "string"
+        },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "idn-email" },
+        "phone": { "type": "string" }
+      }
+    },
+    "organizationAddress": {
+      "type": "object",
+      "description": "Defines an organization's physical address.",
+      "properties": {
+        "bom-ref": {
+          "description": "An optional identifier for the address. Every bom-ref MUST be unique within the BOM. Recommendation: Value SHOULD NOT start with 'urn:cdx:'.",
+          "type": "string"
+        },
+        "country": { "type": "string" },
+        "region": { "type": "string" },
+        "locality": { "type": "string" },
+        "postOfficeBoxNumber": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "streetAddress": { "type": "string" }
+      }
+    },
+    "property": {
+      "type": "object",
+      "description": "A lightweight name-value pair object.",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "The name of the property. This property is Required." },
+        "value": { "type": "string" }
+      }
+    },
+    "component": {
+      "type": "object",
+      "description": "A software, hardware, or data component.",
+      "required": ["type", "name"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["application", "framework", "library", "container", "operating-system", "device", "firmware", "file", "machine-learning-model", "data", "device-driver", "platform"],
+          "description": "Specifies the type of component. This property is Required. Recommendations: For software, classify as 'application' if no more specific classification is available. If a library has key features of a framework, it SHOULD be classified as a framework. If unknown, specifying 'library' is recommended. A hardware device with firmware SHOULD include a component for the hardware and another for the firmware/OS."
+        },
+        "mime-type": { "type": "string", "pattern": "^[a-zA-Z0-9_\\-]+/[a-zA-Z0-9_\\-\\+]+$", "description": "The mime-type of the component. This property is Optional." },
+        "bom-ref": { "type": "string", "description": "An optional identifier which can be used to reference the component elsewhere in the BOM. Every bom-ref MUST be unique. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+        "supplier": { "$ref": "#/$defs/organizationalEntity", "description": "The supplier of the component. This property is Optional." },
+        "manufacturer": { "$ref": "#/$defs/organizationalEntity", "description": "The manufacturer of the component. This property is Optional." },
+        "authors": { "type": "array", "items": { "$ref": "#/$defs/organizationalContact" }, "description": "The authors of the component. This property is Optional." },
+        "author": { "type": "string", "description": "[Deprecated] Use 'authors' instead. This property is Optional and Deprecated.", "deprecated": true },
+        "publisher": { "type": "string", "description": "The publisher of the component. This property is Optional." },
+        "group": { "type": "string", "description": "The group of the component. This property is Optional. Recommendation: Whitespace and special characters SHOULD be avoided." },
+        "name": { "type": "string", "description": "The name of the component. This property is Required." },
+        "version": { "type": "string", "description": "The version of the component. This property is Optional. Recommendation: The version SHOULD ideally comply with semantic versioning." },
+        "description": { "type": "string", "description": "A description of the component. This property is Optional." },
+        "scope": { "type": "string", "enum": ["required", "optional", "excluded"], "description": "The scope of the component. This property is Optional. Recommendation: If scope is not specified, 'required' scope SHOULD be assumed by the consumer." },
+        "hashes": { "type": "array", "items": { "$ref": "#/$defs/hash" }, "description": "A list of cryptographic hashes of the component. Each item MUST be a Hash object. This property is Optional." },
+        "licenses": { "$ref": "#/$defs/licenseChoice", "description": "The license(s) of the component. This property is Optional. The property MUST be one of: 'Multiple licenses' or 'SPDX License Expression'." },
+        "copyright": { "type": "string", "description": "The copyright statement of the component. This property is Optional." },
+        "cpe": { "type": "string", "pattern": "^([c][p][e]:/[aho]?:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+)|(cpe:2\\.3:[aho*](:(((\\?*|\\*|-)([a-zA-Z0-9\\-._~]|%[0-9a-fA-F]{2})*)|[*])){10})$", "description": "The Common Platform Enumeration (CPE) of the component. The CPE MUST conform to the CPE 2.2 or 2.3 specification. This property is Optional." },
+        "purl": { "type": "string", "pattern": "^pkg:.+", "description": "The Package URL (purl) of the component. If specified, the purl MUST be valid and conform to the purl-spec. This property is Optional." },
+        "omniborId": { "type": "string", "pattern": "^gitoid:blob:sha(1|256):[0-9a-f]+$", "description": "The OmniBOR Artifact Identifier (gitoid) of the component. If specified, the OmniBOR MUST be valid. This property is Optional." },
+        "swhid": { "type": "array", "items": { "type": "string", "pattern": "^swh:1:(cnt|dir|rel|rev|snp):[0-9a-f]{40}(;(origin|anchor|path|lines)=.+)*$" }, "description": "The Software Heritage Identifier (SWHID) of the component. If specified, the SWHID MUST be valid. Each item MUST be a string. This property is Optional." },
+        "swid": { "$ref": "#/$defs/swid", "description": "The Software Identification (SWID) tag of the component. This property is Optional." },
+        "modified": { "type": "boolean", "description": "[Deprecated] Use 'pedigree' instead. This property is Optional and Deprecated.", "deprecated": true },
+        "pedigree": { "$ref": "#/$defs/pedigree", "description": "Component pedigree describes the provenance of a component. This property is Optional." },
+        "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "External references to the component. Each item MUST be an External Reference object. This property is Optional." },
+        "components": { "type": "array", "items": { "$ref": "#/$defs/component" }, "uniqueItems": true, "description": "A list of nested sub-components. All items MUST be unique." },
+        "evidence": { "$ref": "#/$defs/evidence", "description": "Provides evidence of the component's existence. This property is Optional." },
+        "releaseNotes": { "$ref": "#/$defs/releaseNotes", "description": "Release notes for the component. This property is Optional." },
+        "modelCard": { "$ref": "#/$defs/modelCard", "description": "The model card for a machine learning model component. Recommendation: This object SHOULD be specified for any component of type 'machine-learning-model' and MUST NOT be specified for other component types. This property is Optional." },
+        "data": { "$ref": "#/$defs/componentData", "description": "The data classification for a data component. Recommendation: This object SHOULD be specified for any component of type 'data' and MUST NOT be specified for other component types. This property is Optional." },
+        "cryptoProperties": { "$ref": "#/$defs/cryptoProperties", "description": "Cryptographic properties of the asset. This property is Optional." },
+        "tags": { "type": "array", "items": { "type": "string" }, "description": "Tags associated with the component. Each item MUST be a string. This property is Optional." },
+        "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Custom properties of the component. Each item MUST be a Lightweight name-value pair object. This property is Optional." },
+        "signature": { "$ref": "#/$defs/signature", "description": "An optional digital signature of the component. All items MUST be unique." }
+      }
+    },
+    "service": {
+      "type": "object",
+      "description": "Defines a service (external API or network resource). This object includes its full definition.",
+      "required": ["name"],
+      "properties": {
+          "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+          "provider": { "$ref": "#/$defs/organizationalEntity" },
+          "group": { "type": "string", "description": "Recommendation: Whitespace and special characters SHOULD be avoided in the group property." },
+          "name": { "type": "string", "description": "The name of the service. This property is Required." },
+          "version": { "type": "string" },
+          "description": { "type": "string" },
+          "endpoints": { "type": "array", "items": { "type": "string" }, "description": "The endpoint URIs. Each item MUST be a string." },
+          "authenticated": { "type": "boolean" },
+          "x-trust-boundary": { "type": "boolean" },
+          "trustZone": { "type": "string" },
+          "data": { "type": "array", "items": { "$ref": "#/$defs/dataClassification" } },
+          "licenses": { "$ref": "#/$defs/licenseChoice" },
+          "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "Each item MUST be an External Reference object." },
+          "services": { "type": "array", "items": { "$ref": "#/$defs/service" }, "uniqueItems": true, "description": "Nested sub-services. All items MUST be unique." },
+          "releaseNotes": { "$ref": "#/$defs/releaseNotes" },
+          "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional for properties." },
+          "tags": { "type": "array", "items": { "type": "string" }, "description": "Each item MUST be a string." },
+          "signature": { "$ref": "#/$defs/signature", "description": "An optional digital signature of the service. All items MUST be unique." }
+      }
+    },
+    "externalReference": {
+      "type": "object",
+      "required": ["url", "type"],
+      "properties": {
+        "url": { "type": "string", "format": "iri-reference", "description": "The URI (URL or URN) to the external reference. This property is Required. The url property MUST be any of: URL, BOM-Link Element." },
+        "comment": { "type": "string", "description": "An optional comment describing the external reference. This property is Optional." },
+        "type": {
+          "type": "string",
+          "description": "Specifies the type of external reference. This property is Required.",
+          "enum": [
+            "vcs", "issue-tracker", "website", "advisories", "bom", "mailing-list", "social", "chat",
+            "documentation", "support", "distribution", "license", "build-meta", "build-system", 
+            "release-notes", "security-contact", "model-card", "log", "configuration", "evidence",
+            "formulation", "attestation", "threat-model", "adversary-model", "risk-assessment", 
+            "vulnerability-assertion", "exploitability-statement", "pentest-report", 
+            "static-analysis-report", "dynamic-analysis-report", "runtime-analysis-report", 
+            "component-analysis-report", "maturity-report", "certification-report", 
+            "codified-infrastructure", "quality-metrics", "poam", "electronic-signature", 
+            "digital-signature", "rfc-9116", "other"
+          ]
+        },
+        "hashes": {
+          "description": "The hashes of the external reference. Each item MUST be a Hash object. This property is Optional.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/hash" }
+        }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {
+        "ref": { "type": "string", "description": "References a component or service by its bom-ref attribute. This property is Required." },
+        "dependsOn": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "The bom-ref identifiers of the dependencies. Each item MUST be a string. All items MUST be unique. This property is Optional."
+        },
+        "provides": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "The bom-ref identifiers of components or services defining a specification. Each item MUST be a string. All items MUST be unique. This property is Optional."
+        }
+      }
+    },
+    "composition": {
+        "type": "object",
+        "required": ["aggregate"],
+        "properties": {
+            "bom-ref": { 
+                "type": "string", 
+                "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links."
+            },
+            "aggregate": {
+                "type": "string",
+                "required": true,
+                "description": "Specifies how complete a relationship is. This property is Required.",
+                "enum": [
+                    "complete",
+                    "incomplete",
+                    "incomplete_first_party_only",
+                    "incomplete_third_party_only",
+                    "incomplete_first_party_proprietary_only",
+                    "incomplete_first_party_opensource_only",
+                    "incomplete_third_party_proprietary_only",
+                    "incomplete_third_party_opensource_only",
+                    "unknown",
+                    "not_specified"
+                ]
+            },
+            "assemblies": { 
+                "type": "array", 
+                "items": { 
+                    "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/bomLinkElement" }]
+                }, 
+                "uniqueItems": true,
+                "description": "The bom-ref identifiers of components or services assembled. Each item MUST be a Ref or BOM-Link Element. All items MUST be unique."
+            },
+            "dependencies": { 
+                "type": "array", 
+                "items": { "type": "string" }, 
+                "uniqueItems": true, 
+                "description": "The bom-ref identifiers of dependencies. Each item MUST be a string. All items MUST be unique."
+            },
+            "vulnerabilities": { 
+                "type": "array", 
+                "items": { "type": "string" }, 
+                "uniqueItems": true,
+                "description": "The bom-ref identifiers of vulnerabilities. Each item MUST be a string. All items MUST be unique."
+            },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "vulnerability": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "id": { "type": "string" },
+            "source": { "$ref": "#/$defs/vulnerabilitySource" },
+            "references": { "type": "array", "items": { "$ref": "#/$defs/vulnerabilityReference" } },
+            "ratings": { "type": "array", "items": { "$ref": "#/$defs/rating" }, "description": "Each item MUST be a Rating object." },
+            "cwes": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "description": "List of Common Weaknesses Enumerations (CWEs) codes. Minimum value for items is 1. Each item MUST be an integer." },
+            "description": { "type": "string" },
+            "detail": { "type": "string", "description": "Recommendation: If a vulnerability is not exploitable, the detail field SHOULD include specific details on why the component or service is not impacted." },
+            "recommendation": { "type": "string" },
+            "workaround": { "type": "string" },
+            "proofOfConcept": { "$ref": "#/$defs/proofOfConcept" },
+            "advisories": { "type": "array", "items": { "$ref": "#/$defs/advisory" }, "description": "Each item MUST be an Advisory object." },
+            "created": { "type": "string", "format": "date-time" },
+            "published": { "type": "string", "format": "date-time" },
+            "updated": { "type": "string", "format": "date-time" },
+            "rejected": { "type": "string", "format": "date-time" },
+            "credits": { "$ref": "#/$defs/credits" },
+            "tools": { "oneOf": [{ "$ref": "#/$defs/tools" }, { "$ref": "#/$defs/toolsLegacy" }], "description": "The tool(s) used to identify, confirm, or score the vulnerability. The object MUST be one of 'Tools' or 'Tools (legacy)'." },
+            "analysis": { "$ref": "#/$defs/impactAnalysis" },
+            "affects": { "type": "array", "items": { "$ref": "#/$defs/affect" } },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." }
+        }
+    },
+    "annotation": {
+        "type": "object",
+        "required": ["subjects", "annotator", "timestamp", "text"],
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "subjects": { 
+                "type": "array", 
+                "required": true,
+                "items": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/bomLinkElement" }] },
+                "uniqueItems": true, 
+                "description": "The object in the BOM identified by its bom-ref. Each subject MUST be any of: Ref, BOM-Link Element. All items MUST be unique." 
+            },
+            "annotator": { 
+                "type": "object",
+                "required": true,
+                "description": "The organization, person, component, or service which created the textual content of the annotation. This property is Required. The object MUST be one of: Organizational Entity, Organizational Contact, Component, or Service.",
+                "oneOf": [
+                    { "required": ["organization"], "properties": { "organization": { "$ref": "#/$defs/organizationalEntity" } } },
+                    { "required": ["individual"], "properties": { "individual": { "$ref": "#/$defs/organizationalContact" } } },
+                    { "required": ["component"], "properties": { "component": { "$ref": "#/$defs/component" } } },
+                    { "required": ["service"], "properties": { "service": { "$ref": "#/$defs/service" } } }
+                ]
+            },
+            "timestamp": { "type": "string", "format": "date-time", "required": true, "description": "The date and time (timestamp) when the annotation was created. This property is Required." },
+            "text": { "type": "string", "required": true, "description": "The textual content of the annotation. This property is Required." },
+            "signature": { "$ref": "#/$defs/signature", "description": "An optional digital signature of the annotation. All items MUST be unique." }
+        }
+    },
+    "formula": {
+        "type": "object",
+        "description": "Describes workflows and resources that captures rules and other aspects of how the associated BOM component or service was formed. Each item MUST be a Formula object.",
+        "properties": {
+            "bom-ref": { "type": "string" },
+            "components": { "type": "array", "items": { "$ref": "#/$defs/component" } },
+            "services": { "type": "array", "items": { "$ref": "#/$defs/service" } },
+            "workflows": { "type": "array", "items": { "$ref": "#/$defs/workflow" } },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "declarations": {
+        "type": "object",
+        "properties": {
+            "assessors": { "type": "array", "items": { "$ref": "#/$defs/assessor" }, "description": "The list of assessors. Each item MUST be an Assessor object." },
+            "attestations": { "type": "array", "items": { "$ref": "#/$defs/attestation" }, "description": "The list of attestations. Each item MUST be an Attestation object." },
+            "claims": { "type": "array", "items": { "$ref": "#/$defs/claim" }, "description": "The list of claims. Each item MUST be a Claim object." },
+            "evidence": { "type": "array", "items": { "$ref": "#/$defs/declarationsEvidence" }, "description": "The list of evidence. Each item MUST be an Evidence object." },
+            "targets": { "$ref": "#/$defs/targets" },
+            "affirmation": { "$ref": "#/$defs/affirmation" },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "standards": { "type": "array", "items": { "$ref": "#/$defs/standard" }, "description": "The list of standards. Each item MUST be a Standard object." }
+        }
+    },
+    "vulnerabilitySource": {
+        "type": "object",
+        "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "name": { "type": "string" }
+        }
+    },
+    "vulnerabilityReference": {
+        "type": "object",
+        "required": ["id", "source"],
+        "properties": {
+            "id": { "type": "string", "description": "An identifier that uniquely identifies the vulnerability. This property is Required." },
+            "source": { "$ref": "#/$defs/vulnerabilitySource", "description": "The source that published the vulnerability. This property is Required." }
+        }
+    },
+    "rating": {
+        "type": "object",
+        "properties": {
+            "source": { "$ref": "#/$defs/vulnerabilitySource" },
+            "score": { "type": "number" },
+            "severity": { "type": "string", "enum": ["none", "low", "medium", "high", "critical", "unknown"] },
+            "method": { "type": "string", "enum": ["CVSSv2", "CVSSv3", "CVSSv31", "CVSSv4", "OWASP", "SSVC", "other"] },
+            "vector": { "type": "string" },
+            "justification": { "type": "string" }
+        }
+    },
+    "advisory": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+            "title": { "type": "string" },
+            "url": { "type": "string", "format": "iri-reference", "required": true, "description": "Location where the advisory can be obtained. This property is Required." }
+        }
+    },
+    "credits": {
+        "type": "object",
+        "properties": {
+            "organizations": { "type": "array", "items": { "$ref": "#/$defs/organizationalEntity" }, "description": "The organizations credited with vulnerability discovery. Each item MUST be an Organizational Entity object." },
+            "individuals": { "type": "array", "items": { "$ref": "#/$defs/organizationalContact" }, "description": "The individuals credited with vulnerability discovery. Each item MUST be an Organizational Contact object." }
+        }
+    },
+    "impactAnalysis": {
+        "type": "object",
+        "properties": {
+            "state": { "type": "string", "enum": ["resolved", "resolved_with_pedigree", "exploitable", "in_triage", "false_positive", "not_affected"], "description": "Recommendation: Justification SHOULD be specified for all 'not_affected' cases." },
+            "justification": { "type": "string", "enum": ["code_not_present", "code_not_reachable", "requires_configuration", "requires_dependency", "requires_environment", "protected_by_compiler", "protected_at_runtime", "protected_at_perimeter", "protected_by_mitigating_control"] },
+            "response": { "type": "array", "items": { "type": "string", "enum": ["can_not_fix", "will_not_fix", "update", "rollback", "workaround_available"] }, "description": "Recommendation: Responses are strongly encouraged for vulnerabilities where the analysis state is exploitable. Each item MUST be a string." },
+            "detail": { "type": "string", "description": "Recommendation: If a vulnerability is not exploitable, the detail field SHOULD include specific details on why the component or service is not impacted." },
+            "firstIssued": { "type": "string", "format": "date-time" },
+            "lastUpdated": { "type": "string", "format": "date-time" }
+        }
+    },
+    "affect": {
+        "type": "object",
+        "required": ["ref"],
+        "properties": {
+            "ref": { "type": "string", "required": true, "description": "References a component or service by its bom-ref attribute. This property is Required. The property MUST be any of: Ref or BOM-Link Element." },
+            "versions": { "type": "array", "items": { "$ref": "#/$defs/version" }, "uniqueItems": true, "description": "Zero or more individual versions or range of versions. All items MUST be unique." }
+        }
+    },
+    "version": {
+        "type": "object",
+        "properties": {
+            "version": { "type": "string" },
+            "range": { "type": "string" },
+            "status": { "type": "string", "enum": ["affected", "unaffected", "unknown"], "default": "affected" }
+        },
+        "oneOf": [{ "required": ["version"] }, { "required": ["range"] }]
+    },
+    "signature": {
+        "type": "object",
+        "description": "An enveloped digital signature embedded within and specific to this object.",
+        "properties": {
+            "algorithm": { "type": "string", "enum": ["RS256", "RS384", "RS512", "PS256", "PS384", "PS512", "ES256", "ES384", "ES512", "Ed25519", "Ed448", "HS256", "HS384", "HS512"] },
+            "keyId": { "type": "string" },
+            "value": { "type": "string" }
+        }
+    },
+    "releaseNotes": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+            "type": { "type": "string", "required": true, "enum": ["major", "minor", "patch", "pre-release", "internal"] },
+            "title": { "type": "string" },
+            "featuredImage": { "type": "string", "format": "iri-reference" },
+            "socialImage": { "type": "string", "format": "iri-reference" },
+            "description": { "type": "string" },
+            "timestamp": { "type": "string", "format": "date-time" },
+            "aliases": { "type": "array", "items": { "type": "string" }, "description": "Each item MUST be a string." },
+            "tags": { "type": "array", "items": { "type": "string" }, "description": "Each item MUST be a string." },
+            "resolves": { "type": "array", "items": { "$ref": "#/$defs/issue" }, "description": "Each item MUST be an Issue object." },
+            "notes": { "type": "array", "items": { "$ref": "#/$defs/note" }, "description": "Each item MUST be a Note object." },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." }
+        }
+    },
+    "note": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+            "locale": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$" },
+            "text": { "$ref": "#/$defs/attachmentText", "required": true, "description": "The content of the note. This property is Required." }
+        }
+    },
+    "modelCard": {
+        "type": "object",
+        "description": "The model card for a machine learning model component.",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "A unique identifier for the model card. Every bom-ref MUST be unique. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "modelParameters": { "$ref": "#/$defs/modelParameters" },
+            "quantitativeAnalysis": { "$ref": "#/$defs/quantitativeAnalysis" },
+            "considerations": { "$ref": "#/$defs/considerations" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Custom properties for the model card. Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." }
+        }
+    },
+    "modelParameters": {
+        "type": "object",
+        "description": "Parameters of the machine learning model.",
+        "properties": {
+            "approach": { "$ref": "#/$defs/approach" },
+            "task": { "type": "string" },
+            "architectureFamily": { "type": "string" },
+            "modelArchitecture": { "type": "string" },
+            "datasets": { "type": "array", "items": { "oneOf": [{ "$ref": "#/$defs/inlineDataInformation" }, { "$ref": "#/$defs/dataReference" }] }, "description": "Datasets used in the model. Each item MUST be one of 'Inline Data Information' or 'Data Reference'." },
+            "inputs": { "type": "array", "items": { "$ref": "#/$defs/ioParameter" }, "description": "Input parameters for the model. Each item MUST be an Input and Output Parameters object." },
+            "outputs": { "type": "array", "items": { "$ref": "#/$defs/ioParameter" }, "description": "Output parameters for the model. Each item MUST be an Input and Output Parameters object." }
+        }
+    },
+    "approach": {
+        "type": "object",
+        "description": "The machine learning approach.",
+        "properties": {
+            "type": { "type": "string", "enum": ["supervised", "un-supervised", "semi-supervised", "self-supervised", "reinforcement-learning"] }
+        }
+    },
+    "inlineDataInformation": {
+        "type": "object",
+        "description": "Information about inline data.",
+        "required": ["type"],
+        "properties": {
+            "bom-ref": { "type": "string", "description": "A unique identifier for the data. Every bom-ref MUST be unique. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "type": { "type": "string", "required": true, "description": "The type of data. This property is Required." },
+            "name": { "type": "string" },
+            "contents": { "$ref": "#/$defs/dataContents" },
+            "classification": { "type": "string" },
+            "sensitiveData": { "type": "array", "items": { "type": "string" }, "description": "A list of sensitive data types. Each item MUST be a string." },
+            "graphics": { "$ref": "#/$defs/graphicsCollection" },
+            "description": { "type": "string" },
+            "governance": { "$ref": "#/$defs/dataGovernance" }
+        }
+    },
+    "dataReference": {
+        "type": "object",
+        "description": "A reference to data.",
+        "properties": { "ref": { "type": "string" } }
+    },
+    "dataContents": {
+        "type": "object",
+        "description": "The contents of the data.",
+        "properties": {
+            "attachment": { "$ref": "#/$defs/attachmentText" },
+            "url": { "type": "string", "format": "uri" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Configuration properties. Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." }
+        }
+    },
+    "graphicsCollection": {
+        "type": "object",
+        "description": "A collection of graphics.",
+        "properties": {
+            "description": { "type": "string" },
+            "collection": { "type": "array", "items": { "$ref": "#/$defs/graphic" } }
+        }
+    },
+    "graphic": {
+        "type": "object",
+        "description": "A graphic image.",
+        "properties": {
+            "name": { "type": "string" },
+            "image": { "$ref": "#/$defs/attachmentText" }
+        }
+    },
+    "dataGovernance": {
+        "type": "object",
+        "description": "Data governance information.",
+        "properties": {
+            "custodians": { "type": "array", "items": { "$ref": "#/$defs/governanceParty" } },
+            "stewards": { "type": "array", "items": { "$ref": "#/$defs/governanceParty" } },
+            "owners": { "type": "array", "items": { "$ref": "#/$defs/governanceParty" } }
+        }
+    },
+    "governanceParty": {
+        "oneOf": [{ "$ref": "#/$defs/organizationalEntity" }, { "$ref": "#/$defs/organizationalContact" }]
+    },
+    "ioParameter": {
+        "type": "object",
+        "description": "An input or output parameter.",
+        "properties": {
+            "name": { "type": "string" },
+            "format": { "type": "string" },
+            "optional": { "type": "boolean" }
+        }
+    },
+    "quantitativeAnalysis": {
+        "type": "object",
+        "description": "Quantitative analysis of the model.",
+        "properties": {
+            "performanceMetrics": { "type": "array", "items": { "$ref": "#/$defs/performanceMetric" } },
+            "graphics": { "$ref": "#/$defs/graphicsCollection" }
+        }
+    },
+    "performanceMetric": {
+        "type": "object",
+        "description": "A performance metric.",
+        "properties": {
+            "type": { "type": "string" },
+            "value": { "type": "string" },
+            "slice": { "type": "string" },
+            "confidenceInterval": { "$ref": "#/$defs/confidenceInterval" }
+        }
+    },
+    "confidenceInterval": {
+        "type": "object",
+        "description": "A confidence interval.",
+        "properties": {
+            "lowerBound": { "type": "string" },
+            "upperBound": { "type": "string" }
+        }
+    },
+    "considerations": {
+        "type": "object",
+        "description": "Considerations for the model.",
+        "properties": {
+            "users": { "type": "array", "items": { "type": "string" } },
+            "useCases": { "type": "array", "items": { "type": "string" } },
+            "technicalLimitations": { "type": "array", "items": { "type": "string" } },
+            "mitigations": { "type": "array", "items": { "type": "string" } },
+            "ethicalConsiderations": { "type": "array", "items": { "$ref": "#/$defs/ethicalConsideration" } },
+            "fairnessAssessments": { "type": "array", "items": { "$ref": "#/$defs/fairnessAssessment" } }
+        }
+    },
+    "ethicalConsideration": {
+        "type": "object",
+        "description": "An ethical consideration.",
+        "properties": {
+            "name": { "type": "string" },
+            "mitigationStrategy": { "type": "string" }
+        }
+    },
+    "fairnessAssessment": {
+        "type": "object",
+        "description": "A fairness assessment.",
+        "properties": {
+            "groupAtRisk": { "type": "string" },
+            "benefits": { "type": "string" },
+            "harms": { "type": "string" },
+            "mitigationStrategy": { "type": "string" }
+        }
+    },
+    "componentData": {
+        "type": "object",
+        "description": "Data associated with a component.",
+        "required": ["type"],
+        "properties": {
+            "bom-ref": { "type": "string", "description": "A unique identifier for the data. Every bom-ref MUST be unique. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "type": { "type": "string", "required": true, "description": "The type of data. This property is Required." },
+            "name": { "type": "string" },
+            "contents": { "$ref": "#/$defs/dataContents" },
+            "classification": { "type": "string" },
+            "sensitiveData": { "type": "array", "items": { "type": "string" }, "description": "A list of sensitive data types. Each item MUST be a string." },
+            "graphics": { "$ref": "#/$defs/graphicsCollection" },
+            "description": { "type": "string" },
+            "governance": { "$ref": "#/$defs/dataGovernance" }
+        }
+    },
+    "cryptoProperties": {
+        "type": "object",
+        "description": "Cryptographic properties of an asset.",
+        "required": ["assetType"],
+        "properties": {
+            "assetType": { "type": "string", "enum": ["algorithm", "certificate", "protocol", "related-crypto-material"], "description": "The type of cryptographic asset. This property is Required." },
+            "algorithmProperties": { "$ref": "#/$defs/algorithmProperties" },
+            "certificateProperties": { "$ref": "#/$defs/certificateProperties" },
+            "relatedCryptoMaterialProperties": { "$ref": "#/$defs/relatedCryptoMaterialProperties" },
+            "protocolProperties": { "$ref": "#/$defs/protocolProperties" },
+            "oid": { "type": "string" }
+        }
+    },
+    "algorithmProperties": {
+        "type": "object",
+        "description": "Properties of a cryptographic algorithm.",
+        "properties": {
+            "primitive": { "type": "string", "enum": ["drbg", "mac", "block-cipher", "stream-cipher", "signature", "hash", "pke", "xof", "kdf", "key-agree", "kem", "ae", "combiner", "other", "unknown"] },
+            "parameterSetIdentifier": { "type": "string" },
+            "curve": { "type": "string", "description": "Recommendation: Use curve names as defined at https://neuromancer.sk/std/." },
+            "executionEnvironment": { "type": "string", "enum": ["software-plain-ram", "software-encrypted-ram", "software-tee", "hardware", "other", "unknown"] },
+            "implementationPlatform": { "type": "string", "enum": ["generic", "x86_32", "x86_64", "armv7-a", "armv7-m", "armv8-a", "armv8-m", "armv9-a", "armv9-m", "s390x", "ppc64", "ppc64le", "other", "unknown"] },
+            "certificationLevel": { "type": "array", "items": { "type": "string", "enum": ["none", "fips140-1-l1", "fips140-1-l2", "fips140-1-l3", "fips140-1-l4", "fips140-2-l1", "fips140-2-l2", "fips140-2-l3", "fips140-2-l4", "fips140-3-l1", "fips140-3-l2", "fips140-3-l3", "fips140-3-l4", "cc-eal1", "cc-eal1+", "cc-eal2", "cc-eal2+", "cc-eal3", "cc-eal3+", "cc-eal4", "cc-eal4+", "cc-eal5", "cc-eal5+", "cc-eal6", "cc-eal6+", "cc-eal7", "cc-eal7+", "other", "unknown"] }, "description": "Each item MUST be a string and one of the enumerated values." },
+            "mode": { "type": "string", "enum": ["cbc", "ecb", "ccm", "gcm", "cfb", "ofb", "ctr", "other", "unknown"] },
+            "padding": { "type": "string", "enum": ["pkcs5", "pkcs7", "pkcs1v15", "oaep", "raw", "other", "unknown"] },
+            "cryptoFunctions": { "type": "array", "items": { "type": "string", "enum": ["generate", "keygen", "encrypt", "decrypt", "digest", "tag", "keyderive", "sign", "verify", "encapsulate", "decapsulate", "other", "unknown"] }, "description": "Each item MUST be a string and one of the enumerated values." },
+            "classicalSecurityLevel": { "type": "integer" },
+            "nistQuantumSecurityLevel": { "type": "integer" }
+        }
+    },
+    "certificateProperties": {
+        "type": "object",
+        "description": "Properties of a certificate.",
+        "properties": {
+            "subjectName": { "type": "string" },
+            "issuerName": { "type": "string" },
+            "notValidBefore": { "type": "string", "format": "date-time" },
+            "notValidAfter": { "type": "string", "format": "date-time" },
+            "signatureAlgorithmRef": { "type": "string" },
+            "subjectPublicKeyRef": { "type": "string" },
+            "certificateFormat": { "type": "string" },
+            "certificateExtension": { "type": "string" }
+        }
+    },
+    "relatedCryptoMaterialProperties": {
+        "type": "object",
+        "description": "Properties of related cryptographic material.",
+        "properties": {
+            "type": { "type": "string", "enum": ["private-key", "public-key", "secret-key", "key", "ciphertext", "signature", "digest", "initialization-vector", "nonce", "seed", "salt", "shared-secret", "tag", "additional-data", "password", "credential", "token", "other", "unknown"] },
+            "id": { "type": "string" },
+            "state": { "type": "string", "enum": ["pre-activation", "active", "suspended", "deactivated", "compromised", "destroyed"] },
+            "algorithmRef": { "type": "string" },
+            "creationDate": { "type": "string", "format": "date-time" },
+            "activationDate": { "type": "string", "format": "date-time" },
+            "updateDate": { "type": "string", "format": "date-time" },
+            "expirationDate": { "type": "string", "format": "date-time" },
+            "value": { "type": "string" },
+            "size": { "type": "integer" },
+            "format": { "type": "string" },
+            "securedBy": { "$ref": "#/$defs/securedBy" }
+        }
+    },
+    "securedBy": {
+        "type": "object",
+        "description": "The mechanism by which the cryptographic asset is secured.",
+        "properties": {
+            "mechanism": { "type": "string" },
+            "algorithmRef": { "type": "string" }
+        }
+    },
+    "protocolProperties": {
+        "type": "object",
+        "description": "Properties of a cryptographic protocol.",
+        "properties": {
+            "type": { "type": "string", "enum": ["tls", "ssh", "ipsec", "ike", "sstp", "wpa", "other", "unknown"] },
+            "version": { "type": "string" },
+            "cipherSuites": { "type": "array", "items": { "$ref": "#/$defs/cipherSuite" }, "description": "Each item MUST be a Cipher Suite object." },
+            "ikev2TransformTypes": { "$ref": "#/$defs/ikev2TransformTypes" },
+            "cryptoRefArray": { "type": "array", "items": { "type": "string" }, "description": "A list of protocol-related cryptographic assets. Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." }
+        }
+    },
+    "cipherSuite": {
+        "type": "object",
+        "description": "A cipher suite.",
+        "properties": {
+            "name": { "type": "string" },
+            "algorithms": { "type": "array", "items": { "type": "string" }, "description": "A list of algorithms related to the cipher suite. Each item MUST be a string." },
+            "identifiers": { "type": "array", "items": { "type": "string" }, "description": "A list of common identifiers for the cipher suite. Each item MUST be a string." }
+        }
+    },
+    "ikev2TransformTypes": {
+        "type": "object",
+        "description": "IKEv2 transform types.",
+        "properties": {
+            "encr": { "type": "array", "items": { "type": "string" }, "description": "Encryption Algorithm (ENCR). Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." },
+            "prf": { "type": "array", "items": { "type": "string" }, "description": "Pseudorandom Function (PRF). Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." },
+            "integ": { "type": "array", "items": { "type": "string" }, "description": "Integrity Algorithm (INTEG). Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." },
+            "ke": { "type": "array", "items": { "type": "string" }, "description": "Key Exchange Method (KE). Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." },
+            "esn": { "type": "boolean" },
+            "auth": { "type": "array", "items": { "type": "string" }, "description": "IKEv2 Authentication method. Recommendation: Value SHOULD NOT start with 'urn:cdx:'. Each item MUST be a string." }
+        }
+    },
+    "dataClassification": {
+        "type": "object",
+        "required": ["flow", "classification"],
+        "properties": {
+            "flow": { "type": "string", "required": true, "enum": ["inbound", "outbound", "bi-directional", "unknown"], "description": "Specifies the flow direction of the data. This property is Required." },
+            "classification": { "type": "string", "required": true, "description": "Data classification tags data. This property is Required." },
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "governance": { "$ref": "#/$defs/dataGovernance" },
+            "source": { "type": "array", "items": { "oneOf": [{ "type": "string", "format": "uri" }, { "$ref": "#/$defs/bomLinkElement" }] }, "description": "The URI, URL, or BOM-Link of the components or services the data came in from. Each item MUST be a URL or BOM-Link Element." },
+            "destination": { "type": "array", "items": { "oneOf": [{ "type": "string", "format": "uri" }, { "$ref": "#/$defs/bomLinkElement" }] }, "description": "The URI, URL, or BOM-Link of the components or services the data is sent to. Each item MUST be a URL or BOM-Link Element." }
+        }
+    },
+    "assessor": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "thirdParty": { "type": "boolean" },
+            "organization": { "$ref": "#/$defs/organizationalEntity" }
+        }
+    },
+    "attestation": {
+        "type": "object",
+        "properties": {
+            "summary": { "type": "string" },
+            "assessor": { "type": "string" },
+            "map": { "type": "array", "items": { "$ref": "#/$defs/map" } },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "map": {
+        "type": "object",
+        "required": ["claims", "counterClaims", "mitigationStrategies"],
+        "properties": {
+            "requirement": { "type": "string" },
+            "claims": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to the claims being attested to. Each item MUST be a string." },
+            "counterClaims": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to the counter claims being attested to. Each item MUST be a string." },
+            "conformance": { "$ref": "#/$defs/conformance" },
+            "confidence": { "$ref": "#/$defs/confidence" }
+        }
+    },
+    "conformance": {
+        "type": "object",
+        "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 1 },
+            "rationale": { "type": "string" },
+            "mitigationStrategies": { "type": "array", "items": { "type": "string" }, "description": "The list of bom-ref to the evidence provided describing the mitigation strategies. Each item MUST be a string." }
+        }
+    },
+    "confidence": {
+        "type": "object",
+        "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 1 },
+            "rationale": { "type": "string" }
+        }
+    },
+    "claim": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "target": { "type": "string" },
+            "predicate": { "type": "string" },
+            "mitigationStrategies": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to the evidence provided. Each item MUST be a string. Recommendation: Each mitigation strategy SHOULD include an explanation of how any weaknesses in the evidence will be mitigated." },
+            "reasoning": { "type": "string" },
+            "evidence": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to evidence that supports this claim. Each item MUST be a string." },
+            "counterEvidence": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to counterEvidence. Each item MUST be a string." },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "Each item MUST be an External Reference object." },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "declarationsEvidence": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "propertyName": { "type": "string" },
+            "description": { "type": "string" },
+            "data": { "type": "array", "items": { "$ref": "#/$defs/declarationsData" }, "description": "The output or analysis that supports claims. Each item MUST be a Data object." },
+            "created": { "type": "string", "format": "date-time" },
+            "expires": { "type": "string", "format": "date-time" },
+            "author": { "$ref": "#/$defs/organizationalContact" },
+            "reviewer": { "$ref": "#/$defs/organizationalContact" },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "declarationsData": {
+        "type": "object",
+        "properties": {
+            "name": { "type": "string" },
+            "contents": { "$ref": "#/$defs/dataContents" },
+            "classification": { "type": "string" },
+            "sensitiveData": { "type": "array", "items": { "type": "string" }, "description": "Each item MUST be a string." },
+            "governance": { "$ref": "#/$defs/dataGovernance" }
+        }
+    },
+    "targets": {
+        "type": "object",
+        "properties": {
+            "organizations": { "type": "array", "items": { "$ref": "#/$defs/organizationalEntity" }, "description": "The list of organizations. Each item MUST be an Organizational Entity object." },
+            "components": { "type": "array", "items": { "$ref": "#/$defs/component" } },
+            "services": { "type": "array", "items": { "$ref": "#/$defs/service" }, "description": "Each item MUST be a Service object." }
+        }
+    },
+    "affirmation": {
+        "type": "object",
+        "properties": {
+            "statement": { "type": "string" },
+            "signatories": { "type": "array", "items": { "$ref": "#/$defs/signatory" }, "description": "The list of signatories. Each item MUST be a Signatory object." },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "signatory": {
+        "type": "object",
+        "properties": {
+            "name": { "type": "string" },
+            "role": { "type": "string" },
+            "signature": { "$ref": "#/$defs/signature" },
+            "organization": { "$ref": "#/$defs/organizationalEntity" },
+            "externalReference": { "$ref": "#/$defs/externalReference" }
+        }
+    },
+    "standard": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "name": { "type": "string" },
+            "version": { "type": "string" },
+            "description": { "type": "string" },
+            "owner": { "$ref": "#/$defs/organizationalEntity" },
+            "requirements": { "type": "array", "items": { "$ref": "#/$defs/requirement" } },
+            "levels": { "type": "array", "items": { "$ref": "#/$defs/level" } },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "Each item MUST be an External Reference object." },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "requirement": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "identifier": { "type": "string" },
+            "title": { "type": "string" },
+            "text": { "type": "string" },
+            "descriptions": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The supplemental text. Each item MUST be a string." },
+            "openCre": { "type": "array", "items": { "type": "string", "pattern": "^CRE:[0-9]+-[0-9]+$" }, "required": true, "description": "The Common Requirements Enumeration (CRE) identifier(s). Each item MUST be a string." },
+            "parent": { "type": "string" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "required": true, "description": "Each item MUST be a Lightweight name-value pair object. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "required": true, "description": "Each item MUST be an External Reference object." }
+        }
+    },
+    "level": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "identifier": { "type": "string" },
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "requirements": { "type": "array", "items": { "type": "string" }, "description": "The list of requirement bom-refs. Each item MUST be a string." }
+        }
+    },
+    "licensing": {
+        "type": "object",
+        "properties": {
+            "altIds": { "type": "array", "items": { "type": "string" }, "description": "Each item MUST be a string." },
+            "licensor": { "$ref": "#/$defs/organizationalEntity" },
+            "licensee": { "$ref": "#/$defs/organizationalEntity" },
+            "purchaser": { "$ref": "#/$defs/organizationalEntity" },
+            "purchaseOrder": { "type": "string" },
+            "licenseTypes": { "type": "array", "items": { "type": "string", "enum": [ "academic", "appliance", "client-access", "concurrent-user", "core-points", "custom-metric", "device", "evaluation", "floating-user", "named-user", "node-locked", "oem", "per-server", "perpetual", "processor-points", "subscription", "user", "other" ] }, "description": "Each item MUST be a string." },
+            "lastRenewal": { "type": "string", "format": "date-time" },
+            "expires": { "type": "string", "format": "date-time" }
+        }
+    },
+    "proofOfConcept": {
+        "type": "object",
+        "properties": {
+            "reproductionSteps": { "type": "string" },
+            "environment": { "type": "string" },
+            "supportingMaterial": { "type": "array", "items": { "$ref": "#/$defs/attachmentText" }, "description": "Each item MUST be an Attachment object." }
+        }
+    },
+    "workflow": {
+        "type": "object",
+        "required": ["bom-ref", "uid", "taskTypes"],
+        "properties": {
+            "bom-ref": { "type": "string", "required": true, "description": "Identifier for referable and interlinkable elements. This property is Required. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "uid": { "type": "string", "required": true, "description": "The unique identifier for the resource instance. This property is Required." },
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "resourceReferences": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } },
+            "taskDependencies": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+            "taskTypes": { "type": "array", "items": { "type": "string", "enum": ["copy", "clone", "lint", "scan", "merge", "build", "test", "deliver", "deploy", "release", "clean", "other"] }, "required": true, "description": "Indicates the types of activities performed. Each item MUST be a string." },
+            "trigger": { "$ref": "#/$defs/trigger" },
+            "steps": { "type": "array", "items": { "$ref": "#/$defs/step" } },
+            "inputs": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+            "outputs": { "type": "array", "items": { "$ref": "#/$defs/output" } },
+            "timeStart": { "type": "string", "format": "date-time" },
+            "timeEnd": { "type": "string", "format": "date-time" },
+            "workspaces": { "type": "array", "items": { "$ref": "#/$defs/workspace" } },
+            "runtimeTopology": { "type": "array", "items": { "$ref": "#/$defs/dependency" }, "description": "Each item MUST be a Dependency object." },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "trigger": {
+        "type": "object",
+        "required": ["bom-ref", "uid", "type"],
+        "properties": {
+            "bom-ref": { "type": "string", "required": true, "description": "Identifier for referable and interlinkable elements. This property is Required. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "uid": { "type": "string", "required": true, "description": "The unique identifier. This property is Required." },
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "resourceReferences": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "type": { "type": "string", "required": true, "enum": ["manual", "api", "webhook", "scheduled"], "description": "The source type of event which caused the trigger to fire. This property is Required." },
+            "event": { "$ref": "#/$defs/event" },
+            "conditions": { "type": "array", "items": { "$ref": "#/$defs/condition" } },
+            "timeActivated": { "type": "string", "format": "date-time" },
+            "inputs": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+            "outputs": { "type": "array", "items": { "$ref": "#/$defs/output" } },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "event": {
+        "type": "object",
+        "properties": {
+            "uid": { "type": "string" },
+            "description": { "type": "string" },
+            "timeReceived": { "type": "string", "format": "date-time" },
+            "data": { "$ref": "#/$defs/attachmentText" },
+            "source": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "target": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "condition": {
+        "type": "object",
+        "properties": {
+            "description": { "type": "string" },
+            "expression": { "type": "string" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair object." }
+        }
+    },
+    "step": {
+        "type": "object",
+        "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "commands": { "type": "array", "items": { "$ref": "#/$defs/command" } },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "command": {
+        "type": "object",
+        "properties": {
+            "executed": { "type": "string" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "task": {
+        "type": "object",
+        "required": ["bom-ref", "uid"],
+        "properties": {
+            "bom-ref": { "type": "string", "required": true, "description": "Identifier for referable and interlinkable elements. This property is Required. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "uid": { "type": "string", "required": true, "description": "The unique identifier. This property is Required." },
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "resourceReferences": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "parameters": { "type": "array", "items": { "$ref": "#/$defs/parameter" } },
+            "environmentVars": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair." },
+            "data": { "$ref": "#/$defs/attachmentText" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "parameter": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+            "name": { "type": "string", "required": true },
+            "value": { "type": "string" },
+            "dataType": { "type": "string" }
+        }
+    },
+    "input": {
+        "type": "object",
+        "properties": {
+            "type": { "type": "string" },
+            "source": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "target": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "resource": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "data": { "$ref": "#/$defs/attachmentText" },
+            "environmentVars": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair." },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "output": {
+        "type": "object",
+        "properties": {
+            "type": { "type": "string", "enum": ["artifact", "attestation", "log", "evidence", "metrics", "other"] },
+            "source": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "target": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "resource": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "data": { "$ref": "#/$defs/attachmentText" },
+            "environmentVars": { "type": "array", "items": { "$ref": "#/$defs/property" }, "description": "Each item MUST be a Lightweight name-value pair." },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "workspace": {
+        "type": "object",
+        "required": ["bom-ref", "uid"],
+        "properties": {
+            "bom-ref": { "type": "string", "required": true, "description": "Identifier for referable and interlinkable elements. This property is Required. Recommendation: Value SHOULD NOT start with 'urn:cdx:'." },
+            "uid": { "type": "string", "required": true, "description": "The unique identifier. This property is Required." },
+            "name": { "type": "string" },
+            "aliases": { "type": "array", "items": { "type": "string" } },
+            "description": { "type": "string" },
+            "resourceReferences": { "type": "array", "items": { "$ref": "#/$defs/resourceReferenceChoice" } },
+            "accessMode": { "type": "string", "enum": ["read-only", "read-write", "read-write-once", "write-once", "write-only"] },
+            "mountPath": { "type": "string" },
+            "managedDataType": { "type": "string" },
+            "volumeRequest": { "type": "string" },
+            "volume": { "$ref": "#/$defs/volume" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "volume": {
+        "type": "object",
+        "properties": {
+            "uid": { "type": "string" },
+            "name": { "type": "string" },
+            "mode": { "type": "string", "enum": ["filesystem", "block"] },
+            "path": { "type": "string" },
+            "sizeAllocated": { "type": "string" },
+            "persistent": { "type": "boolean" },
+            "remote": { "type": "boolean" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" } }
+        }
+    },
+    "resourceReferenceChoice": {
+        "oneOf": [
+            { "$ref": "#/$defs/ref" },
+            { "$ref": "#/$defs/bomLinkElement" },
+            { "$ref": "#/$defs/externalReference" }
+        ],
+        "description": "A resource reference MUST be any of: Ref, BOM-Link Element, or External Reference."
+    },
+    "ref": {
+        "type": "string",
+        "description": "Descriptor for an element identified by the attribute 'bom-ref' in the same BOM document."
+    },
+    "bomLinkElement": {
+        "type": "string",
+        "format": "iri-reference",
+        "pattern": "^urn:cdx:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/[1-9][0-9]*#.+$",
+        "description": "Descriptor for an element in a BOM document, referencing a full object via a BOM-Link."
+    },
+    "claim": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "target": { "type": "string" },
+            "predicate": { "type": "string" },
+            "mitigationStrategies": { 
+                "type": "array", 
+                "items": { "type": "string" }, 
+                "required": true, 
+                "description": "The list of bom-ref to the evidence describing mitigation strategies. Each item MUST be a string. Recommendation: Each mitigation strategy SHOULD include an explanation of how any weaknesses in the evidence will be mitigated." 
+            },
+            "reasoning": { "type": "string" },
+            "evidence": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to evidence that supports this claim. Each item MUST be a string." },
+            "counterEvidence": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The list of bom-ref to counterEvidence that supports this claim. Each item MUST be a string." },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "Each item MUST be an External Reference object." },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "standard": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "name": { "type": "string" },
+            "version": { "type": "string" },
+            "description": { "type": "string" },
+            "owner": { "$ref": "#/$defs/organizationalEntity" },
+            "requirements": { "type": "array", "items": { "$ref": "#/$defs/requirement" } },
+            "levels": { "type": "array", "items": { "$ref": "#/$defs/level" } },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "description": "Each item MUST be an External Reference object." },
+            "signature": { "$ref": "#/$defs/signature" }
+        }
+    },
+    "requirement": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "identifier": { "type": "string" },
+            "title": { "type": "string" },
+            "text": { "type": "string" },
+            "descriptions": { "type": "array", "items": { "type": "string" }, "required": true, "description": "The supplemental text. Each item MUST be a string. This property is Required." },
+            "openCre": { "type": "array", "items": { "type": "string", "pattern": "^CRE:[0-9]+-[0-9]+$" }, "required": true, "description": "The Common Requirements Enumeration (CRE) identifier(s). Each item MUST be a string. This property is Required." },
+            "parent": { "type": "string" },
+            "properties": { "type": "array", "items": { "$ref": "#/$defs/property" }, "required": true, "description": "Each item MUST be a Lightweight name-value pair object. This property is Required. Recommendation: Property names are encouraged to be registered in the CycloneDX Property Taxonomy. Formal registration is optional." },
+            "externalReferences": { "type": "array", "items": { "$ref": "#/$defs/externalReference" }, "required": true, "description": "Each item MUST be an External Reference object. This property is Required." }
+        }
+    },
+    "level": {
+        "type": "object",
+        "properties": {
+            "bom-ref": { "type": "string", "description": "Identifier for referable and interlinkable elements. Recommendation: Value SHOULD NOT start with 'urn:cdx:' to avoid conflicts with BOM-Links." },
+            "identifier": { "type": "string" },
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "requirements": { "type": "array", "items": { "type": "string" }, "description": "The list of requirement bom-refs. Each item MUST be a string." }
+        }
+    }
+  }
+}

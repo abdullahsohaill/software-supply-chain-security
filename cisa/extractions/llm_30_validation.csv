@@ -1,0 +1,133 @@
+Section ID & Heading,Primary Unit Text,Abdullah,NotebookLM
+3 SBOM Processes,"This section describes how to create and exchange SBOM information from three stakeholder perspectives: those who produce, choose, and operate software.",0,0
+3 SBOM Processes,These perspectives are described in detail in “Use Cases: Roles and Benefits for SBOM Across the Supply Chain.,0,0
+3 SBOM Processes,"Three particular SBOM use cases — vulnerability management, intellectual property, and secure Supply Chain software assurance — illustrate an SBOM as an independent data source as well as how an SBOM can be integrated into typical business processes.",0,0
+3 SBOM Processes,These are discussed in Section 3.6.,0,0
+3.1 SBOM Creation: How,"To create an SBOM, the Supplier defines Components that the Supplier creates themselves, produces baseline and any supplemental Attributes for those Components, and enumerates all directly included Components.",1,1
+3.1 SBOM Creation: How,"SBOM information will ideally be generated as an integral part of the Supplier’s software build and packaging processes, which can be accomplished with modifications to existing development tools.",1,1
+3.1 SBOM Creation: How,"Any entity creating, modifying, packaging, and delivering software or software systems is considered a Supplier and is therefore responsible for defining Components and creating SBOMs.",1,1
+3.1 SBOM Creation: How,"This includes system integrators, who are essentially considered Suppliers for SBOM purposes.",0,0
+3.1 SBOM Creation: How,An organization can also act as a Supplier for internally developed Components.,0,0
+3.1 SBOM Creation: How,"When SBOMs for Included Components are available from upstream Suppliers, those SBOMs are provided with or incorporated into the primary SBOM.",1,1
+3.1 SBOM Creation: How,"Where such information is not available, a Supplier can provide “best effort” SBOMs, which will be indicated by the fact that the Author for an Included Component SBOM will not be the same as the Supplier of the Component.",0,0
+3.1 SBOM Creation: How,Section 2.2.2.6 describes a way for SBOM authors to make assertions about indirectly included upstream Components for which the Supplier has not provided an SBOM.,0,0
+3.1 SBOM Creation: How,"An SBOM includes Attributes used to identify Components and supplemental Attributes to capture characteristics of, or information about, Components.",0,0
+3.1 SBOM Creation: How,"Identity Attributes are essential, and supplemental Attributes may or may not be required depending on the use case or application.",1,1
+3.1 SBOM Creation: How,An SBOM from the Component’s Supplier serves as a system of record or authoritative source of information about the Component.,0,0
+3.1 SBOM Creation: How,"As noted elsewhere, some information may need to be validated with other external sources.",0,0
+3.1 SBOM Creation: How,"For example, vulnerability information about a Component can sometimes be derived from the NVD using CPE",0,0
+3.2 SBOM Creation: When,An SBOM needs to be created when a Component is released.,1,1
+3.2 SBOM Creation: When,"This loosely corresponds to build, packaging, or deployment activities.",0,0
+3.2 SBOM Creation: When,"As discussed in Section 2 and Section 2.2.1.3, consider using the Type Attribute of SBOM to indicate the context from which the SBOM was
+created or assembled. ",1,1
+3.2 SBOM Creation: When,"A new SBOM should be created when the Component is updated or versioned, including when new upstream Components are added.",1,1
+3.2 SBOM Creation: When,"Changes to Components are often noted as updates, upgrades, releases, and patches.",0,0
+3.2 SBOM Creation: When,"Ideally, changes to Components are indicated by a change in the Version String Attribute.",1,1
+3.2 SBOM Creation: When,The original SBOM may require updates when new SBOM information becomes available even if the Components themselves have not changed.,0,0
+3.2 SBOM Creation: When,Maintaining a current SBOM with information and Baseline Attributes that are as complete as possible is essential.,1,1
+3.2 SBOM Creation: When,"When changing an existing Component (including patching or updating), there are two options for documenting the change: A) as a separate, new Component added to the existing SBOM or B) as the same Component with a new version string.",0,0
+3.2 SBOM Creation: When,These two options are illustrated in the example below.,0,0
+3.2 SBOM Creation: When,"Before update: Bob’s Browser v1.1 ; SBOM Update Options: Separate, new Component (A): Bob’s Browser v1.1
+Bob’s Browser update 37 ; SBOM Update Options: Same Component with new version string (B): Bob’s Browser v1.1.1",0,0
+3.3 SBOM Exchange,It is necessary to exchange SBOM information.,1,0
+3.3 SBOM Exchange,The primary exchange is directly from a Supplier to a Consumer through a single downstream Supply Chain link.,1,0
+3.3 SBOM Exchange,"As part of delivering the Component, the Supplier also delivers the SBOM, or a means by which the Consumer can easily obtain the SBOM, such as a URL or other reference.",1,1
+3.3 SBOM Exchange,"This direct delivery does not preclude aggregation or cataloging of SBOM information by Suppliers, Consumers, or others.",0,0
+3.3 SBOM Exchange,"Due to the variety of different software and device ecosystems, it is unlikely that a single SBOM exchange mechanism will suffice.",0,0
+3.3 SBOM Exchange,They can be provided as additional files as part of a Component’s distribution or delivery.,0,1
+3.3 SBOM Exchange,"For devices with storage and power constraints, one option is to provide a URL to look up SBOM information on a Supplier’s website.",1,1
+3.3 SBOM Exchange,Dynamic access to an SBOM may be a good option for such devices as well.,1,1
+3.3 SBOM Exchange,"The Internet Engineering Task Force (IETF) has developed a protocol and format for end user discovery of SBOMs, whether they are shared on a local device or on a website.",0,0
+3.3 SBOM Exchange,"The specification is “format neutral,” meaning it can support SPDX, CycloneDX, and future formats too.",0,0
+3.4 Software Supply Chain Rules,"Participants in a secure software Supply Chain include Suppliers and authors who create SBOM information, Consumers who receive SBOM information, and as providers of optional intermediary services such as composition analysis and Dependency analysis.",0,0
+3.4 Software Supply Chain Rules,"In many cases, a participant acts as both a Supplier and Consumer, operating somewhere in the middle of a Supply Chain.",0,0
+3.4 Software Supply Chain Rules,Participants follow a set of Supply Chain rules so that SBOM systems function at scale.,0,0
+3.4 Software Supply Chain Rules,"Suppliers create SBOMs for Components the Suppliers develop themselves, and Suppliers define these Components.",1,1
+3.4 Software Supply Chain Rules,"For upstream Components, Suppliers obtain SBOMs from the appropriate upstream Suppliers.",1,1
+3.4 Software Supply Chain Rules,"If upstream SBOMs are not available, the Supplier or other authors can create SBOMs, even when this involves researching the appropriate entry or omitting Baseline Attributes.",1,1
+3.4 Software Supply Chain Rules,"An SBOM must list a Primary Component, which defines the subject of the SBOM. An SBOM lists Components that are:",1,1
+3.4 Software Supply Chain Rules,1. Originally created by a Supplier who is the authoritative source of the software,1,1
+3.4 Software Supply Chain Rules,2. Integrated as a Component from an upstream Supplier who also provides an SBOM,1,1
+3.4 Software Supply Chain Rules,3. Integrated as a Component from an upstream Supplier who does not provide an SBOM.,1,1
+3.4 Software Supply Chain Rules,"As part of delivering Components to users, Suppliers also deliver the associated SBOM(s) or provide a means for the Consumer to easily obtain SBOMs.",1,1
+3.4 Software Supply Chain Rules,"A set of many interconnected Supply Chains is likely a directed acyclic graph, as shown in Figures 1, 2, and 3.",0,0
+3.4 Software Supply Chain Rules,"Ultimate upstream Suppliers only create original Components and do not include Components (i.e., do not have dependencies) from any other Supplier.",1,0
+3.4 Software Supply Chain Rules,"In Section 2.6, Carol is an example of such a Supplier. Components flow downstream along Supply Chains
+throughout the graph. ",0,0
+3.4 Software Supply Chain Rules,"At the far ends of the graph, ultimate Consumers only obtain Components and SBOMs and do not produce Components or SBOMs.",1,0
+3.4 Software Supply Chain Rules,"Throughout the middle of the graph, most participants act as both Suppliers and Consumers.",1,0
+3.4 Software Supply Chain Rules,"Even end-user organizations may act as Suppliers, producing SBOMs for in-house Components or external Components such as websites, mobile applications, or Internet of Things (IoT) devices.",1,0
+3.4 Software Supply Chain Rules,Suppliers are responsible for the Components they create and include in an SBOM.,1,1
+3.4 Software Supply Chain Rules,Suppliers are also responsible for providing the collected set of Components to their downstream Consumers.,1,1
+3.4 Software Supply Chain Rules,"In a macroeconomic sense, Suppliers are the least cost avoiders, since they have high-quality authoritative information about their Components and comparatively low costs to generate and share that information.",0,0
+3.4 Software Supply Chain Rules,This model distributes the cost to produce SBOM information to Suppliers.,0,0
+3.4 Software Supply Chain Rules,"In this secure Supply Chain network, there are some scenarios where a Supplier may create SBOMs for upstream Components, where the Supplier is acting as the Author of the SBOM and not the Supplier of the upstream Component.",0,0
+3.4 Software Supply Chain Rules,"When a Supplier creates such SBOMs, the Supplier is expected to clearly convey that they are only the Author of the SBOM and are not the Supplier of the Component.",1,1
+3.4 Software Supply Chain Rules,"This informs Consumers of the lack of first-hand, authoritative SBOM information for the Component.",0,0
+3.4 Software Supply Chain Rules,"In such a case, the Author Name and Supplier Name would be different.",0,0
+3.4 Software Supply Chain Rules,The concepts around SBOM exchange and network rules are designed so that those who choose and operate software can obtain comprehensive lists of Components they use across different Suppliers and Supply Chains. ,0,0
+3.4 Software Supply Chain Rules,Figure 3 expands the example in Figure 2 to show a user of two software products (Primary Components) from two different Supply Chains.,0,0
+3.4 Software Supply Chain Rules,The user has two SBOMs: one shown in Table 4 and one in Table 6.,0,0
+3.4 Software Supply Chain Rules,Figure 3: User graph with two Supply Chains,0,0
+3.4 Software Supply Chain Rules,Component Name: NanoPhone; Supplier Name: Nancy; Version String: v1254-a4; Author: Nancy; Hash: 0x523; UID: 237; Relationship: Primary; Relationship Completeness: Partial,0,0
+3.4 Software Supply Chain Rules,Component Name: |--- OpenLibrary; Supplier Name: Oscar; Version String: 0.9.8s; Author: Nancy; Hash: 0xA23; UID: 394; Relationship: Included in; Relationship Completeness: Partial,0,0
+3.4 Software Supply Chain Rules,Component Name: |--- Protocol; Supplier Name: Paul; Version String: 2012.11; Author: Nancy; Hash: 0xB53; UID: 934; Relationship: Included in; Relationship Completeness: None,0,0
+3.5.1 Perspectives,"Different stakeholders will use SBOMs in complementary, yet distinct, ways.",0,0
+3.5.1 Perspectives,"“Roles and Benefits for SBOM Across the Supply Chain” presents three stakeholder perspectives: those who produce, choose, and operate software.",0,0
+3.5.1 Perspectives,"This document borrows the definitions introduced in “Roles and Benefits for SBOM Across the Supply Chain,” with changes to update the terms to present use cases.",0,0
+3.5.1.1 Produce,This SBOM model is designed with the idea that all Suppliers create SBOMs for their own Components.,1,1
+3.5.1.1 Produce,"When SBOMs for upstream Components are not available, a Supplier may need to Author an SBOM for a different Supplier’s Component.",1,1
+3.5.1.1 Produce,"In the case where a Supplier does not provide SBOM information, there is a higher likelihood that this lack of clarity will cause downstream users to assume the worst about the unknown parts of the product.",0,0
+3.5.1.1 Produce,An additional benefit to Suppliers is the ability to determine which organization to contact to get fixes for vulnerabilities in upstream Components.,0,0
+3.5.1.2 Choose,"SBOMs can be used by prospective Choosers (e.g., development, acquisition, or procurement) considering the use of a Component or product that has an associated SBOM.",0,0
+3.5.1.2 Choose,"Choosers are likely to be interested in information directly attributable to the product, such as its baseline Component or license information.",0,0
+3.5.1.2 Choose,"Supplemental SBOM information about vulnerabilities, current certification status, and level of support can factor into the selection process.",0,0
+3.5.1.3 Operate,"In any industry, Operators struggle with the lack of complete information on Components or products they are expected to support.",0,0
+3.5.1.3 Operate,An SBOM becomes a very relevant source of this information to provide visibility into the software and its Components.,0,0
+3.5.1.3 Operate,"Some of this information may be static, such as licensing information.",0,0
+3.5.1.3 Operate,"However, due to the dynamic nature of software, some of this information may change or be updated after a Component’s initial distribution.",0,0
+3.5.1.3 Operate,Most of the information of ongoing interest for Operators is expected to be found in SBOM updates.,0,0
+3.5.1.3 Operate,Operators can also use the current information to verify the state of the software before it is to be in production at their site or business.,0,0
+3.6 SBOM Use Cases,The core focus of this SBOM model and the Baseline Attributes is to identify Components and their relationships.,0,0
+3.6 SBOM Use Cases,"Supplemental elements and Attributes such as new Attributes, relationship types, or external data connections, can be added to SBOMs to enable different use cases.",0,0
+3.6 SBOM Use Cases,This section highlights several notable SBOM use cases.,0,0
+3.6.1 Vulnerability Management and VEX,Vulnerability management is one of the more prominent SBOM use cases.,0,0
+3.6.1 Vulnerability Management and VEX,"Today, it is often an expensive and time-consuming effort to determine whether a vulnerable upstream Component is used, and if the vulnerability is present or exploitable in downstream Components.",0,0
+3.6.1 Vulnerability Management and VEX,"SBOM and Vulnerability Exploitability eXchange (VEX) data helps Suppliers, users, and other defenders more quickly and accurately assess the risk posed by vulnerable Components, which are often hidden behind opaque Supply Chain relationships.",0,0
+3.6.1 Vulnerability Management and VEX,"While upstream Components are typically included to provide functionality, it is common for parts of the Component to be unused.",0,0
+3.6.1 Vulnerability Management and VEX,A software program (component) might include a library (component) but only call some of the functions provided by the library.,1,0
+3.6.1 Vulnerability Management and VEX,"Additionally, certain features of a Component may be disabled during build or packaging.",1,0
+3.6.1 Vulnerability Management and VEX,"This becomes important in some SBOM use cases, particularly vulnerability management.",0,0
+3.6.1 Vulnerability Management and VEX,"For example, if a vulnerability affects an upstream Component, the vulnerability may or may not affect downstream Components.",0,0
+3.6.1 Vulnerability Management and VEX,"VEX is designed to convey the status (not affected, affected, fixed, under investigation) of vulnerabilities in Components",0,0
+3.6.1 Vulnerability Management and VEX,"Vulnerability management requires sources of vulnerability information (such as CVE, security advisories from Suppliers, [e.g. in CSAF, and the NVD]), mapping of vulnerabilities to Components (such as CPE as used in the NVD), and a way to convey vulnerability or exploitability status (such as VEX).",0,0
+3.6.1 Vulnerability Management and VEX,"While VEX was developed to address the vulnerability management use case, VEX is not limited to use with SBOMs nor expected to be included in the SBOM itself.",0,0
+3.6.1 Vulnerability Management and VEX,"One concern is the incorrect detection of vulnerabilities based on limited information such as version strings, protocol banners, or other heuristics.",0,0
+3.6.1 Vulnerability Management and VEX,"VEX can be used to indicate that software is not vulnerable or exploitable, even when the SBOM indicates the presence of vulnerabilities in upstream Components.",0,0
+3.6.1 Vulnerability Management and VEX,"This can save Suppliers and users the costs of managing, producing, and applying security updates for Components that are not affected.",0,0
+3.6.1 Vulnerability Management and VEX,"Additionally, including the end-of-life date and level-of-support for the Components as supplemental to the SBOM provides the entity performing an impact assessment of a vulnerability with crucial information for mitigation options.",1,1
+3.6.2 Intellectual Property,A number of Intellectual Property (IP) use cases can be improved with better inventory data.,0,0
+3.6.2 Intellectual Property,Managing software license and copyright notice information (including constraints on use or redistribution) for Included Components and tracking entitlement (permission to use copies or features of Components) are two common use cases.,0,0
+3.6.2 Intellectual Property,"A notable market exists for software composition analysis tools to help determine the contents of Components, in part to identify license requirements.",0,0
+3.6.2 Intellectual Property,SBOM data would improve knowledge about composition without depending on binary analysis tools.,0,0
+3.6.2 Intellectual Property,Both SPDX and CycloneDX were initially designed to convey license and entitlement information.,0,0
+3.6.2 Intellectual Property,This use case requires associations of different licenses and types of licenses to Components and a way to evaluate the net effect of different Components with different licenses combined into an assembled product.,0,1
+3.6.3 Secure Supply Chain Software Assurance,"Secure Supply Chain of the source and integrity of Components requires information about the pedigree and provenance of Components, such as how they were built and packaged, who created and modified them, and their chain of custody through the Supply Chain.",1,1
+3.6.3 Secure Supply Chain Software Assurance,"As with the other use cases, the secure Supply Chain documentation will require additional Attributes about Components, different relationship types, and likely different Supplier information.",1,1
+3.7 Tool Support,The availability of SBOM generation and management tools will be critical for widespread adoption.,0,0
+3.7 Tool Support,"Available tools and lists of tools include the CycloneDX Tool Center40 and SPDX
+Tools.",0,0
+3.7 Tool Support,"SBOM functionality will need to be integrated into software development, packaging, and asset management systems.",0,0
+4 Conclusion,Organizations around the world are facing operational and secure Supply Chain software assurance questions about the software actively deployed in their environments.,0,0
+4 Conclusion,Much of this software handles critical parts of their business activities while providing little or no visibility into the software’s Components.,0,0
+4 Conclusion,Questions about known vulnerabilities continue to go unanswered because of this lack of visibility.,0,0
+4 Conclusion,"One way to increase cybersecurity automation and software transparency, enable enterprises to better manage the security of their networks, and enable vendors to monitor their Components is to establish a harmonized model for creating and sharing SBOMs.",0,0
+4 Conclusion,"To be useful to end-user organizations, an SBOM needs to include baseline identity and relationship information that allows software Components to be correlated and linked as they move through the secure software Supply Chain.",1,1
+4 Conclusion,"In the interest of rapid adoption, a set of minimum Baseline Attributes has been defined.",0,0
+4 Conclusion,"These Attributes generally align with existing
+formats such as SPDX and CycloneDX. ",0,0
+4 Conclusion,"As noted in this document, however, limiting an SBOM to only this baseline information is not sufficient to enable a number of identified use cases and applications.",0,0
+4 Conclusion,"As the use of SBOMs matures and becomes more common, the ready availability of baseline SBOM information will lead to further work to establish more coordinated and standardized methods for sharing and managing SBOMs.",0,0
+4 Conclusion,One of the reasons to standardize the structure and content of the SBOM is to enable these next steps.,0,0
+4 Conclusion,Tooling will also be an important factor in the adoption and further evolution of SBOMs.,0,0
+4 Conclusion,"Overall, the goal is to ensure that the necessary information, captured and exchanged through SBOMs, is available to those who need it, thereby leading to better asset management, IP management, vulnerability management, implementation of mitigations, and risk management.",0,0

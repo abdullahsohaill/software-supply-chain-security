@@ -1,0 +1,47 @@
+===== Unified Schema Comparison Report: CycloneDX v1.6 =====
+
+Baseline (Prescriptive): 02_schema.json
+Target   (Official)    : schema.json
+
+
+--- [Level 1] Top-Level Definition Presence ---
+
+ℹ️  Info: 45 definitions in Baseline but not Target (likely defined inline or refactored).
+ℹ️  Info: 33 definitions in Target but not Baseline (due to modular/reusable design).
+Interpretation: The Official Schema uses a highly modular design with many reusable types, explaining the difference in top-level definition counts.
+
+
+--- [Level 2] Property Presence within Common Definitions ---
+
+  - In 'dataClassification', properties missing from Official Schema: ['classification', 'flow']
+
+
+
+--- [Level 3] Granular Constraint & Type Comparison ---
+
+Found 38 granular type/constraint mismatches. This is expected due to the Official Schema's use of '$ref'.
+Key examples:
+  - BOM Root -> 'bomFormat': Mismatch ('const("CycloneDX")' vs 'type:string, enum[1]')
+  - BOM Root -> 'specVersion': Mismatch ('const("1.6")' vs 'type:string')
+  - BOM Root -> 'declarations': Mismatch ('type:object, ref(#/definitions/declarations)' vs 'type:object')
+  - BOM Root -> 'definitions': Mismatch ('type:object, ref(#/definitions/definitions)' vs 'type:object')
+  - In 'component' -> 'cpe': Mismatch ('type:string, has_pattern' vs 'type:string')
+  - In 'component' -> 'cryptoProperties': Mismatch ('type:object' vs 'type:object, ref(#/definitions/cryptoProperties)')
+  - In 'component' -> 'purl': Mismatch ('type:string, has_pattern' vs 'type:string')
+  - In 'componentData' -> 'classification': Mismatch ('type:string' vs 'type:string, ref(#/definitions/dataClassification)')
+  - In 'componentData' -> 'contents': Mismatch ('any' vs 'type:object')
+  - In 'componentData' -> 'type': Mismatch ('type:string' vs 'type:string, enum[5]')
+  - In 'dependency' -> 'ref': Mismatch ('type:string, ref(#/definitions/refType)' vs 'ref(#/definitions/refLinkType)')
+  - In 'event' -> 'data': Mismatch ('type:object, ref(#/definitions/attachmentText)' vs 'type:object, ref(#/definitions/attachment)')
+  - In 'event' -> 'source': Mismatch ('oneOf, ref(#/definitions/resourceReferenceChoice)' vs 'type:object, oneOf, ref(#/definitions/resourceReferenceChoice)')
+  - In 'event' -> 'target': Mismatch ('oneOf, ref(#/definitions/resourceReferenceChoice)' vs 'type:object, oneOf, ref(#/definitions/resourceReferenceChoice)')
+  - In 'externalReference' -> 'url': Mismatch ('oneOf' vs 'anyOf')
+
+Interpretation: Most mismatches highlight that the Official Schema defines constraints in central, referenced types, not directly on the properties.
+
+
+--- [Semantic Audit] Programmatic Verification of Key Findings ---
+
+❌ DIVERGENCE: 'specVersion': Official Schema DOES NOT enforce the '1.6' value. This is a critical laxity.
+⚠️ 'licenseChoice' structure: Error during programmatic check.
+✅ Global Strictness: VERIFIED that the Official Schema is 'closed' (additionalProperties: false), a non-normative security hardening choice.

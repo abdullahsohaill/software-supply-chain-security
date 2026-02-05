@@ -1,0 +1,12 @@
+,COmponent Identification,Component Identification,Cryptographic Hashes,Data Completeness & Transparency,Dependency & Relationship Mapping,Format & Interoperability,Foundational Principles,Legal Information,SBOM Metadata,Unique Identifiers,Use Case Enablement
+COmponent Identification,0,0,0,0,0,0,0,0,0,0,0
+Component Identification,0,16,0,0,1,1,0,0,0,0,0
+Cryptographic Hashes,0,0,7,0,0,0,0,0,0,0,0
+Data Completeness & Transparency,1,0,1,0,0,0,0,0,0,0,0
+Dependency & Relationship Mapping,0,0,0,0,11,0,0,0,0,0,0
+Format & Interoperability,0,0,0,0,0,0,1,0,0,0,0
+Foundational Principles,0,1,0,0,0,0,0,0,0,0,0
+Legal Information,0,0,0,0,0,0,0,8,0,0,0
+SBOM Metadata,0,0,0,0,0,0,0,0,8,0,0
+Unique Identifiers,0,0,0,0,0,0,0,0,0,4,0
+Use Case Enablement,0,0,0,0,0,1,0,0,0,0,0

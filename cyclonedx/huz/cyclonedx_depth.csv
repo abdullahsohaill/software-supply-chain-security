@@ -1,0 +1,104 @@
+class_name,max_depth,path
+metadata,1,metadata
+lifecycle,2,metadata -> lifecycle
+tools,2,metadata -> tools
+toolsLegacy,2,metadata -> toolsLegacy
+tool,3,metadata -> toolsLegacy -> tool
+hash,10,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> externalReference -> hash
+organizationalEntity,9,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> organizationalEntity
+organizationalContact,10,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> organizationalEntity -> organizationalContact
+organizationAddress,10,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> organizationalEntity -> organizationAddress
+property,8,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> property
+component,3,declarations -> targets -> component
+service,3,declarations -> targets -> service
+externalReference,9,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> externalReference
+dependency,4,formula -> workflow -> task -> dependency
+composition,1,composition
+vulnerability,1,vulnerability
+annotation,1,annotation
+formula,1,formula
+declarations,1,declarations
+definitions,1,definitions
+vulnerabilitySource,3,vulnerability -> rating -> vulnerabilitySource
+vulnerabilityReference,2,vulnerability -> vulnerabilityReference
+rating,2,vulnerability -> rating
+advisory,2,vulnerability -> advisory
+credits,2,vulnerability -> credits
+impactAnalysis,2,vulnerability -> impactAnalysis
+affect,2,vulnerability -> affect
+signature,4,declarations -> targets -> component -> signature
+releaseNotes,4,declarations -> targets -> component -> releaseNotes
+note,5,declarations -> targets -> component -> releaseNotes -> note
+modelCard,4,declarations -> targets -> component -> modelCard
+modelParameters,5,declarations -> targets -> component -> modelCard -> modelParameters
+approach,6,declarations -> targets -> component -> modelCard -> modelParameters -> approach
+inlineDataInformation,6,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation
+dataReference,6,declarations -> targets -> component -> modelCard -> modelParameters -> dataReference
+graphicsCollection,7,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation -> graphicsCollection
+graphic,8,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation -> graphicsCollection -> graphic
+dataGovernance,7,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation -> dataGovernance
+governanceParty,8,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation -> dataGovernance -> governanceParty
+ioParameter,6,declarations -> targets -> component -> modelCard -> modelParameters -> ioParameter
+quantitativeAnalysis,5,declarations -> targets -> component -> modelCard -> quantitativeAnalysis
+performanceMetric,6,declarations -> targets -> component -> modelCard -> quantitativeAnalysis -> performanceMetric
+confidenceInterval,7,declarations -> targets -> component -> modelCard -> quantitativeAnalysis -> performanceMetric -> confidenceInterval
+considerations,5,declarations -> targets -> component -> modelCard -> considerations
+ethicalConsideration,6,declarations -> targets -> component -> modelCard -> considerations -> ethicalConsideration
+fairnessAssessment,6,declarations -> targets -> component -> modelCard -> considerations -> fairnessAssessment
+environmentalConsiderations,6,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations
+energyConsumption,7,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption
+energyProvider,8,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider
+energyMeasure,9,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> energyMeasure
+co2Measure,8,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> co2Measure
+componentData,4,declarations -> targets -> component -> componentData
+securedBy,4,declarations -> targets -> component -> securedBy
+cipherSuite,4,declarations -> targets -> component -> cipherSuite
+ikev2TransformTypes,4,declarations -> targets -> component -> ikev2TransformTypes
+licenseChoice,5,declarations -> targets -> component -> componentEvidence -> licenseChoice
+license,6,declarations -> targets -> component -> componentEvidence -> licenseChoice -> license
+attachmentText,9,declarations -> targets -> component -> modelCard -> modelParameters -> inlineDataInformation -> graphicsCollection -> graphic -> attachmentText
+swid,4,declarations -> targets -> component -> swid
+commit,4,declarations -> targets -> component -> commit
+patch,4,declarations -> targets -> component -> patch
+identifiableAction,5,declarations -> targets -> component -> commit -> identifiableAction
+issue,5,declarations -> targets -> component -> patch -> issue
+componentEvidence,4,declarations -> targets -> component -> componentEvidence
+identityEvidence,5,declarations -> targets -> component -> componentEvidence -> identityEvidence
+evidenceMethod,6,declarations -> targets -> component -> componentEvidence -> identityEvidence -> evidenceMethod
+evidenceOccurrence,5,declarations -> targets -> component -> componentEvidence -> evidenceOccurrence
+callstackFrame,5,declarations -> targets -> component -> componentEvidence -> callstackFrame
+copyright,5,declarations -> targets -> component -> componentEvidence -> copyright
+bomLinkElement,10,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> externalReference -> bomLinkElement
+ref,7,formula -> workflow -> task -> trigger -> io -> resourceReferenceChoice -> ref
+dataClassification,4,declarations -> targets -> service -> dataClassification
+step,4,formula -> workflow -> task -> step
+io,5,formula -> workflow -> task -> trigger -> io
+resourceReferenceChoice,6,formula -> workflow -> task -> trigger -> io -> resourceReferenceChoice
+attestation,2,declarations -> attestation
+conformance,4,declarations -> attestation -> mapItem -> conformance
+confidence,4,declarations -> attestation -> mapItem -> confidence
+targets,2,declarations -> targets
+affirmation,2,declarations -> affirmation
+proofOfConcept,2,vulnerability -> proofOfConcept
+workflow,2,formula -> workflow
+task,3,formula -> workflow -> task
+trigger,4,formula -> workflow -> task -> trigger
+event,5,formula -> workflow -> task -> trigger -> event
+workspace,4,formula -> workflow -> task -> workspace
+assessor,2,declarations -> assessor
+mapItem,3,declarations -> attestation -> mapItem
+claim,2,declarations -> claim
+declarationsEvidence,2,declarations -> declarationsEvidence
+evidenceData,3,declarations -> declarationsEvidence -> evidenceData
+signatory,3,declarations -> affirmation -> signatory
+standard,2,definitions -> standard
+requirement,3,definitions -> standard -> requirement
+level,3,definitions -> standard -> level
+refType,11,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> organizationalEntity -> organizationalContact -> refType
+version,5,declarations -> targets -> component -> swid -> version
+hash-alg,11,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> externalReference -> hash -> hash-alg
+hash-content,11,declarations -> targets -> component -> modelCard -> considerations -> environmentalConsiderations -> energyConsumption -> energyProvider -> externalReference -> hash -> hash-content
+severity,3,vulnerability -> rating -> severity
+scoreMethod,3,vulnerability -> rating -> scoreMethod
+affectedStatus,3,vulnerability -> affect -> affectedStatus
+tags,4,declarations -> targets -> component -> tags

@@ -1,0 +1,108 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:930cbcf0-c3b2-42e8-903a-f44f53b62bad",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-05-28T13:22:14+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "dev"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "10d051df-6f7b-4e94-a280-c5cc95f86b5a",
+      "type": "application",
+      "name": ".",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "9cf23ad6-3bc7-4038-aacb-7d87520ae5e8",
+      "type": "application",
+      "name": "Manifest.toml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "julia"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:julia/A@1.0.0?uuid=1",
+      "type": "library",
+      "name": "A",
+      "version": "1.0.0",
+      "purl": "pkg:julia/A@1.0.0?uuid=1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "julia"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:julia/B@2.0.0?uuid=2",
+      "type": "library",
+      "name": "B",
+      "version": "2.0.0",
+      "purl": "pkg:julia/B@2.0.0?uuid=2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "julia"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "10d051df-6f7b-4e94-a280-c5cc95f86b5a",
+      "dependsOn": [
+        "9cf23ad6-3bc7-4038-aacb-7d87520ae5e8"
+      ]
+    },
+    {
+      "ref": "9cf23ad6-3bc7-4038-aacb-7d87520ae5e8",
+      "dependsOn": [
+        "pkg:julia/A@1.0.0?uuid=1",
+        "pkg:julia/B@2.0.0?uuid=2"
+      ]
+    },
+    {
+      "ref": "pkg:julia/A@1.0.0?uuid=1",
+      "dependsOn": [
+        "pkg:julia/B@2.0.0?uuid=2"
+      ]
+    },
+    {
+      "ref": "pkg:julia/B@2.0.0?uuid=2",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3c5e2f1a-8b9d-4e3a-a1c7-9f8e7d6c5b4a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-09-30T00:00:00Z",
+    "authors": [
+      {
+        "name": "Hypermedia Au Security Team"
+      }
+    ],
+    "component": {
+      "type": "data",
+      "name": "Catalog Integrity Requirements",
+      "version": "1.0.0"
+    }
+  },
+  "definitions": {
+    "standards": [
+      {
+        "bom-ref": "catalog-integrity-v1",
+        "name": "Hypermedia Security: Catalog Integrity Requirements",
+        "version": "1.0",
+        "description": "Automated validation requirements for catalog structure and integrity",
+        "owner": "Hypermedia Au",
+        "requirements": [
+          {
+            "bom-ref": "catalog-structure-valid",
+            "identifier": "INT-001",
+            "title": "Catalog Structure Validation",
+            "text": "Catalog artifacts MUST contain valid structure with all required applicationSet.yaml files. Catalog must be built from verified source and cryptographically signed.",
+            "descriptions": [
+              "Automated validation ensures catalog structural integrity before deployment. All workload definitions must be present and correctly formatted."
+            ],
+            "parent": "catalog-integrity-v1",
+            "properties": [
+              {
+                "name": "validation-method",
+                "value": "automated"
+              },
+              {
+                "name": "required-files",
+                "value": "applicationSet.yaml"
+              },
+              {
+                "name": "source-verification",
+                "value": "required"
+              },
+              {
+                "name": "cryptographic-signing",
+                "value": "required"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

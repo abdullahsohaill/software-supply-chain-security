@@ -1,0 +1,104 @@
+class_name,ancestor_count,ancestors
+metadata,0,
+lifecycle,1,metadata
+tools,2,"metadata, vulnerability"
+toolsLegacy,2,"metadata, vulnerability"
+tool,3,"metadata, toolsLegacy, vulnerability"
+hash,23,"affirmation, annotation, claim, component, considerations, declarations, definitions, energyConsumption, energyProvider, environmentalConsiderations, externalReference, formula, metadata, modelCard, requirement, service, signatory, standard, targets, tool, tools, toolsLegacy, vulnerability"
+organizationalEntity,25,"affirmation, annotation, assessor, component, componentData, considerations, credits, dataGovernance, declarations, declarationsEvidence, energyConsumption, energyProvider, environmentalConsiderations, evidenceData, formula, governanceParty, inlineDataInformation, metadata, modelCard, modelParameters, service, signatory, targets, tools, vulnerability"
+organizationalContact,26,"affirmation, annotation, assessor, component, componentData, considerations, credits, dataGovernance, declarations, declarationsEvidence, energyConsumption, energyProvider, environmentalConsiderations, evidenceData, formula, governanceParty, inlineDataInformation, metadata, modelCard, modelParameters, organizationalEntity, service, signatory, targets, tools, vulnerability"
+organizationAddress,26,"affirmation, annotation, assessor, component, componentData, considerations, credits, dataGovernance, declarations, declarationsEvidence, energyConsumption, energyProvider, environmentalConsiderations, evidenceData, formula, governanceParty, inlineDataInformation, metadata, modelCard, modelParameters, organizationalEntity, service, signatory, targets, tools, vulnerability"
+property,25,"annotation, component, considerations, declarations, definitions, energyConsumption, environmentalConsiderations, event, formula, inlineDataInformation, io, metadata, modelCard, modelParameters, releaseNotes, requirement, service, standard, targets, task, tools, trigger, vulnerability, workflow, workspace"
+component,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+service,8,"annotation, declarations, formula, metadata, service, targets, tools, vulnerability"
+externalReference,22,"affirmation, annotation, claim, component, considerations, declarations, definitions, energyConsumption, energyProvider, environmentalConsiderations, formula, metadata, modelCard, requirement, service, signatory, standard, targets, tool, tools, toolsLegacy, vulnerability"
+dependency,3,"formula, task, workflow"
+composition,0,
+vulnerability,0,
+annotation,0,
+formula,0,
+declarations,0,
+definitions,0,
+vulnerabilitySource,3,"rating, vulnerability, vulnerabilityReference"
+vulnerabilityReference,1,vulnerability
+rating,1,vulnerability
+advisory,1,vulnerability
+credits,1,vulnerability
+impactAnalysis,1,vulnerability
+affect,1,vulnerability
+signature,18,"affirmation, annotation, attestation, claim, component, composition, declarations, declarationsEvidence, definitions, formula, metadata, service, signatory, signature, standard, targets, tools, vulnerability"
+releaseNotes,9,"annotation, component, declarations, formula, metadata, service, targets, tools, vulnerability"
+note,10,"annotation, component, declarations, formula, metadata, releaseNotes, service, targets, tools, vulnerability"
+modelCard,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+modelParameters,9,"annotation, component, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+approach,10,"annotation, component, declarations, formula, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+inlineDataInformation,10,"annotation, component, declarations, formula, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+dataReference,10,"annotation, component, declarations, formula, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+graphicsCollection,13,"annotation, component, componentData, declarations, formula, inlineDataInformation, metadata, modelCard, modelParameters, quantitativeAnalysis, targets, tools, vulnerability"
+graphic,14,"annotation, component, componentData, declarations, formula, graphicsCollection, inlineDataInformation, metadata, modelCard, modelParameters, quantitativeAnalysis, targets, tools, vulnerability"
+dataGovernance,14,"annotation, component, componentData, declarations, declarationsEvidence, evidenceData, formula, inlineDataInformation, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+governanceParty,15,"annotation, component, componentData, dataGovernance, declarations, declarationsEvidence, evidenceData, formula, inlineDataInformation, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+ioParameter,10,"annotation, component, declarations, formula, metadata, modelCard, modelParameters, targets, tools, vulnerability"
+quantitativeAnalysis,9,"annotation, component, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+performanceMetric,10,"annotation, component, declarations, formula, metadata, modelCard, quantitativeAnalysis, targets, tools, vulnerability"
+confidenceInterval,11,"annotation, component, declarations, formula, metadata, modelCard, performanceMetric, quantitativeAnalysis, targets, tools, vulnerability"
+considerations,9,"annotation, component, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+ethicalConsideration,10,"annotation, component, considerations, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+fairnessAssessment,10,"annotation, component, considerations, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+environmentalConsiderations,10,"annotation, component, considerations, declarations, formula, metadata, modelCard, targets, tools, vulnerability"
+energyConsumption,11,"annotation, component, considerations, declarations, environmentalConsiderations, formula, metadata, modelCard, targets, tools, vulnerability"
+energyProvider,12,"annotation, component, considerations, declarations, energyConsumption, environmentalConsiderations, formula, metadata, modelCard, targets, tools, vulnerability"
+energyMeasure,13,"annotation, component, considerations, declarations, energyConsumption, energyProvider, environmentalConsiderations, formula, metadata, modelCard, targets, tools, vulnerability"
+co2Measure,12,"annotation, component, considerations, declarations, energyConsumption, environmentalConsiderations, formula, metadata, modelCard, targets, tools, vulnerability"
+componentData,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+securedBy,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+cipherSuite,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+ikev2TransformTypes,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+licenseChoice,10,"annotation, component, componentEvidence, declarations, formula, metadata, service, targets, tools, vulnerability"
+license,11,"annotation, component, componentEvidence, declarations, formula, licenseChoice, metadata, service, targets, tools, vulnerability"
+attachmentText,31,"annotation, component, componentData, componentEvidence, declarations, declarationsEvidence, event, evidenceData, formula, graphic, graphicsCollection, inlineDataInformation, io, license, licenseChoice, metadata, modelCard, modelParameters, note, patch, proofOfConcept, quantitativeAnalysis, releaseNotes, service, swid, targets, task, tools, trigger, vulnerability, workflow"
+swid,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+commit,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+patch,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+identifiableAction,9,"annotation, commit, component, declarations, formula, metadata, targets, tools, vulnerability"
+issue,11,"annotation, component, declarations, formula, metadata, patch, releaseNotes, service, targets, tools, vulnerability"
+componentEvidence,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"
+identityEvidence,9,"annotation, component, componentEvidence, declarations, formula, metadata, targets, tools, vulnerability"
+evidenceMethod,10,"annotation, component, componentEvidence, declarations, formula, identityEvidence, metadata, targets, tools, vulnerability"
+evidenceOccurrence,9,"annotation, component, componentEvidence, declarations, formula, metadata, targets, tools, vulnerability"
+callstackFrame,9,"annotation, component, componentEvidence, declarations, formula, metadata, targets, tools, vulnerability"
+copyright,9,"annotation, component, componentEvidence, declarations, formula, metadata, targets, tools, vulnerability"
+bomLinkElement,31,"affirmation, annotation, claim, component, composition, considerations, declarations, definitions, energyConsumption, energyProvider, environmentalConsiderations, event, externalReference, formula, io, metadata, modelCard, requirement, resourceReferenceChoice, service, signatory, standard, targets, task, tool, tools, toolsLegacy, trigger, vulnerability, workflow, workspace"
+ref,10,"annotation, composition, event, formula, io, resourceReferenceChoice, task, trigger, workflow, workspace"
+dataClassification,8,"annotation, declarations, formula, metadata, service, targets, tools, vulnerability"
+step,3,"formula, task, workflow"
+io,4,"formula, task, trigger, workflow"
+resourceReferenceChoice,7,"event, formula, io, task, trigger, workflow, workspace"
+attestation,1,declarations
+conformance,3,"attestation, declarations, mapItem"
+confidence,3,"attestation, declarations, mapItem"
+targets,1,declarations
+affirmation,1,declarations
+proofOfConcept,1,vulnerability
+workflow,1,formula
+task,2,"formula, workflow"
+trigger,3,"formula, task, workflow"
+event,4,"formula, task, trigger, workflow"
+workspace,3,"formula, task, workflow"
+assessor,1,declarations
+mapItem,2,"attestation, declarations"
+claim,1,declarations
+declarationsEvidence,1,declarations
+evidenceData,2,"declarations, declarationsEvidence"
+signatory,2,"affirmation, declarations"
+standard,1,definitions
+requirement,2,"definitions, standard"
+level,2,"definitions, standard"
+refType,41,"affirmation, annotation, assessor, claim, component, componentData, componentEvidence, composition, considerations, credits, dataGovernance, declarations, declarationsEvidence, definitions, dependency, energyConsumption, energyProvider, environmentalConsiderations, evidenceData, evidenceOccurrence, formula, governanceParty, inlineDataInformation, level, metadata, modelCard, modelParameters, organizationAddress, organizationalContact, organizationalEntity, requirement, service, signatory, standard, targets, task, tools, trigger, vulnerability, workflow, workspace"
+version,15,"affect, annotation, component, declarations, definitions, formula, metadata, service, standard, swid, targets, tool, tools, toolsLegacy, vulnerability"
+hash-alg,24,"affirmation, annotation, claim, component, considerations, declarations, definitions, energyConsumption, energyProvider, environmentalConsiderations, externalReference, formula, hash, metadata, modelCard, requirement, service, signatory, standard, targets, tool, tools, toolsLegacy, vulnerability"
+hash-content,24,"affirmation, annotation, claim, component, considerations, declarations, definitions, energyConsumption, energyProvider, environmentalConsiderations, externalReference, formula, hash, metadata, modelCard, requirement, service, signatory, standard, targets, tool, tools, toolsLegacy, vulnerability"
+severity,2,"rating, vulnerability"
+scoreMethod,2,"rating, vulnerability"
+affectedStatus,2,"affect, vulnerability"
+tags,8,"annotation, component, declarations, formula, metadata, targets, tools, vulnerability"

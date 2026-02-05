@@ -1,0 +1,8 @@
+Subtheme,Huzaifa,Code
+Format & Interoperability,Foundational Principles,SBOM system supports baseline attributes
+Use Case Enablement,Format & Interoperability,SBOM system supports supplemental attributes
+Foundational Principles,Component Identification,Populate all component attributes adhering to Maturity Levels
+Component Identification,Format & Interoperability,Handle multiple names/aliases
+Data Completeness & Transparency,COmponent Identification,Use URL or mark supplier unknown
+Component Identification,Dependency & Relationship Mapping,Record originating supplier if different
+Data Completeness & Transparency,Cryptographic Hashes,Indicate hash as unknown if unavailable

@@ -1,0 +1,56 @@
+Source ID,Statement/Text,Abdullah ,Huzaifa
+2.3,"There are cases where certain Components or Component Attributes may not be available, may not make sense, may not be shareable due to contractual obligations, or may not materially contribute to Component identification at the time of an SBOM’s creation.",0,0
+2.3,The following are recommendations for handling undeclared data in known use cases.,0,0
+2.3,"Be cautious if you proceed with these alternatives to providing Component Attributes, as the goal of SBOMs is to provide software Supply Chain Transparency.",0,0
+2.3,Providing options for SBOM data to be undeclared is not intended to promote the obfuscation of the Component data.,0,0
+2.3,"These options are meant to enable SBOMs to be created in good faith even when missing data, conflicting data, or contractual obligations become a barrier.",0,0
+2.3,"It is expected that, if an SBOM has undeclared data, the Author continues to work to remove the barriers and reissue the SBOM with the appropriate data.",1,0
+2.3.1,The lack of first-hand knowledge of the composition of Components significantly contributes to the need for a method to manage missing or inadequate data for Component identification.,0,0
+2.3.1,"If the Author of the SBOM is not the Supplier of the software Component, the Author may lack the information or visibility necessary to generate some Attributes.",0,0
+2.3.1,"Another factor is the point in time at which the SBOM (and the Component) is created, roughly: pre-build, at build or packaging time, and post-build.",0,0
+2.3.1,"For example, binary software composition analysis performed post-build by a non-supplier.",0,0
+2.3.1,Author may detect a Component but not extract the binary Component to generate a hash.,0,0
+2.3.1,SBOMs must handle cases of missing Attributes gracefully.,1,1
+2.3.1,"A basic recommendation is to always provide all of the Baseline Attributes but explicitly define values that differentiate between “no assertion” (i.e., data is missing) and “no value” (i.e., the Attribute is not applicable for this specific SBOM).",1,1
+2.3.1,"Alternatively, an SBOM format can permit missing Baseline Attributes and treat them as default values (i.e., “no assertion” or “no value”).",1,0
+2.3.1,Refer to the specific SBOM format specifications for implementation.,0,0
+2.3.1,The Unknown Component Attributes data maturity levels are:,0,0
+2.3.1,Minimum Expected - Declaring a Baseline Attribute as “no assertion” or “no value” is only used when necessary to provide an SBOM in a reasonably timely manner.,1,1
+2.3.1,Recommended Practice - Declaring a Baseline Attribute as “no assertion” or “no value” is used rarely when sufficient effort matching the potential security risk of that Component is spent.,1,1
+2.3.1,"Aspirational Goal - When a Baseline Attribute for a Component has been declared as “no assertion” or “no value”, it is proactively tracked as a compliance gap.",1,1
+2.3.2,"At times, downstream Distributors of software will have contractual agreements with upstream Suppliers that require that the inclusion of software not be divulged publicly.",0,0
+2.3.2,"Therefore, a redaction of that Component from the publicly distributed SBOM is needed.",0,0
+2.3.2,"In this case, it is recommended to:",0,0
+2.3.2,Indicate the Component as redacted and provide a redaction rationale.,1,1
+2.3.2,Remove any Component identifying information but preserve the Component’s version or cryptographic hash.,1,1
+2.3.2,Maintain any of the dependency relationships to or from the redacted Component in a manner that honors the redaction.,1,1
+2.3.2,The Redacted Components maturity levels are:,0,0
+2.3.2,Minimum Expected - A Component’s Attributes that could identify it are redacted only when a Supplier contract requires it.,1,1
+2.3.2,Recommended Practice - The contract with a Supplier of a Component that requires redaction is approached for re-negotiation of a contract that allows Supply Chain Transparency.,1,1
+2.3.2,"Alternatively, a more transparent upstream Supplier is selected for future software development.",1,0
+2.3.2,Disclaimer: Your regulatory authorities may require a complete and accurate disclosure of all manufacturer-developed and third-party software Components as part of an SBOM.,0,0
+2.3.2,"Similarly, customers may also necessitate such disclosure.",0,0
+2.3.3,"When it is common knowledge that supplied software has Dependencies, but the included Dependencies are not known or only partially known, an SBOM system needs to be able to indicate that the list of Component Dependencies is incomplete.",1,1
+2.3.3,"For example, if a proprietary operating system is included in your distributed software but many of the included Dependencies of the operating system are unknown, the SBOM lists the known Dependencies and an indication that there are additional unknown Dependencies not listed.",0,0
+2.3.3,The Unknown Dependencies data maturity levels are:,0,0
+2.3.3,Minimum Expected - Every Direct Dependency to the Primary Component is identified in the SBOM with all Baseline Attributes identified (or indicated as shown in Section 2.3.1).,1,1
+2.3.3,"Deeper Dependencies may be declared as unknown, when necessary.",1,1
+2.3.3,It is recommended to provide a rationale if Dependencies are declared as unknown.,1,1
+2.3.3,Recommended Practice - Contact the upstream Supplier for their SBOM to provide the Component data needed.,1,1
+2.3.3,Provide this information either nested within your Primary Component’s SBOM or separately.,1,1
+2.3.3,Aspirational Goal - Use tooling to produce SBOMs for upstream supplied software where an SBOM cannot be procured.,1,1
+2.3.3,"Also, use tooling to gather data from upstream Supplier SBOMs and your organizational development to assist in producing robust SBOMs.",1,1
+2.3.3,More details about how to indicate unknown Dependencies in the assertions for relationship completeness can be found in Section 2.2.2.6.4.,0,0
+3.1,"To create an SBOM, the Supplier defines Components that the Supplier creates themselves, produces baseline and any supplemental Attributes for those Components, and enumerates all directly included Components.",1,1
+3.1,"SBOM information will ideally be generated as an integral part of the Supplier’s software build and packaging processes, which can be accomplished with modifications to existing development tools.",1,0
+3.1,"Any entity creating, modifying, packaging, and delivering software or software systems is considered a Supplier and is therefore responsible for defining Components and creating SBOMs.",1,0
+3.1,"This includes system integrators, who are essentially considered Suppliers for SBOM purposes.",0,0
+3.1,An organization can also act as a Supplier for internally developed Components.,0,0
+3.1,"When SBOMs for Included Components are available from upstream Suppliers, those SBOMs are provided with or incorporated into the primary SBOM.",1,1
+3.1,"Where such information is not available, a Supplier can provide “best effort” SBOMs, which will be indicated by the fact that the Author for an Included Component SBOM will not be the same as the Supplier of the Component.",1,1
+3.1,Section 2.2.2.6 describes a way for SBOM authors to make assertions about indirectly included upstream Components for which the Supplier has not provided an SBOM.,0,0
+3.1,"An SBOM includes Attributes used to identify Components and supplemental Attributes to capture characteristics of, or information about, Components.",0,1
+3.1,"Identity Attributes are essential, and supplemental Attributes may or may not be required depending on the use case or application.",0,0
+3.1,An SBOM from the Component’s Supplier serves as a system of record or authoritative source of information about the Component.,0,0
+3.1,"As noted elsewhere, some information may need to be validated with other external sources.",0,0
+3.1,"For example, vulnerability information about a Component can sometimes be derived from the NVD using CPE.",0,0

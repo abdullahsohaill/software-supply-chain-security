@@ -1,0 +1,3220 @@
+
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://template.org/cyclonedx/prescriptive-bom-1.6.schema.json",
+    "title": "Prescriptive CycloneDX BOM Schema v1.6 (Aligned with Official Design)",
+    "description": "A comprehensive JSON schema for CycloneDX v1.6, architecturally aligned with the official schema to facilitate accurate comparison.",
+    "type": "object",
+    "required": [
+        "bomFormat",
+        "specVersion"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "bomFormat": {
+            "description": "Specifies the format of the BOM. The bomFormat property is Required, and its value MUST be 'CycloneDX'.",
+            "type": "string",
+            "enum": ["CycloneDX"]
+        },
+        "specVersion": {
+            "description": "The version of the CycloneDX specification the BOM conforms to.",
+            "type": "string",
+            "examples": ["1.6"]
+        },
+        "serialNumber": {
+            "description": "A unique serial number for the BOM. If specified, it MUST conform to RFC 4122 (urn:uuid:*).",
+            "type": "string",
+            "pattern": "^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "version": {
+            "description": "The version of the BOM. Recommendation: Whenever an existing BOM is modified, the version of the BOM SHOULD be incremented by 1.",
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+        },
+        "metadata": {
+            "description": "Provides additional information about the BOM.",
+            "$ref": "#/definitions/metadata"
+        },
+        "components": {
+            "description": "A list of software, hardware, and data components.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/component"
+            },
+            "uniqueItems": true
+        },
+        "services": {
+            "description": "A list of services.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service"
+            },
+            "uniqueItems": true
+        },
+        "externalReferences": {
+            "description": "Provides the ability to document external references to the BOM.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/externalReference"
+            }
+        },
+        "dependencies": {
+            "description": "A dependency graph of components and services.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/dependency"
+            },
+            "minItems": 0
+        },
+        "compositions": {
+            "description": "Compositions describe the completeness of the BOM.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/composition"
+            }
+        },
+        "vulnerabilities": {
+            "description": "A list of known vulnerabilities.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/vulnerability"
+            }
+        },
+        "annotations": {
+            "description": "Provides a mechanism to annotate the BOM with external information.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/annotation"
+            }
+        },
+        "formulation": {
+            "description": "Describes how the BOM was formulated.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/formula"
+            }
+        },
+        "declarations": {
+            "type": "object",
+            "description": "The list of declarations which describe the conformance to standards.",
+            "properties": {
+                "assessors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/assessor"
+                    },
+                    "description": "The list of assessors. Each item MUST be an Assessor object."
+                },
+                "attestations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/attestation"
+                    },
+                    "description": "The list of attestations. Each item MUST be an Attestation object."
+                },
+                "claims": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/claim"
+                    },
+                    "description": "The list of claims. Each item MUST be a Claim object."
+                },
+                "evidence": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/declarationsEvidence"
+                    },
+                    "description": "The list of evidence. Each item MUST be an Evidence object."
+                },
+                "targets": {
+                    "$ref": "#/definitions/targets"
+                },
+                "affirmation": {
+                    "$ref": "#/definitions/affirmation"
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "definitions": {
+            "type": "object",
+            "description": "A collection of reusable objects (standards, levels, etc.).",
+            "properties": {
+                "standards": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/standard"
+                    },
+                    "description": "The list of standards. Each item MUST be a Standard object."
+                }
+            }
+        },
+        "properties": {
+            "description": "Provides the ability to add custom properties to the BOM.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/property"
+            }
+        },
+        "signature": {
+            "description": "An enveloped signature in JSON Signature Format (JSF).",
+            "$ref": "#/definitions/signature"
+        }
+    },
+    "definitions": {
+        "metadata": {
+            "type": "object",
+            "description": "Provides additional information about a BOM.",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "lifecycles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/lifecycle"
+                    }
+                },
+                "tools": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/tools"
+                        },
+                        {
+                            "$ref": "#/definitions/toolsLegacy"
+                        }
+                    ]
+                },
+                "authors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalContact"
+                    }
+                },
+                "component": {
+                    "$ref": "#/definitions/component"
+                },
+                "manufacturer": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "manufacture": {
+                    "$ref": "#/definitions/organizationalEntity",
+                    "deprecated": true
+                },
+                "supplier": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "licenses": {
+                    "$ref": "#/definitions/licenseChoice"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "lifecycle": {
+            "oneOf": [
+                {
+                    "title": "Pre-Defined Phase",
+                    "type": "object",
+                    "required": [
+                        "phase"
+                    ],
+                    "properties": {
+                        "phase": {
+                            "type": "string",
+                            "enum": [
+                                "design",
+                                "pre-build",
+                                "build",
+                                "post-build",
+                                "operations",
+                                "discovery",
+                                "decommission"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "title": "Custom Phase",
+                    "type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "tools": {
+            "type": "object",
+            "properties": {
+                "components": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "services": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/service"
+                    }
+                }
+            }
+        },
+        "toolsLegacy": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+                "$ref": "#/definitions/tool"
+            }
+        },
+        "tool": {
+            "type": "object",
+            "deprecated": true,
+            "properties": {
+                "vendor": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "hashes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/hash"
+                    }
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                }
+            }
+        },
+        "hash": {
+            "type": "object",
+            "required": [
+                "alg",
+                "content"
+            ],
+            "properties": {
+                "alg": {
+                    "$ref": "#/definitions/hash-alg"
+                },
+                "content": {
+                    "$ref": "#/definitions/hash-content"
+                }
+            }
+        },
+        "organizationalEntity": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "address": {
+                    "$ref": "#/definitions/organizationAddress"
+                },
+                "url": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    }
+                },
+                "contact": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalContact"
+                    }
+                }
+            }
+        },
+        "organizationalContact": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "idn-email"
+                },
+                "phone": {
+                    "type": "string"
+                }
+            }
+        },
+        "organizationAddress": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                },
+                "locality": {
+                    "type": "string"
+                },
+                "postOfficeBoxNumber": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                }
+            }
+        },
+        "property": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        "component": {
+            "type": "object",
+            "required": [
+                "type",
+                "name"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "application",
+                        "framework",
+                        "library",
+                        "container",
+                        "operating-system",
+                        "device",
+                        "device-driver",
+                        "firmware",
+                        "file",
+                        "machine-learning-model",
+                        "data",
+                        "platform",
+                        "cryptographic-asset"
+                    ]
+                },
+                "mime-type": {
+                    "type": "string",
+                    "pattern": "^[-+a-z0-9.]+/[-+a-z0-9.]+$"
+                },
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "supplier": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "manufacturer": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "authors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalContact"
+                    }
+                },
+                "author": {
+                    "type": "string",
+                    "deprecated": true
+                },
+                "publisher": {
+                    "type": "string"
+                },
+                "group": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "$ref": "#/definitions/version"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "scope": {
+                    "type": "string",
+                    "enum": [
+                        "required",
+                        "optional",
+                        "excluded"
+                    ],
+                    "default": "required"
+                },
+                "hashes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/hash"
+                    }
+                },
+                "licenses": {
+                    "$ref": "#/definitions/licenseChoice"
+                },
+                "copyright": {
+                    "type": "string"
+                },
+                "cpe": {
+                    "type": "string",
+                    "pattern": "^([c][p][e]:/[aho]?:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+:[^:]+)|(cpe:2\\.3:[aho*](:(((\\?*|\\*|-)([a-zA-Z0-9\\-._~]|%[0-9a-fA-F]{2})*)|[*])){10})$"
+                },
+                "purl": {
+                    "type": "string",
+                    "pattern": "^pkg:.+"
+                },
+                "omniborId": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "pattern": "^gitoid:blob:sha(1|256):[0-9a-fA-F]{40,}$"
+                    }
+                },
+                "swhid": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "pattern": "^swh:1:(cnt|dir|rel|rev|snp):[0-9a-f]{40}(;(origin|anchor|path|lines)=.+)*$"
+                    }
+                },
+                "swid": {
+                    "$ref": "#/definitions/swid"
+                },
+                "modified": {
+                    "type": "boolean",
+                    "deprecated": true
+                },
+                "pedigree": {
+                    "$ref": "#/definitions/pedigree"
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                },
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    },
+                    "uniqueItems": true
+                },
+                "evidence": {
+                    "$ref": "#/definitions/evidence"
+                },
+                "releaseNotes": {
+                    "$ref": "#/definitions/releaseNotes"
+                },
+                "modelCard": {
+                    "$ref": "#/definitions/modelCard"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/componentData"
+                    }
+                },
+                "cryptoProperties": {
+                    "$ref": "#/definitions/cryptoProperties"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "service": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "provider": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "group": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "$ref": "#/definitions/version"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "endpoints": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    }
+                },
+                "authenticated": {
+                    "type": "boolean"
+                },
+                "x-trust-boundary": {
+                    "type": "boolean"
+                },
+                "trustZone": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                             "flow": {
+                                "type": "string",
+                                "enum": [
+                                    "inbound",
+                                    "outbound",
+                                    "bi-directional",
+                                    "unknown"
+                                ]
+                            },
+                            "classification": {
+                                "$ref": "#/definitions/dataClassification"
+                            }
+                        }
+                    }
+                },
+                "licenses": {
+                    "$ref": "#/definitions/licenseChoice"
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/service"
+                    },
+                    "uniqueItems": true
+                },
+                "releaseNotes": {
+                    "$ref": "#/definitions/releaseNotes"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "externalReference": {
+            "type": "object",
+            "required": [
+                "url",
+                "type"
+            ],
+            "properties": {
+                "url": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "format": "iri-reference"
+                        },
+                        {
+                            "$ref": "#/definitions/bomLinkElement"
+                        }
+                    ]
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "vcs", "issue-tracker", "website", "advisories", "bom", "mailing-list", "social", "chat", "documentation", "support", "source-distribution", "distribution", "distribution-intake", "license", "build-meta", "build-system", "release-notes", "security-contact", "model-card", "log", "configuration", "evidence", "formulation", "attestation", "threat-model", "adversary-model", "risk-assessment", "vulnerability-assertion", "exploitability-statement", "pentest-report", "static-analysis-report", "dynamic-analysis-report", "runtime-analysis-report", "component-analysis-report", "maturity-report", "certification-report", "codified-infrastructure", "quality-metrics", "poam", "electronic-signature", "digital-signature", "rfc-9116", "other"
+                    ]
+                },
+                "hashes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/hash"
+                    }
+                }
+            }
+        },
+        "dependency": {
+            "type": "object",
+            "required": [
+                "ref"
+            ],
+            "properties": {
+                "ref": {
+                    "type": "string"
+                },
+                "dependsOn": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "provides": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                }
+            }
+        },
+        "composition": {
+            "type": "object",
+            "required": [
+                "aggregate"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "aggregate": {
+                    "type": "string",
+                    "enum": [
+                        "complete", "incomplete", "incomplete_first_party_only", "incomplete_third_party_only", "incomplete_first_party_proprietary_only", "incomplete_first_party_opensource_only", "incomplete_third_party_proprietary_only", "incomplete_third_party_opensource_only", "unknown", "not_specified"
+                    ]
+                },
+                "assemblies": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/ref"
+                            },
+                            {
+                                "$ref": "#/definitions/bomLinkElement"
+                            }
+                        ]
+                    },
+                    "uniqueItems": true
+                },
+                "dependencies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "vulnerabilities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "vulnerability": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "source": {
+                    "$ref": "#/definitions/vulnerabilitySource"
+                },
+                "references": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/vulnerabilityReference"
+                    }
+                },
+                "ratings": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/rating"
+                    }
+                },
+                "cwes": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 1
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "detail": {
+                    "type": "string"
+                },
+                "recommendation": {
+                    "type": "string"
+                },
+                "workaround": {
+                    "type": "string"
+                },
+                "proofOfConcept": {
+                    "$ref": "#/definitions/proofOfConcept"
+                },
+                "advisories": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/advisory"
+                    }
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "published": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "rejected": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "credits": {
+                    "$ref": "#/definitions/credits"
+                },
+                "tools": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/tools"
+                        },
+                        {
+                            "$ref": "#/definitions/toolsLegacy"
+                        }
+                    ]
+                },
+                "analysis": {
+                    "$ref": "#/definitions/impactAnalysis"
+                },
+                "affects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/affect"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "annotation": {
+            "type": "object",
+            "required": [
+                "subjects",
+                "annotator",
+                "timestamp",
+                "text"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "subjects": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/ref"
+                            },
+                            {
+                                "$ref": "#/definitions/bomLinkElement"
+                            }
+                        ]
+                    },
+                    "uniqueItems": true
+                },
+                "annotator": {
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "properties": {
+                                "organization": {
+                                    "$ref": "#/definitions/organizationalEntity"
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "individual": {
+                                    "$ref": "#/definitions/organizationalContact"
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "component": {
+                                    "$ref": "#/definitions/component"
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "service": {
+                                    "$ref": "#/definitions/service"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "formula": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/service"
+                    }
+                },
+                "workflows": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/workflow"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "vulnerabilitySource": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "vulnerabilityReference": {
+            "type": "object",
+            "required": [
+                "id",
+                "source"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "source": {
+                    "$ref": "#/definitions/vulnerabilitySource"
+                }
+            }
+        },
+        "rating": {
+            "type": "object",
+            "properties": {
+                "source": {
+                    "$ref": "#/definitions/vulnerabilitySource"
+                },
+                "score": {
+                    "type": "number"
+                },
+                "severity": {
+                    "$ref": "#/definitions/severity"
+                },
+                "method": {
+                    "$ref": "#/definitions/scoreMethod"
+                },
+                "vector": {
+                    "type": "string"
+                },
+                "justification": {
+                    "type": "string"
+                }
+            }
+        },
+        "advisory": {
+            "type": "object",
+            "required": [
+                "url"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "iri-reference"
+                }
+            }
+        },
+        "credits": {
+            "type": "object",
+            "properties": {
+                "organizations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalEntity"
+                    }
+                },
+                "individuals": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalContact"
+                    }
+                }
+            }
+        },
+        "impactAnalysis": {
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "enum": [
+                        "resolved", "resolved_with_pedigree", "exploitable", "in_triage", "false_positive", "not_affected"
+                    ]
+                },
+                "justification": {
+                    "type": "string",
+                    "enum": [
+                        "code_not_present", "code_not_reachable", "requires_configuration", "requires_dependency", "requires_environment", "protected_by_compiler", "protected_at_runtime", "protected_at_perimeter", "protected_by_mitigating_control"
+                    ]
+                },
+                "response": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "can_not_fix", "will_not_fix", "update", "rollback", "workaround_available"
+                        ]
+                    }
+                },
+                "detail": {
+                    "type": "string"
+                },
+                "firstIssued": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "lastUpdated": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "affect": {
+            "type": "object",
+            "required": [
+                "ref"
+            ],
+            "properties": {
+                "ref": {
+                    "type": "string"
+                },
+                "versions": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "oneOf": [
+                            {
+                                "required": ["version"]
+                            },
+                            {
+                                "required": ["range"]
+                            }
+                        ],
+                        "properties": {
+                            "version": {
+                                "$ref": "#/definitions/version"
+                            },
+                            "range": {
+                                "$ref": "#/definitions/versionRange"
+                            },
+                            "status": {
+                                "$ref": "#/definitions/affectedStatus"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "versionRange": {
+            "description": "A version range specified in Package URL Version Range syntax (vers)",
+            "type": "string"
+        },
+        "signature": {
+            "title": "JSON Signature Format",
+            "$ref": "https://cyclonedx.org/schema/jsf-0.82.schema.json#/definitions/signature"
+        },
+        "releaseNotes": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "major", "minor", "patch", "pre-release", "internal"
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                },
+                "featuredImage": {
+                    "type": "string",
+                    "format": "iri-reference"
+                },
+                "socialImage": {
+                    "type": "string",
+                    "format": "iri-reference"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "aliases": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "resolves": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/issue"
+                    }
+                },
+                "notes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/note"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "note": {
+            "type": "object",
+            "required": [
+                "text"
+            ],
+            "properties": {
+                "locale": {
+                    "type": "string",
+                    "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+                },
+                "text": {
+                    "$ref": "#/definitions/attachmentText"
+                }
+            }
+        },
+        "modelCard": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "modelParameters": {
+                    "$ref": "#/definitions/modelParameters"
+                },
+                "quantitativeAnalysis": {
+                    "$ref": "#/definitions/quantitativeAnalysis"
+                },
+                "considerations": {
+                    "$ref": "#/definitions/considerations"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "modelParameters": {
+            "type": "object",
+            "properties": {
+                "approach": {
+                    "$ref": "#/definitions/approach"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "architectureFamily": {
+                    "type": "string"
+                },
+                "modelArchitecture": {
+                    "type": "string"
+                },
+                "datasets": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/inlineDataInformation"
+                            },
+                            {
+                                "$ref": "#/definitions/dataReference"
+                            }
+                        ]
+                    }
+                },
+                "inputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ioParameter"
+                    }
+                },
+                "outputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ioParameter"
+                    }
+                }
+            }
+        },
+        "approach": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "supervised", "un-supervised", "semi-supervised", "self-supervised", "reinforcement-learning"
+                    ]
+                }
+            }
+        },
+        "inlineDataInformation": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "contents": {
+                    "$ref": "#/definitions/dataContents"
+                },
+                "classification": {
+                    "type": "string"
+                },
+                "sensitiveData": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "graphics": {
+                    "$ref": "#/definitions/graphicsCollection"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "governance": {
+                    "$ref": "#/definitions/dataGovernance"
+                }
+            }
+        },
+        "dataReference": {
+            "type": "object",
+            "properties": {
+                "ref": {
+                    "type": "string"
+                }
+            }
+        },
+        "dataContents": {
+            "type": "object",
+            "properties": {
+                "attachment": {
+                    "$ref": "#/definitions/attachmentText"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "graphicsCollection": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "collection": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/graphic"
+                    }
+                }
+            }
+        },
+        "graphic": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "image": {
+                    "$ref": "#/definitions/attachmentText"
+                }
+            }
+        },
+        "dataGovernance": {
+            "type": "object",
+            "properties": {
+                "custodians": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/governanceParty"
+                    }
+                },
+                "stewards": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/governanceParty"
+                    }
+                },
+                "owners": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/governanceParty"
+                    }
+                }
+            }
+        },
+        "governanceParty": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                {
+                    "$ref": "#/definitions/organizationalContact"
+                }
+            ]
+        },
+        "ioParameter": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "optional": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "quantitativeAnalysis": {
+            "type": "object",
+            "properties": {
+                "performanceMetrics": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/performanceMetric"
+                    }
+                },
+                "graphics": {
+                    "$ref": "#/definitions/graphicsCollection"
+                }
+            }
+        },
+        "performanceMetric": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "slice": {
+                    "type": "string"
+                },
+                "confidenceInterval": {
+                    "$ref": "#/definitions/confidenceInterval"
+                }
+            }
+        },
+        "confidenceInterval": {
+            "type": "object",
+            "properties": {
+                "lowerBound": {
+                    "type": "string"
+                },
+                "upperBound": {
+                    "type": "string"
+                }
+            }
+        },
+        "considerations": {
+            "type": "object",
+            "properties": {
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "useCases": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "technicalLimitations": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "performanceTradeoffs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ethicalConsiderations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ethicalConsideration"
+                    }
+                },
+                "environmentalConsiderations": {
+                    "$ref": "#/definitions/environmentalConsiderations"
+                },
+                "fairnessAssessments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/fairnessAssessment"
+                    }
+                }
+            }
+        },
+        "ethicalConsideration": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "mitigationStrategy": {
+                    "type": "string"
+                }
+            }
+        },
+        "fairnessAssessment": {
+            "type": "object",
+            "properties": {
+                "groupAtRisk": {
+                    "type": "string"
+                },
+                "benefits": {
+                    "type": "string"
+                },
+                "harms": {
+                    "type": "string"
+                },
+                "mitigationStrategy": {
+                    "type": "string"
+                }
+            }
+        },
+        "environmentalConsiderations": {
+            "type": "object",
+            "properties": {
+                "energyConsumptions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/energyConsumption"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "energyConsumption": {
+            "type": "object",
+            "required": [
+                "activity",
+                "energyProviders",
+                "activityEnergyCost"
+            ],
+            "properties": {
+                "activity": {
+                    "type": "string",
+                    "enum": [
+                        "design", "data-collection", "data-preparation", "training", "fine-tuning", "validation", "deployment", "inference", "other"
+                    ]
+                },
+                "energyProviders": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/energyProvider"
+                    }
+                },
+                "activityEnergyCost": {
+                    "$ref": "#/definitions/energyMeasure"
+                },
+                "co2CostEquivalent": {
+                    "$ref": "#/definitions/co2Measure"
+                },
+                "co2CostOffset": {
+                    "$ref": "#/definitions/co2Measure"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "energyProvider": {
+            "type": "object",
+            "required": [
+                "organization",
+                "energySource",
+                "energyProvided"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "organization": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "energySource": {
+                    "type": "string",
+                    "enum": [
+                        "coal", "oil", "natural-gas", "nuclear", "wind", "solar", "geothermal", "hydropower", "biofuel", "unknown", "other"
+                    ]
+                },
+                "energyProvided": {
+                    "$ref": "#/definitions/energyMeasure"
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                }
+            }
+        },
+        "energyMeasure": {
+            "type": "object",
+            "required": [
+                "value",
+                "unit"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "kWh"
+                    ]
+                }
+            }
+        },
+        "co2Measure": {
+            "type": "object",
+            "required": [
+                "value",
+                "unit"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "tCO2eq"
+                    ]
+                }
+            }
+        },
+        "componentData": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "contents": {
+                    "$ref": "#/definitions/dataContents"
+                },
+                "classification": {
+                    "type": "string"
+                },
+                "sensitiveData": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "graphics": {
+                    "$ref": "#/definitions/graphicsCollection"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "governance": {
+                    "$ref": "#/definitions/dataGovernance"
+                }
+            }
+        },
+        "cryptoProperties": {
+            "type": "object",
+            "required": [
+                "assetType"
+            ],
+            "properties": {
+                "assetType": {
+                    "type": "string",
+                    "enum": [
+                        "algorithm", "certificate", "protocol", "related-crypto-material"
+                    ]
+                },
+                "algorithmProperties": {
+                    "$ref": "#/definitions/algorithmProperties"
+                },
+                "certificateProperties": {
+                    "$ref": "#/definitions/certificateProperties"
+                },
+                "relatedCryptoMaterialProperties": {
+                    "$ref": "#/definitions/relatedCryptoMaterialProperties"
+                },
+                "protocolProperties": {
+                    "$ref": "#/definitions/protocolProperties"
+                },
+                "oid": {
+                    "type": "string"
+                }
+            }
+        },
+        "algorithmProperties": {
+            "type": "object",
+            "properties": {
+                "primitive": {
+                    "type": "string",
+                    "enum": [
+                        "drbg", "mac", "block-cipher", "stream-cipher", "signature", "hash", "pke", "xof", "kdf", "key-agree", "kem", "ae", "combiner", "other", "unknown"
+                    ]
+                },
+                "parameterSetIdentifier": {
+                    "type": "string"
+                },
+                "curve": {
+                    "type": "string"
+                },
+                "executionEnvironment": {
+                    "type": "string",
+                    "enum": [
+                        "software-plain-ram", "software-encrypted-ram", "software-tee", "hardware", "other", "unknown"
+                    ]
+                },
+                "implementationPlatform": {
+                    "type": "string",
+                    "enum": [
+                        "generic", "x86_32", "x86_64", "armv7-a", "armv7-m", "armv8-a", "armv8-m", "armv9-a", "armv9-m", "s390x", "ppc64", "ppc64le", "other", "unknown"
+                    ]
+                },
+                "certificationLevel": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "none", "fips140-1-l1", "fips140-1-l2", "fips140-1-l3", "fips140-1-l4", "fips140-2-l1", "fips140-2-l2", "fips140-2-l3", "fips140-2-l4", "fips140-3-l1", "fips140-3-l2", "fips140-3-l3", "fips140-3-l4", "cc-eal1", "cc-eal1+", "cc-eal2", "cc-eal2+", "cc-eal3", "cc-eal3+", "cc-eal4", "cc-eal4+", "cc-eal5", "cc-eal5+", "cc-eal6", "cc-eal6+", "cc-eal7", "cc-eal7+", "other", "unknown"
+                        ]
+                    }
+                },
+                "mode": {
+                    "type": "string",
+                    "enum": [
+                        "cbc", "ecb", "ccm", "gcm", "cfb", "ofb", "ctr", "other", "unknown"
+                    ]
+                },
+                "padding": {
+                    "type": "string",
+                    "enum": [
+                        "pkcs5", "pkcs7", "pkcs1v15", "oaep", "raw", "other", "unknown"
+                    ]
+                },
+                "cryptoFunctions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "generate", "keygen", "encrypt", "decrypt", "digest", "tag", "keyderive", "sign", "verify", "encapsulate", "decapsulate", "other", "unknown"
+                        ]
+                    }
+                },
+                "classicalSecurityLevel": {
+                    "type": "integer"
+                },
+                "nistQuantumSecurityLevel": {
+                    "type": "integer"
+                }
+            }
+        },
+        "certificateProperties": {
+            "type": "object",
+            "properties": {
+                "subjectName": {
+                    "type": "string"
+                },
+                "issuerName": {
+                    "type": "string"
+                },
+                "notValidBefore": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "notValidAfter": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "signatureAlgorithmRef": {
+                    "type": "string"
+                },
+                "subjectPublicKeyRef": {
+                    "type": "string"
+                },
+                "certificateFormat": {
+                    "type": "string"
+                },
+                "certificateExtension": {
+                    "type": "string"
+                }
+            }
+        },
+        "relatedCryptoMaterialProperties": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "private-key", "public-key", "secret-key", "key", "ciphertext", "signature", "digest", "initialization-vector", "nonce", "seed", "salt", "shared-secret", "tag", "additional-data", "password", "credential", "token", "other", "unknown"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string",
+                    "enum": [
+                        "pre-activation", "active", "suspended", "deactivated", "compromised", "destroyed"
+                    ]
+                },
+                "algorithmRef": {
+                    "type": "string"
+                },
+                "creationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "activationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updateDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "expirationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "securedBy": {
+                    "$ref": "#/definitions/securedBy"
+                }
+            }
+        },
+        "securedBy": {
+            "type": "object",
+            "properties": {
+                "mechanism": {
+                    "type": "string"
+                },
+                "algorithmRef": {
+                    "type": "string"
+                }
+            }
+        },
+        "protocolProperties": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "tls", "ssh", "ipsec", "ike", "sstp", "wpa", "other", "unknown"
+                    ]
+                },
+                "version": {
+                    "type": "string"
+                },
+                "cipherSuites": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/cipherSuite"
+                    }
+                },
+                "ikev2TransformTypes": {
+                    "$ref": "#/definitions/ikev2TransformTypes"
+                },
+                "cryptoRefArray": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "cipherSuite": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "algorithms": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "identifiers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "ikev2TransformTypes": {
+            "type": "object",
+            "properties": {
+                "encr": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "integ": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ke": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "esn": {
+                    "type": "boolean"
+                },
+                "auth": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "licenseChoice": {
+            "type": "array",
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/license"
+                    }
+                },
+                {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "items": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "expression"
+                            ],
+                            "properties": {
+                                "expression": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "license": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "text": {
+                    "$ref": "#/definitions/attachmentText"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "iri-reference"
+                }
+            }
+        },
+        "attachmentText": {
+            "type": "object",
+            "required": [
+                "content"
+            ],
+            "properties": {
+                "contentType": {
+                    "type": "string",
+                    "default": "text/plain"
+                },
+                "encoding": {
+                    "type": "string",
+                    "enum": [
+                        "base64"
+                    ]
+                },
+                "content": {
+                    "type": "string"
+                }
+            }
+        },
+        "swid": {
+            "type": "object",
+            "required": [
+                "tagId",
+                "name"
+            ],
+            "properties": {
+                "tagId": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "tagVersion": {
+                    "type": "integer"
+                },
+                "patch": {
+                    "type": "boolean"
+                },
+                "text": {
+                    "$ref": "#/definitions/attachmentText"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "iri-reference"
+                }
+            }
+        },
+        "pedigree": {
+            "type": "object",
+            "properties": {
+                "ancestors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "descendants": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "variants": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "commits": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/commit"
+                    }
+                },
+                "patches": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/patch"
+                    }
+                },
+                "notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "commit": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "iri-reference"
+                },
+                "author": {
+                    "$ref": "#/definitions/identifiableAction"
+                },
+                "committer": {
+                    "$ref": "#/definitions/identifiableAction"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "patch": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "unofficial", "monkey", "backport", "cherry-pick"
+                    ]
+                },
+                "diff": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "$ref": "#/definitions/attachmentText"
+                        },
+                        "url": {
+                            "type": "string",
+                            "format": "iri-reference"
+                        }
+                    }
+                },
+                "resolves": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/issue"
+                    }
+                }
+            }
+        },
+        "identifiableAction": {
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "idn-email"
+                }
+            }
+        },
+        "issue": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "defect", "enhancement", "security"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string",
+                            "format": "iri-reference"
+                        }
+                    }
+                },
+                "references": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    }
+                }
+            }
+        },
+        "evidence": {
+            "type": "object",
+            "properties": {
+                "identity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/identityEvidence"
+                    }
+                },
+                "occurrences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/evidenceOccurrence"
+                    }
+                },
+                "callstack": {
+                    "$ref": "#/definitions/callstack"
+                },
+                "licenses": {
+                    "$ref": "#/definitions/licenseChoice"
+                },
+                "copyright": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/copyright"
+                    }
+                }
+            }
+        },
+        "identityEvidence": {
+            "type": "object",
+            "required": [
+                "field"
+            ],
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "group", "name", "version", "purl", "cpe", "swid", "hash"
+                    ]
+                },
+                "confidence": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "methods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/evidenceMethod"
+                    }
+                },
+                "tools": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "evidenceMethod": {
+            "type": "object",
+            "required": [
+                "technique",
+                "confidence"
+            ],
+            "properties": {
+                "technique": {
+                    "type": "string"
+                },
+                "confidence": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        "evidenceOccurrence": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "location": {
+                    "type": "string"
+                }
+            }
+        },
+        "callstack": {
+            "type": "object",
+            "properties": {
+                "frames": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/callstackFrame"
+                    }
+                }
+            }
+        },
+        "callstackFrame": {
+            "type": "object",
+            "properties": {
+                "module": {
+                    "type": "string"
+                },
+                "function": {
+                    "type": "string"
+                }
+            }
+        },
+        "copyright": {
+            "type": "object",
+            "required": [
+                "text"
+            ],
+            "properties": {
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "bomLinkElement": {
+            "type": "string",
+            "format": "iri-reference",
+            "pattern": "^urn:cdx:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/[1-9][0-9]*#.*$"
+        },
+        "ref": {
+            "type": "string"
+        },
+        "dataClassification": {
+            "type": "string"
+        },
+        "step": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "commands": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "executed": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "io": {
+            "type": "object",
+            "properties": {
+                "source": {
+                    "$ref": "#/definitions/resourceReferenceChoice"
+                },
+                "target": {
+                    "$ref": "#/definitions/resourceReferenceChoice"
+                },
+                "resource": {
+                    "$ref": "#/definitions/resourceReferenceChoice"
+                },
+                "parameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                },
+                "environmentVars": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                },
+                "data": {
+                    "$ref": "#/definitions/attachmentText"
+                }
+            }
+        },
+        "resourceReferenceChoice": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/ref"
+                },
+                {
+                    "$ref": "#/definitions/bomLinkElement"
+                }
+            ]
+        },
+        "attestation": {
+            "type": "object",
+            "properties": {
+                "summary": {
+                    "type": "string"
+                },
+                "assessor": {
+                    "type": "string"
+                },
+                "map": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/mapItem"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "conformance": {
+            "type": "object",
+            "properties": {
+                "score": {
+                    "type": "number"
+                },
+                "rationale": {
+                    "type": "string"
+                },
+                "mitigationStrategies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "confidence": {
+            "type": "object",
+            "properties": {
+                "score": {
+                    "type": "number"
+                },
+                "rationale": {
+                    "type": "string"
+                }
+            }
+        },
+        "targets": {
+            "type": "object",
+            "properties": {
+                "organizations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/organizationalEntity"
+                    }
+                },
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/component"
+                    }
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/service"
+                    }
+                }
+            }
+        },
+        "affirmation": {
+            "type": "object",
+            "properties": {
+                "statement": {
+                    "type": "string"
+                },
+                "signatories": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/signatory"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "proofOfConcept": {
+            "type": "object",
+            "properties": {
+                "reproductionSteps": {
+                    "type": "string"
+                },
+                "environment": {
+                    "type": "string"
+                },
+                "supportingMaterial": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/attachmentText"
+                    }
+                }
+            }
+        },
+        "workflow": {
+            "type": "object",
+            "required": [
+                "bom-ref", "uid", "taskTypes"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "uid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "resourceReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/resourceReferenceChoice"
+                    }
+                },
+                "tasks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/task"
+                    }
+                },
+                "taskDependencies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dependency"
+                    }
+                },
+                "taskTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "trigger": {
+                    "$ref": "#/definitions/trigger"
+                },
+                "steps": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/step"
+                    }
+                },
+                "inputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "outputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "timeStart": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "timeEnd": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "workspaces": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/workspace"
+                    }
+                },
+                "runtimeTopology": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dependency"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "task": {
+            "type": "object",
+            "required": [
+                "bom-ref", "uid", "taskTypes"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "uid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "resourceReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/resourceReferenceChoice"
+                    }
+                },
+                "taskTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "copy", "clone", "lint", "scan", "merge", "build", "test", "deliver", "deploy", "release", "clean", "other"
+                        ]
+                    }
+                },
+                "trigger": {
+                    "$ref": "#/definitions/trigger"
+                },
+                "steps": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/step"
+                    }
+                },
+                "inputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "outputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "timeStart": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "timeEnd": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "workspaces": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/workspace"
+                    }
+                },
+                "runtimeTopology": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dependency"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "trigger": {
+            "type": "object",
+            "required": [
+                "bom-ref", "uid", "type"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "uid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "resourceReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/resourceReferenceChoice"
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "manual", "api", "webhook", "scheduled"
+                    ]
+                },
+                "event": {
+                    "$ref": "#/definitions/event"
+                },
+                "conditions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "expression": {
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/property"
+                                }
+                            }
+                        }
+                    }
+                },
+                "timeActivated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "inputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "outputs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/io"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "event": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "timeReceived": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "data": {
+                    "$ref": "#/definitions/attachmentText"
+                },
+                "source": {
+                    "$ref": "#/definitions/resourceReferenceChoice"
+                },
+                "target": {
+                    "$ref": "#/definitions/resourceReferenceChoice"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "workspace": {
+            "type": "object",
+            "required": [
+                "bom-ref", "uid"
+            ],
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "uid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "aliases": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "resourceReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/resourceReferenceChoice"
+                    }
+                },
+                "accessMode": {
+                    "type": "string",
+                    "enum": [
+                        "read-only", "read-write", "read-write-once", "write-once", "write-only"
+                    ]
+                },
+                "mountPath": {
+                    "type": "string"
+                },
+                "managedDataType": {
+                    "type": "string"
+                },
+                "volumeRequest": {
+                    "type": "string"
+                },
+                "volume": {
+                    "type": "object",
+                    "properties": {
+                        "uid": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "mode": {
+                            "type": "string",
+                            "enum": [
+                                "filesystem", "block"
+                            ]
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "sizeAllocated": {
+                            "type": "string"
+                        },
+                        "persistent": {
+                            "type": "boolean"
+                        },
+                        "remote": {
+                            "type": "boolean"
+                        },
+                        "properties": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/property"
+                            }
+                        }
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                }
+            }
+        },
+        "assessor": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "thirdParty": {
+                    "type": "boolean"
+                },
+                "organization": {
+                    "$ref": "#/definitions/organizationalEntity"
+                }
+            }
+        },
+        "mapItem": {
+            "type": "object",
+            "properties": {
+                "requirement": {
+                    "type": "string"
+                },
+                "claims": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "counterClaims": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "conformance": {
+                    "$ref": "#/definitions/conformance"
+                },
+                "confidence": {
+                    "$ref": "#/definitions/confidence"
+                }
+            }
+        },
+        "claim": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "target": {
+                    "type": "string"
+                },
+                "predicate": {
+                    "type": "string"
+                },
+                "mitigationStrategies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "reasoning": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "counterEvidence": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "declarationsEvidence": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "propertyName": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/evidenceData"
+                    }
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "expires": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "author": {
+                    "$ref": "#/definitions/organizationalContact"
+                },
+                "reviewer": {
+                    "$ref": "#/definitions/organizationalContact"
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "evidenceData": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "contents": {
+                    "type": "object",
+                    "properties": {
+                        "attachment": {
+                            "$ref": "#/definitions/attachmentText"
+                        },
+                        "url": {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    }
+                },
+                "classification": {
+                    "type": "string"
+                },
+                "sensitiveData": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "governance": {
+                    "$ref": "#/definitions/dataGovernance"
+                }
+            }
+        },
+        "signatory": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "organization": {
+                    "$ref": "#/definitions/organizationalEntity"
+                },
+                "externalReference": {
+                    "$ref": "#/definitions/externalReference"
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "standard": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "requirements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/requirement"
+                    }
+                },
+                "levels": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/level"
+                    }
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/signature"
+                }
+            }
+        },
+        "requirement": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "descriptions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "openCre": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "parent": {
+                    "type": "string"
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/property"
+                    }
+                },
+                "externalReferences": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/externalReference"
+                    }
+                }
+            }
+        },
+        "level": {
+            "type": "object",
+            "properties": {
+                "bom-ref": {
+                    "$ref": "#/definitions/refType"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "requirements": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "refType": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "hash-alg": {
+            "type": "string",
+            "enum": [
+                "MD5", "SHA-1", "SHA-256", "SHA-384", "SHA-512", "SHA3-256", "SHA3-384", "SHA3-512", "BLAKE2b-256", "BLAKE2b-384", "BLAKE2b-512", "BLAKE3"
+            ]
+        },
+        "hash-content": {
+            "type": "string",
+            "pattern": "^([a-fA-F0-9]{32}|[a-fA-F0-9]{40}|[a-fA-F0-9]{64}|[a-fA-F0-9]{96}|[a-fA-F0-9]{128})$"
+        },
+        "severity": {
+            "type": "string",
+            "enum": [
+                "none", "low", "medium", "high", "info", "critical", "unknown"
+            ]
+        },
+        "scoreMethod": {
+            "type": "string",
+            "enum": [
+                "CVSSv2", "CVSSv3", "CVSSv31", "CVSSv4", "OWASP", "SSVC", "other"
+            ]
+        },
+        "affectedStatus": {
+            "type": "string",
+            "enum": [
+                "affected", "unaffected", "unknown"
+            ],
+            "default": "affected"
+        }
+    }
+}

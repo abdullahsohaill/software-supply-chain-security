@@ -1,0 +1,44 @@
+// Thematic Hierarchy
+digraph CISA_SBOM_Taxonomy {
+	fontsize=20 label="Hierarchical Taxonomy of CISA SBOM Requirements" rankdir=LR size="12,12"
+	node [fillcolor=skyblue fontsize=14 shape=box style=filled]
+	"Foundational Principles" [label="Foundational Principles"]
+	"Supply Chain Relationships" [label="Supply Chain Relationships"]
+	"Data Governance & Transparency" [label="Data Governance & Transparency"]
+	"Use Case Enablement" [label="Use Case Enablement"]
+	"Component & SBOM Attributes" [label="Component & SBOM Attributes"]
+	"SBOM Operations & Lifecycle" [label="SBOM Operations & Lifecycle"]
+	node [fillcolor=lightgreen fontsize=12 shape=ellipse style=filled]
+	"Foundational Principles" [label="Foundational Principles"]
+	"Unique Identifiers" [label="Unique Identifiers"]
+	"SBOM Creation & Tooling" [label="SBOM Creation & Tooling"]
+	"Handling Redactions" [label="Handling Redactions"]
+	"Legal Information" [label="Legal Information"]
+	"Format & Interoperability" [label="Format & Interoperability"]
+	"Dependency & Relationship Mapping" [label="Dependency & Relationship Mapping"]
+	"Data Completeness & Transparency" [label="Data Completeness & Transparency"]
+	"Cryptographic Hashes" [label="Cryptographic Hashes"]
+	"Lifecycle Management" [label="Lifecycle Management"]
+	"Use Case Enablement" [label="Use Case Enablement"]
+	"SBOM Distribution" [label="SBOM Distribution"]
+	"Component Identification" [label="Component Identification"]
+	"SBOM Metadata" [label="SBOM Metadata"]
+	"Supply Chain Practices" [label="Supply Chain Practices"]
+	"Assurance & Trust" [label="Assurance & Trust"]
+	"Foundational Principles" -> "Foundational Principles"
+	"Data Governance & Transparency" -> "Data Completeness & Transparency"
+	"Foundational Principles" -> "Format & Interoperability"
+	"Component & SBOM Attributes" -> "Component Identification"
+	"Use Case Enablement" -> "Use Case Enablement"
+	"Component & SBOM Attributes" -> "SBOM Metadata"
+	"Supply Chain Relationships" -> "Dependency & Relationship Mapping"
+	"Component & SBOM Attributes" -> "Cryptographic Hashes"
+	"Component & SBOM Attributes" -> "Unique Identifiers"
+	"Component & SBOM Attributes" -> "Legal Information"
+	"SBOM Operations & Lifecycle" -> "Lifecycle Management"
+	"Data Governance & Transparency" -> "Handling Redactions"
+	"SBOM Operations & Lifecycle" -> "Supply Chain Practices"
+	"SBOM Operations & Lifecycle" -> "SBOM Creation & Tooling"
+	"SBOM Operations & Lifecycle" -> "Assurance & Trust"
+	"SBOM Operations & Lifecycle" -> "SBOM Distribution"
+}

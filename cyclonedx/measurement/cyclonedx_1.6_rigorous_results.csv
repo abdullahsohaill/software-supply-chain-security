@@ -1,0 +1,6 @@
+File,Status,Schema_Error,CISA_Supplier,CISA_Timestamp,CISA_Tool_Author,Feature_Formulation,Feature_ML_BOM,Graph_Present,Graph_Integrity
+package-lock.json,Schema Violation,'bomFormat' is a required property,False,False,False,False,False,False,N/A
+package.json,Schema Violation,'bomFormat' is a required property,False,False,False,False,False,False,N/A
+cdxgen_1.6.json,Valid SBOM,,False,True,True,False,False,True,Failed (1 dangling)
+trivy_1.6.json,Valid SBOM,,False,True,True,False,False,True,Valid
+syft_1.6.json,Valid SBOM,,False,True,True,False,False,True,Valid
