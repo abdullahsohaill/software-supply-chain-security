@@ -4,13 +4,13 @@ import pandas as pd
 import requests
 from jsonschema import validate, ValidationError
 
-# --- CONFIGURATION ---
-# INPUT_DIR = "wild_cyclonedx_1.6_sboms"
+
+
 INPUT_DIR = "tool_experiment"
 RESULTS_FILE = "cyclonedx_1.6_rigorous_results.csv"
 SCHEMA_URL = "https://cyclonedx.org/schema/bom-1.6.schema.json"
 
-# --- STEP 1: FETCH OFFICIAL SCHEMA ---
+
 print("[*] Fetching Official CycloneDX 1.6 Schema...")
 try:
     schema_response = requests.get(SCHEMA_URL)
@@ -34,28 +34,28 @@ def analyze_sbom_rigorous(file_path):
             "Graph_Present": False, "Graph_Integrity": "N/A"
         }
 
-    # --- STEP 2: STRICT SCHEMA VALIDATION ---
-    # We perform validation but DON'T stop if it fails. We want to see WHY.
+    
+    
     try:
         validate(instance=data, schema=CDX_SCHEMA)
         is_schema_valid = True
         validation_error = None
     except ValidationError as e:
         is_schema_valid = False
-        # Capture the first line of the error for the CSV
+        
         validation_error = e.message.split("\n")[0][:100] 
 
-    # --- STEP 3: SEMANTIC / POLICY ANALYSIS ---
+    
     metadata = data.get("metadata", {})
     component = metadata.get("component", {})
     
-    # 3.1 CISA Compliance
+    
     has_supplier = False
-    # Check root component supplier
+    
     if isinstance(component, dict) and "supplier" in component and isinstance(component["supplier"], dict):
         if "name" in component["supplier"] and component["supplier"]["name"]:
             has_supplier = True
-    # Check metadata supplier (older style but valid)
+    
     elif "supplier" in metadata and isinstance(metadata["supplier"], dict):
         if "name" in metadata["supplier"] and metadata["supplier"]["name"]:
             has_supplier = True
@@ -68,7 +68,7 @@ def analyze_sbom_rigorous(file_path):
     elif "tools" in metadata:
         has_tool_author = True
 
-    # 3.2 Advanced Feature Usage
+    
     has_formulation = "formulation" in data and isinstance(data["formulation"], list) and len(data["formulation"]) > 0
     has_modelcard = "modelCard" in data
     
@@ -78,7 +78,7 @@ def analyze_sbom_rigorous(file_path):
                 has_modelcard = True
                 break
     
-    # 3.3 Dependency Graph Integrity
+    
     dependencies = data.get("dependencies", [])
     has_dep_graph = isinstance(dependencies, list) and len(dependencies) > 0
     
@@ -86,11 +86,11 @@ def analyze_sbom_rigorous(file_path):
     
     if has_dep_graph:
         defined_refs = set()
-        # Get root ref
+        
         if isinstance(component, dict) and "bom-ref" in component:
             defined_refs.add(component["bom-ref"])
             
-        # Get component refs
+        
         if isinstance(data.get("components"), list):
             for c in data["components"]:
                 if isinstance(c, dict) and "bom-ref" in c:
@@ -128,97 +128,97 @@ def analyze_sbom_rigorous(file_path):
         "Graph_Integrity": graph_integrity
     }
 
-# def analyze_sbom_rigorous(file_path):
-#     try:
-#         with open(file_path, 'r', encoding='utf-8') as f:
-#             data = json.load(f)
-#     except:
-#         return {"File": os.path.basename(file_path), "Status": "Invalid JSON"}
 
-#     # --- STEP 2: STRICT SCHEMA VALIDATION ---
-#     try:
-#         validate(instance=data, schema=CDX_SCHEMA)
-#         is_schema_valid = True
-#         validation_error = None
-#     except ValidationError as e:
-#         is_schema_valid = False
-#         validation_error = e.message.split("\n")[0] # Keep it brief
 
-#     # If it fails schema validation, we treat it differently in the paper
-#     # (e.g. "X% of SBOMs were invalid artifacts")
-    
-#     # --- STEP 3: SEMANTIC / POLICY ANALYSIS ---
-#     # We run this even on invalid files to see *intent*, but usually analyze valid ones.
-    
-#     metadata = data.get("metadata", {})
-#     component = metadata.get("component", {})
-    
-#     # 3.1 CISA Compliance (Strict)
-#     # Must have Supplier Name (Non-empty string)
-#     has_supplier = False
-#     if "supplier" in component and "name" in component["supplier"]:
-#         if isinstance(component["supplier"]["name"], str) and len(component["supplier"]["name"]) > 0:
-#             has_supplier = True
-#     elif "supplier" in metadata and "name" in metadata["supplier"]:
-#         if isinstance(metadata["supplier"]["name"], str) and len(metadata["supplier"]["name"]) > 0:
-#             has_supplier = True
 
-#     # Must have Timestamp
-#     has_timestamp = "timestamp" in metadata and len(metadata["timestamp"]) > 0
-    
-#     # Must have Tool/Author
-#     has_tool_author = ("authors" in metadata and len(metadata["authors"]) > 0) or \
-#                       ("tools" in metadata)
 
-#     # 3.2 Advanced Feature Usage (The "Bloat" Check)
-#     has_formulation = "formulation" in data and len(data["formulation"]) > 0
-#     has_modelcard = "modelCard" in data # Root level
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-#     # Also check components for ML model type (Semantic check)
-#     if not has_modelcard:
-#         for c in data.get("components", []):
-#             if c.get("type") == "machine-learning-model":
-#                 has_modelcard = True
-#                 break
+
+
     
-#     # 3.3 Dependency Graph Integrity
-#     # Do we have a dependency graph?
-#     dependencies = data.get("dependencies", [])
-#     has_dep_graph = len(dependencies) > 0
+
+
     
-#     # Deep Check: Do the dependencies actually reference components that exist?
-#     # This detects "dangling references" - a common data quality issue.
-#     graph_integrity = "N/A"
-#     if has_dep_graph:
-#         # Collect all defined BOM-Refs
-#         defined_refs = set()
-#         if "bom-ref" in component: defined_refs.add(component["bom-ref"])
-#         for c in data.get("components", []):
-#             if "bom-ref" in c: defined_refs.add(c["bom-ref"])
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
             
-#         # Check if dependency refs exist in defined_refs
-#         dangling_count = 0
-#         for d in dependencies:
-#             if d.get("ref") not in defined_refs:
-#                 dangling_count += 1
-        
-#         if dangling_count == 0:
-#             graph_integrity = "Valid"
-#         else:
-#             graph_integrity = f"Failed ({dangling_count} dangling)"
 
-#     return {
-#         "File": os.path.basename(file_path),
-#         "Status": "Valid SBOM" if is_schema_valid else "Schema Violation",
-#         "Schema_Error": validation_error,
-#         "CISA_Supplier": has_supplier,
-#         "CISA_Timestamp": has_timestamp,
-#         "CISA_Tool_Author": has_tool_author,
-#         "Feature_Formulation": has_formulation,
-#         "Feature_ML_BOM": has_modelcard,
-#         "Graph_Present": has_dep_graph,
-#         "Graph_Integrity": graph_integrity
-#     }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def main():
     if not os.path.exists(INPUT_DIR):

@@ -3,7 +3,7 @@ import json
 import time
 import os
 
-# --- CONFIGURATION ---
+
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "") 
 OUTPUT_DIR = "wild_cyclonedx_1.6_sboms"
 MAX_FILES = 1000
@@ -20,10 +20,7 @@ def search_github_sboms():
     downloaded_repos = set()
     files_downloaded = 0
     
-    # --- THE STRICT QUERY ---
-    # This mirrors your partner's approach.
-    # It looks for files ending in .json that contain the exact string: "specVersion": "1.6"
-    # We add "CycloneDX" to ensure it's not some other random file with a specVersion key.
+    
     query = 'extension:json "specVersion": "1.6" "CycloneDX"'
     
     url = f"https://api.github.com/search/code?q={query}&per_page=100"
@@ -31,7 +28,7 @@ def search_github_sboms():
     print(f"[*] Searching for CycloneDX 1.6 specific files...")
 
     page = 1
-    # GitHub limits code search to 1000 results (10 pages)
+    
     while page <= 10 and files_downloaded < MAX_FILES:
         try:
             print(f"[*] Fetching page {page}...")
@@ -55,7 +52,7 @@ def search_github_sboms():
             for item in items:
                 repo_name = item['repository']['full_name']
                 
-                # Filter: One SBOM per repository (same as partner)
+                
                 if repo_name in downloaded_repos:
                     continue
 
@@ -65,8 +62,8 @@ def search_github_sboms():
                     file_content = requests.get(raw_url).text
                     json_content = json.loads(file_content)
                     
-                    # DOUBLE CHECK: Ensure it is actually 1.6
-                    # (GitHub search is fuzzy, so we must verify manually)
+                    
+                    
                     if json_content.get("specVersion") == "1.6":
                         
                         safe_filename = repo_name.replace("/", "_") + ".json"
