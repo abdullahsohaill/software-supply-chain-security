@@ -16,41 +16,46 @@ from . import BaseTestCase, extract_all_components
 class TC1CISACompliance(BaseTestCase):
     """Test case for CISA Minimum Elements compliance."""
     
-    # CISA Minimum Elements for CycloneDX
+    
     CISA_ELEMENTS = [
-        "supplier_name",      # metadata.supplier.name OR component.supplier.name
-        "component_name",     # components[].name
-        "component_version",  # components[].version
-        "unique_identifier",  # components[].purl OR bom-ref
-        "dependency_rel",     # dependencies[]
-        "author",             # metadata.authors OR metadata.manufacturer
-        "timestamp"           # metadata.timestamp
+        "supplier_name",      
+        "component_name",     
+        "component_version",  
+        "unique_identifier",  
+        "dependency_rel",     
+        "author",             
+        "timestamp"           
     ]
     
     def __init__(self):
         super().__init__("TC1", "CISA Minimum Elements Compliance")
     
     def check_mitigation(self, sbom: Dict[str, Any]) -> Dict[str, Any]:
-        """Check if SBOM has key CISA fields."""
+        """Check if SBOM has key CISA fields with robust validation."""
         metadata = sbom.get("metadata", {})
         
-        # Check supplier
+        
         has_supplier = False
         if "supplier" in metadata and isinstance(metadata["supplier"], dict):
-            has_supplier = bool(metadata["supplier"].get("name"))
-        # Also check in root component
+            name = metadata["supplier"].get("name", "").strip()
+            
+            has_supplier = bool(name) and name.lower() != "organization"
+            
+        
         if not has_supplier and "component" in metadata:
             comp = metadata["component"]
             if isinstance(comp, dict) and "supplier" in comp:
-                has_supplier = bool(comp.get("supplier", {}).get("name"))
+                name = comp.get("supplier", {}).get("name", "").strip()
+                has_supplier = bool(name)
         
-        # Check timestamp
+        
         has_timestamp = bool(metadata.get("timestamp"))
         
-        # Check authors
+        
         has_authors = bool(metadata.get("authors"))
         
-        # Check tools (alternative to authors)
+        
+        
         has_tools = bool(metadata.get("tools"))
         
         return {
@@ -70,51 +75,66 @@ class TC1CISACompliance(BaseTestCase):
         elements_present = 0
         element_status = {}
         
-        # 1. Supplier Name
+        
         has_supplier = False
         if "supplier" in metadata and isinstance(metadata["supplier"], dict):
-            has_supplier = bool(metadata["supplier"].get("name"))
+             
+            name = metadata["supplier"].get("name", "").strip()
+            has_supplier = bool(name)
+            
         if not has_supplier and "component" in metadata:
             comp = metadata.get("component", {})
-            has_supplier = bool(comp.get("supplier", {}).get("name"))
+            name = comp.get("supplier", {}).get("name", "").strip()
+            has_supplier = bool(name)
+            
         element_status["supplier_name"] = has_supplier
         if has_supplier:
             elements_present += 1
         
-        # 2. Component Name
-        has_comp_name = any(c.get("name") for c in components if isinstance(c, dict))
+        
+        
+        
+        
+        total_comps = len(components)
+        comps_with_name = sum(1 for c in components if isinstance(c, dict) and c.get("name"))
+        has_comp_name = (comps_with_name / total_comps > 0.9) if total_comps > 0 else True
+        
         element_status["component_name"] = has_comp_name
         if has_comp_name:
             elements_present += 1
         
-        # 3. Component Version
-        has_comp_version = any(c.get("version") for c in components if isinstance(c, dict))
+        
+        comps_with_ver = sum(1 for c in components if isinstance(c, dict) and c.get("version"))
+        has_comp_version = (comps_with_ver / total_comps > 0.9) if total_comps > 0 else True
+        
         element_status["component_version"] = has_comp_version
         if has_comp_version:
             elements_present += 1
         
-        # 4. Unique Identifier (purl or bom-ref)
-        has_identifier = any(
-            c.get("purl") or c.get("bom-ref") 
-            for c in components if isinstance(c, dict)
+        
+        comps_with_id = sum(
+            1 for c in components 
+            if isinstance(c, dict) and (c.get("purl") or c.get("bom-ref"))
         )
+        has_identifier = (comps_with_id / total_comps > 0.9) if total_comps > 0 else True
+        
         element_status["unique_identifier"] = has_identifier
         if has_identifier:
             elements_present += 1
         
-        # 5. Dependency Relationship
+        
         has_deps = len(dependencies) > 0
         element_status["dependency_rel"] = has_deps
         if has_deps:
             elements_present += 1
         
-        # 6. Author
+        
         has_author = bool(metadata.get("authors")) or bool(metadata.get("manufacturer"))
         element_status["author"] = has_author
         if has_author:
             elements_present += 1
         
-        # 7. Timestamp
+        
         has_timestamp = bool(metadata.get("timestamp"))
         element_status["timestamp"] = has_timestamp
         if has_timestamp:
@@ -123,7 +143,7 @@ class TC1CISACompliance(BaseTestCase):
         total_elements = len(self.CISA_ELEMENTS)
         percentage = (elements_present / total_elements) * 100
         
-        # Severity: 1.0 = 0% compliance, 0.0 = 100% compliance
+        
         severity = 1.0 - (elements_present / total_elements)
         
         return {
@@ -131,5 +151,11 @@ class TC1CISACompliance(BaseTestCase):
             "elements_present": elements_present,
             "total_elements": total_elements,
             "percentage": round(percentage, 1),
-            "element_status": element_status
+            "element_status": element_status,
+            "components_stats": {
+                "total": total_comps,
+                "with_name": comps_with_name,
+                "with_version": comps_with_ver,
+                "with_id": comps_with_id
+            }
         }

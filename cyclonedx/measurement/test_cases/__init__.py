@@ -17,6 +17,10 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Any, Optional
 import re
 from collections import defaultdict
+try:
+    from packageurl import PackageURL
+except ImportError:
+    PackageURL = None  
 
 
 @dataclass
@@ -26,7 +30,7 @@ class TestResult:
     test_name: str
     mitigation_present: bool
     mitigation_details: Dict[str, Any] = field(default_factory=dict)
-    problem_severity: float = 0.0  # 0.0 = no problem, 1.0 = severe
+    problem_severity: float = 0.0  
     problem_details: Dict[str, Any] = field(default_factory=dict)
     
     def to_dict(self) -> Dict[str, Any]:
@@ -91,7 +95,7 @@ def extract_all_components(sbom: Dict[str, Any]) -> List[Dict[str, Any]]:
     if "components" in sbom:
         recurse(sbom["components"])
     
-    # Also check metadata.component (the root component)
+    
     if "metadata" in sbom and "component" in sbom["metadata"]:
         components.append(sbom["metadata"]["component"])
     
@@ -147,16 +151,16 @@ def calculate_graph_depth(graph: Dict[str, List[str]]) -> int:
         else:
             for child in graph[node]:
                 dfs(child, depth + 1)
-        visited.discard(node)  # Allow revisiting for different paths
+        visited.discard(node)  
     
-    # Find root nodes (nodes that are not dependsOn of anyone)
+    
     all_children = set()
     for deps in graph.values():
         all_children.update(deps)
     roots = [node for node in graph.keys() if node not in all_children]
     
     if not roots:
-        roots = list(graph.keys())[:1]  # Fallback to first node
+        roots = list(graph.keys())[:1]  
     
     for root in roots:
         visited.clear()
@@ -169,6 +173,6 @@ def validate_purl(purl: str) -> bool:
     """Validate if a PURL follows the correct format."""
     if not purl:
         return False
-    # Basic PURL format: pkg:type/namespace/name@version
+    
     pattern = r'^pkg:[a-zA-Z][a-zA-Z0-9+.-]*/.+'
     return bool(re.match(pattern, purl))

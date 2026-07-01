@@ -24,7 +24,7 @@ class TC2DependencyDepth(BaseTestCase):
         graph = build_dependency_graph(sbom)
         max_depth = calculate_graph_depth(graph)
         
-        # Count total dependency relationships
+        
         total_deps = sum(len(deps) for deps in graph.values())
         
         return {
@@ -40,41 +40,62 @@ class TC2DependencyDepth(BaseTestCase):
         components = sbom.get("components", [])
         dependencies = sbom.get("dependencies", [])
         
-        # Count components with bom-ref
+        
         components_with_ref = [c for c in components if c.get("bom-ref")]
         
-        # Count refs mentioned in dependencies
+        
         refs_in_deps = set()
+        refs_as_depender = set()
+        refs_as_dependee = set()
+        
         for dep in dependencies:
             if isinstance(dep, dict):
-                refs_in_deps.add(dep.get("ref", ""))
-                refs_in_deps.update(dep.get("dependsOn", []))
+                ref = dep.get("ref", "")
+                if ref:
+                    refs_in_deps.add(ref)
+                    refs_as_depender.add(ref)
+                    
+                for target in dep.get("dependsOn", []):
+                    refs_in_deps.add(target)
+                    refs_as_dependee.add(target)
+        
         refs_in_deps.discard("")
         
-        # Check for dangling refs (refs in deps not in components)
+        
         component_refs = {c.get("bom-ref") for c in components_with_ref}
-        # Add metadata.component ref if exists
         if "metadata" in sbom and "component" in sbom["metadata"]:
-            component_refs.add(sbom["metadata"]["component"].get("bom-ref"))
+            root_ref = sbom["metadata"]["component"].get("bom-ref")
+            if root_ref:
+                component_refs.add(root_ref)
         component_refs.discard(None)
+        
         
         dangling_refs = refs_in_deps - component_refs
         
-        # Calculate coverage
+        
+        
+        orphan_nodes = component_refs - refs_in_deps
+        
+        
         if len(components_with_ref) > 0:
-            coverage = len(refs_in_deps.intersection(component_refs)) / len(components_with_ref)
+            participating_components = component_refs.intersection(refs_in_deps)
+            coverage = len(participating_components) / len(component_refs) if component_refs else 0.0
         else:
             coverage = 0.0
         
-        # Severity based on coverage (lower coverage = higher severity)
-        severity = 1.0 - coverage if components_with_ref else 0.5
+        
+        
+        severity = 1.0 - coverage
         
         return {
             "severity": max(0.0, min(1.0, severity)),
             "component_count": len(components),
             "components_with_ref": len(components_with_ref),
             "refs_in_deps": len(refs_in_deps),
-            "dangling_refs": len(dangling_refs),
+            "dangling_refs": list(dangling_refs)[:10],
+            "dangling_refs_count": len(dangling_refs),
+            "orphan_nodes": list(orphan_nodes)[:10],
+            "orphan_nodes_count": len(orphan_nodes),
             "coverage": round(coverage * 100, 1),
             "graph_present": len(dependencies) > 0
         }
