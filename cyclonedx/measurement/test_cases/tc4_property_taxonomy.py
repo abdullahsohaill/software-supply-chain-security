@@ -17,14 +17,14 @@ from . import BaseTestCase, extract_all_properties
 class TC4PropertyTaxonomy(BaseTestCase):
     """Test case for property taxonomy adherence."""
     
-    # Known registered CycloneDX property prefixes
+    
     REGISTERED_PREFIXES = [
-        "cdx:",           # Official CycloneDX namespace
-        "cyclonedx:",     # Alternative official namespace
-        "spdx:",          # SPDX interop namespace
-        "aquasecurity:",  # Trivy/Aqua namespace
-        "syft:",          # Syft namespace
-        "snyk:",          # Snyk namespace
+        "cdx:",           
+        "cyclonedx:",     
+        "spdx:",          
+        "aquasecurity:",  
+        "syft:",          
+        "snyk:",          
     ]
     
     def __init__(self):
@@ -36,7 +36,7 @@ class TC4PropertyTaxonomy(BaseTestCase):
         
         if not properties:
             return {
-                "present": True,  # No properties = no problem
+                "present": True,  
                 "total_properties": 0,
                 "registered_count": 0,
                 "registration_rate": 100.0
@@ -51,7 +51,7 @@ class TC4PropertyTaxonomy(BaseTestCase):
         rate = (registered / len(properties)) * 100 if properties else 100.0
         
         return {
-            "present": rate >= 50.0,  # Mitigation present if >50% registered
+            "present": rate >= 50.0,  
             "total_properties": len(properties),
             "registered_count": registered,
             "registration_rate": round(rate, 1)
@@ -70,11 +70,11 @@ class TC4PropertyTaxonomy(BaseTestCase):
                 "fragmentation_score": 0.0
             }
         
-        # Count property name occurrences
+        
         name_counts = Counter(p.get("name", "") for p in properties)
         unique_names = len(name_counts)
         
-        # Categorize properties
+        
         registered = []
         adhoc = []
         
@@ -85,13 +85,13 @@ class TC4PropertyTaxonomy(BaseTestCase):
             else:
                 adhoc.append(name)
         
-        # Unique adhoc patterns (potential fragmentation)
+        
         adhoc_unique = len(set(adhoc))
         
-        # Fragmentation score: ratio of adhoc to total
+        
         fragmentation = len(adhoc) / len(properties) if properties else 0.0
         
-        # Severity based on fragmentation
+        
         severity = fragmentation
         
         return {
@@ -102,5 +102,5 @@ class TC4PropertyTaxonomy(BaseTestCase):
             "adhoc_properties": len(adhoc),
             "adhoc_unique_patterns": adhoc_unique,
             "fragmentation_score": round(fragmentation * 100, 1),
-            "sample_adhoc": list(set(adhoc))[:5]  # Sample of adhoc names
+            "sample_adhoc": list(set(adhoc))[:5]  
         }

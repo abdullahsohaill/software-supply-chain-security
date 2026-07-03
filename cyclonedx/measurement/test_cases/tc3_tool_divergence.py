@@ -34,7 +34,7 @@ class TC3ToolDivergence(BaseTestCase):
         """
         components = extract_all_components(sbom)
         
-        # Count components with standardized identifiers
+        
         with_purl = sum(1 for c in components if c.get("purl"))
         with_cpe = sum(1 for c in components if c.get("cpe"))
         with_hashes = sum(1 for c in components if c.get("hashes"))
@@ -46,12 +46,12 @@ class TC3ToolDivergence(BaseTestCase):
             cpe_rate = with_cpe / total
             hash_rate = with_hashes / total
             
-            # Standardization score (higher = more standardized = less divergence risk)
+            
             standardization = (purl_rate + hash_rate) / 2
         else:
             purl_rate = cpe_rate = hash_rate = standardization = 0.0
         
-        # Severity: lower standardization = higher divergence risk
+        
         severity = 1.0 - standardization
         
         return {
@@ -94,13 +94,13 @@ class TC3ToolDivergence(BaseTestCase):
         purls1 = extract_purls(sbom1)
         purls2 = extract_purls(sbom2)
         
-        # Jaccard similarity for name+version
+        
         if ids1 or ids2:
             jaccard_ids = len(ids1 & ids2) / len(ids1 | ids2)
         else:
             jaccard_ids = 1.0
         
-        # Jaccard similarity for PURLs
+        
         if purls1 or purls2:
             jaccard_purls = len(purls1 & purls2) / len(purls1 | purls2)
         else:
