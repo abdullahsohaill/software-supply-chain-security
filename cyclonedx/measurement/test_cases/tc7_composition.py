@@ -17,7 +17,7 @@ from . import BaseTestCase
 class TC7Composition(BaseTestCase):
     """Test case for composition completeness assertions."""
     
-    # CycloneDX aggregate types indicating completeness
+    
     COMPLETE_TYPES = ["complete", "first_party_only", "third_party_only"]
     INCOMPLETE_TYPES = ["incomplete", "incomplete_first_party_only", 
                         "incomplete_third_party_only", "unknown", "not_specified"]
@@ -59,7 +59,7 @@ class TC7Composition(BaseTestCase):
         compositions = sbom.get("compositions", [])
         
         if not compositions:
-            # No composition = unknown completeness = high severity
+            
             return {
                 "severity": 1.0,
                 "total_compositions": 0,
@@ -80,16 +80,16 @@ class TC7Composition(BaseTestCase):
         incomplete_count = sum(aggregate_counts.get(t, 0) for t in self.INCOMPLETE_TYPES)
         total = len(compositions)
         
-        # Completeness rate
+        
         if total > 0:
             completeness_rate = complete_count / total
         else:
             completeness_rate = 0.0
         
-        # Checkbox compliance: high if mostly incomplete/unknown
+        
         checkbox_compliance = completeness_rate < 0.5
         
-        # Severity based on incompleteness
+        
         severity = 1.0 - completeness_rate
         
         return {

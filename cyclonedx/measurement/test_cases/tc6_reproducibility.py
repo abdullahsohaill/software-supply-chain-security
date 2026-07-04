@@ -32,7 +32,7 @@ class TC6Reproducibility(BaseTestCase):
                 "has_tasks": False
             }
         
-        # Check for specific formulation elements
+        
         has_workflow = False
         has_environment = False
         has_tasks = False
@@ -45,7 +45,7 @@ class TC6Reproducibility(BaseTestCase):
                     has_environment = True
                 if "tasks" in form:
                     has_tasks = True
-                # Check for components that describe the build
+                
                 if "components" in form:
                     has_environment = True
         
@@ -60,11 +60,11 @@ class TC6Reproducibility(BaseTestCase):
     
     def measure_problem(self, sbom: Dict[str, Any]) -> Dict[str, Any]:
         """Measure presence of reproducibility indicators."""
-        # Count hashes (enable verification)
+        
         components = sbom.get("components", [])
         comp_with_hashes = sum(1 for c in components if c.get("hashes"))
         
-        # Check external references for build artifacts
+        
         ext_refs = sbom.get("externalReferences", [])
         build_refs = []
         for ref in ext_refs:
@@ -72,39 +72,39 @@ class TC6Reproducibility(BaseTestCase):
             if ref_type in ["build-meta", "build-system", "vcs", "source-distribution"]:
                 build_refs.append(ref_type)
         
-        # Check for lockfile hashes in components
+        
         lockfile_components = [
             c for c in components 
             if any(kw in c.get("name", "").lower() 
                    for kw in ["lock", "package-lock", "yarn.lock", "poetry.lock", "gemfile.lock"])
         ]
         
-        # Check metadata for tools with version
+        
         metadata = sbom.get("metadata", {})
         tools = metadata.get("tools", {})
         versioned_tools = 0
         if isinstance(tools, dict):
-            # New format
+            
             tool_components = tools.get("components", [])
             versioned_tools = sum(1 for t in tool_components if t.get("version"))
         elif isinstance(tools, list):
-            # Legacy format
+            
             versioned_tools = sum(1 for t in tools if t.get("version"))
         
-        # Calculate reproducibility score
+        
         total = len(components)
         if total > 0:
             hash_coverage = comp_with_hashes / total
         else:
             hash_coverage = 0.0
         
-        build_ref_score = min(len(build_refs) / 4, 1.0)  # Max 4 types
+        build_ref_score = min(len(build_refs) / 4, 1.0)  
         lockfile_score = 1.0 if lockfile_components else 0.0
         tool_score = 1.0 if versioned_tools > 0 else 0.0
         
         reproducibility_score = (hash_coverage + build_ref_score + lockfile_score + tool_score) / 4
         
-        # Severity: lower score = worse
+        
         severity = 1.0 - reproducibility_score
         
         return {
