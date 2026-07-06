@@ -1,0 +1,219 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e8c2a3b8-f7c5-4e9e-a942-c6ff970296ce",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-02-11T08:37:07+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "a5e52467-40d3-4752-b9ed-4b559355aae7",
+      "type": "application",
+      "name": "/Users/abdullahsohail/LUMS/SSC/cyclonedx/sbom_testing/packages/cobra",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "53d6ce73-4a34-4e42-8aba-7339f0980be7",
+      "type": "application",
+      "name": "go.mod",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.6",
+      "type": "library",
+      "name": "github.com/cpuguy83/go-md2man/v2",
+      "version": "v2.0.6",
+      "purl": "pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.6",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/cpuguy83/go-md2man/v2@v2.0.6"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+      "type": "library",
+      "name": "github.com/inconshreveable/mousetrap",
+      "version": "v1.1.0",
+      "purl": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/inconshreveable/mousetrap@v1.1.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/russross/blackfriday/v2@v2.1.0",
+      "type": "library",
+      "name": "github.com/russross/blackfriday/v2",
+      "version": "v2.1.0",
+      "purl": "pkg:golang/github.com/russross/blackfriday/v2@v2.1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/russross/blackfriday/v2@v2.1.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/cobra",
+      "type": "library",
+      "name": "github.com/spf13/cobra",
+      "purl": "pkg:golang/github.com/spf13/cobra",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/spf13/cobra"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/pflag@v1.0.9",
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.9",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.9",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/spf13/pflag@v1.0.9"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/go.yaml.in/yaml/v3@v3.0.4",
+      "type": "library",
+      "name": "go.yaml.in/yaml/v3",
+      "version": "v3.0.4",
+      "purl": "pkg:golang/go.yaml.in/yaml/v3@v3.0.4",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "go.yaml.in/yaml/v3@v3.0.4"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405",
+      "type": "library",
+      "name": "gopkg.in/check.v1",
+      "version": "v0.0.0-20161208181325-20d25e280405",
+      "purl": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "53d6ce73-4a34-4e42-8aba-7339f0980be7",
+      "dependsOn": [
+        "pkg:golang/github.com/spf13/cobra"
+      ]
+    },
+    {
+      "ref": "a5e52467-40d3-4752-b9ed-4b559355aae7",
+      "dependsOn": [
+        "53d6ce73-4a34-4e42-8aba-7339f0980be7"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/github.com/russross/blackfriday/v2@v2.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/github.com/spf13/cobra",
+      "dependsOn": [
+        "pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.6",
+        "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+        "pkg:golang/github.com/russross/blackfriday/v2@v2.1.0",
+        "pkg:golang/github.com/spf13/pflag@v1.0.9",
+        "pkg:golang/go.yaml.in/yaml/v3@v3.0.4",
+        "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/spf13/pflag@v1.0.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/go.yaml.in/yaml/v3@v3.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

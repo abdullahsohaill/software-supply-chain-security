@@ -1,0 +1,2931 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7a1161e1-c361-4306-903e-e34c427e61bc",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-03T11:56:23+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "cce0a84a-d2f1-4c8a-b42f-6deb414b08a4",
+      "type": "application",
+      "name": "/Users/abdullahsohail/LUMS/SSC/cyclonedx/sbom_testing/packages/guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "02d79cb9-279e-44a9-a916-a89a92806e84",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-testlib",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-testlib@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-testlib:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "03f8c39d-2169-4dee-a088-9bc70137677c",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "03fc9aa9-0737-400a-9634-643defa79ef7",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-tests",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-tests@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-tests:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "058ca7a6-d816-4bae-a03c-0fc9d2382411",
+      "type": "library",
+      "group": "junit",
+      "name": "junit",
+      "version": "4.13.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/junit/junit@4.13.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "junit:junit:4.13.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "0a02847c-6640-477e-8a7f-089499ea19b7",
+      "type": "application",
+      "name": "android/guava-testlib/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "0a5e68aa-5bd3-4ea2-9c5d-1572fc9203a0",
+      "type": "library",
+      "group": "org.hamcrest",
+      "name": "hamcrest-core",
+      "version": "1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.hamcrest/hamcrest-core@1.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.hamcrest:hamcrest-core:1.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "0c72a9de-087e-4aed-a235-0ee6c6e91745",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "0d92dcb6-7226-4cdb-acad-2c87face9211",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "0f78b578-acec-4dfd-8a92-779c3cfd5f63",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "11169c32-7c61-4235-8ea4-d6201c2b069e",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "11f70748-7121-4a86-b956-c962cf6cf776",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "121d7909-687b-4030-985a-52ee0c8ae4eb",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-gwt",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-gwt@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-gwt:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1381c1fa-80c3-4ef3-9794-b6bc9219308c",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "14427f92-9942-4462-9131-ba0ca2eae4a5",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1b586885-4b0f-4665-a051-ea4387ef6c93",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-testlib",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-testlib@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-testlib:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1bd842fd-a250-42ce-87c2-12330f252362",
+      "type": "application",
+      "name": "android/guava-bom/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1cb663ef-9eda-4d31-931a-d19811a26d6a",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1d52f3ae-eb64-489a-a25f-9f8377921108",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-bom",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-bom@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-bom:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "20492e79-802f-4710-ba93-48f59603f8c0",
+      "type": "library",
+      "group": "junit",
+      "name": "junit",
+      "version": "4.13.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/junit/junit@4.13.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "junit:junit:4.13.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2709d8d3-1990-49cf-a522-612463468395",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "296f3e94-7011-4a1a-b781-d7f10e15965d",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2d249f0b-0b57-4310-86e1-d6b5eb687a69",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2f5a66c1-0ea1-4e2d-99d5-d653bc75bbc5",
+      "type": "application",
+      "name": "futures/listenablefuture1/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3140386c-5046-4acb-bf44-3bcf839f27b8",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3236aca4-1541-411e-b471-3c83b06764ef",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "32c36721-b9e5-41dc-94ad-aa16b2338353",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "353707b0-8e61-4884-a1a3-9efbcf34efbf",
+      "type": "library",
+      "group": "junit",
+      "name": "junit",
+      "version": "4.13.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/junit/junit@4.13.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "junit:junit:4.13.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3983d891-9f27-4a8a-9c32-1d2d8f047bda",
+      "type": "application",
+      "name": "android/guava-tests/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3c89ca66-365f-4f1a-8011-f4dbbed99aba",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4bd6a0b2-b932-43bc-bed6-2c844d0520dd",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-testlib",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-testlib@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-testlib:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4bfdbe6f-0e7d-410c-88bd-96470fa7da24",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4e199cd4-6a89-4db1-80d3-e91705847f4d",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4e9a6bbf-fae3-4753-aba3-33953022d046",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4eabbab9-e2f4-4bfb-a367-69c809f4a210",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "663babe1-2dd3-46f6-8c60-fe25bf60cf59",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "68e0efc5-4020-41b0-8e01-d360f340a899",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-bom",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-bom@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-bom:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "68fdb60e-2d5d-4d88-9aba-0ad2e0fc4b02",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7043d03b-cd0c-45a9-9162-716ea28ee357",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "709d09a3-9560-46e9-bb84-961faa32c651",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-bom",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-bom@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-bom:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "72a9120a-3712-443c-bb75-9daed8503528",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "745cc768-d80d-4dc6-b370-65a9a5cfd059",
+      "type": "application",
+      "name": "android/guava/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "75393be8-ec00-43b2-9028-fb0e77de8690",
+      "type": "library",
+      "group": "org.hamcrest",
+      "name": "hamcrest-core",
+      "version": "1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.hamcrest/hamcrest-core@1.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.hamcrest:hamcrest-core:1.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7740ecda-ef76-402d-8ae4-7c3492cc8fed",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "78041e32-231c-4cf4-8cf7-4f03a00064fd",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "790f060d-850c-4fc3-9fb4-0681b2c90670",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-testlib",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-testlib@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-testlib:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7916a996-cf7c-4a82-98e6-34b8fe4e699b",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7d161377-7e67-47b0-98f7-ba7ce9674a16",
+      "type": "application",
+      "name": "android/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8124e748-a481-4838-a4cc-2f25cf30e02b",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "82774305-de5f-426f-9c9b-aa96ccb10055",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "87c68f71-35c8-403e-b470-0a141f06d198",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-tests",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-tests@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-tests:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8a8d826d-52be-4e65-9b09-554bdd8e0530",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8e440988-b31d-440a-b27d-c55ac232e7fa",
+      "type": "application",
+      "name": "guava-bom/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "93f7f11e-be23-4615-8909-e1147019aabc",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9781ff6b-283c-4f6f-87fb-17ec807958a4",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "98cdc274-c780-4c54-a61f-da117376b815",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9a88b7ff-aecf-40a7-a968-86cfe2568730",
+      "type": "application",
+      "name": "guava-gwt/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9a92d8d2-1a78-4e66-a0aa-a7e0d6de0681",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9ca0537c-8285-4882-9811-4d8be064194e",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9d5002ff-0ae9-47d3-954c-45efd76efe04",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9d5b1e2e-baf0-4161-91af-f32de73bc5f5",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a066c2ff-ac9c-46df-be95-3c6c57fd9366",
+      "type": "application",
+      "name": "pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a358fb20-0905-4fee-82c6-8111c781da30",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-bom",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-bom@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-bom:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b14dea63-b97b-49ab-98e5-5266f30f2102",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b40aef1a-77ec-406d-ac2c-1d444cbfeb7b",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b785e49b-c877-42cc-9df5-01ab7ebc889c",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b802fddf-1665-4b75-85c5-513e256b1766",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "bbab6b1f-23bc-4742-ae72-08b6af9b551a",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c083a5d6-d074-486e-a04f-5aad05f86c2f",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c1833ed6-6380-43d7-bde7-d1ac4d9d1987",
+      "type": "library",
+      "group": "org.hamcrest",
+      "name": "hamcrest-core",
+      "version": "1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.hamcrest/hamcrest-core@1.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.hamcrest:hamcrest-core:1.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c205dd74-5d72-4ff4-90f3-24bae1031be5",
+      "type": "application",
+      "name": "futures/failureaccess/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c2b4c4cd-0366-4cf0-a08c-5b3766dad127",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c2c507a6-751d-4ead-98a4-1a7e9bcad5a4",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c340b266-637f-420d-b6d5-b7f10cf57474",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c5ff3c9b-8fa8-4af5-92f2-99b09aa36703",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c7c81996-34e9-4aff-95bc-7784d5444189",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-tests",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-tests@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-tests:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c8d7bfac-dc89-4a12-815c-afdbbb51d560",
+      "type": "application",
+      "name": "futures/listenablefuture9999/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cb0c4519-f0ae-4f33-9d66-3174d55919b4",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cbd17e6d-1a05-4269-8439-59c5df9466bd",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cc81d6a8-a34e-4d59-a577-2be9fcc431d5",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d41f86c3-f72d-44c2-af6a-5a87952641a8",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d89aec5a-13f7-4ac5-9749-f116b16ba85f",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d8bb2cc0-a4b2-4909-b0b2-ca95c6fd7ad6",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-gwt",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-gwt@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-gwt:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "da6aed6f-f883-46f2-90e5-c9d7ace9f812",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dd329406-60e2-438c-b62f-4cdc2d2aa3e0",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-tests",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-tests@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-tests:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dd3fd97d-aff7-4b3c-94d7-215b9093a3b7",
+      "type": "application",
+      "name": "guava/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e5b7ebad-09c1-4e37-b1a5-2a3329ce115f",
+      "type": "library",
+      "group": "junit",
+      "name": "junit",
+      "version": "4.13.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/junit/junit@4.13.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "junit:junit:4.13.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "eb0ceecd-3122-479a-b9c7-b99d70e4d736",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "eca2058a-526c-41ad-9a8e-952cb2f12221",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ed98d9a9-1397-4abc-bb29-a9374dcf5dae",
+      "type": "application",
+      "name": "guava-tests/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "edd576cb-2a39-451b-b7d5-767b88f77e1f",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f098fc39-79be-4545-ac98-378c94dc17a8",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.jspecify:jspecify:1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f2aedbc8-2d33-4595-b464-0e02e2db0463",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f3e97c19-0d3e-40cc-bc9d-0a09a2b8e3c2",
+      "type": "library",
+      "group": "org.hamcrest",
+      "name": "hamcrest-core",
+      "version": "1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.hamcrest/hamcrest-core@1.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.hamcrest:hamcrest-core:1.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f48ea9b1-ad56-4c70-830f-db67141a20db",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:failureaccess:1.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f937bd3b-a41e-4a74-8852-0a58d0a8d175",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.46.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.46.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.46.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "fa093dcb-19fe-46df-813b-218d9a964276",
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.j2objc:j2objc-annotations:3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "fb7008c2-820c-4ecf-bdcb-8bacdd7659fb",
+      "type": "application",
+      "name": "guava-testlib/pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-android-SNAPSHOT",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-parent",
+      "version": "999.0.0-HEAD-android-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-android-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-parent:999.0.0-HEAD-android-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-jre-SNAPSHOT",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava-parent",
+      "version": "999.0.0-HEAD-jre-SNAPSHOT",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-jre-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:guava-parent:999.0.0-HEAD-jre-SNAPSHOT"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/listenablefuture@1.0",
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.guava:listenablefuture:1.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "02d79cb9-279e-44a9-a916-a89a92806e84",
+      "dependsOn": [
+        "058ca7a6-d816-4bae-a03c-0fc9d2382411",
+        "11f70748-7121-4a86-b956-c962cf6cf776",
+        "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+        "b785e49b-c877-42cc-9df5-01ab7ebc889c",
+        "d41f86c3-f72d-44c2-af6a-5a87952641a8"
+      ]
+    },
+    {
+      "ref": "03f8c39d-2169-4dee-a088-9bc70137677c",
+      "dependsOn": []
+    },
+    {
+      "ref": "03fc9aa9-0737-400a-9634-643defa79ef7",
+      "dependsOn": [
+        "2709d8d3-1990-49cf-a522-612463468395",
+        "82774305-de5f-426f-9c9b-aa96ccb10055"
+      ]
+    },
+    {
+      "ref": "058ca7a6-d816-4bae-a03c-0fc9d2382411",
+      "dependsOn": [
+        "c1833ed6-6380-43d7-bde7-d1ac4d9d1987"
+      ]
+    },
+    {
+      "ref": "0a02847c-6640-477e-8a7f-089499ea19b7",
+      "dependsOn": [
+        "4bd6a0b2-b932-43bc-bed6-2c844d0520dd"
+      ]
+    },
+    {
+      "ref": "0a5e68aa-5bd3-4ea2-9c5d-1572fc9203a0",
+      "dependsOn": []
+    },
+    {
+      "ref": "0c72a9de-087e-4aed-a235-0ee6c6e91745",
+      "dependsOn": []
+    },
+    {
+      "ref": "0d92dcb6-7226-4cdb-acad-2c87face9211",
+      "dependsOn": []
+    },
+    {
+      "ref": "0f78b578-acec-4dfd-8a92-779c3cfd5f63",
+      "dependsOn": []
+    },
+    {
+      "ref": "11f70748-7121-4a86-b956-c962cf6cf776",
+      "dependsOn": []
+    },
+    {
+      "ref": "121d7909-687b-4030-985a-52ee0c8ae4eb",
+      "dependsOn": [
+        "9781ff6b-283c-4f6f-87fb-17ec807958a4",
+        "9ca0537c-8285-4882-9811-4d8be064194e",
+        "cb0c4519-f0ae-4f33-9d66-3174d55919b4"
+      ]
+    },
+    {
+      "ref": "1381c1fa-80c3-4ef3-9794-b6bc9219308c",
+      "dependsOn": []
+    },
+    {
+      "ref": "14427f92-9942-4462-9131-ba0ca2eae4a5",
+      "dependsOn": []
+    },
+    {
+      "ref": "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+      "dependsOn": []
+    },
+    {
+      "ref": "1b586885-4b0f-4665-a051-ea4387ef6c93",
+      "dependsOn": [
+        "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+        "7916a996-cf7c-4a82-98e6-34b8fe4e699b",
+        "bbab6b1f-23bc-4742-ae72-08b6af9b551a",
+        "e5b7ebad-09c1-4e37-b1a5-2a3329ce115f",
+        "edd576cb-2a39-451b-b7d5-767b88f77e1f"
+      ]
+    },
+    {
+      "ref": "1bd842fd-a250-42ce-87c2-12330f252362",
+      "dependsOn": [
+        "68e0efc5-4020-41b0-8e01-d360f340a899"
+      ]
+    },
+    {
+      "ref": "1cb663ef-9eda-4d31-931a-d19811a26d6a",
+      "dependsOn": []
+    },
+    {
+      "ref": "1d52f3ae-eb64-489a-a25f-9f8377921108",
+      "dependsOn": []
+    },
+    {
+      "ref": "20492e79-802f-4710-ba93-48f59603f8c0",
+      "dependsOn": [
+        "75393be8-ec00-43b2-9028-fb0e77de8690"
+      ]
+    },
+    {
+      "ref": "2709d8d3-1990-49cf-a522-612463468395",
+      "dependsOn": []
+    },
+    {
+      "ref": "2d249f0b-0b57-4310-86e1-d6b5eb687a69",
+      "dependsOn": []
+    },
+    {
+      "ref": "2f5a66c1-0ea1-4e2d-99d5-d653bc75bbc5",
+      "dependsOn": [
+        "pkg:maven/com.google.guava/listenablefuture@1.0"
+      ]
+    },
+    {
+      "ref": "3140386c-5046-4acb-bf44-3bcf839f27b8",
+      "dependsOn": [
+        "0f78b578-acec-4dfd-8a92-779c3cfd5f63",
+        "2d249f0b-0b57-4310-86e1-d6b5eb687a69",
+        "4bfdbe6f-0e7d-410c-88bd-96470fa7da24",
+        "f2aedbc8-2d33-4595-b464-0e02e2db0463",
+        "f48ea9b1-ad56-4c70-830f-db67141a20db"
+      ]
+    },
+    {
+      "ref": "3236aca4-1541-411e-b471-3c83b06764ef",
+      "dependsOn": [
+        "11f70748-7121-4a86-b956-c962cf6cf776",
+        "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+        "7043d03b-cd0c-45a9-9162-716ea28ee357",
+        "b802fddf-1665-4b75-85c5-513e256b1766",
+        "d41f86c3-f72d-44c2-af6a-5a87952641a8"
+      ]
+    },
+    {
+      "ref": "32c36721-b9e5-41dc-94ad-aa16b2338353",
+      "dependsOn": []
+    },
+    {
+      "ref": "353707b0-8e61-4884-a1a3-9efbcf34efbf",
+      "dependsOn": [
+        "f3e97c19-0d3e-40cc-bc9d-0a09a2b8e3c2"
+      ]
+    },
+    {
+      "ref": "3983d891-9f27-4a8a-9c32-1d2d8f047bda",
+      "dependsOn": [
+        "87c68f71-35c8-403e-b470-0a141f06d198"
+      ]
+    },
+    {
+      "ref": "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+      "dependsOn": []
+    },
+    {
+      "ref": "3c89ca66-365f-4f1a-8011-f4dbbed99aba",
+      "dependsOn": []
+    },
+    {
+      "ref": "4bd6a0b2-b932-43bc-bed6-2c844d0520dd",
+      "dependsOn": [
+        "14427f92-9942-4462-9131-ba0ca2eae4a5",
+        "353707b0-8e61-4884-a1a3-9efbcf34efbf",
+        "68fdb60e-2d5d-4d88-9aba-0ad2e0fc4b02",
+        "9d5002ff-0ae9-47d3-954c-45efd76efe04",
+        "b14dea63-b97b-49ab-98e5-5266f30f2102"
+      ]
+    },
+    {
+      "ref": "4bfdbe6f-0e7d-410c-88bd-96470fa7da24",
+      "dependsOn": []
+    },
+    {
+      "ref": "4e199cd4-6a89-4db1-80d3-e91705847f4d",
+      "dependsOn": [
+        "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+        "3c89ca66-365f-4f1a-8011-f4dbbed99aba",
+        "bbab6b1f-23bc-4742-ae72-08b6af9b551a",
+        "c2c507a6-751d-4ead-98a4-1a7e9bcad5a4",
+        "edd576cb-2a39-451b-b7d5-767b88f77e1f"
+      ]
+    },
+    {
+      "ref": "4e9a6bbf-fae3-4753-aba3-33953022d046",
+      "dependsOn": []
+    },
+    {
+      "ref": "4eabbab9-e2f4-4bfb-a367-69c809f4a210",
+      "dependsOn": []
+    },
+    {
+      "ref": "663babe1-2dd3-46f6-8c60-fe25bf60cf59",
+      "dependsOn": []
+    },
+    {
+      "ref": "68e0efc5-4020-41b0-8e01-d360f340a899",
+      "dependsOn": []
+    },
+    {
+      "ref": "68fdb60e-2d5d-4d88-9aba-0ad2e0fc4b02",
+      "dependsOn": []
+    },
+    {
+      "ref": "7043d03b-cd0c-45a9-9162-716ea28ee357",
+      "dependsOn": []
+    },
+    {
+      "ref": "709d09a3-9560-46e9-bb84-961faa32c651",
+      "dependsOn": []
+    },
+    {
+      "ref": "745cc768-d80d-4dc6-b370-65a9a5cfd059",
+      "dependsOn": [
+        "3140386c-5046-4acb-bf44-3bcf839f27b8"
+      ]
+    },
+    {
+      "ref": "75393be8-ec00-43b2-9028-fb0e77de8690",
+      "dependsOn": []
+    },
+    {
+      "ref": "78041e32-231c-4cf4-8cf7-4f03a00064fd",
+      "dependsOn": []
+    },
+    {
+      "ref": "790f060d-850c-4fc3-9fb4-0681b2c90670",
+      "dependsOn": [
+        "0d92dcb6-7226-4cdb-acad-2c87face9211",
+        "20492e79-802f-4710-ba93-48f59603f8c0",
+        "78041e32-231c-4cf4-8cf7-4f03a00064fd",
+        "9d5b1e2e-baf0-4161-91af-f32de73bc5f5",
+        "da6aed6f-f883-46f2-90e5-c9d7ace9f812"
+      ]
+    },
+    {
+      "ref": "7916a996-cf7c-4a82-98e6-34b8fe4e699b",
+      "dependsOn": [
+        "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+        "3c89ca66-365f-4f1a-8011-f4dbbed99aba",
+        "bbab6b1f-23bc-4742-ae72-08b6af9b551a",
+        "c2c507a6-751d-4ead-98a4-1a7e9bcad5a4",
+        "edd576cb-2a39-451b-b7d5-767b88f77e1f"
+      ]
+    },
+    {
+      "ref": "7d161377-7e67-47b0-98f7-ba7ce9674a16",
+      "dependsOn": [
+        "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-android-SNAPSHOT"
+      ]
+    },
+    {
+      "ref": "8124e748-a481-4838-a4cc-2f25cf30e02b",
+      "dependsOn": []
+    },
+    {
+      "ref": "82774305-de5f-426f-9c9b-aa96ccb10055",
+      "dependsOn": []
+    },
+    {
+      "ref": "87c68f71-35c8-403e-b470-0a141f06d198",
+      "dependsOn": [
+        "98cdc274-c780-4c54-a61f-da117376b815",
+        "f937bd3b-a41e-4a74-8852-0a58d0a8d175"
+      ]
+    },
+    {
+      "ref": "8e440988-b31d-440a-b27d-c55ac232e7fa",
+      "dependsOn": [
+        "709d09a3-9560-46e9-bb84-961faa32c651"
+      ]
+    },
+    {
+      "ref": "9781ff6b-283c-4f6f-87fb-17ec807958a4",
+      "dependsOn": []
+    },
+    {
+      "ref": "98cdc274-c780-4c54-a61f-da117376b815",
+      "dependsOn": []
+    },
+    {
+      "ref": "9a88b7ff-aecf-40a7-a968-86cfe2568730",
+      "dependsOn": [
+        "121d7909-687b-4030-985a-52ee0c8ae4eb"
+      ]
+    },
+    {
+      "ref": "9ca0537c-8285-4882-9811-4d8be064194e",
+      "dependsOn": []
+    },
+    {
+      "ref": "9d5002ff-0ae9-47d3-954c-45efd76efe04",
+      "dependsOn": []
+    },
+    {
+      "ref": "9d5b1e2e-baf0-4161-91af-f32de73bc5f5",
+      "dependsOn": []
+    },
+    {
+      "ref": "a066c2ff-ac9c-46df-be95-3c6c57fd9366",
+      "dependsOn": [
+        "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-jre-SNAPSHOT"
+      ]
+    },
+    {
+      "ref": "a358fb20-0905-4fee-82c6-8111c781da30",
+      "dependsOn": []
+    },
+    {
+      "ref": "b14dea63-b97b-49ab-98e5-5266f30f2102",
+      "dependsOn": []
+    },
+    {
+      "ref": "b785e49b-c877-42cc-9df5-01ab7ebc889c",
+      "dependsOn": [
+        "11f70748-7121-4a86-b956-c962cf6cf776",
+        "11f70748-7121-4a86-b956-c962cf6cf776",
+        "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+        "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+        "7043d03b-cd0c-45a9-9162-716ea28ee357",
+        "7043d03b-cd0c-45a9-9162-716ea28ee357",
+        "b802fddf-1665-4b75-85c5-513e256b1766",
+        "b802fddf-1665-4b75-85c5-513e256b1766",
+        "d41f86c3-f72d-44c2-af6a-5a87952641a8",
+        "d41f86c3-f72d-44c2-af6a-5a87952641a8"
+      ]
+    },
+    {
+      "ref": "b802fddf-1665-4b75-85c5-513e256b1766",
+      "dependsOn": []
+    },
+    {
+      "ref": "bbab6b1f-23bc-4742-ae72-08b6af9b551a",
+      "dependsOn": []
+    },
+    {
+      "ref": "c083a5d6-d074-486e-a04f-5aad05f86c2f",
+      "dependsOn": []
+    },
+    {
+      "ref": "c1833ed6-6380-43d7-bde7-d1ac4d9d1987",
+      "dependsOn": []
+    },
+    {
+      "ref": "c205dd74-5d72-4ff4-90f3-24bae1031be5",
+      "dependsOn": [
+        "32c36721-b9e5-41dc-94ad-aa16b2338353"
+      ]
+    },
+    {
+      "ref": "c2c507a6-751d-4ead-98a4-1a7e9bcad5a4",
+      "dependsOn": []
+    },
+    {
+      "ref": "c7c81996-34e9-4aff-95bc-7784d5444189",
+      "dependsOn": [
+        "187f0ad2-eb7c-44a4-aee4-3eee68309f44",
+        "d41f86c3-f72d-44c2-af6a-5a87952641a8"
+      ]
+    },
+    {
+      "ref": "c8d7bfac-dc89-4a12-815c-afdbbb51d560",
+      "dependsOn": [
+        "eb0ceecd-3122-479a-b9c7-b99d70e4d736"
+      ]
+    },
+    {
+      "ref": "cb0c4519-f0ae-4f33-9d66-3174d55919b4",
+      "dependsOn": []
+    },
+    {
+      "ref": "cbd17e6d-1a05-4269-8439-59c5df9466bd",
+      "dependsOn": []
+    },
+    {
+      "ref": "cce0a84a-d2f1-4c8a-b42f-6deb414b08a4",
+      "dependsOn": [
+        "0a02847c-6640-477e-8a7f-089499ea19b7",
+        "1bd842fd-a250-42ce-87c2-12330f252362",
+        "2f5a66c1-0ea1-4e2d-99d5-d653bc75bbc5",
+        "3983d891-9f27-4a8a-9c32-1d2d8f047bda",
+        "745cc768-d80d-4dc6-b370-65a9a5cfd059",
+        "7d161377-7e67-47b0-98f7-ba7ce9674a16",
+        "8e440988-b31d-440a-b27d-c55ac232e7fa",
+        "9a88b7ff-aecf-40a7-a968-86cfe2568730",
+        "a066c2ff-ac9c-46df-be95-3c6c57fd9366",
+        "c205dd74-5d72-4ff4-90f3-24bae1031be5",
+        "c8d7bfac-dc89-4a12-815c-afdbbb51d560",
+        "dd3fd97d-aff7-4b3c-94d7-215b9093a3b7",
+        "ed98d9a9-1397-4abc-bb29-a9374dcf5dae",
+        "fb7008c2-820c-4ecf-bdcb-8bacdd7659fb"
+      ]
+    },
+    {
+      "ref": "d41f86c3-f72d-44c2-af6a-5a87952641a8",
+      "dependsOn": []
+    },
+    {
+      "ref": "d89aec5a-13f7-4ac5-9749-f116b16ba85f",
+      "dependsOn": [
+        "0c72a9de-087e-4aed-a235-0ee6c6e91745",
+        "1381c1fa-80c3-4ef3-9794-b6bc9219308c",
+        "1cb663ef-9eda-4d31-931a-d19811a26d6a",
+        "cbd17e6d-1a05-4269-8439-59c5df9466bd",
+        "eca2058a-526c-41ad-9a8e-952cb2f12221"
+      ]
+    },
+    {
+      "ref": "d8bb2cc0-a4b2-4909-b0b2-ca95c6fd7ad6",
+      "dependsOn": [
+        "11f70748-7121-4a86-b956-c962cf6cf776",
+        "b785e49b-c877-42cc-9df5-01ab7ebc889c",
+        "b802fddf-1665-4b75-85c5-513e256b1766"
+      ]
+    },
+    {
+      "ref": "da6aed6f-f883-46f2-90e5-c9d7ace9f812",
+      "dependsOn": []
+    },
+    {
+      "ref": "dd329406-60e2-438c-b62f-4cdc2d2aa3e0",
+      "dependsOn": [
+        "3a4d11e9-675a-4e06-9910-2df6dcfd2da0",
+        "edd576cb-2a39-451b-b7d5-767b88f77e1f"
+      ]
+    },
+    {
+      "ref": "dd3fd97d-aff7-4b3c-94d7-215b9093a3b7",
+      "dependsOn": [
+        "d89aec5a-13f7-4ac5-9749-f116b16ba85f"
+      ]
+    },
+    {
+      "ref": "e5b7ebad-09c1-4e37-b1a5-2a3329ce115f",
+      "dependsOn": [
+        "0a5e68aa-5bd3-4ea2-9c5d-1572fc9203a0"
+      ]
+    },
+    {
+      "ref": "eb0ceecd-3122-479a-b9c7-b99d70e4d736",
+      "dependsOn": []
+    },
+    {
+      "ref": "eca2058a-526c-41ad-9a8e-952cb2f12221",
+      "dependsOn": []
+    },
+    {
+      "ref": "ed98d9a9-1397-4abc-bb29-a9374dcf5dae",
+      "dependsOn": [
+        "03fc9aa9-0737-400a-9634-643defa79ef7"
+      ]
+    },
+    {
+      "ref": "edd576cb-2a39-451b-b7d5-767b88f77e1f",
+      "dependsOn": []
+    },
+    {
+      "ref": "f2aedbc8-2d33-4595-b464-0e02e2db0463",
+      "dependsOn": []
+    },
+    {
+      "ref": "f3e97c19-0d3e-40cc-bc9d-0a09a2b8e3c2",
+      "dependsOn": []
+    },
+    {
+      "ref": "f48ea9b1-ad56-4c70-830f-db67141a20db",
+      "dependsOn": []
+    },
+    {
+      "ref": "f937bd3b-a41e-4a74-8852-0a58d0a8d175",
+      "dependsOn": []
+    },
+    {
+      "ref": "fb7008c2-820c-4ecf-bdcb-8bacdd7659fb",
+      "dependsOn": [
+        "790f060d-850c-4fc3-9fb4-0681b2c90670"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-android-SNAPSHOT",
+      "dependsOn": [
+        "1b586885-4b0f-4665-a051-ea4387ef6c93",
+        "7916a996-cf7c-4a82-98e6-34b8fe4e699b",
+        "a358fb20-0905-4fee-82c6-8111c781da30",
+        "dd329406-60e2-438c-b62f-4cdc2d2aa3e0"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.google.guava/guava-parent@999.0.0-HEAD-jre-SNAPSHOT",
+      "dependsOn": [
+        "02d79cb9-279e-44a9-a916-a89a92806e84",
+        "1d52f3ae-eb64-489a-a25f-9f8377921108",
+        "b785e49b-c877-42cc-9df5-01ab7ebc889c",
+        "c7c81996-34e9-4aff-95bc-7784d5444189",
+        "d8bb2cc0-a4b2-4909-b0b2-ca95c6fd7ad6"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.google.guava/listenablefuture@1.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

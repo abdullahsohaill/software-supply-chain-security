@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 CycloneDX Measurement Study - Main Test Runner
 ===============================================
@@ -28,7 +28,7 @@ import sys
 from typing import Dict, Any, List
 from datetime import datetime
 
-# Import test cases
+
 from test_cases import load_sbom, TestResult
 from test_cases.tc1_cisa_compliance import TC1CISACompliance
 from test_cases.tc2_dependency_depth import TC2DependencyDepth
@@ -125,10 +125,10 @@ class MeasurementStudy:
             for j in range(i + 1, len(filenames)):
                 f1, f2 = filenames[i], filenames[j]
                 
-                # TC3 comparison
+                
                 tc3_comp = TC3ToolDivergence.compare_sboms(sboms[f1], sboms[f2])
                 
-                # TC8 comparison
+                
                 tc8_comp = TC8PURLConsistency.compare_purl_naming(sboms[f1], sboms[f2])
                 
                 comparisons.append({
@@ -148,14 +148,14 @@ class MeasurementStudy:
         columns = [
             "file", "spec_version", "component_count",
             "TC1_mitigation", "TC1_severity",
-            "TC2_mitigation", "TC2_severity",
+            "TC2_mitigation", "TC2_severity", "TC2_orphans", "TC2_dangling",
             "TC3_mitigation", "TC3_severity",
             "TC4_mitigation", "TC4_severity",
-            "TC5_mitigation", "TC5_severity",
+            "TC5_mitigation", "TC5_severity", "TC5_risk_score",
             "TC5b_mitigation", "TC5b_severity",
             "TC6_mitigation", "TC6_severity",
             "TC7_mitigation", "TC7_severity",
-            "TC8_mitigation", "TC8_severity"
+            "TC8_mitigation", "TC8_severity", "TC8_valid_rate", "TC8_parsing_errors"
         ]
         
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
@@ -170,6 +170,18 @@ class MeasurementStudy:
                 for tc_id in ["TC1", "TC2", "TC3", "TC4", "TC5", "TC5b", "TC6", "TC7", "TC8"]:
                     row[f"{tc_id}_mitigation"] = result.get(f"{tc_id}_mitigation", "N/A")
                     row[f"{tc_id}_severity"] = result.get(f"{tc_id}_severity", "N/A")
+                    
+                    
+                    details = result.get(f"{tc_id}_details", {})
+                    if tc_id == "TC2":
+                        row["TC2_orphans"] = details.get("orphan_nodes_count", 0)
+                        row["TC2_dangling"] = details.get("dangling_refs_count", 0)
+                    elif tc_id == "TC5":
+                        row["TC5_risk_score"] = details.get("potential_loss_risk", 0)
+                    elif tc_id == "TC8":
+                        row["TC8_valid_rate"] = details.get("purl_coverage", 0)
+                        row["TC8_parsing_errors"] = details.get("parsing_errors_count", 0) or details.get("total_inconsistencies", 0)
+                        
                 writer.writerow(row)
     
     def print_summary(self, results: List[Dict[str, Any]]):

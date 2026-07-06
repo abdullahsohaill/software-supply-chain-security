@@ -1,0 +1,42 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:873d79d0-4817-48de-a369-d7289d5db589",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-03T11:56:08+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "d5c2af52-79f3-4c18-abc7-235044ce2c3a",
+      "type": "application",
+      "name": "/Users/abdullahsohail/LUMS/SSC/cyclonedx/sbom_testing/packages/fastify",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "d5c2af52-79f3-4c18-abc7-235044ce2c3a",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}
