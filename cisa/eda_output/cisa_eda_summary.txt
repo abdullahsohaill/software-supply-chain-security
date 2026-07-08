@@ -1,0 +1,33 @@
+CISA THEMATIC ANALYSIS SUMMARY
+Total requirements: 133
+
+Theme Distribution:
+  Component & SBOM Attributes: 48 (36.1%)
+  SBOM Operations & Lifecycle: 39 (29.3%)
+  Data Governance & Transparency: 17 (12.8%)
+  Supply Chain Relationships: 12 (9.0%)
+  Foundational Principles: 11 (8.3%)
+  Use Case Enablement: 6 (4.5%)
+
+Subtheme Distribution:
+  Component Identification: 19 (14.3%)
+  Supply Chain Practices: 17 (12.8%)
+  Data Completeness & Transparency: 13 (9.8%)
+  Dependency & Relationship Mapping: 12 (9.0%)
+  SBOM Metadata: 10 (7.5%)
+  Legal Information: 8 (6.0%)
+  Foundational Principles: 7 (5.3%)
+  Cryptographic Hashes: 7 (5.3%)
+  SBOM Creation & Tooling: 7 (5.3%)
+  SBOM Distribution: 7 (5.3%)
+  Use Case Enablement: 6 (4.5%)
+  Lifecycle Management: 5 (3.8%)
+  Format & Interoperability: 4 (3.0%)
+  Unique Identifiers: 4 (3.0%)
+  Handling Redactions: 4 (3.0%)
+  Assurance & Trust: 3 (2.3%)
+
+Normative Force (normalized):
+  REQUIRED: 57 (42.9%)
+  RECOMMENDED: 49 (36.8%)
+  OPTIONAL: 27 (20.3%)
