@@ -1,0 +1,1725 @@
+Section ID & Heading,Recommendation / Requirement,Normative Keyword,Subtheme
+2.2 Implementation Conformance,A consumer must interpret and process the contents of CycloneDX BOMs in a manner conforming to this standard.,REQUIRED,Specification Conformance
+2.2 Implementation Conformance,A consumer should instantiate a warning or error condition when a CycloneDX BOM is not conforming to this standard. ,RECOMMENDED,Specification Conformance
+2.2 Implementation Conformance,A consumer must not instantiate an error condition in response to a CycloneDX BOM conforming to this standard.,REQUIRED,Specification Conformance
+2.2 Implementation Conformance,"When optional or recommended features contained within CycloneDX BOMs are accessed by a consumer, the consumer must interpret and process those features in a manner conforming to this standard.",REQUIRED,Specification Conformance
+2.2 Implementation Conformance,Any CycloneDX BOM a producer creates must conform to this standard.,REQUIRED,Specification Conformance
+2.2 Implementation Conformance,A producer must not introduce any non-conforming CycloneDX content when modifying or enriching a CycloneDX BOM.,REQUIRED,Specification Conformance
+2.2 Implementation Conformance,"When a producer chooses to use an optional or recommended feature in an CycloneDX BOM, then the producer must create or modify that feature in a manner conforming to this standard.",REQUIRED,Specification Conformance
+5.2 High-Level SBOM Use Cases,SBOMs should ideally contain all direct and transitive components and the dependency relationships between them.,RECOMMENDED,Dependency Graph Representation
+5.3.1 Software Bill of Materials (SBOM),SBOMs should ideally contain all direct and transitive components and the dependency relationships between them.,RECOMMENDED,Dependency Graph Representation
+5.4.1.1 Serial Number,"Every BOM generated should have a unique serial number, even if the contents of the BOM have not changed over time.",RECOMMENDED,BOM Identification
+5.4.1.1 Serial Number,"If specified, the serial number must conform to RFC-4122.",REQUIRED,BOM Identification
+5.4.1.1 Serial Number,The use of serial numbers is recommended.,RECOMMENDED,BOM Identification
+5.4.1.2 Version,"Whenever an existing BOM is modified, either manually or through automated processes, the version of the BOM should be incremented by 1.",RECOMMENDED,BOM Identification
+5.4.1.2 Version,"When a system is presented with multiple BOMs with identical serial numbers, the system should use the most recent version of the BOM.",RECOMMENDED,BOM Identification
+6 CycloneDX Bill of Materials Standard,The bomFormat property is Required.,REQUIRED,BOM Format and Versioning
+6 CycloneDX Bill of Materials Standard,"The value of bomFormat must be ""CycloneDX"".",REQUIRED,BOM Format and Versioning
+6 CycloneDX Bill of Materials Standard,The specVersion property is Required.,REQUIRED,BOM Format and Versioning
+6 CycloneDX Bill of Materials Standard,The serialNumber property is Optional.,MAY,BOM Identification
+6 CycloneDX Bill of Materials Standard,"Every BOM generated SHOULD have a unique serial number, even if the contents of the BOM have not changed over time.",RECOMMENDED,BOM Identification
+6 CycloneDX Bill of Materials Standard,"If specified, the serial number must conform to RFC 4122.",REQUIRED,BOM Identification
+6 CycloneDX Bill of Materials Standard,Use of serial numbers is recommended.,RECOMMENDED,BOM Identification
+6 CycloneDX Bill of Materials Standard,The version property is Optional.,MAY,BOM Identification
+6 CycloneDX Bill of Materials Standard,"Whenever an existing BOM is modified, either manually or through automated processes, the version of the BOM SHOULD be incremented by 1.",RECOMMENDED,BOM Identification
+6 CycloneDX Bill of Materials Standard,"When a system is presented with multiple BOMs with identical serial numbers, the system SHOULD use the most recent version of the BOM.",RECOMMENDED,BOM Identification
+6 CycloneDX Bill of Materials Standard,The metadata property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The components property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The services property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The externalReferences property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The dependencies property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The compositions property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The vulnerabilities property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The annotations property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The formulation property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The declarations property is Optional.,MAY,Root Object Model
+6 CycloneDX Bill of Materials Standard,The definitions property is Optional.,MAY,Root Object Model
+6.1 BOM Format,The bomFormat property is Required.,REQUIRED,BOM Format and Versioning
+6.1 BOM Format,"The value of bomFormat must be ""CycloneDX"".",REQUIRED,BOM Format and Versioning
+6.2 CycloneDX Specification Version,The specVersion property is Required.,REQUIRED,BOM Format and Versioning
+6.3 BOM Serial Number,The serialNumber property is Optional.,MAY,BOM Identification
+6.3 BOM Serial Number,"Every BOM generated SHOULD have a unique serial number, even if the contents of the BOM have not changed over time.",RECOMMENDED,BOM Identification
+6.3 BOM Serial Number,"If specified, the serial number must conform to RFC 4122.",REQUIRED,BOM Identification
+6.3 BOM Serial Number,Use of serial numbers is recommended.,RECOMMENDED,BOM Identification
+6.4 BOM Version,The version property is Optional.,MAY,BOM Identification
+6.4 BOM Version,"Whenever an existing BOM is modified, either manually or through automated processes, the version of the BOM SHOULD be incremented by 1.",RECOMMENDED,BOM Identification
+6.4 BOM Version,"When a system is presented with multiple BOMs with identical serial numbers, the system SHOULD use the most recent version of the BOM.",RECOMMENDED,BOM Identification
+7 BOM Metadata,The metadata property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The tools property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The manufacturer property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The authors property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The component property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The manufacture property is Optional and Deprecated.,MAY,BOM Metadata
+7 BOM Metadata,The supplier property is Optional.,MAY,BOM Metadata
+7 BOM Metadata,The licenses property is Optional.,MAY,BOM Metadata
+7.1 Timestamp,The timestamp property is Optional.,MAY,Timestamping
+7.2 Lifecycles,The lifecycles property is Optional.,MAY,Lifecycle Information
+7.2 Lifecycles,Each item of this array must be a Lifecycle object.,REQUIRED,Lifecycle Information
+7.2.1 Lifecycle,The Lifecycle object Must be one of: Pre-Defined Phase.,REQUIRED,Lifecycle Information
+7.2.1 Lifecycle,The Lifecycle object Must be one of: Custom Phase.,REQUIRED,Lifecycle Information
+7.2.2 Pre-Defined Phase,The phase property is Required.,REQUIRED,Lifecycle Information
+7.2.3 Custom Phase,The name property is Required.,REQUIRED,Lifecycle Information
+7.2.3 Custom Phase,The description property is Optional.,MAY,Lifecycle Information
+7.2.4 Phase,The lifecycles property is Required.,REQUIRED,Lifecycle Information
+7.2.5 Name,The lifecycles property is Required.,REQUIRED,Lifecycle Information
+7.2.6 Description,The lifecycles property is Optional.,MAY,Lifecycle Information
+7.3 Tools,The tools property is Optional.,MAY,Tooling Information
+7.3 Tools,The tools object Must be one of: Tools.,REQUIRED,Tooling Information
+7.3 Tools,The tools object Must be one of: Tools (legacy).,REQUIRED,Tooling Information
+7.3.1 Tools,The components property is Optional.,MAY,Tooling Information
+7.3.1 Tools,The services property is Optional.,MAY,Tooling Information
+7.3.3 Components,The tools property is Optional.,MAY,Tooling Information
+7.3.3 Components,Each item of this array must be a Component object.,REQUIRED,Tooling Information
+7.3.3.1 Component,All items must be unique.,REQUIRED,Tooling Information
+7.3.4 Services,The tools property is Optional.,MAY,Tooling Information
+7.3.4 Services,Each item of this array must be a Service object.,REQUIRED,Tooling Information
+7.3.4.1 Service,All items must be unique.,REQUIRED,Tooling Information
+7.3.4.1.1 Tools (legacy),Each item of this array must be a Tool object.,REQUIRED,Tooling Information
+7.3.5 Tool,The vendor property is Optional.,MAY,Tooling Information
+7.3.5 Tool,The name property is Optional.,MAY,Tooling Information
+7.3.5 Tool,The version property is Optional.,MAY,Tooling Information
+7.3.5 Tool,The hashes property is Optional.,MAY,Tooling Information
+7.3.5 Tool,The externalReferences property is Optional.,MAY,Tooling Information
+7.3.5.1 Tool Vendor,The vendor property is Optional.,MAY,Tooling Information
+7.3.5.2 Tool Name,The name property is Optional.,MAY,Tooling Information
+7.3.5.3 Tool Version,The version property is Optional.,MAY,Tooling Information
+7.3.5.4 Hashes,The hashes property is Optional.,MAY,Cryptographic Hashes
+7.3.5.4 Hashes,Each item of this array must be a Hash object.,REQUIRED,Cryptographic Hashes
+7.3.5.4.1 Hash,The alg property is Required.,REQUIRED,Cryptographic Hashes
+7.3.5.4.1 Hash,The content property is Required.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The alg property is Required.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: MD5.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA-1.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA-256.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA-384.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA-512.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA3-256.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA3-384.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: SHA3-512.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: BLAKE2b-256.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: BLAKE2b-384.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: BLAKE2b-512.,REQUIRED,Cryptographic Hashes
+7.3.5.4.2 Hash Algorithm,The hash algorithm Must be one of: BLAKE3.,REQUIRED,Cryptographic Hashes
+7.3.5.4.3 Hash Value,The content property is Required.,REQUIRED,Cryptographic Hashes
+7.3.5.5 External References,The externalReferences property is Optional.,MAY,External References
+7.3.5.5 External References,Each item of this array must be an External Reference object.,REQUIRED,External References
+7.4 BOM Manufacturer,The manufacturer property is Optional.,MAY,Organizational Entity Definition
+7.4 BOM Manufacturer,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4 BOM Manufacturer,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4 BOM Manufacturer,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4 BOM Manufacturer,The name property is Optional.,MAY,Organizational Entity Definition
+7.4 BOM Manufacturer,The address property is Optional.,MAY,Organizational Entity Definition
+7.4 BOM Manufacturer,The url property is Optional.,MAY,Organizational Entity Definition
+7.4 BOM Manufacturer,The contact property is Optional.,MAY,Organizational Entity Definition
+7.4.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4.2 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4.3 Organization Address,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4.3 Organization Address,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4.3 Organization Address,The country property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The region property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The locality property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The postalCode property is Optional.,MAY,Organizational Entity Definition
+7.4.3 Organization Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+7.4.3.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4.3.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4.3.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4.3.2 Country,The country property is Optional.,MAY,Organizational Entity Definition
+7.4.3.3 Region,The region property is Optional.,MAY,Organizational Entity Definition
+7.4.3.4 Locality,The locality property is Optional.,MAY,Organizational Entity Definition
+7.4.3.5 Post Office Box Number,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+7.4.3.6 Postal Code,The postalCode property is Optional.,MAY,Organizational Entity Definition
+7.4.3.7 Street Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+7.4.4 Organization URL(s),The url property is Optional.,MAY,Organizational Entity Definition
+7.4.4 Organization URL(s),Each item of this array must be a string.,REQUIRED,Organizational Entity Definition
+7.4.5 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+7.4.5 Organizational Contact,Each item of this array must be an Organizational Contact object.,REQUIRED,Contact Information
+7.4.5.1 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4.5.1 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4.5.1 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4.5.1 Organizational Contact,The name property is Optional.,MAY,Contact Information
+7.4.5.1 Organizational Contact,The email property is Optional.,MAY,Contact Information
+7.4.5.1 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+7.4.5.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.4.5.1.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.4.5.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.4.5.1.2 Name,The name property is Optional.,MAY,Contact Information
+7.4.5.1.3 Email Address,The email property is Optional.,MAY,Contact Information
+7.4.5.1.4 Phone,The phone property is Optional.,MAY,Contact Information
+7.5 BOM Authors,The authors property is Optional.,MAY,Organizational Entity Definition
+7.5 BOM Authors,Each item of this array must be an Organizational Contact object.,REQUIRED,Organizational Entity Definition
+7.5.1 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.5.1 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.5.1 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.5.1 Organizational Contact,The name property is Optional.,MAY,Contact Information
+7.5.1 Organizational Contact,The email property is Optional.,MAY,Contact Information
+7.5.1 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+7.5.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.5.1.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.5.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.5.1.2 Name,The name property is Optional.,MAY,Contact Information
+7.5.1.3 Email Address,The email property is Optional.,MAY,Contact Information
+7.5.1.4 Phone,The phone property is Optional.,MAY,Contact Information
+7.6 Component,The component property is Optional.,MAY,BOM Metadata
+7.7 Component Manufacture (legacy),The manufacture property is Optional and Deprecated.,MAY,Organizational Entity Definition
+7.7 Component Manufacture (legacy),The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.7 Component Manufacture (legacy),The name property is Optional.,MAY,Organizational Entity Definition
+7.7 Component Manufacture (legacy),The address property is Optional.,MAY,Organizational Entity Definition
+7.7 Component Manufacture (legacy),The url property is Optional.,MAY,Organizational Entity Definition
+7.7 Component Manufacture (legacy),The contact property is Optional.,MAY,Organizational Entity Definition
+7.7.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.7.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.7.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.7.2 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.7.3 Organization Address,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.7.3 Organization Address,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.7.3 Organization Address,The country property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The region property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The locality property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The postalCode property is Optional.,MAY,Organizational Entity Definition
+7.7.3 Organization Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+7.7.3.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.7.3.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.7.3.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.7.4 Organization URL(s),The url property is Optional.,MAY,Organizational Entity Definition
+7.7.4 Organization URL(s),Each item of this array must be a string.,REQUIRED,Organizational Entity Definition
+7.7.5 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+7.7.5 Organizational Contact,Each item of this array must be an Organizational Contact object.,REQUIRED,Contact Information
+7.7.5.1 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.7.5.1 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.7.5.1 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.7.5.1 Organizational Contact,The name property is Optional.,MAY,Contact Information
+7.7.5.1 Organizational Contact,The email property is Optional.,MAY,Contact Information
+7.8 Supplier,The supplier property is Optional.,MAY,Organizational Entity Definition
+7.8 Supplier,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.8 Supplier,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.8 Supplier,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.8 Supplier,The name property is Optional.,MAY,Organizational Entity Definition
+7.8 Supplier,The address property is Optional.,MAY,Organizational Entity Definition
+7.8 Supplier,The url property is Optional.,MAY,Organizational Entity Definition
+7.8 Supplier,The contact property is Optional.,MAY,Organizational Entity Definition
+7.8.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.8.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.8.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.8.2 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.8.3 Organization Address,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.8.3 Organization Address,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.8.3 Organization Address,The country property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The region property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The locality property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The postalCode property is Optional.,MAY,Organizational Entity Definition
+7.8.3 Organization Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+7.8.3.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.8.3.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.8.3.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.8.4 Organization URL(s),The url property is Optional.,MAY,Organizational Entity Definition
+7.8.4 Organization URL(s),Each item of this array must be a string.,REQUIRED,Organizational Entity Definition
+7.8.5 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+7.8.5 Organizational Contact,Each item of this array must be an Organizational Contact object.,REQUIRED,Contact Information
+7.8.5.1 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+7.8.5.1 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+7.8.5.1 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+7.8.5.1 Organizational Contact,The name property is Optional.,MAY,Contact Information
+7.8.5.1 Organizational Contact,The email property is Optional.,MAY,Contact Information
+7.9 BOM Licence(s),The licenses property is Optional.,MAY,Licensing and Copyright
+7.10 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+7.10 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+7.10 Properties,Formal registration is optional.,MAY,Property Taxonomies
+7.10 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1 Component,The type property is Required.,REQUIRED,Component and Service Typing
+8.1 Component,The mime-type property is Optional.,MAY,Descriptive Metadata
+8.1 Component,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1 Component,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1 Component,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1 Component,The supplier property is Optional.,MAY,Organizational Entity Definition
+8.1 Component,The manufacturer property is Optional.,MAY,Organizational Entity Definition
+8.1 Component,The authors property is Optional.,MAY,Organizational Entity Definition
+8.1 Component,The author property is Optional and Deprecated.,MAY,Organizational Entity Definition
+8.1 Component,The publisher property is Optional.,MAY,Organizational Entity Definition
+8.1 Component,The group property is Optional.,MAY,Component and Service Identification
+8.1 Component,Whitespace and special characters should be avoided in the group property.,RECOMMENDED,Component and Service Identification
+8.1 Component,The name property is Required.,REQUIRED,Component and Service Identification
+8.1 Component,The version property is Optional.,MAY,Component and Service Identification
+8.1 Component,The version should ideally comply with semantic versioning but is not enforced.,RECOMMENDED,Component and Service Identification
+8.1 Component,The description property is Optional.,MAY,Descriptive Metadata
+8.1 Component,The scope property is Optional.,MAY,Component Scope
+8.1 Component,"If scope is not specified, 'required' scope SHOULD be assumed by the consumer of the BOM.",RECOMMENDED,Component Scope
+8.1.1 Component Type,The type property is Required.,REQUIRED,Component and Service Typing
+8.1.1 Component Type,"For software components, classify as application if no more specific appropriate classification is available or cannot be determined for the component.",RECOMMENDED,Component and Service Typing
+8.1.1 Component Type,"If the library also has key features of a framework, then it should be classified as a framework.",RECOMMENDED,Component and Service Typing
+8.1.1 Component Type,"If the classification is unknown, then specifying library is recommended.",RECOMMENDED,Component and Service Typing
+8.1.1 Component Type,"A hardware device containing firmware SHOULD include a component for the physical hardware itself and another component of type 'firmware' or 'operating-system' (whichever is relevant), describing information about the software running on the device.",RECOMMENDED,Component and Service Typing
+8.1.2 Mime-Type,The mime-type property is Optional.,MAY,Descriptive Metadata
+8.1.3 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.3 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.3 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.4 Component Supplier,The supplier property is Optional.,MAY,Organizational Entity Definition
+8.1.5 Component Manufacturer,The manufacturer property is Optional.,MAY,Organizational Entity Definition
+8.1.6 Component Authors,The authors property is Optional.,MAY,Organizational Entity Definition
+8.1.7 Component Author (legacy),The author property is Optional and Deprecated.,MAY,Organizational Entity Definition
+8.1.8 Component Publisher,The publisher property is Optional.,MAY,Organizational Entity Definition
+8.1.9 Component Group,The group property is Optional.,MAY,Component and Service Identification
+8.1.9 Component Group,Whitespace and special characters should be avoided.,RECOMMENDED,Component and Service Identification
+8.1.10 Component Name,The name property is Required.,REQUIRED,Component and Service Identification
+8.1.11 Component Version,The version property is Optional.,MAY,Component and Service Identification
+8.1.11 Component Version,The version should ideally comply with semantic versioning but is not enforced.,RECOMMENDED,Component and Service Identification
+8.1.12 Component Description,The description property is Optional.,MAY,Descriptive Metadata
+8.1.13 Component Scope,The scope property is Optional.,MAY,Component Scope
+8.1.13 Component Scope,"If scope is not specified, 'required' scope SHOULD be assumed by the consumer of the BOM.",RECOMMENDED,Component Scope
+8.1.14 Component Hashes,The hashes property is Optional.,MAY,Cryptographic Hashes
+8.1.14 Component Hashes,Each item of this array must be a Hash object.,REQUIRED,Cryptographic Hashes
+8.1.14.1 Hash,The alg property for the hashes object is Required.,REQUIRED,Cryptographic Hashes
+8.1.14.1 Hash,The alg property must define the algorithm that generated the hash value.,REQUIRED,Cryptographic Hashes
+8.1.14.1 Hash,The content property for the hashes object is Required.,REQUIRED,Cryptographic Hashes
+8.1.14.1 Hash,The content property must define the value of the hash.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg property is Required.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: MD5.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA-1.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA-256.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA-384.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA-512.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA3-256.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA3-384.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: SHA3-512.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-256.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-384.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-512.,REQUIRED,Cryptographic Hashes
+8.1.14.1.1 Hash Algorithm,The alg value Must be one of: BLAKE3.,REQUIRED,Cryptographic Hashes
+8.1.14.1.2 Hash Value,The content property is Required.,REQUIRED,Cryptographic Hashes
+8.1.15 Component Licence(s),The licenses property is Optional.,MAY,Licensing and Copyright
+8.1.15 Component Licence(s),The licenses property Must be one of: Multiple licenses.,REQUIRED,Licensing and Copyright
+8.1.15 Component Licence(s),The licenses property Must be one of: SPDX License Expression.,REQUIRED,Licensing and Copyright
+8.1.16 Multiple licences,Multiple licences must be a list of SPDX licences and/or named licences.,REQUIRED,Licensing and Copyright
+8.1.17 SPDX Licence Expression,SPDX Licence Expression must be a tuple of exactly one SPDX Licence Expression.,REQUIRED,Licensing and Copyright
+8.1.18 Multiple licences,Each item of this array must be a Licence object.,REQUIRED,Licensing and Copyright
+8.1.18.1 Licence,The license property is Required.,REQUIRED,Licensing and Copyright
+8.1.18.1 Licence,The license property must specify the details and attributes related to a software license.,REQUIRED,Licensing and Copyright
+8.1.18.1.1 Licence,The license property is Required.,REQUIRED,Licensing and Copyright
+8.1.18.1.1 Licence,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.18.1.1 Licence,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.18.1.1 Licence,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.18.1.1 Licence,The id property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,"If the id property is specified, its value must be one of the enumeration of valid SPDX license identifiers defined in the spdx.schema.json (or spdx.xml) subschema which is synchronized with the official SPDX license list.",REQUIRED,Licensing and Copyright
+8.1.18.1.1 Licence,The name property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,The acknowledgement property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,The text property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,The url property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,"If url is specified, a 'license' externalReference should also be specified for completeness.",RECOMMENDED,Licensing and Copyright
+8.1.18.1.1 Licence,The licensing property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.1 Licence,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.18.1.1 Licence,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.18.1.1 Licence,Formal registration for properties is optional.,MAY,Property Taxonomies
+8.1.18.1.2 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.18.1.2 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.18.1.2 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.18.1.3 Licence ID (SPDX),The id property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.3 Licence ID (SPDX),"If specified, this value must be one of the enumeration of valid SPDX licence identifiers defined in the spdx.schema.json (or spdx.xml) subschema which is synchronized with the official SPDX licence list.",REQUIRED,Licensing and Copyright
+8.1.18.1.4 Licence Name,The name property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.5 Licence Acknowledgement,The acknowledgement property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.6 Licence text,The text property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.6 Licence text,The content property for the text object is Required.,REQUIRED,Licensing and Copyright
+8.1.18.1.6 Licence text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text for the attachment data.,RECOMMENDED,Licensing and Copyright
+8.1.18.1.7 Content-Type,The contentType property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.8 Encoding,The encoding property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.9 Attachment Text,The content property is Required.,REQUIRED,Licensing and Copyright
+8.1.18.1.9 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Licensing and Copyright
+8.1.18.1.10 Licence URL,The url property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.10 Licence URL,"If specified, a 'licence' externalReference should also be specified for completeness.",RECOMMENDED,Licensing and Copyright
+8.1.18.1.11 Licencing information,The licensing property is Optional.,MAY,Licensing and Copyright
+8.1.18.1.89 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.18.1.89 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.18.1.89 Properties,Formal registration is optional for properties.,MAY,Property Taxonomies
+8.1.18.1.89 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.19 SPDX Licence Expression,The licenses array must be a tuple of exactly one SPDX Licence Expression.,REQUIRED,Licensing and Copyright
+8.1.20 Component Copyright,The copyright property is Optional.,MAY,Licensing and Copyright
+8.1.21 Common Platform Enumeration (CPE),The cpe property is Optional.,MAY,Standardized External Identifiers
+8.1.21 Common Platform Enumeration (CPE),The CPE must conform to the CPE 2.2 or 2.3 specification.,REQUIRED,Standardized External Identifiers
+8.1.22 Package URL (purl),The purl property is Optional.,MAY,Standardized External Identifiers
+8.1.22 Package URL (purl),"The purl, if specified, must be valid and conform to the specification defined at: https://github.com/package-url/purl-spec.",REQUIRED,Standardized External Identifiers
+8.1.23 OmniBOR Artefact Identifier (gitoid),The omniborId property is Optional.,MAY,Standardized External Identifiers
+8.1.23 OmniBOR Artefact Identifier (gitoid),"The OmniBOR, if specified, must be valid and conform to the specification defined at: https://www.iana.org/assignments/uri-schemes/prov/gitoid.",REQUIRED,Standardized External Identifiers
+8.1.24 Software Heritage Identifier,The swhid property is Optional.,MAY,Standardized External Identifiers
+8.1.24 Software Heritage Identifier,"The SWHID, if specified, must be valid and conform to the specification defined at: https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html.",REQUIRED,Standardized External Identifiers
+8.1.24 Software Heritage Identifier,Each item of the swhid array must be a string.,REQUIRED,Standardized External Identifiers
+8.1.25 SWID Tag,The swid property is Optional.,MAY,Standardized External Identifiers
+8.1.25 SWID Tag,The tagId property for the swid object is Required.,REQUIRED,Standardized External Identifiers
+8.1.25 SWID Tag,The tagId property must map to the tagId of a SoftwareIdentity.,REQUIRED,Standardized External Identifiers
+8.1.25 SWID Tag,The name property for the swid object is Required.,REQUIRED,Standardized External Identifiers
+8.1.25 SWID Tag,The name property must map to the name of a SoftwareIdentity.,REQUIRED,Standardized External Identifiers
+8.1.25 SWID Tag,The version property is Optional.,MAY,Standardized External Identifiers
+8.1.25 SWID Tag,The tagVersion property is Optional.,MAY,Standardized External Identifiers
+8.1.25 SWID Tag,The patch property is Optional.,MAY,Standardized External Identifiers
+8.1.25 SWID Tag,The text property is Optional.,MAY,Standardized External Identifiers
+8.1.25 SWID Tag,The url property is Optional.,MAY,Standardized External Identifiers
+8.1.25.1 Tag ID,The tagId property is Required.,REQUIRED,Standardized External Identifiers
+8.1.25.1 Tag ID,The tagId property must map to the tagId of a SoftwareIdentity.,REQUIRED,Standardized External Identifiers
+8.1.25.2 Name,The name property is Required.,REQUIRED,Standardized External Identifiers
+8.1.25.2 Name,The name property must map to the name of a SoftwareIdentity.,REQUIRED,Standardized External Identifiers
+8.1.25.3 Version,The version property is Optional.,MAY,Standardized External Identifiers
+8.1.25.4 Tag Version,The tagVersion property is Optional.,MAY,Standardized External Identifiers
+8.1.25.5 Patch,The patch property is Optional.,MAY,Standardized External Identifiers
+8.1.25.6 Attachment text,The text property is Optional.,MAY,Standardized External Identifiers
+8.1.25.6 Attachment text,The contentType property for the SWID tag text object is Optional.,MAY,Standardized External Identifiers
+8.1.25.6 Attachment text,The encoding property for the SWID tag text object is Optional.,MAY,Standardized External Identifiers
+8.1.25.6 Attachment text,The content property for the SWID tag text object is Required.,REQUIRED,Standardized External Identifiers
+8.1.25.6 Attachment text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Standardized External Identifiers
+8.1.25.6.1 Content-Type,The contentType property is Optional.,MAY,Standardized External Identifiers
+8.1.25.6.2 Encoding,The encoding property is Optional.,MAY,Standardized External Identifiers
+8.1.25.6.3 Attachment Text,The content property is Required.,REQUIRED,Standardized External Identifiers
+8.1.25.6.3 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Standardized External Identifiers
+8.1.25.7 URL,The url property is Optional.,MAY,Standardized External Identifiers
+8.1.26 Component Modified From Original,The modified property is Optional and Deprecated.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The pedigree property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The ancestors property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The descendants property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The variants property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The commits property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The patches property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27 Component Pedigree,The notes property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.1 Ancestors,Each item of the ancestors array must be a Component object.,REQUIRED,Component Pedigree and Provenance
+8.1.27.2 Descendants,Each item of the descendants array must be a Component object.,REQUIRED,Component Pedigree and Provenance
+8.1.27.3 Variants,The variants property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.3 Variants,Each item of the variants array must be a Component object.,REQUIRED,Component Pedigree and Provenance
+8.1.27.4 Commits,Each item of the commits array must be a Commit object.,REQUIRED,Component Pedigree and Provenance
+8.1.27.4 Commits,The uid property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4 Commits,The url property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4 Commits,The author property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4 Commits,The committer property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4 Commits,The message property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.4 Author,The timestamp property for the author object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.4 Author,The name property for the author object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.4 Author,The email property for the author object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.8 Committer,The committer property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.8 Committer,The timestamp property for the committer object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.8 Committer,The name property for the committer object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.4.8 Committer,The email property for the committer object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5 Patches,The patches property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5 Patches,Each item of the patches array must be a Patch object.,REQUIRED,Component Pedigree and Provenance
+8.1.27.5.7 Attachment Text,The content property for the attachment data is Required.,REQUIRED,Component Pedigree and Provenance
+8.1.27.5.7 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Component Pedigree and Provenance
+8.1.27.5.9 Resolves,The resolves property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5.15 Source,The name property for the source object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5.15 Source,The url property for the source object is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5.18 References,The references property is Optional.,MAY,Component Pedigree and Provenance
+8.1.27.5.18 References,Each item of the references array must be a string.,REQUIRED,Component Pedigree and Provenance
+8.1.27.6 Notes,The notes property is Optional.,MAY,Component Pedigree and Provenance
+8.1.28 External References,The externalReferences property is Optional.,MAY,External References
+8.1.28 External References,Each item of the externalReferences array must be an External Reference object.,REQUIRED,External References
+8.1.29 Components,All items in the nested components list must be unique.,REQUIRED,Component Assemblies (Nesting)
+8.1.30 Evidence,The evidence property is Optional.,MAY,Evidence and Substantiation
+8.1.30 Evidence,The identity property is Optional.,MAY,Evidence and Substantiation
+8.1.30 Evidence,"It is recommended that all implementations use arrays [for identity evidence], even if only one identity object is specified.",RECOMMENDED,Evidence and Substantiation
+8.1.30 Evidence,The occurrences property is Optional.,MAY,Evidence and Substantiation
+8.1.30 Evidence,The callstack property is Optional.,MAY,Evidence and Substantiation
+8.1.30 Evidence,The licenses property is Optional.,MAY,Evidence and Substantiation
+8.1.30 Evidence,The copyright property is Optional.,MAY,Evidence and Substantiation
+8.1.30.1 Identity Evidence,The field property for identity evidence is Required.,REQUIRED,Evidence and Substantiation
+8.1.30.1 Identity Evidence,The confidence property is Optional.,MAY,Evidence and Substantiation
+8.1.30.1 Identity Evidence,The concludedValue property is Optional.,MAY,Evidence and Substantiation
+8.1.30.1 Identity Evidence,The methods property is Optional.,MAY,Evidence and Substantiation
+8.1.30.1 Identity Evidence,The tools property is Optional.,MAY,Evidence and Substantiation
+8.1.31 Release notes,The releaseNotes property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The type property is Required.,REQUIRED,Descriptive Metadata
+8.1.31 Release notes,The title property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The featuredImage property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The socialImage property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The description property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The timestamp property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The aliases property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The tags property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The resolves property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The notes property is Optional.,MAY,Descriptive Metadata
+8.1.31 Release notes,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.31 Release notes,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.31 Release notes,Formal registration of properties is optional.,MAY,Property Taxonomies
+8.1.31 Release notes,Each item of the properties array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.31.1 Type,The type property is Required.,REQUIRED,Descriptive Metadata
+8.1.31.7 Aliases,Each item of the aliases array must be a string.,REQUIRED,Descriptive Metadata
+8.1.31.8 Tags,Each item of the tags array must be a string.,REQUIRED,Descriptive Metadata
+8.1.31.9 Resolves,Each item of the resolves array must be an Issue object.,REQUIRED,Descriptive Metadata
+8.1.31.9.1 Issue,The type property for an Issue object is Required.,REQUIRED,Descriptive Metadata
+8.1.31.9.2 Issue Type,The type property is Required.,REQUIRED,Descriptive Metadata
+8.1.31.9.9 References,Each item of the references array must be a string.,REQUIRED,Descriptive Metadata
+8.1.31.10 Notes,Each item of the notes array must be a Note object.,REQUIRED,Annotations
+8.1.31.10.1 Note,The text object in a Note is Required.,REQUIRED,Annotations
+8.1.31.10.3 Release note content,The text property is Required.,REQUIRED,Descriptive Metadata
+8.1.31.10.6 Attachment Text,The content property is Required.,REQUIRED,Descriptive Metadata
+8.1.31.10.6 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Descriptive Metadata
+8.1.31.11 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.31.11 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.31.11 Properties,Formal registration is optional.,MAY,Property Taxonomies
+8.1.31.11.2 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+8.1.31.11.3 Value,The value property is Optional.,MAY,Extensibility via Properties
+8.1.32 AI/ML Model Card,The modelCard property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,This object SHOULD be specified for any component of type machine-learning-model.,RECOMMENDED,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,This object must not be specified for other component types.,REQUIRED,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.32 AI/ML Model Card,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.32 AI/ML Model Card,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.32 AI/ML Model Card,The modelParameters property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,The quantitativeAnalysis property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,The considerations property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32 AI/ML Model Card,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.32 AI/ML Model Card,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.32 AI/ML Model Card,Formal registration of properties is optional.,MAY,Property Taxonomies
+8.1.32 AI/ML Model Card,Each item of the properties array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.32.2 Model Parameters,The approach property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The task property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The architectureFamily property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The modelArchitecture property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The datasets property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The inputs property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2 Model Parameters,The outputs property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2.1 Approach,The approach property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2.1 Approach,The type property is Optional.,MAY,AI/ML Model Cards (ML-BOM)
+8.1.32.2.6 Datasets,Each item in datasets Must be one of: Inline Data Information.,REQUIRED,Data Components and Governance
+8.1.32.2.6 Datasets,Each item in datasets Must be one of: Data Reference.,REQUIRED,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The bom-ref property for inline data information is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.32.2.7 Inline Data Information,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.32.2.7 Inline Data Information,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.32.2.7 Inline Data Information,The type property for inline data information is Required.,REQUIRED,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The name property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The contents property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The classification property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The sensitiveData property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The graphics property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The description property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.7 Inline Data Information,The governance property for inline data information is Optional.,MAY,Data Components and Governance
+8.1.32.2.8 Data Reference,The ref property for a Data Reference is Optional.,MAY,Data Components and Governance
+8.1.32.2.10 Type of Data,The type property (under datasets) is Required.,REQUIRED,Data Components and Governance
+8.1.32.2.12 Data Contents,The attachment property for data contents is Optional.,MAY,Data Components and Governance
+8.1.32.2.12 Data Contents,The url property for data contents is Optional.,MAY,Data Components and Governance
+8.1.32.2.12 Data Contents,The properties property for data contents is Optional.,MAY,Extensibility via Properties
+8.1.32.2.13 Data Attachment,The content property for attachment data is Required.,REQUIRED,Data Components and Governance
+8.1.32.2.13 Data Attachment,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+8.1.32.2.16 Attachment Text,The content property is Required.,REQUIRED,Data Components and Governance
+8.1.32.2.16 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+8.1.32.2.18 Configuration Properties,Each item of the properties array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.32.2.19 Lightweight name-value pair,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.32.2.19 Lightweight name-value pair,Formal registration of properties is optional.,MAY,Property Taxonomies
+8.1.32.2.20 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+8.1.32.2.21 Value,The value property is Optional.,MAY,Extensibility via Properties
+8.1.32.2.23 Sensitive Data,Each item of the sensitiveData array must be a string.,REQUIRED,Data Components and Governance
+8.1.32.2.32 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+8.1.32.2.32 Attachment Text,The content property is Required.,REQUIRED,Data Components and Governance
+8.1.32.2.35 Data Custodians,The custodians property is Optional.,MAY,Data Components and Governance
+8.1.32.2.83 Data Owners,The owners property is Optional.,MAY,Data Components and Governance
+8.1.32.2.110 Inputs,Each item of the inputs array must be an Input and Output Parameters object.,REQUIRED,AI/ML Model Cards (ML-BOM)
+8.1.32.2.113 Outputs,Each item of the outputs array must be an Input and Output Parameters object.,REQUIRED,AI/ML Model Cards (ML-BOM)
+8.1.33 Data,The data property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,This object SHOULD be specified for any component of type data.,RECOMMENDED,Data Components and Governance
+8.1.33 Data,This object must not be specified for other component types.,REQUIRED,Data Components and Governance
+8.1.33 Data,Each item of the data array must be a Data object.,REQUIRED,Data Components and Governance
+8.1.33 Data,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+8.1.33 Data,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+8.1.33 Data,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+8.1.33 Data,The type property is Required.,REQUIRED,Data Components and Governance
+8.1.33 Data,The name property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The contents property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The classification property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The sensitiveData property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The graphics property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The description property is Optional.,MAY,Data Components and Governance
+8.1.33 Data,The governance property is Optional.,MAY,Data Components and Governance
+8.1.33.1.2 Type of Data,The type property is Required.,REQUIRED,Data Components and Governance
+8.1.33.1.4 Data Contents,The attachment property is Optional.,MAY,Data Components and Governance
+8.1.33.1.4 Data Contents,The url property is Optional.,MAY,Data Components and Governance
+8.1.33.1.4 Data Contents,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.33.1.5 Data Attachment,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+8.1.33.1.10 Configuration Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.33.1.11 Lightweight name-value pair,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.33.1.11 Lightweight name-value pair,Formal registration is optional.,MAY,Property Taxonomies
+8.1.33.1.12 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+8.1.33.1.13 Value,The value property is Optional.,MAY,Extensibility via Properties
+8.1.33.1.15 Sensitive Data,Each item of the sensitiveData array must be a string.,REQUIRED,Data Components and Governance
+8.1.33.1.16 Graphics Collection,The collection property is Optional.,MAY,Data Components and Governance
+8.1.33.1.27 Data Custodians,The custodians property is Optional.,MAY,Data Components and Governance
+8.1.33.1.75 Data Owners,The owners property is Optional.,MAY,Data Components and Governance
+8.1.34 Cryptographic Properties,The cryptoProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The assetType property is Required.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The algorithmProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The certificateProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The relatedCryptoMaterialProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The protocolProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34 Cryptographic Properties,The oid property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.1 Asset Type,The assetType property is Required.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.1 Asset Type,The assetType value Must be one of: algorithm.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.1 Asset Type,The assetType value Must be one of: certificate.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.1 Asset Type,The assetType value Must be one of: protocol.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.1 Asset Type,The assetType value Must be one of: related-crypto-material.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The algorithmProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The primitive property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The parameterSetIdentifier property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The curve property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The executionEnvironment property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The implementationPlatform property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The certificationLevel property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The mode property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The padding property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The cryptoFunctions property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The classicalSecurityLevel property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2 Algorithm Properties,The nistQuantumSecurityLevel property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: drbg.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: mac.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: block-cipher.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: stream-cipher.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: signature.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: hash.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: pke.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: xof.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: kdf.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: key-agree.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: kem.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: ae.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: combiner.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.1 primitive,The primitive value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.3 Elliptic Curve,The curve property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.3 Elliptic Curve,CycloneDX recommends using curve names as defined at https://neuromancer.sk/std/.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: software-plain-ram.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: software-encrypted-ram.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: software-tee.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: hardware.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.4 Execution Environment,The executionEnvironment value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: generic.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: x86_32.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: x86_64.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv7-a.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv7-m.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv8-a.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv8-m.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv9-a.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: armv9-m.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: s390x.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: ppc64.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: ppc64le.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.5 Implementation platform,The implementationPlatform value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certificationLevel property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,Each item of the certificationLevel array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: none.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-1-l1.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-1-l2.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-1-l3.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-1-l4.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-2-l1.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-2-l2.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-2-l3.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-2-l4.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-3-l1.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-3-l2.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-3-l3.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: fips140-3-l4.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal1.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal1+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal2.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal2+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal3.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal3+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal4.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal4+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal5.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal5+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal6.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal6+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal7.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: cc-eal7+.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.6 Certification Level,The certification level value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: cbc.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: ecb.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: ccm.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: gcm.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: cfb.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: ofb.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: ctr.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.7 Mode,The mode value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: pkcs5.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: pkcs7.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: pkcs1v15.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: oaep.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: raw.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.8 Padding,The padding value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: generate.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: keygen.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: encrypt.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: decrypt.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: digest.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: tag.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: keyderive.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: sign.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: verify.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: encapsulate.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: decapsulate.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.2.9 Cryptographic functions,The cryptoFunctions value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The certificateProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The subjectName property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The issuerName property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The notValidBefore property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The notValidAfter property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The signatureAlgorithmRef property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The subjectPublicKeyRef property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The certificateFormat property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.3 Certificate Properties,The certificateExtension property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The relatedCryptoMaterialProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The type property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The id property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The state property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The algorithmRef property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The creationDate property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The activationDate property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The updateDate property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The expirationDate property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The value property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The size property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The format property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4 Related Cryptographic Material Properties,The securedBy property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: private-key.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: public-key.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: secret-key.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: key.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: ciphertext.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: signature.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: digest.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: initialization-vector.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: nonce.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: seed.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: salt.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: shared-secret.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: tag.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: additional-data.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: password.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: credential.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: token.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.1 relatedCryptoMaterialType,The type value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: pre-activation.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: active.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: suspended.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: deactivated.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: compromised.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.3 State,The state value Must be one of: destroyed.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.4.12 Secured By,The mechanism property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.12 Secured By,The algorithmRef property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.13 Mechanism,The mechanism property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.4.14 Algorithm Reference,The algorithmRef property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The protocolProperties property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The type property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The version property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The cipherSuites property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The ikev2TransformTypes property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5 Protocol Properties,The cryptoRefArray property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: tls.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: ssh.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: ipsec.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: ike.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: sstp.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: wpa.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: other.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.1 Type,The type value Must be one of: unknown.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.3 Cipher Suites,Each item of this array must be a Cipher Suite object.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.4 Cipher Suite,The name property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.4 Cipher Suite,The algorithms property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.4 Cipher Suite,The identifiers property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.6 Related Algorithms,Each item of the algorithms array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.7 Cipher Suite Identifiers,Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The encr property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The prf property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The integ property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The ke property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The esn property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.8 IKEv2 Transform Types,The auth property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.9 Encryption Algorithm (ENCR),The encr Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.9 Encryption Algorithm (ENCR),Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.10 Pseudorandom Function (PRF),The prf Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.10 Pseudorandom Function (PRF),Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.11 Integrity Algorithm (INTEG),The integ Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.11 Integrity Algorithm (INTEG),Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.12 Key Exchange Method (KE),The ke Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.12 Key Exchange Method (KE),Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.14 IKEv2 Authentication method,The auth Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.14 IKEv2 Authentication method,Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.34.5.15 Cryptographic References,The cryptoRefArray property is Optional.,MAY,Cryptographic Asset Management (CBOM)
+8.1.34.5.15 Cryptographic References,The cryptoRefArray Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Cryptographic Asset Management (CBOM)
+8.1.34.5.15 Cryptographic References,Each item of this array must be a string.,REQUIRED,Cryptographic Asset Management (CBOM)
+8.1.35 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+8.1.35 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+8.1.35 Properties,Formal registration is optional.,MAY,Property Taxonomies
+8.1.35 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+8.1.35 Properties,The name property is Required.,REQUIRED,Extensibility via Properties
+8.1.35 Properties,The value property is Optional.,MAY,Extensibility via Properties
+8.1.35.1.1 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+8.1.35.1.2 Value,The value property is Optional.,MAY,Extensibility via Properties
+8.1.36 Tags,The tags property is Optional.,MAY,Descriptive Metadata
+8.1.36 Tags,Each item of this array must be a string.,REQUIRED,Descriptive Metadata
+8.1.37 Signature,The signature property is Optional.,MAY,Digital Signatures
+8.1.37 Signature,All items must be unique.,REQUIRED,Digital Signatures
+9 Services,The services property is Optional.,MAY,Root Object Model
+9 Services,Each item of this array must be a Service object.,REQUIRED,Root Object Model
+9.1 Service,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1 Service,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1 Service,The provider property is Optional.,MAY,Organizational Entity Definition
+9.1 Service,The group property is Optional.,MAY,Component and Service Identification
+9.1 Service,Whitespace and special characters should be avoided in the group property.,RECOMMENDED,Component and Service Identification
+9.1 Service,The name property is Required.,REQUIRED,Component and Service Identification
+9.1 Service,The version property is Optional.,MAY,Component and Service Identification
+9.1 Service,The description property is Optional.,MAY,Descriptive Metadata
+9.1 Service,The endpoints property is Optional.,MAY,Component and Service Definition
+9.1 Service,The authenticated property is Optional.,MAY,Component and Service Definition
+9.1 Service,The x-trust-boundary property is Optional.,MAY,Component and Service Definition
+9.1 Service,The trustZone property is Optional.,MAY,Component and Service Definition
+9.1 Service,The data property is Optional.,MAY,Data Components and Governance
+9.1 Service,The licenses property is Optional.,MAY,Licensing and Copyright
+9.1 Service,The externalReferences property is Optional.,MAY,External References
+9.1 Service,The nested services property is Optional.,MAY,Component Assemblies (Nesting)
+9.1 Service,The releaseNotes property is Optional.,MAY,Descriptive Metadata
+9.1 Service,The properties property is Optional.,MAY,Extensibility via Properties
+9.1 Service,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+9.1 Service,Formal registration of properties is optional.,MAY,Property Taxonomies
+9.1 Service,The tags property is Optional.,MAY,Descriptive Metadata
+9.1 Service,The signature property is Optional.,MAY,Digital Signatures
+9.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.2 Provider,The provider property is Optional.,MAY,Organizational Entity Definition
+9.1.2 Provider,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.2 Provider,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.2 Provider,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.2 Provider,The name property is Optional.,MAY,Organizational Entity Definition
+9.1.2 Provider,The address property is Optional.,MAY,Organizational Entity Definition
+9.1.2 Provider,The url property is Optional.,MAY,Organizational Entity Definition
+9.1.2 Provider,The contact property is Optional.,MAY,Organizational Entity Definition
+9.1.2.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.2.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.2.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.2.2 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+9.1.2.3 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+9.1.2.3 Organization Address,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.2.3 Organization Address,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.2.3 Organization Address,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.2.5 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+9.1.2.5 Organizational Contact,Each item of the contact array must be an Organizational Contact object.,REQUIRED,Contact Information
+9.1.2.5.1 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.2.5.1 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.2.5.1 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.2.5.1 Organizational Contact,The name property is Optional.,MAY,Contact Information
+9.1.2.5.1 Organizational Contact,The email property is Optional.,MAY,Contact Information
+9.1.2.5.1 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+9.1.3 Service Group,The group property is Optional.,MAY,Component and Service Identification
+9.1.3 Service Group,Whitespace and special characters should be avoided in the group property.,RECOMMENDED,Component and Service Identification
+9.1.4 Service Name,The name property is Required.,REQUIRED,Component and Service Identification
+9.1.5 Service Version,The version property is Optional.,MAY,Component and Service Identification
+9.1.6 Service Description,The description property is Optional.,MAY,Descriptive Metadata
+9.1.7 Endpoints,The endpoints property is Optional.,MAY,Component and Service Definition
+9.1.7 Endpoints,Each item of this array must be a string.,REQUIRED,Component and Service Definition
+9.1.8 Authentication Required,The authenticated property is Optional.,MAY,Component and Service Definition
+9.1.9 Crosses Trust Boundary,The x-trust-boundary property is Optional.,MAY,Component and Service Definition
+9.1.10 Trust Zone,The trustZone property is Optional.,MAY,Component and Service Definition
+9.1.11 Data,The data property is Optional.,MAY,Data Components and Governance
+9.1.11.1.1 Directional Flow,The flow property is Required.,REQUIRED,Data Components and Governance
+9.1.11.1.1 Directional Flow,The flow value Must be one of: inbound.,REQUIRED,Data Components and Governance
+9.1.11.1.1 Directional Flow,The flow value Must be one of: outbound.,REQUIRED,Data Components and Governance
+9.1.11.1.1 Directional Flow,The flow value Must be one of: bi-directional.,REQUIRED,Data Components and Governance
+9.1.11.1.1 Directional Flow,The flow value Must be one of: unknown.,REQUIRED,Data Components and Governance
+9.1.11.1.2 Data Classification,The classification property is Required.,REQUIRED,Data Components and Governance
+9.1.11.1.3 Name,The name property is Optional.,MAY,Data Components and Governance
+9.1.11.1.4 Description,The description property is Optional.,MAY,Data Components and Governance
+9.1.11.1.5 Data Governance,The governance property is Optional.,MAY,Data Components and Governance
+9.1.11.1.7 Organization,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.11.1.7 Organization,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.11.1.7 Organization,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.11.1.7 Organization,The name property is Optional.,MAY,Organizational Entity Definition
+9.1.11.1.7 Organization,The address property is Optional.,MAY,Organizational Entity Definition
+9.1.11.1.7 Organization,The url property is Optional.,MAY,Organizational Entity Definition
+9.1.11.1.7 Organization,The contact property is Optional.,MAY,Organizational Entity Definition
+9.1.11.1.8 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.11.1.8 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.11.1.8 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.11.1.11 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.11.1.11 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.11.1.11 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.11.1.20 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+9.1.11.1.20 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+9.1.11.1.20 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+9.1.11.1.20 Organizational Contact,The name property is Optional.,MAY,Contact Information
+9.1.11.1.20 Organizational Contact,The email property is Optional.,MAY,Contact Information
+9.1.11.1.20 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+9.1.11.1.78 Source,The source property is Optional.,MAY,Data Components and Governance
+9.1.11.1.78 Source,Each item of the source array Must be any of: URL.,REQUIRED,Data Components and Governance
+9.1.11.1.78 Source,Each item of the source array Must be any of: BOM-Link Element.,REQUIRED,Data Components and Governance
+9.1.11.1.81 Destination,The destination property is Optional.,MAY,Data Components and Governance
+9.1.11.1.81 Destination,Each item of the destination array Must be any of: URL.,REQUIRED,Data Components and Governance
+9.1.11.1.81 Destination,Each item of the destination array Must be any of: BOM-Link Element.,REQUIRED,Data Components and Governance
+9.1.12 Service Licence(s),The licenses property is Optional.,MAY,Licensing and Copyright
+9.1.13 External References,The externalReferences property is Optional.,MAY,External References
+9.1.13 External References,Each item of this array must be an External Reference object.,REQUIRED,External References
+9.1.14 Services,The nested services property is Optional.,MAY,Component Assemblies (Nesting)
+9.1.14 Services,Each item of this array must be a Service object.,REQUIRED,Component Assemblies (Nesting)
+9.1.14.1 Service,All items must be unique.,REQUIRED,Component Assemblies (Nesting)
+9.1.15 Release notes,The releaseNotes property is Optional.,MAY,Descriptive Metadata
+9.1.15 Release notes,The type property is Required.,REQUIRED,Descriptive Metadata
+9.1.15 Release notes,The title property is Optional.,MAY,Descriptive Metadata
+9.1.15.8 Tags,The tags property is Optional.,MAY,Descriptive Metadata
+9.1.15.8 Tags,Each item of this array must be a string.,REQUIRED,Descriptive Metadata
+9.1.15.9 Resolves,The resolves property is Optional.,MAY,Descriptive Metadata
+9.1.15.10 Notes,The notes property is Optional.,MAY,Annotations
+9.1.15.10 Notes,Each item of this array must be a Note object.,REQUIRED,Annotations
+9.1.15.11 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+9.1.15.11 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+9.1.15.11 Properties,Formal registration is optional for properties.,MAY,Property Taxonomies
+9.1.15.11 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+9.1.18 Signature,All items in the signature array must be unique.,REQUIRED,Digital Signatures
+10 External References,The externalReferences property is Optional.,MAY,External References
+10 External References,Each item of this array must be an External Reference object.,REQUIRED,External References
+10.1 External Reference,The url property is Required.,REQUIRED,External References
+10.1 External Reference,The comment property is Optional.,MAY,External References
+10.1 External Reference,The type property is Required.,REQUIRED,External References
+10.1 External Reference,The hashes property is Optional.,MAY,External References
+10.1.1 URL,The url property is Required.,REQUIRED,External References
+10.1.1 URL,The url property Must be any of: URL.,REQUIRED,External References
+10.1.4 Comment,The comment property is Optional.,MAY,External References
+10.1.5 Type,The type property is Required.,REQUIRED,External References
+10.1.6 Hashes,The hashes property is Optional.,MAY,Cryptographic Hashes
+10.1.6 Hashes,Each item of this array must be a Hash object.,REQUIRED,Cryptographic Hashes
+10.1.6.1 Hash,The alg property for the hash object is Required.,REQUIRED,Cryptographic Hashes
+10.1.6.1 Hash,The alg property must define the algorithm that generated the hash value.,REQUIRED,Cryptographic Hashes
+10.1.6.1 Hash,The content property for the hash object is Required.,REQUIRED,Cryptographic Hashes
+10.1.6.1 Hash,The content property must define the value of the hash.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg property is Required.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: MD5.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA-1.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA-256.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA-384.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA-512.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA3-256.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA3-384.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: SHA3-512.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-256.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-384.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: BLAKE2b-512.,REQUIRED,Cryptographic Hashes
+10.1.6.1.1 Hash Algorithm,The alg value Must be one of: BLAKE3.,REQUIRED,Cryptographic Hashes
+10.1.6.1.2 Hash Value,The content property is Required.,REQUIRED,Cryptographic Hashes
+11 Dependencies,The dependencies property is Optional.,MAY,Dependency Graph Representation
+11 Dependencies,Each item of the dependencies array must be a Dependency object.,REQUIRED,Dependency Graph Representation
+11.1 Dependency,Components or services that do not have their own dependencies must be declared as empty elements within the graph.,REQUIRED,Dependency Graph Representation
+11.1 Dependency,It is recommended that implementations assume opaque dependency components or services to not be an indicator of an object being dependency-free.,RECOMMENDED,Dependency Graph Representation
+11.1 Dependency,It is recommended to leverage compositions to indicate unknown dependency graphs.,RECOMMENDED,Composition and Completeness
+11.1 Dependency,The ref property is Required.,REQUIRED,Dependency Graph Representation
+11.1 Dependency,The dependsOn property is Optional.,MAY,Dependency Graph Representation
+11.1 Dependency,The provides property is Optional.,MAY,Dependency Graph Representation
+11.1.1 Reference,The ref property is Required.,REQUIRED,Dependency Graph Representation
+11.1.2 Depends On,The dependsOn property is Optional.,MAY,Dependency Graph Representation
+11.1.2 Depends On,Each item of the dependsOn array must be a string.,REQUIRED,Dependency Graph Representation
+11.1.2 Depends On,All items in the dependsOn array must be unique.,REQUIRED,Dependency Graph Representation
+11.1.3 Provides,The provides property is Optional.,MAY,Dependency Graph Representation
+11.1.3 Provides,Each item of the provides array must be a string.,REQUIRED,Dependency Graph Representation
+11.1.3 Provides,All items in the provides array must be unique.,REQUIRED,Dependency Graph Representation
+12 Compositions,The compositions property is Optional.,MAY,Composition and Completeness
+12 Compositions,Each item of the compositions array must be a Compositions object.,REQUIRED,Composition and Completeness
+12.1 Compositions,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+12.1 Compositions,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+12.1 Compositions,The aggregate property is Required.,REQUIRED,Composition and Completeness
+12.1 Compositions,The assemblies property is Optional.,MAY,Composition and Completeness
+12.1 Compositions,The dependencies property is Optional.,MAY,Composition and Completeness
+12.1 Compositions,The vulnerabilities property is Optional.,MAY,Composition and Completeness
+12.1 Compositions,The signature property is Optional.,MAY,Digital Signatures
+12.1.3 BOM references,The assemblies property is Optional.,MAY,Composition and Completeness
+12.1.3 BOM references,Each item in the assemblies array Must be any of: Ref or BOM-Link Element.,REQUIRED,Composition and Completeness
+12.1.3 BOM references,All items in the assemblies array must be unique.,REQUIRED,Composition and Completeness
+12.1.4 BOM references,The dependencies property is Optional.,MAY,Composition and Completeness
+12.1.4 BOM references,Each item of the dependencies array must be a string.,REQUIRED,Composition and Completeness
+12.1.4 BOM references,All items in the dependencies array must be unique.,REQUIRED,Composition and Completeness
+12.1.5 BOM references,The vulnerabilities property is Optional.,MAY,Composition and Completeness
+12.1.5 BOM references,Each item of the vulnerabilities array must be a string.,REQUIRED,Composition and Completeness
+12.1.5 BOM references,All items in the vulnerabilities array must be unique.,REQUIRED,Composition and Completeness
+12.1.6 Signature,The signature property is Optional.,MAY,Digital Signatures
+13 Vulnerabilities,The vulnerabilities property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13 Vulnerabilities,Each item of the vulnerabilities array must be a Vulnerability object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1 Vulnerability,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1 Vulnerability,The id property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The source property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The references property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The ratings property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The cwes property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The description property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The detail property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The recommendation property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The workaround property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The proofOfConcept property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The advisories property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The created property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The published property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The updated property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The rejected property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The credits property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The tools property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The analysis property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The affects property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1 Vulnerability,The properties property is Optional.,MAY,Extensibility via Properties
+13.1 Vulnerability,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+13.1 Vulnerability,Formal registration is optional.,MAY,Property Taxonomies
+13.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.2 ID,The id property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.3 Source,The source property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.3 Source,The url property for the source object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.3 Source,The name property for the source object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.3.1 URL,The url property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.3.2 Name,The name property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.4 References,The references property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.4.1.1 ID,The id property is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.4.1.2 Source,The source property is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.4.1.2 Source,The url property for the source object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.4.1.2 Source,The name property for the source object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.4.1.3 URL,The url property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.4.1.4 Name,The name property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5 Ratings,The ratings property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5 Ratings,Each item of the ratings array must be a Rating object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The source property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The score property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The severity property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The method property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The vector property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1 Rating,The justification property for the rating is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.1 Source,The source property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.1 Source,The url property for the source is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.1 Source,The name property for the source is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.2 URL,The url property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.3 Name,The name property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.4 Score,The score property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.5 Severity,The severity property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.6 Method,The method property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.7 Vector,The vector property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.5.1.8 Justification,The justification property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.6 CWEs,The cwes property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.6 CWEs,The minimum value for items in the cwes array is 1.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.6 CWEs,Each item of the cwes array must be an integer.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.7 Description,The description property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.8 Details,The detail property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.9 Recommendation,The recommendation property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.10 Workarounds,The workaround property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11 Proof of Concept,The proofOfConcept property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.1 Steps to Reproduce,The reproductionSteps property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.2 Environment,The environment property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3 Supporting Material,The supportingMaterial property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3 Supporting Material,Each item of the supportingMaterial array must be an Attachment object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.11.3.1 Attachment,The contentType property for the attachment object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3.1 Attachment,The encoding property for the attachment object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3.1 Attachment,The content property for the attachment data is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.11.3.1 Attachment,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Vulnerability Information (Vulnerability Object)
+13.1.11.3.2 Content-Type,The contentType property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3.3 Encoding,The encoding property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.11.3.4 Attachment Text,The content property is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.11.3.4 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Vulnerability Information (Vulnerability Object)
+13.1.12 Advisories,The advisories property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.12 Advisories,Each item of the advisories array must be an Advisory object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.12.1 Advisory,The title property for the advisory object is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.12.1 Advisory,The url property for the advisory object is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.12.1.1 Title,The title property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.12.1.2 URL,The url property is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.13 Created,The created property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.14 Published,The published property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.15 Updated,The updated property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.16 Rejected,The rejected property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17 Credits,The credits property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17 Credits,The organizations property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17 Credits,The individuals property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17.1 Organizations,The organizations property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17.1 Organizations,Each item of the organizations array must be an Organizational Entity object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.17.1.1 Organizational Entity,The bom-ref property for the organizational entity is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.1 Organizational Entity,Every bom-ref for the organizational entity must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.1 Organizational Entity,The bom-ref Value for the organizational entity SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.1 Organizational Entity,The name property for the organizational entity is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.1 Organizational Entity,The address property for the organizational entity is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.1 Organizational Entity,The url property for the organizational entity is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.1 Organizational Entity,The contact property for the organizational entity is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.2 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.2 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.2 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.3 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The bom-ref property for the address is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.4 Organization Address,Every bom-ref for the address must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.4 Organization Address,The bom-ref Value for the address SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.4 Organization Address,The country property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The region property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The locality property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The postalCode property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.4 Organization Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.5 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.5 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.5 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.6 Country,The country property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.7 Region,The region property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.8 Locality,The locality property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.11 Street Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.12 Organization URL(s),The url property is Optional.,MAY,Organizational Entity Definition
+13.1.17.1.12 Organization URL(s),Each item of the url array must be a string.,REQUIRED,Organizational Entity Definition
+13.1.17.1.13 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+13.1.17.1.13 Organizational Contact,Each item of the contact array must be an Organizational Contact object.,REQUIRED,Contact Information
+13.1.17.1.14 Organizational Contact,The bom-ref property for the contact is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.14 Organizational Contact,Every bom-ref for the contact must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.14 Organizational Contact,The bom-ref Value for the contact SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.14 Organizational Contact,The name property for the contact is Optional.,MAY,Contact Information
+13.1.17.1.14 Organizational Contact,The email property for the contact is Optional.,MAY,Contact Information
+13.1.17.1.14 Organizational Contact,The phone property for the contact is Optional.,MAY,Contact Information
+13.1.17.1.15 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.1.15 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.1.15 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.1.16 Name,The name property is Optional.,MAY,Contact Information
+13.1.17.1.17 Email Address,The email property is Optional.,MAY,Contact Information
+13.1.17.1.18 Phone,The phone property is Optional.,MAY,Contact Information
+13.1.17.2 Individuals,The individuals property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.17.2 Individuals,Each item of the individuals array must be an Organizational Contact object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.17.2.1 Organizational Contact,The bom-ref property for the organizational contact is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.2.1 Organizational Contact,Every bom-ref for the organizational contact must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.2.1 Organizational Contact,The bom-ref Value for the organizational contact SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.2.1 Organizational Contact,The name property for the contact is Optional.,MAY,Contact Information
+13.1.17.2.1 Organizational Contact,The email property for the contact is Optional.,MAY,Contact Information
+13.1.17.2.1 Organizational Contact,The phone property for the contact is Optional.,MAY,Contact Information
+13.1.17.2.2 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+13.1.17.2.2 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+13.1.17.2.2 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+13.1.17.2.3 Name,The name property is Optional.,MAY,Contact Information
+13.1.17.2.4 Email Address,The email property is Optional.,MAY,Contact Information
+13.1.17.2.5 Phone,The phone property is Optional.,MAY,Contact Information
+13.1.18 Tools,The tools property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.18 Tools,The tools object Must be one of: Tools or Tools (legacy).,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.19 Tools,The components property for tools is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.19 Tools,The services property for tools is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.20.1 Components,The components list within Tools (legacy) is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.20.1 Components,Each item of the components array must be a Component object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.20.1.1 Component,All items in the components list must be unique.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.20.2 Services,The services list within Tools (legacy) is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.20.2 Services,Each item of the services array must be a Service object.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.20.2.1 Service,All items in the services list must be unique.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.21 Tools (legacy),Each item of the Tools (legacy) array must be a Tool object.,REQUIRED,Tooling Information
+13.1.21.1 Tool,The vendor property for the tool is Optional.,MAY,Tooling Information
+13.1.21.1 Tool,The name property for the tool is Optional.,MAY,Tooling Information
+13.1.21.1 Tool,The version property for the tool is Optional.,MAY,Tooling Information
+13.1.21.1 Tool,The hashes property for the tool is Optional.,MAY,Tooling Information
+13.1.21.1 Tool,The externalReferences property for the tool is Optional.,MAY,Tooling Information
+13.1.21.1.4 Hashes,The hashes property is Optional.,MAY,Cryptographic Hashes
+13.1.21.1.4 Hashes,Each item of the hashes array must be a Hash object.,REQUIRED,Cryptographic Hashes
+13.1.21.1.5 Hash,The alg property for the hash object is Required.,REQUIRED,Cryptographic Hashes
+13.1.21.1.5 Hash,The content property for the hash object is Required.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg property is Required.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: MD5.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA-1.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA-256.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA-384.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA-512.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA3-256.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA3-384.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: SHA3-512.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: BLAKE2b-256.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: BLAKE2b-384.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: BLAKE2b-512.,REQUIRED,Cryptographic Hashes
+13.1.21.1.6 Hash Algorithm,The alg value Must be one of: BLAKE3.,REQUIRED,Cryptographic Hashes
+13.1.21.1.7 Hash Value,The content property is Required.,REQUIRED,Cryptographic Hashes
+13.1.21.1.8 External References,The externalReferences property is Optional.,MAY,External References
+13.1.21.1.8 External References,Each item of the externalReferences array must be an External Reference object.,REQUIRED,External References
+13.1.22 Impact Analysis,The analysis property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The state property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The justification property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The response property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,Responses are strongly encouraged for vulnerabilities where the analysis state is exploitable.,RECOMMENDED,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The detail property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The firstIssued property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,The lastUpdated property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.1 Impact Analysis State,Justification should be specified for all not_affected cases.,RECOMMENDED,Vulnerability Impact Analysis (VEX)
+13.1.22.2 Impact Analysis Justification,The justification property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.3 Response,The response property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.3 Response,More than one response is allowed.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.3 Response,Responses are strongly encouraged for vulnerabilities where the analysis state is exploitable.,RECOMMENDED,Vulnerability Impact Analysis (VEX)
+13.1.22.3 Response,Each item of the response array must be a string.,REQUIRED,Vulnerability Impact Analysis (VEX)
+13.1.22.4 Detail,The detail property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.4 Detail,"If a vulnerability is not exploitable, the detail field should include specific details on why the component or service is not impacted by this vulnerability.",RECOMMENDED,Vulnerability Impact Analysis (VEX)
+13.1.22.5 First Issued,The firstIssued property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.22.6 Last Updated,The lastUpdated property is Optional.,MAY,Vulnerability Impact Analysis (VEX)
+13.1.23 Affects,The affects property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.23.1.1 Reference,The ref property is Required.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.23.1.1 Reference,The ref property Must be any of: Ref or BOM-Link Element.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.23.1.4 Versions,The versions property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.23.1.5 Version,The version property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.23.1.6 Version Range,The range property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.23.1.7 Status,The status property is Optional.,MAY,Vulnerability Information (Vulnerability Object)
+13.1.23.1.7 Status,All items in the versions array must be unique.,REQUIRED,Vulnerability Information (Vulnerability Object)
+13.1.24 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+13.1.24 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+13.1.24 Properties,Formal registration is optional.,MAY,Property Taxonomies
+13.1.24 Properties,Each item of the properties array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+13.1.24.1 Lightweight name-value pair,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+13.1.24.1 Lightweight name-value pair,Formal registration is optional.,MAY,Property Taxonomies
+13.1.24.1.1 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+13.1.24.1.2 Value,The value property is Optional.,MAY,Extensibility via Properties
+13.1.24.1.2 Value,All items in the properties array must be unique.,REQUIRED,Extensibility via Properties
+14 Annotations,The annotations property is Optional.,MAY,Annotations
+14 Annotations,Each item of this array must be an Annotations object.,REQUIRED,Annotations
+14.1 Annotations,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1 Annotations,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1 Annotations,The subjects property is Required.,REQUIRED,Annotations
+14.1 Annotations,The annotator property is Required.,REQUIRED,Annotations
+14.1 Annotations,The timestamp property is Required.,REQUIRED,Annotations
+14.1 Annotations,The text property is Required.,REQUIRED,Annotations
+14.1 Annotations,The signature property is Optional.,MAY,Annotations
+14.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.2 Subjects,The subjects property is Required.,REQUIRED,Annotations
+14.1.2 Subjects,The subject Must be any of: Ref.,REQUIRED,Annotations
+14.1.2 Subjects,The subject Must be any of: BOM-Link Element.,REQUIRED,Annotations
+14.1.2.2 BOM-Link Element,All items must be unique.,REQUIRED,Annotations
+14.1.3 Annotator,The annotator property is Required.,REQUIRED,Annotations
+14.1.3.1 Organizational Entity,The organization property is Optional.,MAY,Annotations
+14.1.3.1 Organizational Entity,The individual property is Optional.,MAY,Annotations
+14.1.3.1 Organizational Entity,The component property is Optional.,MAY,Annotations
+14.1.3.1 Organizational Entity,The service property is Optional.,MAY,Annotations
+14.1.3.1.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.1.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.1.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.1.2 Organization Name,The name property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The address property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.1.3 Organization Address,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.1.3 Organization Address,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.1.3 Organization Address,The country property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The region property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The locality property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The postOfficeBoxNumber property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The postalCode property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.3 Organization Address,The streetAddress property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.4 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.1.4 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.1.4 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.1.5 Country,The country property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.6 Region,The region property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.7 Locality,The locality property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.11 Organization URL(s),The url property is Optional.,MAY,Organizational Entity Definition
+14.1.3.1.11 Organization URL(s),Multiple URLs are allowed.,MAY,Organizational Entity Definition
+14.1.3.1.12 Organizational Contact,The contact property is Optional.,MAY,Contact Information
+14.1.3.1.12 Organizational Contact,Multiple contacts are allowed.,MAY,Contact Information
+14.1.3.1.12 Organizational Contact,Each item of this array must be an Organizational Contact object.,REQUIRED,Contact Information
+14.1.3.1.13 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.1.13 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.1.13 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.1.13 Organizational Contact,The name property is Optional.,MAY,Contact Information
+14.1.3.1.13 Organizational Contact,The email property is Optional.,MAY,Contact Information
+14.1.3.1.13 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+14.1.3.1.14 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.1.14 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.1.14 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.1.15 Name,The name property is Optional.,MAY,Contact Information
+14.1.3.1.16 Email Address,The email property is Optional.,MAY,Contact Information
+14.1.3.1.17 Phone,The phone property is Optional.,MAY,Contact Information
+14.1.3.2 Organizational Contact,The individual property is Optional.,MAY,Annotations
+14.1.3.2 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.2 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.2 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.2 Organizational Contact,The name property is Optional.,MAY,Contact Information
+14.1.3.2 Organizational Contact,The email property is Optional.,MAY,Contact Information
+14.1.3.2 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+14.1.3.2.1 BOM Reference,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+14.1.3.2.1 BOM Reference,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+14.1.3.2.1 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+14.1.3.2.2 Name,The name property is Optional.,MAY,Contact Information
+14.1.3.2.3 Email Address,The email property is Optional.,MAY,Contact Information
+14.1.3.2.4 Phone,The phone property is Optional.,MAY,Contact Information
+14.1.3.3 Component,The component property is Optional.,MAY,Annotations
+14.1.3.4 Service,The service property is Optional.,MAY,Annotations
+14.1.4 Timestamp,The timestamp property is Required.,REQUIRED,Timestamping
+14.1.5 Text,The text property is Required.,REQUIRED,Annotations
+14.1.6 Signature,The signature property is Optional.,MAY,Digital Signatures
+14.1.6 Signature,All items must be unique.,REQUIRED,Digital Signatures
+15 Formulation,The formulation property is Optional.,MAY,Formulation and Reproducible Builds
+15 Formulation,Each item of this array must be a Formula object.,REQUIRED,Formulation and Reproducible Builds
+15.1 Formula,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.2 Components,The components property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.3 Services,The services property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4 Workflows,The workflows property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.7 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.7 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.7 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.13 BOM Reference,The bom-ref property is Required.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.13 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+15.1.4.1.14 Unique Identifier (UID),The uid property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.18 Resource reference choice,The ref property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.18 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.19 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.19 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.19 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.31 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.44 Resource reference choice,The ref property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.44 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.45 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.45 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.50 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.50 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.50 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.53 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.66 Data Attachment,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+15.1.4.1.67 Content-Type,The contentType property is Optional.,MAY,Data Components and Governance
+15.1.4.1.68 Encoding,The encoding property is Optional.,MAY,Data Components and Governance
+15.1.4.1.69 Attachment Text,The content property is Required.,REQUIRED,Data Components and Governance
+15.1.4.1.69 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+15.1.4.1.70 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.70 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.70 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.74 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.75 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.75 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.75 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.79 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.80 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.80 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.80 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.83 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.84 Parameters,The parameters property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.84 Parameters,Each item of this array must be a Parameter object.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.85 Parameter,The name property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.85 Parameter,The value property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.89 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.90 Lightweight name-value pair,The name property is Required.,REQUIRED,Extensibility via Properties
+15.1.4.1.91 Value,The value property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.92 Value,All items must be unique.,REQUIRED,Extensibility via Properties
+15.1.4.1.93 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.94 Content-Type,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.95 Encoding,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.96 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.96 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.97 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.97 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.97 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.97 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.103 Resource reference choice,The type property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.103 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.103 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.103 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.104 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.104 BOM Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.108 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.109 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.109 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.109 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.113 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.114 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.114 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.114 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.117 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.118 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.119 Content-Type,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.120 Encoding,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.121 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.121 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.122 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.122 Environment variables,The environment variables Must be one of: Lightweight name-value pair.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.134 Steps,The steps property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.137 Commands,The commands property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.137 Commands,Each item of the commands array must be an object (Command object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.138 Executed,The executed property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.139 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.139 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.139 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.139 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.141 Inputs,The inputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.141 Inputs,Each item of the inputs array must be an object (Input object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.149 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.149 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.149 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.150 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.150 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.150 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.153 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.155 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.155 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.155 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.158 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.160 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.160 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.160 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.163 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.164 Parameters,The parameters property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.168 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.172 Value,All items must be unique.,REQUIRED,Extensibility via Properties
+15.1.4.1.173 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.173 Attachment,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.173 Attachment,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.176 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.176 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.177 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.177 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.177 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.177 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.179 Outputs,The outputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.179 Outputs,Each item of the outputs array must be an object (Output object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: artifact.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: attestation.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: log.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: evidence.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: metrics.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.182 Type,The type value Must be one of: other.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.183 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.183 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.183 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.184 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.184 BOM Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.188 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.189 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.189 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.189 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.193 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.194 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.194 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.194 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.197 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.198 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.199 Content-Type,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.200 Encoding,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.201 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.201 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.202 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.202 Environment variables,The environment variables Must be one of: Lightweight name-value pair.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.214 BOM Reference,The bom-ref property is Required.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.214 BOM Reference,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+15.1.4.1.215 Unique Identifier (UID),The uid property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.219 Resource reference choice,The resourceReferences array is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.220 Resource reference choice,The ref property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.220 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.221 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.221 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.221 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.224 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.224 External Reference,All items must be unique.,REQUIRED,External References
+15.1.4.1.244 Value,All items must be unique.,REQUIRED,Extensibility via Properties
+15.1.4.1.245 Runtime topology,The runtimeTopology property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.245 Runtime topology,Each item of this array must be a Dependency object.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.246 Dependency,The ref property is Required.,REQUIRED,Dependency Graph Representation
+15.1.4.1.246 Dependency,The dependsOn property is Optional.,MAY,Dependency Graph Representation
+15.1.4.1.246 Dependency,The provides property is Optional.,MAY,Dependency Graph Representation
+15.1.4.1.249 Provides,Each item of this array must be a string.,REQUIRED,Dependency Graph Representation
+15.1.4.1.250 Task Dependencies,The taskDependencies property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.250 Task Dependencies,The ref property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.250 Task Dependencies,The dependsOn property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.250 Task Dependencies,The provides property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.258 Provides,Each item of this array must be a string.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.267 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.267 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.267 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.272 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.272 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.280 Resource reference choice,The ref property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.280 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.280 Resource reference choice,Each item of the ref array must be a string.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.286 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.286 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.286 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.289 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.290 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.290 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.290 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.290 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.292 Inputs,The inputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.306 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.306 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.306 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.311 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.311 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.311 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.314 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.316 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.316 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.316 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.319 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.323 Parameters,The parameters property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.327 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.328 Value,All items must be unique.,REQUIRED,Extensibility via Properties
+15.1.4.1.329 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.329 Attachment,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.332 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.332 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.333 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.333 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.333 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.333 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.334 Outputs,The outputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: artifact.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: attestation.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: log.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: evidence.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: metrics.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.338 Type,The type value Must be one of: other.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.339 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.339 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.339 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.340 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.340 BOM Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.344 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.345 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.345 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.345 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.349 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.350 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.350 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.350 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.353 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.354 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.355 Content-Type,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.356 Encoding,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.357 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.357 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.358 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.358 Environment variables,The environment variables Must be one of: Lightweight name-value pair.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.370 Steps,The steps property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.373 Commands,The commands property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.373 Commands,Each item of the commands array must be an object (Command object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.374 Executed,The executed property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.375 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.375 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.375 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.375 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.377 Inputs,The inputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.377 Inputs,Each item of the inputs array must be an object (Input object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.383 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.383 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.383 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.386 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.386 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.386 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.391 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.391 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.391 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.394 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.396 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.396 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.396 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.399 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.401 Parameters,The parameters property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.405 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.408 Value,All items must be unique.,REQUIRED,Extensibility via Properties
+15.1.4.1.409 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.409 Attachment,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.412 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.412 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.413 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.4.1.413 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.4.1.413 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.4.1.413 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+15.1.4.1.415 Outputs,The outputs property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.415 Outputs,Each item of the outputs array must be an object (Output object).,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: artifact.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: attestation.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: log.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: evidence.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: metrics.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.418 Type,The type value Must be one of: other.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.419 Resource reference choice,The source property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.419 Resource reference choice,The target property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.419 Resource reference choice,The resource property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.420 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.420 BOM Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.424 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.425 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.425 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.425 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.429 Resource reference choice,The externalReference property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.430 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.430 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.430 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.433 External Reference,The externalReference property is Optional.,MAY,External References
+15.1.4.1.434 Attachment,The data property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.435 Content-Type,The contentType property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.436 Encoding,The encoding property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.437 Attachment Text,The content property is Required.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.437 Attachment Text,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Formulation and Reproducible Builds
+15.1.4.1.438 Environment variables,The environmentVars property is Optional.,MAY,Formulation and Reproducible Builds
+15.1.4.1.438 Environment variables,The environment variables Must be one of: Lightweight name-value pair.,REQUIRED,Formulation and Reproducible Builds
+15.1.4.1.457 BOM Reference,The ref property is Optional.,MAY,Internal Referencing (bom-ref)
+15.1.4.1.457 BOM Reference,The ref must be any of: Ref.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.457 BOM Reference,The ref must be any of: BOM-Link Element.,REQUIRED,Internal Referencing (bom-ref)
+15.1.4.1.483 Reference,The ref property is Required.,REQUIRED,Dependency Graph Representation
+15.1.4.1.484 Depends On,The dependsOn property is Optional.,MAY,Dependency Graph Representation
+15.1.4.1.485 Provides,The provides property is Optional.,MAY,Dependency Graph Representation
+15.1.5 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+15.1.5 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+15.1.5 Properties,Formal registration is optional.,MAY,Property Taxonomies
+15.1.5 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+16 Declarations,The declarations property is Optional.,MAY,Attestations and Declarations
+16.1 Assessors,The assessors property is Optional.,MAY,Attestations and Declarations
+16.1 Assessors,Each item of this array must be an Assessor object.,REQUIRED,Attestations and Declarations
+16.1.1 Assessor,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+16.1.1 Assessor,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+16.1.1 Assessor,The thirdParty property is Optional.,MAY,Attestations and Declarations
+16.1.1 Assessor,The organization property is Optional.,MAY,Attestations and Declarations
+16.2 Attestations,The attestations property is Optional.,MAY,Attestations and Declarations
+16.2 Attestations,Each item of this array must be an Attestation object.,REQUIRED,Attestations and Declarations
+16.2.1 Attestation,The summary property is Optional.,MAY,Attestations and Declarations
+16.2.1 Attestation,The assessor property is Optional.,MAY,Attestations and Declarations
+16.2.1 Attestation,The map property is Optional.,MAY,Attestations and Declarations
+16.2.1 Attestation,The signature property is Optional.,MAY,Digital Signatures
+16.2.1.3 Map,The map property is Optional.,MAY,Attestations and Declarations
+16.2.1.3 Map,Each item of this array must be a Map object.,REQUIRED,Attestations and Declarations
+16.2.1.3.1 Map,The requirement property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.1 Map,The claims property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.1 Map,The counterClaims property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.1 Map,The conformance property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.1 Map,The confidence property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.3 Claims,The claims property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.3 Claims,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.2.1.3.4 Counter Claims,The counterClaims property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.4 Counter Claims,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.2.1.3.5 Conformance,The conformance property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.5 Conformance,The score property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.5 Conformance,The rationale property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.5 Conformance,The mitigationStrategies property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.8 Mitigation Strategies,The mitigationStrategies property is Optional.,MAY,Attestations and Declarations
+16.2.1.3.8 Mitigation Strategies,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.2.1.3.9 Confidence,The confidence property is Optional.,MAY,Attestations and Declarations
+16.2.1.4 Signature,The signature property is Optional.,MAY,Digital Signatures
+16.3 Claims,The claims property is Optional.,MAY,Attestations and Declarations
+16.3 Claims,Each item of this array must be a Claim object.,REQUIRED,Attestations and Declarations
+16.3.1 Claim,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+16.3.1 Claim,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+16.3.1 Claim,The target property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The predicate property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The mitigationStrategies property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The reasoning property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The evidence property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The counterEvidence property is Optional.,MAY,Attestations and Declarations
+16.3.1 Claim,The externalReferences property is Optional.,MAY,External References
+16.3.1 Claim,The signature property is Optional.,MAY,Digital Signatures
+16.3.1.4 Mitigation Strategies,The mitigationStrategies property is Optional.,MAY,Attestations and Declarations
+16.3.1.4 Mitigation Strategies,Each mitigation strategy should include an explanation of how any weaknesses in the evidence will be mitigated.,RECOMMENDED,Attestations and Declarations
+16.3.1.4 Mitigation Strategies,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.3.1.6 Evidence,The evidence property is Optional.,MAY,Attestations and Declarations
+16.3.1.6 Evidence,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.3.1.7 Counter Evidence,The counterEvidence property is Optional.,MAY,Attestations and Declarations
+16.3.1.7 Counter Evidence,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+16.3.1.8 External References,The externalReferences property is Optional.,MAY,External References
+16.3.1.8 External References,Each item of this array must be an External Reference object.,REQUIRED,External References
+16.3.1.9 Signature,The signature property is Optional.,MAY,Digital Signatures
+16.4 Evidence,The evidence property is Optional.,MAY,Evidence and Substantiation
+16.4 Evidence,Each item of this array must be an Evidence object.,REQUIRED,Evidence and Substantiation
+16.4.1 Evidence,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+16.4.1 Evidence,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+16.4.1 Evidence,The propertyName property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The description property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The data property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The created property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The expires property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The author property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The reviewer property is Optional.,MAY,Evidence and Substantiation
+16.4.1 Evidence,The signature property is Optional.,MAY,Digital Signatures
+16.4.1.4 Data,The data property is Optional.,MAY,Data Components and Governance
+16.4.1.4 Data,Each item of this array must be a Data object.,REQUIRED,Data Components and Governance
+16.4.1.4.1 Data,The name property is Optional.,MAY,Data Components and Governance
+16.4.1.4.1 Data,The contents property is Optional.,MAY,Data Components and Governance
+16.4.1.4.1 Data,The classification property is Optional.,MAY,Data Components and Governance
+16.4.1.4.1 Data,The sensitiveData property is Optional.,MAY,Data Components and Governance
+16.4.1.4.1 Data,The governance property is Optional.,MAY,Data Components and Governance
+16.4.1.4.3 Data Contents,The attachment property is Optional.,MAY,Data Components and Governance
+16.4.1.4.3 Data Contents,The url property is Optional.,MAY,Data Components and Governance
+16.4.1.4.4 Attachment,The contentType property is Optional.,MAY,Data Components and Governance
+16.4.1.4.4 Attachment,The encoding property is Optional.,MAY,Data Components and Governance
+16.4.1.4.4 Attachment,The content property is Required.,REQUIRED,Data Components and Governance
+16.4.1.4.4 Attachment,Proactive controls such as input validation and sanitization should be employed to prevent misuse of attachment text.,RECOMMENDED,Data Components and Governance
+16.4.1.4.10 Sensitive Data,The sensitiveData property is Optional.,MAY,Data Components and Governance
+16.4.1.4.10 Sensitive Data,Each item of this array must be a string.,REQUIRED,Data Components and Governance
+16.4.1.4.11 Data Governance,The governance property is Optional.,MAY,Data Components and Governance
+16.4.1.4.12 Data Custodians,The custodians property is Optional.,MAY,Data Components and Governance
+16.4.1.4.36 Data Stewards,The stewards property is Optional.,MAY,Data Components and Governance
+16.4.1.4.60 Data Owners,The owners property is Optional.,MAY,Data Components and Governance
+16.4.1.7 Organizational Contact,The author property is Optional.,MAY,Organizational Entity Definition
+16.4.1.7 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+16.4.1.7 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+16.4.1.7 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+16.4.1.7 Organizational Contact,The name property is Optional.,MAY,Contact Information
+16.4.1.7 Organizational Contact,The email property is Optional.,MAY,Contact Information
+16.4.1.7 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+16.4.1.8 Organizational Contact,The reviewer property is Optional.,MAY,Organizational Entity Definition
+16.4.1.8 Organizational Contact,The bom-ref property is Optional.,MAY,Internal Referencing (bom-ref)
+16.4.1.8 Organizational Contact,Every bom-ref must be unique within the BOM.,REQUIRED,Internal Referencing (bom-ref)
+16.4.1.8 Organizational Contact,The bom-ref Value SHOULD not start with the BOM-Link intro 'urn:cdx:' to avoid conflicts with BOM-Links.,RECOMMENDED,Internal Referencing (bom-ref)
+16.4.1.8 Organizational Contact,The name property is Optional.,MAY,Contact Information
+16.4.1.8 Organizational Contact,The email property is Optional.,MAY,Contact Information
+16.4.1.8 Organizational Contact,The phone property is Optional.,MAY,Contact Information
+16.4.1.9 Signature,The signature property is Optional.,MAY,Digital Signatures
+16.5 Targets,The targets property is Optional.,MAY,Attestations and Declarations
+16.5.1 Organizations,The organizations property is Optional.,MAY,Attestations and Declarations
+16.5.1 Organizations,Each item of this array must be an Organizational Entity object.,REQUIRED,Attestations and Declarations
+16.5.2 Components,The components property is Optional.,MAY,Attestations and Declarations
+16.5.3 Services,The services property is Optional.,MAY,Attestations and Declarations
+16.5.3 Services,Each item of this array must be a Service object.,REQUIRED,Attestations and Declarations
+16.6 Affirmation,The affirmation property is Optional.,MAY,Attestations and Declarations
+16.6.1 Statement,The statement property is Optional.,MAY,Attestations and Declarations
+16.6.2 Signatories,The signatories property is Optional.,MAY,Attestations and Declarations
+16.6.2 Signatories,Each item of this array must be a Signatory object.,REQUIRED,Attestations and Declarations
+16.6.2.1 Signatory,The name property is Optional.,MAY,Attestations and Declarations
+16.6.2.1 Signatory,The role property is Optional.,MAY,Attestations and Declarations
+16.6.2.1 Signatory,The signature property is Optional.,MAY,Attestations and Declarations
+16.6.2.1 Signatory,The organization property is Optional.,MAY,Attestations and Declarations
+16.6.2.1 Signatory,The externalReference property is Optional.,MAY,Attestations and Declarations
+16.6.3 Signature,The signature property is Optional.,MAY,Digital Signatures
+16.7 Signature,The signature property is Optional.,MAY,Digital Signatures
+17 Definitions,The definitions property is Optional.,MAY,Root Object Model
+17.1 Standards,The standards property is Optional.,MAY,Attestations and Declarations
+17.1 Standards,Each item of this array must be a Standard object.,REQUIRED,Attestations and Declarations
+17.1.1 Standard,The version property is Optional.,MAY,Attestations and Declarations
+17.1.1 Standard,The description property is Optional.,MAY,Attestations and Declarations
+17.1.1 Standard,The owner property is Optional.,MAY,Attestations and Declarations
+17.1.1 Standard,The requirements property is Optional.,MAY,Attestations and Declarations
+17.1.1 Standard,The levels property is Optional.,MAY,Attestations and Declarations
+17.1.1 Standard,The externalReferences property is Optional.,MAY,External References
+17.1.1 Standard,The signature property is Optional.,MAY,Digital Signatures
+17.1.1.6 Requirements,The requirements property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The title property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The text property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The descriptions property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The openCre property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The parent property is Optional.,MAY,Attestations and Declarations
+17.1.1.6 Requirements,The properties property is Optional.,MAY,Extensibility via Properties
+17.1.1.6 Requirements,The externalReferences property is Optional.,MAY,External References
+17.1.1.6.6 Descriptions,The descriptions property is Optional.,MAY,Attestations and Declarations
+17.1.1.6.6 Descriptions,Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+17.1.1.6.7 OWASP OpenCRE Identifier(s),The openCre property is Optional.,MAY,Attestations and Declarations
+17.1.1.6.7 OWASP OpenCRE Identifier(s),Each item of this array must be a string.,REQUIRED,Attestations and Declarations
+17.1.1.6.9 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+17.1.1.6.9 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+17.1.1.6.9 Properties,Formal registration is optional.,MAY,Property Taxonomies
+17.1.1.6.9 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+17.1.1.6.13 External References,The externalReferences property is Optional.,MAY,External References
+17.1.1.6.13 External References,Each item of this array must be an External Reference object.,REQUIRED,External References
+17.1.1.8 Levels,The levels property is Optional.,MAY,Attestations and Declarations
+18 Properties,The properties property is Optional.,MAY,Extensibility via Properties
+18 Properties,Property names of interest to the general public are encouraged to be registered in the CycloneDX Property Taxonomy.,RECOMMENDED,Property Taxonomies
+18 Properties,Formal registration is optional.,MAY,Property Taxonomies
+18 Properties,Each item of this array must be a Lightweight name-value pair object.,REQUIRED,Extensibility via Properties
+18.1.1 Name,The name property is Required.,REQUIRED,Extensibility via Properties
+18.1.2 Value,The value property is Optional.,MAY,Extensibility via Properties
+19 Signature,The signature property is Optional.,MAY,Digital Signatures
+19 Signature,All items must be unique.,REQUIRED,Digital Signatures
