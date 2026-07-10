@@ -1,0 +1,83 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:37b2f515-38fc-4b65-b42b-0efa9576733d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-06T14:53:27+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "ee70bbb8-d5c7-43c3-9278-9d1ce1b56636",
+      "type": "application",
+      "name": "packages/3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "060e470e-e7fc-46ea-8eb4-207e7a7b1c5b",
+      "type": "application",
+      "name": "docs/requirements.txt",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/sphinx@7.2.6",
+      "type": "library",
+      "name": "Sphinx",
+      "version": "7.2.6",
+      "purl": "pkg:pypi/sphinx@7.2.6",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "060e470e-e7fc-46ea-8eb4-207e7a7b1c5b",
+      "dependsOn": [
+        "pkg:pypi/sphinx@7.2.6"
+      ]
+    },
+    {
+      "ref": "ee70bbb8-d5c7-43c3-9278-9d1ce1b56636",
+      "dependsOn": [
+        "060e470e-e7fc-46ea-8eb4-207e7a7b1c5b"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/sphinx@7.2.6",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

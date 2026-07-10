@@ -1,0 +1,290 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:d2c4bfda-f058-47bb-b527-5740bb25012e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-06T14:53:27+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "3cc3a2c4-e3f4-4d81-8cbd-89a7e7bc397e",
+      "type": "application",
+      "name": "packages/2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "39e4bd0a-622c-4b68-b4ee-fadad56b1262",
+      "type": "application",
+      "name": "uv.lock",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/brotli@1.1.0",
+      "type": "library",
+      "name": "brotli",
+      "version": "1.1.0",
+      "purl": "pkg:pypi/brotli@1.1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "brotli@1.1.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/brotlicffi@1.1.0.0",
+      "type": "library",
+      "name": "brotlicffi",
+      "version": "1.1.0.0",
+      "purl": "pkg:pypi/brotlicffi@1.1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "brotlicffi@1.1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/cffi@1.17.1",
+      "type": "library",
+      "name": "cffi",
+      "version": "1.17.1",
+      "purl": "pkg:pypi/cffi@1.17.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "cffi@1.17.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/h2@4.1.0",
+      "type": "library",
+      "name": "h2",
+      "version": "4.1.0",
+      "purl": "pkg:pypi/h2@4.1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "h2@4.1.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/hpack@4.0.0",
+      "type": "library",
+      "name": "hpack",
+      "version": "4.0.0",
+      "purl": "pkg:pypi/hpack@4.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "hpack@4.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/hyperframe@6.0.1",
+      "type": "library",
+      "name": "hyperframe",
+      "version": "6.0.1",
+      "purl": "pkg:pypi/hyperframe@6.0.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "hyperframe@6.0.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pycparser@2.22",
+      "type": "library",
+      "name": "pycparser",
+      "version": "2.22",
+      "purl": "pkg:pypi/pycparser@2.22",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "pycparser@2.22"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pysocks@1.7.1",
+      "type": "library",
+      "name": "pysocks",
+      "version": "1.7.1",
+      "purl": "pkg:pypi/pysocks@1.7.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "pysocks@1.7.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/urllib3",
+      "type": "library",
+      "name": "urllib3",
+      "purl": "pkg:pypi/urllib3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "urllib3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/zstandard@0.23.0",
+      "type": "library",
+      "name": "zstandard",
+      "version": "0.23.0",
+      "purl": "pkg:pypi/zstandard@0.23.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "zstandard@0.23.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "39e4bd0a-622c-4b68-b4ee-fadad56b1262",
+      "dependsOn": [
+        "pkg:pypi/urllib3"
+      ]
+    },
+    {
+      "ref": "3cc3a2c4-e3f4-4d81-8cbd-89a7e7bc397e",
+      "dependsOn": [
+        "39e4bd0a-622c-4b68-b4ee-fadad56b1262"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/brotli@1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/brotlicffi@1.1.0.0",
+      "dependsOn": [
+        "pkg:pypi/cffi@1.17.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/cffi@1.17.1",
+      "dependsOn": [
+        "pkg:pypi/pycparser@2.22"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/h2@4.1.0",
+      "dependsOn": [
+        "pkg:pypi/hpack@4.0.0",
+        "pkg:pypi/hyperframe@6.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/hpack@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/hyperframe@6.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pycparser@2.22",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pysocks@1.7.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/urllib3",
+      "dependsOn": [
+        "pkg:pypi/brotli@1.1.0",
+        "pkg:pypi/brotlicffi@1.1.0.0",
+        "pkg:pypi/h2@4.1.0",
+        "pkg:pypi/pysocks@1.7.1",
+        "pkg:pypi/zstandard@0.23.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/zstandard@0.23.0",
+      "dependsOn": [
+        "pkg:pypi/cffi@1.17.1"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}

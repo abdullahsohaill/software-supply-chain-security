@@ -1,0 +1,151 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:4d7992c7-e3d9-41e0-a22d-1f9d2084b2ed",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-06T14:53:28+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "12f69753-1552-4ad5-b70c-71151cf39b2e",
+      "type": "application",
+      "name": "packages/11",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "9f89f336-14e0-4a3a-b757-317d6c933c67",
+      "type": "application",
+      "name": "docs/environment.yml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/botocore",
+      "type": "library",
+      "name": "botocore",
+      "purl": "pkg:conda/botocore",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/docutils",
+      "type": "library",
+      "name": "docutils",
+      "purl": "pkg:conda/docutils",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/python@3.9",
+      "type": "library",
+      "name": "python",
+      "version": "3.9",
+      "purl": "pkg:conda/python@3.9",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/sphinx",
+      "type": "library",
+      "name": "sphinx",
+      "purl": "pkg:conda/sphinx",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/sphinx_rtd_theme",
+      "type": "library",
+      "name": "sphinx_rtd_theme",
+      "purl": "pkg:conda/sphinx_rtd_theme",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "12f69753-1552-4ad5-b70c-71151cf39b2e",
+      "dependsOn": [
+        "9f89f336-14e0-4a3a-b757-317d6c933c67"
+      ]
+    },
+    {
+      "ref": "9f89f336-14e0-4a3a-b757-317d6c933c67",
+      "dependsOn": [
+        "pkg:conda/botocore",
+        "pkg:conda/docutils",
+        "pkg:conda/python@3.9",
+        "pkg:conda/sphinx",
+        "pkg:conda/sphinx_rtd_theme"
+      ]
+    },
+    {
+      "ref": "pkg:conda/botocore",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/docutils",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/python@3.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/sphinx",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/sphinx_rtd_theme",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

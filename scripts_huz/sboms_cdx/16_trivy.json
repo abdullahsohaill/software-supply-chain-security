@@ -1,0 +1,684 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:9389882a-f5cb-46c0-827f-9c34fad1f699",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-06T14:53:31+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.68.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "30cbbdaa-d64c-4d57-8e7a-593d96368341",
+      "type": "application",
+      "name": "packages/16",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "874f36fc-1476-489d-bda2-2f933265b9b6",
+      "type": "application",
+      "name": "environment.yml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/breathe",
+      "type": "library",
+      "name": "breathe",
+      "purl": "pkg:conda/breathe",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/ccache",
+      "type": "library",
+      "name": "ccache",
+      "purl": "pkg:conda/ccache",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/cffi",
+      "type": "library",
+      "name": "cffi",
+      "purl": "pkg:conda/cffi",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/compilers",
+      "type": "library",
+      "name": "compilers",
+      "purl": "pkg:conda/compilers",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/cython",
+      "type": "library",
+      "name": "cython",
+      "purl": "pkg:conda/cython",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/doxygen",
+      "type": "library",
+      "name": "doxygen",
+      "purl": "pkg:conda/doxygen",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/gitpython",
+      "type": "library",
+      "name": "gitpython",
+      "purl": "pkg:conda/gitpython",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/hypothesis",
+      "type": "library",
+      "name": "hypothesis",
+      "purl": "pkg:conda/hypothesis",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/ipython",
+      "type": "library",
+      "name": "ipython",
+      "purl": "pkg:conda/ipython",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/jupyterlite-pyodide-kernel@0.5.2",
+      "type": "library",
+      "name": "jupyterlite-pyodide-kernel",
+      "version": "0.5.2",
+      "purl": "pkg:conda/jupyterlite-pyodide-kernel@0.5.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/jupyterlite-sphinx",
+      "type": "library",
+      "name": "jupyterlite-sphinx",
+      "purl": "pkg:conda/jupyterlite-sphinx",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/matplotlib",
+      "type": "library",
+      "name": "matplotlib",
+      "purl": "pkg:conda/matplotlib",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/meson-python",
+      "type": "library",
+      "name": "meson-python",
+      "purl": "pkg:conda/meson-python",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/mypy@1.15.0",
+      "type": "library",
+      "name": "mypy",
+      "version": "1.15.0",
+      "purl": "pkg:conda/mypy@1.15.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/ninja",
+      "type": "library",
+      "name": "ninja",
+      "purl": "pkg:conda/ninja",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/nomkl",
+      "type": "library",
+      "name": "nomkl",
+      "purl": "pkg:conda/nomkl",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/numpydoc@1.4.0",
+      "type": "library",
+      "name": "numpydoc",
+      "version": "1.4.0",
+      "purl": "pkg:conda/numpydoc@1.4.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/openblas",
+      "type": "library",
+      "name": "openblas",
+      "purl": "pkg:conda/openblas",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/orjson",
+      "type": "library",
+      "name": "orjson",
+      "purl": "pkg:conda/orjson",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pandas",
+      "type": "library",
+      "name": "pandas",
+      "purl": "pkg:conda/pandas",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pkg-config",
+      "type": "library",
+      "name": "pkg-config",
+      "purl": "pkg:conda/pkg-config",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pydata-sphinx-theme",
+      "type": "library",
+      "name": "pydata-sphinx-theme",
+      "purl": "pkg:conda/pydata-sphinx-theme",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pytest",
+      "type": "library",
+      "name": "pytest",
+      "purl": "pkg:conda/pytest",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pytest-cov",
+      "type": "library",
+      "name": "pytest-cov",
+      "purl": "pkg:conda/pytest-cov",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pytest-xdist",
+      "type": "library",
+      "name": "pytest-xdist",
+      "purl": "pkg:conda/pytest-xdist",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/python@3.12",
+      "type": "library",
+      "name": "python",
+      "version": "3.12",
+      "purl": "pkg:conda/python@3.12",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/pytz",
+      "type": "library",
+      "name": "pytz",
+      "purl": "pkg:conda/pytz",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/ruff@0.8.3",
+      "type": "library",
+      "name": "ruff",
+      "version": "0.8.3",
+      "purl": "pkg:conda/ruff@0.8.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/scipy",
+      "type": "library",
+      "name": "scipy",
+      "purl": "pkg:conda/scipy",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/setuptools@65.5.1",
+      "type": "library",
+      "name": "setuptools",
+      "version": "65.5.1",
+      "purl": "pkg:conda/setuptools@65.5.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/sphinx",
+      "type": "library",
+      "name": "sphinx",
+      "purl": "pkg:conda/sphinx",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/sphinx-copybutton",
+      "type": "library",
+      "name": "sphinx-copybutton",
+      "purl": "pkg:conda/sphinx-copybutton",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/sphinx-design",
+      "type": "library",
+      "name": "sphinx-design",
+      "purl": "pkg:conda/sphinx-design",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/spin@0.13",
+      "type": "library",
+      "name": "spin",
+      "version": "0.13",
+      "purl": "pkg:conda/spin@0.13",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/towncrier",
+      "type": "library",
+      "name": "towncrier",
+      "purl": "pkg:conda/towncrier",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:conda/typing_extensions",
+      "type": "library",
+      "name": "typing_extensions",
+      "purl": "pkg:conda/typing_extensions",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "conda-environment"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "30cbbdaa-d64c-4d57-8e7a-593d96368341",
+      "dependsOn": [
+        "874f36fc-1476-489d-bda2-2f933265b9b6"
+      ]
+    },
+    {
+      "ref": "874f36fc-1476-489d-bda2-2f933265b9b6",
+      "dependsOn": [
+        "pkg:conda/breathe",
+        "pkg:conda/ccache",
+        "pkg:conda/cffi",
+        "pkg:conda/compilers",
+        "pkg:conda/cython",
+        "pkg:conda/doxygen",
+        "pkg:conda/gitpython",
+        "pkg:conda/hypothesis",
+        "pkg:conda/ipython",
+        "pkg:conda/jupyterlite-pyodide-kernel@0.5.2",
+        "pkg:conda/jupyterlite-sphinx",
+        "pkg:conda/matplotlib",
+        "pkg:conda/meson-python",
+        "pkg:conda/mypy@1.15.0",
+        "pkg:conda/ninja",
+        "pkg:conda/nomkl",
+        "pkg:conda/numpydoc@1.4.0",
+        "pkg:conda/openblas",
+        "pkg:conda/orjson",
+        "pkg:conda/pandas",
+        "pkg:conda/pkg-config",
+        "pkg:conda/pydata-sphinx-theme",
+        "pkg:conda/pytest",
+        "pkg:conda/pytest-cov",
+        "pkg:conda/pytest-xdist",
+        "pkg:conda/python@3.12",
+        "pkg:conda/pytz",
+        "pkg:conda/ruff@0.8.3",
+        "pkg:conda/scipy",
+        "pkg:conda/setuptools@65.5.1",
+        "pkg:conda/sphinx",
+        "pkg:conda/sphinx-copybutton",
+        "pkg:conda/sphinx-design",
+        "pkg:conda/spin@0.13",
+        "pkg:conda/towncrier",
+        "pkg:conda/typing_extensions"
+      ]
+    },
+    {
+      "ref": "pkg:conda/breathe",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/ccache",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/cffi",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/compilers",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/cython",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/doxygen",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/gitpython",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/hypothesis",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/ipython",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/jupyterlite-pyodide-kernel@0.5.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/jupyterlite-sphinx",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/matplotlib",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/meson-python",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/mypy@1.15.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/ninja",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/nomkl",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/numpydoc@1.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/openblas",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/orjson",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pandas",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pkg-config",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pydata-sphinx-theme",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pytest",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pytest-cov",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pytest-xdist",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/python@3.12",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/pytz",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/ruff@0.8.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/scipy",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/setuptools@65.5.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/sphinx",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/sphinx-copybutton",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/sphinx-design",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/spin@0.13",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/towncrier",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:conda/typing_extensions",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}
