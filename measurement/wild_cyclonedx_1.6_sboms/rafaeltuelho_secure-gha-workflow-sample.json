@@ -1,0 +1,381 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:6a45cc22-1750-4a84-840f-a8f11f175fa7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-08-20T17:37:58-05:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.10.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "08329a07b4eb8eac",
+      "type": "file",
+      "name": "./"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:maven/org.apache.maven.wrapper/maven-wrapper@3.2.0?package-id=c74a5b3636530bd0",
+      "type": "library",
+      "group": "org.apache.maven.wrapper",
+      "name": "maven-wrapper",
+      "version": "3.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apache:maven-wrapper:3.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.apache.maven.wrapper/maven-wrapper@3.2.0",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "daa475c180514b4f190714f7a4df4ce4ec7b772d"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-archive-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:maven_wrapper:3.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:wrapper:3.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:maven:3.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.mvn/wrapper/maven-wrapper.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "maven-wrapper"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.apache.maven.wrapper"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/.mvn/wrapper/maven-wrapper.jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.quarkus/quarkus-arc?package-id=fa3f895b22fd32a6",
+      "type": "library",
+      "group": "io.quarkus",
+      "name": "quarkus-arc",
+      "cpe": "cpe:2.3:a:quarkus-arc:quarkus-arc:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.quarkus/quarkus-arc",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus-arc:quarkus_arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_arc:quarkus-arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_arc:quarkus_arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus-arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus_arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus-arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus_arc:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "quarkus-arc"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "io.quarkus"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.quarkus/quarkus-junit5?package-id=1f970d5c2eac3e42",
+      "type": "library",
+      "group": "io.quarkus",
+      "name": "quarkus-junit5",
+      "cpe": "cpe:2.3:a:quarkus-junit5:quarkus-junit5:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.quarkus/quarkus-junit5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus-junit5:quarkus_junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_junit5:quarkus-junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_junit5:quarkus_junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus-junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus_junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus-junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus_junit5:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "quarkus-junit5"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "io.quarkus"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.quarkus/quarkus-resteasy-reactive?package-id=1a5aa567fd7c35ee",
+      "type": "library",
+      "group": "io.quarkus",
+      "name": "quarkus-resteasy-reactive",
+      "cpe": "cpe:2.3:a:quarkus-resteasy-reactive:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.quarkus/quarkus-resteasy-reactive",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus-resteasy-reactive:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_resteasy_reactive:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_resteasy_reactive:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus-resteasy:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus-resteasy:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_resteasy:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus_resteasy:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.quarkus:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus-resteasy-reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:quarkus:quarkus_resteasy_reactive:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "quarkus-resteasy-reactive"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "io.quarkus"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.rest-assured/rest-assured?package-id=75b1da5505fd73be",
+      "type": "library",
+      "group": "io.rest-assured",
+      "name": "rest-assured",
+      "cpe": "cpe:2.3:a:io.rest-assured:rest-assured:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.rest-assured/rest-assured",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:io.rest-assured:rest_assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest-assured:rest-assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest-assured:rest_assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest_assured:rest-assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest_assured:rest_assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest:rest-assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:rest:rest_assured:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "rest-assured"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "io.rest-assured"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1200 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:be0798f6-088b-4ddd-8333-353408c3a243",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-10-14T15:22:37Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.8.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.8.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.8.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "kauf-rgbww-bulbs",
+      "version": "1.96",
+      "type": "application",
+      "purl": "pkg:github/kaufha/kauf-rgbww-bulbs@1.96",
+      "bom-ref": "pkg:github/kaufha/kauf-rgbww-bulbs@1.96"
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "generic"
+      },
+      {
+        "name": "cdx:bom:componentNamespaces",
+        "value": "arpa\\nesphome/components/ethernet\\nesphome/components/globals\\nesphome/components/json\\nesphome/components/modem\\nesphome/components/openthread\\nesphome/components/output\\nesphome/components/power_supply\\nesphome/components/wifi\\nesphome/core\\nlwip"
+      },
+      {
+        "name": "cdx:bom:componentSrcFiles",
+        "value": "Filename Arduino.h\\nFilename ESP8266WiFi.h\\nFilename IPAddress.h\\nFilename WiFiUdp.h\\nFilename arpa\\inet.h\\nFilename color_mode.h\\nFilename components\\kauf_rgbww\\kauf_rgbww.cpp\\nFilename components\\light\\addressable_light.cpp\\nFilename components\\light\\automation.cpp\\nFilename components\\light\\esp_color_correction.cpp\\nFilename components\\light\\esp_hsv_color.cpp\\nFilename components\\light\\esp_range_view.cpp\\nFilename components\\light\\light_call.cpp\\nFilename components\\light\\light_output.cpp\\nFilename components\\light\\light_state.cpp\\nFilename esp_color_view.h\\nFilename esp_netif.h\\nFilename esphome\\components\\ethernet\\ethernet_component.h\\nFilename esphome\\components\\globals\\globals_component.h\\nFilename esphome\\components\\json\\json_util.h\\nFilename esphome\\components\\modem\\modem_component.h\\nFilename esphome\\components\\openthread\\openthread.h\\nFilename esphome\\components\\output\\float_output.h\\nFilename esphome\\components\\power_supply\\power_supply.h\\nFilename esphome\\components\\wifi\\wifi_component.h\\nFilename esphome\\core\\color.h\\nFilename esphome\\core\\component.h\\nFilename esphome\\core\\defines.h\\nFilename esphome\\core\\entity_base.h\\nFilename esphome\\core\\hal.h\\nFilename esphome\\core\\helpers.h\\nFilename esphome\\core\\log.h\\nFilename esphome\\core\\macros.h\\nFilename esphome\\core\\preferences.h\\nFilename esphome\\core\\string_ref.h\\nFilename ip_address.h\\nFilename light_color_values.h\\nFilename light_effect.h\\nFilename light_json_schema.h\\nFilename light_traits.h\\nFilename light_transformer.h\\nFilename lwip\\ip_addr.h\\nFilename transformers.h\\nFilename util.h"
+      }
+    ]
+  },
+  "components": [
+    {
+      "group": "",
+      "name": "addressable_light",
+      "version": "",
+      "purl": "pkg:generic/addressable_light#components/light/addressable_light.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/addressable_light#components/light/addressable_light.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\addressable_light.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\addressable_light.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "Arduino",
+      "version": "",
+      "purl": "pkg:generic/Arduino#Arduino.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/Arduino#Arduino.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename Arduino.h"
+              }
+            ],
+            "concludedValue": "Filename Arduino.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "arpa",
+      "name": "inet",
+      "version": "",
+      "purl": "pkg:generic/arpa/inet#arpa/inet.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/arpa/inet#arpa/inet.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename arpa\\inet.h"
+              }
+            ],
+            "concludedValue": "Filename arpa\\inet.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "automation",
+      "version": "",
+      "purl": "pkg:generic/automation#components/light/automation.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/automation#components/light/automation.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\automation.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\automation.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "color_mode",
+      "version": "",
+      "purl": "pkg:generic/color_mode#color_mode.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/color_mode#color_mode.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename color_mode.h"
+              }
+            ],
+            "concludedValue": "Filename color_mode.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "esp_color_correction",
+      "version": "",
+      "purl": "pkg:generic/esp_color_correction#components/light/esp_color_correction.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/esp_color_correction#components/light/esp_color_correction.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\esp_color_correction.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\esp_color_correction.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "esp_color_view",
+      "version": "",
+      "purl": "pkg:generic/esp_color_view#esp_color_view.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/esp_color_view#esp_color_view.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esp_color_view.h"
+              }
+            ],
+            "concludedValue": "Filename esp_color_view.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "esp_hsv_color",
+      "version": "",
+      "purl": "pkg:generic/esp_hsv_color#components/light/esp_hsv_color.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/esp_hsv_color#components/light/esp_hsv_color.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\esp_hsv_color.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\esp_hsv_color.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "esp_netif",
+      "version": "",
+      "purl": "pkg:generic/esp_netif#esp_netif.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/esp_netif#esp_netif.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esp_netif.h"
+              }
+            ],
+            "concludedValue": "Filename esp_netif.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "esp_range_view",
+      "version": "",
+      "purl": "pkg:generic/esp_range_view#components/light/esp_range_view.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/esp_range_view#components/light/esp_range_view.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\esp_range_view.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\esp_range_view.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "ESP8266WiFi",
+      "version": "",
+      "purl": "pkg:generic/ESP8266WiFi#ESP8266WiFi.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/ESP8266WiFi#ESP8266WiFi.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename ESP8266WiFi.h"
+              }
+            ],
+            "concludedValue": "Filename ESP8266WiFi.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/ethernet",
+      "name": "ethernet_component",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/ethernet/ethernet_component",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/ethernet/ethernet_component",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\ethernet\\ethernet_component.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\ethernet\\ethernet_component.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/globals",
+      "name": "globals_component",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/globals/globals_component",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/globals/globals_component",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\globals\\globals_component.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\globals\\globals_component.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/json",
+      "name": "json_util",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/json/json_util",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/json/json_util",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\json\\json_util.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\json\\json_util.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/modem",
+      "name": "modem_component",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/modem/modem_component",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/modem/modem_component",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\modem\\modem_component.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\modem\\modem_component.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/openthread",
+      "name": "openthread",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/openthread/openthread",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/openthread/openthread",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\openthread\\openthread.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\openthread\\openthread.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/output",
+      "name": "float_output",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/output/float_output",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/output/float_output",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\output\\float_output.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\output\\float_output.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/power_supply",
+      "name": "power_supply",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/power_supply/power_supply",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/power_supply/power_supply",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\power_supply\\power_supply.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\power_supply\\power_supply.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/components/wifi",
+      "name": "wifi_component",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/components/wifi/wifi_component",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/components/wifi/wifi_component",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\components\\wifi\\wifi_component.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\components\\wifi\\wifi_component.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "color",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/color",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/color",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\color.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\color.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "component",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/component",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/component",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\component.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\component.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "defines",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/defines",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/defines",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\defines.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\defines.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "entity_base",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/entity_base",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/entity_base",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\entity_base.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\entity_base.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "hal",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/hal",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/hal",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\hal.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\hal.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "helpers",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/helpers",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/helpers",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\helpers.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\helpers.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "log",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/log",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/log",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\log.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\log.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "macros",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/macros",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/macros",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\macros.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\macros.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "preferences",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/preferences",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/preferences",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\preferences.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\preferences.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "esphome/core",
+      "name": "string_ref",
+      "version": "",
+      "purl": "pkg:github/esphome/esphome@2025.8.1#esphome/core/string_ref",
+      "type": "library",
+      "bom-ref": "pkg:github/esphome/esphome@2025.8.1#esphome/core/string_ref",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename esphome\\core\\string_ref.h"
+              }
+            ],
+            "concludedValue": "Filename esphome\\core\\string_ref.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "ip_address",
+      "version": "",
+      "purl": "pkg:generic/ip_address#ip_address.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/ip_address#ip_address.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename ip_address.h"
+              }
+            ],
+            "concludedValue": "Filename ip_address.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "IPAddress",
+      "version": "",
+      "purl": "pkg:generic/IPAddress#IPAddress.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/IPAddress#IPAddress.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename IPAddress.h"
+              }
+            ],
+            "concludedValue": "Filename IPAddress.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "kauf_rgbww",
+      "version": "",
+      "purl": "pkg:generic/kauf_rgbww#components/kauf_rgbww/kauf_rgbww.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/kauf_rgbww#components/kauf_rgbww/kauf_rgbww.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\kauf_rgbww\\kauf_rgbww.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\kauf_rgbww\\kauf_rgbww.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_call",
+      "version": "",
+      "purl": "pkg:generic/light_call#components/light/light_call.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_call#components/light/light_call.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\light_call.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\light_call.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_color_values",
+      "version": "",
+      "purl": "pkg:generic/light_color_values#light_color_values.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_color_values#light_color_values.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename light_color_values.h"
+              }
+            ],
+            "concludedValue": "Filename light_color_values.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_effect",
+      "version": "",
+      "purl": "pkg:generic/light_effect#light_effect.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_effect#light_effect.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename light_effect.h"
+              }
+            ],
+            "concludedValue": "Filename light_effect.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_json_schema",
+      "version": "",
+      "purl": "pkg:generic/light_json_schema#light_json_schema.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_json_schema#light_json_schema.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename light_json_schema.h"
+              }
+            ],
+            "concludedValue": "Filename light_json_schema.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_output",
+      "version": "",
+      "purl": "pkg:generic/light_output#components/light/light_output.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_output#components/light/light_output.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\light_output.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\light_output.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_state",
+      "version": "",
+      "purl": "pkg:generic/light_state#components/light/light_state.cpp",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_state#components/light/light_state.cpp",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename components\\light\\light_state.cpp"
+              }
+            ],
+            "concludedValue": "Filename components\\light\\light_state.cpp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_traits",
+      "version": "",
+      "purl": "pkg:generic/light_traits#light_traits.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_traits#light_traits.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename light_traits.h"
+              }
+            ],
+            "concludedValue": "Filename light_traits.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "light_transformer",
+      "version": "",
+      "purl": "pkg:generic/light_transformer#light_transformer.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/light_transformer#light_transformer.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename light_transformer.h"
+              }
+            ],
+            "concludedValue": "Filename light_transformer.h"
+          }
+        ]
+      },
+      "tags": [
+        "transform"
+      ]
+    },
+    {
+      "group": "lwip",
+      "name": "ip_addr",
+      "version": "",
+      "purl": "pkg:generic/lwip/ip_addr#lwip/ip_addr.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/lwip/ip_addr#lwip/ip_addr.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename lwip\\ip_addr.h"
+              }
+            ],
+            "concludedValue": "Filename lwip\\ip_addr.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "transformers",
+      "version": "",
+      "purl": "pkg:generic/transformers#transformers.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/transformers#transformers.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename transformers.h"
+              }
+            ],
+            "concludedValue": "Filename transformers.h"
+          }
+        ]
+      },
+      "tags": [
+        "transform"
+      ]
+    },
+    {
+      "group": "",
+      "name": "util",
+      "version": "",
+      "purl": "pkg:generic/util#util.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/util#util.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename util.h"
+              }
+            ],
+            "concludedValue": "Filename util.h"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "WiFiUdp",
+      "version": "",
+      "purl": "pkg:generic/WiFiUdp#WiFiUdp.h",
+      "type": "library",
+      "bom-ref": "pkg:generic/WiFiUdp#WiFiUdp.h",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0,
+                "value": "Filename WiFiUdp.h"
+              }
+            ],
+            "concludedValue": "Filename WiFiUdp.h"
+          }
+        ]
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:github/kaufha/kauf-rgbww-bulbs@1.96",
+      "dependsOn": [
+        "pkg:generic/Arduino#Arduino.h",
+        "pkg:generic/ESP8266WiFi#ESP8266WiFi.h",
+        "pkg:generic/IPAddress#IPAddress.h",
+        "pkg:generic/WiFiUdp#WiFiUdp.h",
+        "pkg:generic/addressable_light#components/light/addressable_light.cpp",
+        "pkg:generic/arpa/inet#arpa/inet.h",
+        "pkg:generic/automation#components/light/automation.cpp",
+        "pkg:generic/color_mode#color_mode.h",
+        "pkg:generic/esp_color_correction#components/light/esp_color_correction.cpp",
+        "pkg:generic/esp_color_view#esp_color_view.h",
+        "pkg:generic/esp_hsv_color#components/light/esp_hsv_color.cpp",
+        "pkg:generic/esp_netif#esp_netif.h",
+        "pkg:generic/esp_range_view#components/light/esp_range_view.cpp",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/ethernet/ethernet_component",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/globals/globals_component",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/json/json_util",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/modem/modem_component",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/openthread/openthread",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/output/float_output",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/power_supply/power_supply",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/components/wifi/wifi_component",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/color",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/component",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/defines",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/entity_base",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/hal",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/helpers",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/log",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/macros",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/preferences",
+        "pkg:github/esphome/esphome@2025.8.1#esphome/core/string_ref",
+        "pkg:generic/ip_address#ip_address.h",
+        "pkg:generic/kauf_rgbww#components/kauf_rgbww/kauf_rgbww.cpp",
+        "pkg:generic/light_call#components/light/light_call.cpp",
+        "pkg:generic/light_color_values#light_color_values.h",
+        "pkg:generic/light_effect#light_effect.h",
+        "pkg:generic/light_json_schema#light_json_schema.h",
+        "pkg:generic/light_output#components/light/light_output.cpp",
+        "pkg:generic/light_state#components/light/light_state.cpp",
+        "pkg:generic/light_traits#light_traits.h",
+        "pkg:generic/light_transformer#light_transformer.h",
+        "pkg:generic/lwip/ip_addr#lwip/ip_addr.h",
+        "pkg:generic/transformers#transformers.h",
+        "pkg:generic/util#util.h"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "bom-ref": "metadata-annotations",
+      "subjects": [
+        "pkg:github/kaufha/kauf-rgbww-bulbs@1.96"
+      ],
+      "annotator": {
+        "component": {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.8.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.8.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.8.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      },
+      "timestamp": "2025-10-14T15:22:37Z",
+      "text": "This Software Bill-of-Materials (SBOM) document was created on Tuesday, October 14, 2025 with cdxgen. The data was captured during the build lifecycle phase. The document describes an application named 'kauf-rgbww-bulbs' with version '1.96'. There are 44 components. The package type in this SBOM is generic with 11 purl namespaces described under components. The components were identified from 44 source files."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-07-23T10:00:00Z",
+    "component": {
+      "type": "application",
+      "name": "Quantum RNG Project",
+      "version": "1.0.0"
+    }
+  },
+  "components": [
+    {
+      "type": "data",
+      "bom-ref": "quantum-data-100mb",
+      "name": "sample_quantum_data.bin",
+      "version": "1.0.0",
+      "description": "100MB of quantum-generated random number data",
+      "properties": [
+        {
+          "name": "quantum.random.source",
+          "value": "QRNG"
+        },
+        {
+          "name": "quantum.random.hardware",
+          "value": "ID Quantique Quantis QRNG"
+        },
+        {
+          "name": "nist.test.800-22.result",
+          "value": "Pass"
+        },
+        {
+          "name": "nist.test.800-22.date",
+          "value": "2025-07-04"
+        },
+        {
+          "name": "entropy.rate",
+          "value": "16 Mbps"
+        },
+        {
+          "name": "entropy.quality.score",
+          "value": "98"
+        },
+        {
+          "name": "entropy.quality.classification",
+          "value": "Excellent"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "qrng-handler-py",
+      "name": "QRNG Data Handler",
+      "version": "1.0.0",
+      "description": "Python library for handling quantum random data",
+      "properties": [
+        {
+          "name": "crypto.random.source",
+          "value": "QRNG"
+        },
+        {
+          "name": "quantum.safe.entropy",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "qkd-simulator",
+      "name": "QKD BB84 Protocol Simulator",
+      "version": "1.0.0",
+      "description": "Quantum Key Distribution using BB84 protocol",
+      "properties": [
+        {
+          "name": "qkd.protocol",
+          "value": "BB84"
+        },
+        {
+          "name": "qkd.hardware.photon.source",
+          "value": "Simulated Single Photon"
+        },
+        {
+          "name": "qkd.hardware.receiver",
+          "value": "Simulated APD"
+        },
+        {
+          "name": "quantum.random.source",
+          "value": "QRNG"
+        }
+      ]
+    }
+  ]
+}

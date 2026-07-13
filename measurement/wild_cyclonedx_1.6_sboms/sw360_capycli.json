@@ -1,0 +1,5603 @@
+{
+  "components": [
+    {
+      "bom-ref": "pkg:pypi/attrs@25.4.0",
+      "description": "Classes Without Boilerplate",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/attrs/25.4.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/attrs/25.4.0"
+        }
+      ],
+      "name": "attrs",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/attrs@25.4.0",
+      "type": "library",
+      "version": "25.4.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/beautifulsoup4@4.14.3",
+      "description": "Screen-scraping library",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0918bfe44902e6ad8d57732ba310582e98da931428d231a5ecb9e7c703a735bb"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/beautifulsoup4/4.14.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6292b1c5186d356bba669ef9f7f051757099565ad9ada5dd630bd9de5fa7fb86"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/beautifulsoup4/4.14.3"
+        }
+      ],
+      "name": "beautifulsoup4",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/beautifulsoup4@4.14.3",
+      "type": "library",
+      "version": "4.14.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/boolean-py@5.0",
+      "description": "Define boolean algebras, create and parse boolean expressions and create custom boolean DSL.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "60cbc4bad079753721d32649545505362c754e121570ada4658b852a3a318d95"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/boolean-py/5.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ef28a70bd43115208441b53a045d1549e2f0ec6e3d08a9d142cbc41c1938e8d9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/boolean-py/5.0"
+        }
+      ],
+      "name": "boolean-py",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/boolean-py@5.0",
+      "type": "library",
+      "version": "5.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/certifi@2025.11.12",
+      "description": "Python package for providing Mozilla's CA Bundle.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "97de8790030bbd5c2d96b7ec782fc2f7820ef8dba6db909ccf95449f2d062d4b"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/certifi/2025.11.12"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d8ab5478f2ecd78af242878415affce761ca6bc54a22a27e026d7c25357c3316"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/certifi/2025.11.12"
+        }
+      ],
+      "name": "certifi",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/certifi@2025.11.12",
+      "type": "library",
+      "version": "2025.11.12"
+    },
+    {
+      "bom-ref": "pkg:pypi/chardet@5.2.0",
+      "description": "Universal encoding detector for Python 3",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/chardet/5.2.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/chardet/5.2.0"
+        }
+      ],
+      "name": "chardet",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/chardet@5.2.0",
+      "type": "library",
+      "version": "5.2.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/charset-normalizer@3.4.4",
+      "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "027f6de494925c0ab2a55eab46ae5129951638a49a34d87f4c3eda90f696b4ad"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "077fbb858e903c73f6c9db43374fd213b0b6a778106bc7032446a8e8b5b38b93"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0a98e6759f854bd25a58a73fa88833fba3b7c491169f86ce1180c948ab3fd394"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0d3d8f15c07f86e9ff82319b3d9ef6f4bf907608f53fe9d92b28ea9ae3d1fd89"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0f04b14ffe5fdc8c4933862d8306109a2c51e0704acfa35d51598eb45a1e89fc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "11d694519d7f29d6cd09f6ac70028dba10f92f6cdd059096db198c283794ac86"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "194f08cbb32dc406d6e1aea671a68be0823673db2832b38405deba2fb0d88f63"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1bee1e43c28aa63cb16e5c14e582580546b08e535299b8b6158a7c9c768a1f3d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "21d142cc6c0ec30d2efee5068ca36c128a30b0f2c53c1c07bd78cb6bc1d3be5f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2437418e20515acec67d86e12bf70056a33abdacb5cb1655042f6538d6b085a8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "244bfb999c71b35de57821b8ea746b24e863398194a4014e4c76adc2bbdfeff0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2677acec1a2f8ef614c6888b5b4ae4060cc184174a938ed4e8ef690e15d3e505"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "277e970e750505ed74c832b4bf75dac7476262ee2a013f5574dd49075879e161"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2aaba3b0819274cc41757a1da876f810a3e4d7b6eb25699253a4effef9e8e4af"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2b7d8f6c26245217bd2ad053761201e9f9680f8ce52f0fcd8d0755aeae5b2152"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2c9d3c380143a1fedbff95a312aa798578371eb29da42106a29019368a475318"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3162d5d8ce1bb98dd51af660f2121c55d0fa541b46dff7bb9b9f86ea1d87de72"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "31fd66405eaf47bb62e8cd575dc621c56c668f27d46a61d975a249930dd5e2a4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "362d61fd13843997c1c446760ef36f240cf81d3ebf74ac62652aebaf7838561e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "376bec83a63b8021bb5c8ea75e21c4ccb86e7e45ca4eb81146091b56599b80c3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "44c2a8734b333e0578090c4cd6b16f275e07aa6614ca8715e6c038e865e70576"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47cc91b2f4dd2833fddaedd2893006b0106129d4b94fdb6af1f4ce5a9965577c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4902828217069c3c5c71094537a8e623f5d097858ac6ca8252f7b4d10b7560f1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4bd5d4137d500351a30687c2d3971758aac9a19208fc110ccb9d7188fbe709e8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4fe7859a4e3e8457458e2ff592f15ccb02f3da787fcd31e0183879c3ad4692a1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "542d2cee80be6f80247095cc36c418f7bddd14f4a6de45af91dfad36d817bba2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "554af85e960429cf30784dd47447d5125aaa3b99a6f0683589dbd27e2f45da44"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5833d2c39d8896e4e19b689ffc198f08ea58116bee26dea51e362ecc7cd3ed26"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5947809c8a2417be3267efc979c47d76a079758166f7d43ef5ae8e9f92751f88"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5ae497466c7901d54b639cf42d5b8c1b6a4fead55215500d2f486d34db48d016"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5bd2293095d766545ec1a8f612559f6b40abc0eb18bb2f5d1171872d34036ede"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5bfbb1b9acf3334612667b61bd3002196fe2a1eb4dd74d247e0f2a4d50ec9bbf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5cb4d72eea50c8868f5288b7f7f33ed276118325c1dfd3957089f6b519e1382a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5dbe56a36425d26d6cfb40ce79c314a2e4dd6211d51d6d2191c00bed34f354cc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5f819d5fe9234f9f82d75bdfa9aef3a3d72c4d24a6e57aeaebba32a704553aa0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "64b55f9dce520635f018f907ff1b0df1fdc31f2795a922fb49dd14fbcdf48c84"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6515f3182dbe4ea06ced2d9e8666d97b46ef4c75e326b79bb624110f122551db"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "65e2befcd84bc6f37095f5961e68a6f077bf44946771354a28ad434c2cce0ae1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6aee717dcfead04c6eb1ce3bd29ac1e22663cdea57f943c87d1eab9a025438d7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6b39f987ae8ccdf0d2642338faf2abb1862340facc796048b604ef14919e55ed"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6e1fcf0720908f200cd21aa4e6750a48ff6ce4afe7ff5a79a90d5ed8a08296f8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "74018750915ee7ad843a774364e13a3db91682f26142baddf775342c3f5b1133"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "74664978bb272435107de04e36db5a9735e78232b85b77d45cfb38f758efd33e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "74bb723680f9f7a6234dcf67aea57e708ec1fbdf5699fb91dfd6f511b0a320ef"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "752944c7ffbfdd10c074dc58ec2d5a8a4cd9493b314d367c14d24c17684ddd14"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "778d2e08eda00f4256d7f672ca9fef386071c9202f5e4607920b86d7803387f2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "780236ac706e66881f3b7f2f32dfe90507a09e67d1d454c762cf642e6e1586e0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "798d75d81754988d2565bff1b97ba5a44411867c0cf32b77a7e8f8d84796b10d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "799a7a5e4fb2d5898c60b640fd4981d6a25f1c11790935a44ce38c54e985f828"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7a32c560861a02ff789ad905a2fe94e3f840803362c84fecf1851cb4cf3dc37f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7c308f7e26e4363d79df40ca5b2be1c6ba9f02bdbccfed5abddb7859a6ce72cf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7fa17817dc5625de8a027cb8b26d9fefa3ea28c8253929b8d6649e705d2835b6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "81d5eb2a312700f4ecaa977a8235b634ce853200e828fbadf3a9c50bab278328"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "82004af6c302b5d3ab2cfc4cc5f29db16123b1a8417f2e25f9066f91d4411090"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "837c2ce8c5a65a2035be9b3569c684358dfbf109fd3b6969630a87535495ceaa"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "840c25fb618a231545cbab0564a799f101b63b9901f2569faecd6b222ac72381"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8a6562c3700cce886c5be75ade4a5db4214fda19fede41d9792d100288d8f94c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8af65f14dc14a79b924524b1e7fffe304517b2bff5a58bf64f30b98bbc5079eb"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8ef3c867360f88ac904fd3f5e1f902f13307af9052646963ee08ff4f131adafc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "99ae2cffebb06e6c22bdc25801d7b30f503cc87dbd283479e7b606f70aff57ec"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9a26f18905b8dd5d685d6d07b0cdf98a79f3c7a918906af7cc143ea2e164c8bc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9b35f4c90079ff2e2edc5b26c0c77925e5d2d255c42c74fdb70fb49b172726ac"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9cd98cdc06614a2f768d2b7286d66805f94c48cde050acdbbb7db2600ab3197e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9d1bb833febdff5c8927f922386db610b49db6e0d4f4ee29601d71e7c2694313"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9f7fcd74d410a36883701fafa2482a6af2ff5ba96b9a620e9e0721e28ead5569"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a59cb51917aa591b1c4e6a43c132f0cdc3c76dbad6155df4e28ee626cc77a0a3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a61900df84c667873b292c3de315a786dd8dac506704dea57bc957bd31e22c7d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a79cfe37875f822425b89a82333404539ae63dbdddf97f84dcbc3d339aae9525"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a8a8b89589086a25749f471e6a900d3f662d1d3b6e2e59dcecf787b1cc3a1894"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a8bf8d0f749c5757af2142fe7903a9df1d2e8aa3841559b2bad34b08d0e2bcf3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a9768c477b9d7bd54bc0c86dbaebdec6f03306675526c9927c0e8a04e8f94af9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ac1c4a689edcc530fc9d9aa11f5774b9e2f33f9a0c6a57864e90908f5208d30a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "af2d8c67d8e573d6de5bc30cdb27e9b95e49115cd9baad5ddbd1a6207aaa82a9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b435cba5f4f750aa6c0a0d92c541fb79f69a387c91e61f1795227e4ed9cece14"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b5b290ccc2a263e8d185130284f8501e3e36c5e02750fc6b6bdeb2e9e96f1e25"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b5d84d37db046c5ca74ee7bb47dd6cbc13f80665fdde3e8040bdd3fb015ecb50"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b7cf1017d601aa35e6bb650b6ad28652c9cd78ee6caff19f3c28d03e1c80acbf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bc7637e2f80d8530ee4a78e878bce464f70087ce73cf7c1caf142416923b98f1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c0463276121fdee9c49b98908b3a89c39be45d86d1dbaa22957e38f6321d4ce3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c4ef880e27901b6cc782f1b95f82da9313c0eb95c3af699103088fa0ac3ce9ac"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c8ae8a0f02f57a6e61203a31428fa1d677cbe50c93622b4149d5c0f319c1d19e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ca5862d5b3928c4940729dacc329aa9102900382fea192fc5e52eb69d6093815"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cb01158d8b88ee68f15949894ccc6712278243d95f344770fa7593fa2d94410c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cb6254dc36b47a990e59e1068afacdcd02958bdcce30bb50cc1700a8b9d624a6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cc00f04ed596e9dc0da42ed17ac5e596c6ccba999ba6bd92b0e0aef2f170f2d6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cd09d08005f958f370f539f186d10aec3377d55b9eeb0d796025d4886119d76e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cd4b7ca9984e5e7985c12bc60a6f173f3c958eae74f3ef6624bb6b26e2abbae4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ce8a0633f41a967713a59c4139d29110c07e826d131a316b50ce11b1d79b4f84"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cead0978fc57397645f12578bfd2d5ea9138ea0fac82b2f63f7f7c6877986a69"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d055ec1e26e441f6187acf818b73564e6e6282709e9bcb5b63f5b23068356a15"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d1f13550535ad8cff21b8d757a3257963e951d96e20ec82ab44bc64aeb62a191"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d9c7f57c3d666a53421049053eaacdd14bbd0a528e2186fcb2e672effd053bb0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d9e45d7faa48ee908174d8fe84854479ef838fc6a705c9315372eacbc2f02897"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "da3326d9e65ef63a817ecbcc0df6e94463713b754fe293eaa03da99befb9a5bd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "de00632ca48df9daf77a2c65a484531649261ec9f25489917f09e455cb09ddb2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e1f185f86a6f3403aa2420e815904c67b2f9ebc443f045edd0de921108345794"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e824f1492727fa856dd6eda4f7cee25f8518a12f3c4a56a74e8095695089cf6d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e912091979546adf63357d7e2ccff9b44f026c075aeaf25a52d0e95ad2281074"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eaabd426fe94daf8fd157c32e571c85cb12e66692f15516a83a03264b08d06c3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ebf3e58c7ec8a8bed6d66a75d7fb37b55e5015b03ceae72a8e7c74495551e224"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ecaae4149d99b1c9e7b88bb03e3221956f68fd6d50be2ef061b2381b61d20838"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eecbc200c7fd5ddb9a7f16c7decb07b566c29fa2161a16cf67b8d068bd21690a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f155a433c2ec037d4e8df17d18922c3a0d9b3232a396690f17175d2946f0218d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f1e34719c6ed0b92f418c7c780480b26b5d9c50349e9a9af7d76bf757530350d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f34be2938726fc13801220747472850852fe6b1ea75869a048d6f896838c896f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f820802628d2694cb7e56db99213f930856014862f3fd943d290ea8438d07ca8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f8bf04158c6b607d747e93949aa60618b61312fe647a6369f88ce2ff16043490"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f8e160feb2aed042cd657a72acc0b481212ed28b1b9a95c0cee1621b524e1966"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f9d332f8c2a2fcbffe1378594431458ddbef721c1769d78e2cbc06280d8155f9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fa09f53c465e532f4d3db095e0c55b615f010ad81803d383195b6b5ca6cbf5f3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "faa3a41b2b66b6e50f84ae4a68c64fcd0c44355741c6374813a800cd6695db9e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fd44c878ea55ba351104cb93cc85e74916eb8fa440ca7903e57575e97394f608"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.4"
+        }
+      ],
+      "name": "charset-normalizer",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/charset-normalizer@3.4.4",
+      "type": "library",
+      "version": "3.4.4"
+    },
+    {
+      "bom-ref": "pkg:pypi/cli-support@2.0.1",
+      "description": "Support component license information (CLI) files",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "19034558dc7c830eaeb15f18452e16568b431e14bc74b51233911412639aa724"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/cli-support/2.0.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f9f429b0169b61452fe9436f51a7ad7db2423aaeb44d8116d6695c8f1e04363d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/cli-support/2.0.1"
+        }
+      ],
+      "name": "cli-support",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/cli-support@2.0.1",
+      "type": "library",
+      "version": "2.0.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "description": "Cross-platform colored terminal text.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/colorama/0.4.6"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/colorama/0.4.6"
+        }
+      ],
+      "name": "colorama",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "type": "library",
+      "version": "0.4.6"
+    },
+    {
+      "bom-ref": "pkg:pypi/cyclonedx-python-lib@11.6.0",
+      "description": "Python library for CycloneDX",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7fb85a4371fa3a203e5be577ac22b7e9a7157f8b0058b7448731474d6dea7bf0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/cyclonedx-python-lib/11.6.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "94f4aae97db42a452134dafdddcfab9745324198201c4777ed131e64c8380759"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/cyclonedx-python-lib/11.6.0"
+        }
+      ],
+      "name": "cyclonedx-python-lib",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/cyclonedx-python-lib@11.6.0",
+      "type": "library",
+      "version": "11.6.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/dateparser@1.2.2",
+      "description": "Date parsing library designed to parse dates from HTML pages",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5a5d7211a09013499867547023a2a0c91d5a27d15dd4dbcea676ea9fe66f2482"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/dateparser/1.2.2"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "986316f17cb8cdc23ea8ce563027c5ef12fc725b6fb1d137c14ca08777c5ecf7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/dateparser/1.2.2"
+        }
+      ],
+      "name": "dateparser",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/dateparser@1.2.2",
+      "type": "library",
+      "version": "1.2.2"
+    },
+    {
+      "bom-ref": "pkg:pypi/defusedxml@0.7.1",
+      "description": "XML bomb protection for Python stdlib modules",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/defusedxml/0.7.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/defusedxml/0.7.1"
+        }
+      ],
+      "name": "defusedxml",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "type": "library",
+      "version": "0.7.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/et-xmlfile@2.0.0",
+      "description": "An implementation of lxml.xmlfile for the standard library",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/et-xmlfile/2.0.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/et-xmlfile/2.0.0"
+        }
+      ],
+      "name": "et-xmlfile",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/et-xmlfile@2.0.0",
+      "type": "library",
+      "version": "2.0.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/halo@0.0.31",
+      "description": "Beautiful terminal spinners in Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5350488fb7d2aa7c31a1344120cee67a872901ce8858f60da7946cef96c208ab"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/halo/0.0.31"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7b67a3521ee91d53b7152d4ee3452811e1d2a6321975137762eb3d70063cc9d6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/halo/0.0.31"
+        }
+      ],
+      "name": "halo",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/halo@0.0.31",
+      "type": "library",
+      "version": "0.0.31"
+    },
+    {
+      "bom-ref": "pkg:pypi/idna@3.11",
+      "description": "Internationalized Domain Names in Applications (IDNA)",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/idna/3.11"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/idna/3.11"
+        }
+      ],
+      "name": "idna",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/idna@3.11",
+      "type": "library",
+      "version": "3.11"
+    },
+    {
+      "bom-ref": "pkg:pypi/importlib-resources@5.13.0",
+      "description": "Read resources from Python packages",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "82d5c6cca930697dbbd86c93333bb2c2e72861d4789a11c2662b933e5ad2b528"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/importlib-resources/5.13.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9f7bd0c97b79972a6cce36a366356d16d5e13b09679c11a58f1014bfdf8e64b2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/importlib-resources/5.13.0"
+        }
+      ],
+      "name": "importlib-resources",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/importlib-resources@5.13.0",
+      "type": "library",
+      "version": "5.13.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/jsonschema@4.25.1",
+      "description": "An implementation of JSON Schema validation for Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/jsonschema/4.25.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e4a9655ce0da0c0b67a085847e00a3a51449e1157f4f75e9fb5aa545e122eb85"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/jsonschema/4.25.1"
+        }
+      ],
+      "name": "jsonschema",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/jsonschema@4.25.1",
+      "type": "library",
+      "version": "4.25.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "description": "The JSON Schema meta-schemas and vocabularies, exposed as a Registry",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/jsonschema-specifications/2025.9.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/jsonschema-specifications/2025.9.1"
+        }
+      ],
+      "name": "jsonschema-specifications",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "type": "library",
+      "version": "2025.9.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/license-expression@30.4.4",
+      "description": "license-expression is a comprehensive utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "421788fdcadb41f049d2dc934ce666626265aeccefddd25e162a26f23bcbf8a4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/license-expression/30.4.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "73448f0aacd8d0808895bdc4b2c8e01a8d67646e4188f887375398c761f340fd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/license-expression/30.4.4"
+        }
+      ],
+      "name": "license-expression",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/license-expression@30.4.4",
+      "type": "library",
+      "version": "30.4.4"
+    },
+    {
+      "bom-ref": "pkg:pypi/log-symbols@0.0.14",
+      "description": "Colored symbols for various log levels for Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4952106ff8b605ab7d5081dd2c7e6ca7374584eff7086f499c06edd1ce56dcca"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/log-symbols/0.0.14"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cf0bbc6fe1a8e53f0d174a716bc625c4f87043cc21eb55dd8a740cfe22680556"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/log-symbols/0.0.14"
+        }
+      ],
+      "name": "log-symbols",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/log-symbols@0.0.14",
+      "type": "library",
+      "version": "0.0.14"
+    },
+    {
+      "bom-ref": "pkg:pypi/openpyxl@3.1.5",
+      "description": "A Python library to read/write Excel 2010 xlsx/xlsm files",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/openpyxl/3.1.5"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/openpyxl/3.1.5"
+        }
+      ],
+      "name": "openpyxl",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/openpyxl@3.1.5",
+      "type": "library",
+      "version": "3.1.5"
+    },
+    {
+      "bom-ref": "pkg:pypi/packageurl-python@0.15.6",
+      "description": "A purl aka. Package URL parser and builder",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a40210652c89022772a6c8340d6066f7d5dc67132141e5284a4db7a27d0a8ab0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/packageurl-python/0.15.6"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cbc89afd15d5f4d05db4f1b61297e5b97a43f61f28799f6d282aff467ed2ee96"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/packageurl-python/0.15.6"
+        }
+      ],
+      "name": "packageurl-python",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/packageurl-python@0.15.6",
+      "type": "library",
+      "version": "0.15.6"
+    },
+    {
+      "bom-ref": "pkg:pypi/packaging@25.0",
+      "description": "Core utilities for Python packages",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/packaging/25.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/packaging/25.0"
+        }
+      ],
+      "name": "packaging",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/packaging@25.0",
+      "type": "library",
+      "version": "25.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/py-serializable@2.1.0",
+      "description": "Library for serializing and deserializing Python Objects to and from JSON and XML.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9d5db56154a867a9b897c0163b33a793c804c80cee984116d02d49e4578fc103"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/py-serializable/2.1.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b56d5d686b5a03ba4f4db5e769dc32336e142fc3bd4d68a8c25579ebb0a67304"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/py-serializable/2.1.0"
+        }
+      ],
+      "name": "py-serializable",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/py-serializable@2.1.0",
+      "type": "library",
+      "version": "2.1.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/pyjwt@2.10.1",
+      "description": "JSON Web Token implementation in Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3cc5772eb20009233caf06e9d8a0577824723b44e6648ee0a2aedb6cf9381953"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/pyjwt/2.10.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dcdd193e30abefd5debf142f9adfcdd2b58004e644f25406ffaebd50bd98dacb"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/pyjwt/2.10.1"
+        }
+      ],
+      "name": "pyjwt",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/pyjwt@2.10.1",
+      "type": "library",
+      "version": "2.10.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "description": "Extensions to the standard Python datetime module",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/python-dateutil/2.9.0.post0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/python-dateutil/2.9.0.post0"
+        }
+      ],
+      "name": "python-dateutil",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "type": "library",
+      "version": "2.9.0.post0"
+    },
+    {
+      "bom-ref": "pkg:pypi/pytz@2025.2",
+      "description": "World timezone definitions, modern and historical",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/pytz/2025.2"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/pytz/2025.2"
+        }
+      ],
+      "name": "pytz",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/pytz@2025.2",
+      "type": "library",
+      "version": "2025.2"
+    },
+    {
+      "bom-ref": "pkg:pypi/referencing@0.37.0",
+      "description": "JSON Referencing + Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/referencing/0.37.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/referencing/0.37.0"
+        }
+      ],
+      "name": "referencing",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/referencing@0.37.0",
+      "type": "library",
+      "version": "0.37.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/regex@2025.11.3",
+      "description": "Alternative regular expression module, to replace re.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "04d2765516395cf7dda331a244a3282c0f5ae96075f728629287dfa6f76ba70a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "087511f5c8b7dfbe3a03f5d5ad0c2a33861b1fc387f21f6f60825a44865a385a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "08b884f4226602ad40c5d55f52bf91a9df30f513864e0054bad40c0e9cf1afb7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0d31e08426ff4b5b650f68839f5af51a92a5b51abd8554a60c2fbc7c71f25d0b"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0f9397d561a4c16829d4e6ff75202c1c08b68a3bdbfe29dbfcdb31c9830907c6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "10483eefbfb0adb18ee9474498c9a32fcf4e594fbca0543bb94c48bac6183e2e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "149eb0bba95231fb4f6d37c8f760ec9fa6fabf65bab555e128dde5f2475193ec"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1e00ec2970aab10dc5db34af535f21fcf32b4a31d99e34963419636e2f85ae39"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1eb1ebf6822b756c723e09f5186473d93236c06c579d2cc0671a722d2ab14281"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1fedc720f9bb2494ce31a58a1631f9c82df6a09b49c19517ea5cc280b4541e01"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1ff0d190c7f68ae7769cd0313fe45820ba07ffebfddfaa89cc1eb70827ba0ddc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2292cd5a90dab247f9abe892ac584cb24f0f54680c73fcb4a7493c66c2bf2467"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "22b29dda7e1f7062a52359fca6e58e548e28c6686f205e780b02ad8ef710de36"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "22c12d837298651e5550ac1d964e4ff57c3f56965fc1812c90c9fb2028eaf267"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "22dd622a402aad4558277305350699b2be14bc59f64d64ae1d928ce7d072dced"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "22e7d1cdfa88ef33a2ae6aa0d707f9255eb286ffbd90045f1088246833223aee"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "28ba4d69171fc6e9896337d4fc63a43660002b7da53fc15ac992abcf3410917c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2ab815eb8a96379a27c3b6157fcb127c8f59c36f043c1678110cea492868f1d5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2b441a4ae2c8049106e8b39973bfbddfb25a179dda2bdb99b0eeb60c40a6a3af"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2fa2eed3f76677777345d2f81ee89f5de2f5745910e805f7af7386a920fa7313"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "32f74f35ff0f25a5021373ac61442edcb150731fbaa28286bbc8bb1582c89d02"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3809988f0a8b8c9dcc0f92478d6501fac7200b9ec56aecf0ec21f4a2ec4b6009"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3839967cf4dc4b985e1570fd8d91078f0c519f30491c60f9ac42a8db039be204"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "38af559ad934a7b35147716655d4a2f79fcef2d695ddfe06a06ba40ae631fa7e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3a91e4a29938bc1a082cc28fdea44be420bf2bebe2665343029723892eb073e1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3b30bc921d50365775c09a7ed446359e5c0179e9e2512beec4a60cbcef6ddd50"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3b3a5f320136873cc5561098dfab677eea139521cb9a9e8db98b7e64aef44cbc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3bf28b1873a8af8bbb58c26cc56ea6e534d80053b41fb511a35795b6de507e6a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3e0b11b2b2433d1c39c7c7a30e3f3d0aeeea44c2a8d0bae28f6b95f639927a69"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3e816cc9aac1cd3cc9a4ec4d860f06d40f994b5c7b4d03b93345f44e08cc68bf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3f8bf11a4827cc7ce5a53d4ef6cddd5ad25595d3c1435ef08f76825851343154"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "435bbad13e57eb5606a68443af62bed3556de2f46deb9f7d4237bc2f1c9fb3a0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "43b4fb020e779ca81c1b5255015fe2b82816c76ec982354534ad9ec09ad7c9e3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "442d86cf1cfe4faabf97db7d901ef58347efd004934da045c745e7b5bd57ac49"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "44f264d4bf02f3176467d90b294d59bf1db9fe53c141ff772f27a8b456b2a9ed"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "454d9b4ae7881afbc25015b8627c16d88a597479b9dea82b8c6e7e2e07240dc7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4aecb6f461316adf9f1f0f6a4a1a3d79e045f9b71ec76055a791affa3b285850"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4bf146dca15cdd53224a1bf46d628bd7590e4a07fbb69e720d561aea43a32b38"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4c5238d32f3c5269d9e87be0cf096437b7622b6920f5eac4fd202468aaeb34d2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4e1e592789704459900728d88d41a46fe3969b82ab62945560a31732ffc19a6d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "509dc827f89c15c66a0c216331260d777dd6c81e9a4e4f830e662b0bb296c313"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "51c1c1847128238f54930edb8805b660305dca164645a9fd29243f5610beea34"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5cf77eac15bd264986c4a2c63353212c095b40f3affb2bc6b4ef80c4776c1a28"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5d9903ca42bfeec4cebedba8022a7c97ad2aab22e09573ce9976ba01b65e4361"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "61a08bcb0ec14ff4e0ed2044aad948d0659604f824cbd50b55e30b0ec6f09c73"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "62ba394a3dda9ad41c7c780f60f6e4a70988741415ae96f6d1bf6c239cf01379"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "639431bdc89d6429f6721625e8129413980ccd62e9d3f496be618a41d205f160"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "64350685ff08b1d3a6fff33f45a9ca183dc1d58bbfe4981604e70ec9801bbc26"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6538241f45eb5a25aa575dbba1069ad786f68a4f2773a29a2bd3dd1f9de787be"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "669dcfb2e38f9e8c69507bace46f4889e3abbfd9b0c29719202883c0a603598f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "66d559b21d3640203ab9075797a55165d79017520685fb407b9234d72ab63c62"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6dd329a1b61c0ee95ba95385fb0c07ea0d3fe1a21e1349fa2bec272636217118"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "728a9d2d173a65b62bdc380b7932dd8e74ed4295279a8fe1021204ce210803e7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "732aea6de26051af97b94bc98ed86448821f839d058e5d259c72bf6d73ad0fc0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "74d04244852ff73b32eeede4f76f51c5bcf44bc3c207bc3e6cf1c5c45b890708"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7521684c8c7c4f6e88e35ec89680ee1aa8358d3f09d27dfbdf62c446f5d4c695"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "75fa6f0056e7efb1f42a1c34e58be24072cb9e61a601340cc1196ae92326a4f9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "78c2d02bb6e1da0720eedc0bad578049cad3f71050ef8cd065ecc87691bed2b0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "795ea137b1d809eb6836b43748b12634291c0ed55ad50a7d72d21edf1cd565c4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7a50cd39f73faa34ec18d6720ee25ef10c4c1839514186fcda658a06c06057a2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7a7c7fdf755032ffdd72c77e3d8096bdcb0eb92e89e17571a196f03d88b11b3c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7be0277469bf3bd7a34a9c57c1b6a724532a0d235cd0dc4e7f4316f982c28b19"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7eb542fd347ce61e1321b0a6b945d5701528dca0cd9759c2e3bb8bd57e47964d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7fe6e5440584e94cc4b3f5f4d98a25e29ca12dccf8873679a635638349831b98"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "81519e25707fc076978c6143b81ea3dc853f176895af05bf7ec51effe818aeec"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "838441333bc90b829406d4a03cb4b8bf7656231b84358628b0406d803931ef32"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "849202cd789e5f3cf5dcc7822c34b502181b4824a65ff20ce82da5524e45e8e9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "856a25c73b697f2ce2a24e7968285579e62577a048526161a2c0f53090bea9f9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "87eb52a81ef58c7ba4d45c3ca74e12aa4b4e77816f72ca25258a85b3ea96cb48"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "885b26aa3ee56433b630502dc3d36ba78d186a00cc535d3806e6bfd9ed3c70ab"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8a3d571bd95fade53c86c0517f859477ff3a93c3fde10c9e669086f038e0f207"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8e026094aa12b43f4fd74576714e987803a315c76edb6b098b9809db5de58f74"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9697a52e57576c83139d7c6f213d64485d3df5bf84807c35fa409e6c970801c6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9b5aca4d5dfd7fbfbfbdaf44850fcc7709a01146a797536a8f84952e940cca76"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9ddc42e68114e161e51e272f667d640f97e84a2b9ef14b7477c53aac20c2d59a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9f95fbaa0ee1610ec0fc6b26668e9917a582ba80c52cc6d9ada15e30aa9ab9ad"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a12ab1f5c29b4e93db518f5e3872116b7e9b1646c9f9f426f777b50d44a09e8c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a295ca2bba5c1c885826ce3125fa0b9f702a1be547d821c01d65f199e10c01e2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a4cb042b615245d5ff9b3794f56be4138b5adc35a4166014d31d1814744148c7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "adad1a1bcf1c9e76346e091d22d23ac54ef28e1365117d99521631078dfec9de"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b4774ff32f18e0504bfc4e59a3e71e18d83bc1e171a3c8ed75013958a03b2f14"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b6f78f98741dcc89607c16b1e9426ee46ce4bf31ac5e6b0d40e81c89f3481ea5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b7f9ee819f94c6abfa56ec7b1dbab586f41ebbdc0a57e6524bd5e7f487a878c7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ba0d8a5d7f04f73ee7d01d974d47c5834f8a1b0224390e4fe7c12a3a92a78ecc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bac4200befe50c670c405dc33af26dad5a3b6b255dd6c000d92fe4629f9ed6a5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bc8ab71e2e31b16e40868a40a69007bc305e1109bd4658eb6cad007e0bf67c41"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bce22519c989bb72a7e6b36a199384c53db7722fe669ba891da75907fe3587db"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf3490bcbb985a1ae97b2ce9ad1c0f06a852d5b19dde9b07bdf25bf224248c95"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c1e448051717a334891f2b9a620fe36776ebf3dd8ec46a0b877c8ae69575feb4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c54f768482cef41e219720013cd05933b6f971d9562544d691c68699bf2b6801"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c56b4d162ca2b43318ac671c65bd4d563e841a694ac70e1a976ac38fcf4ca1d2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c9c30003b9347c24bcc210958c5d167b9e4f9be786cb380a7d32f14f9b84674f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cc4076a5b4f36d849fd709284b4a3b112326652f3b0466f04002a6c15a0c96c1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cfe6d3f0c9e3b7e8c0c694b24d25e677776f5ca26dce46fd6b0489f9c8339391"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d6c2d5919075a1f2e413c00b056ea0c2f065b3f5fe83c3d07d325ab92dce51d6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d8b4a27eebd684319bdf473d39f1d79eed36bf2cd34bd4465cdb4618d82b3d56"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dbe6095001465294f13f1adcd3311e50dd84e5a71525f20a10bd16689c61ce0b"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dd16e78eb18ffdb25ee33a0682d17912e8cc8a770e885aeee95020046128f1ce"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ddd76a9f58e6a00f8772e72cff8ebcff78e022be95edf018766707c730593e1e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "df9eb838c44f570283712e7cff14c16329a9f0fb19ca492d21d4b7528ee6821e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dfec44d532be4c07088c3de2876130ff0fbeeacaa89a137decbbb5f665855a0f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e18bc3f73bd41243c9b38a6d9f2366cd0e0137a9aebe2d8ff76c5b67d4c0a3f4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e43586ce5bd28f9f285a6e729466841368c4a0353f6fd08d4ce4630843d3648a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e6b49cd2aad93a1790ce9cffb18964f6d3a4b0b3dbdbd5de094b65296fce6e58"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e6c7a21dffba883234baefe91bc3388e629779582038f75d2a5be918e250f0ed"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e721d1b46e25c481dc5ded6f4b3f66c897c58d2e8cfdf77bbced84339108b0b9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eadade04221641516fa25139273505a1c19f9bf97589a05bc4cfcd8b4a618031"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ee3a83ce492074c35a74cc76cf8235d49e77b757193a5365ff86e3f2f93db9fd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f117efad42068f9715677c8523ed2be1518116d1c49b1dd17987716695181efe"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f3b5a391c7597ffa96b41bd5cbd2ed0305f515fcbb367dfa72735679d5502364"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f4ff94e58e84aedb9c9fce66d4ef9f27a190285b451420f297c9a09f2b9abee9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f99be08cfead2020c7ca6e396c13543baea32343b7a9a5780c462e323bd8872f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fd0a5e563c756de210bb964789b5abe4f114dacae9104a47e1a649b910361536"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "feff9e54ec0dd3833d659257f5c3f5322a12eee58ffa360984b716f8b92983f4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ffcca5b9efe948ba0661e9df0fa50d2bc4b097c70b9810212d6b62f05d83b2dd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/regex/2025.11.3"
+        }
+      ],
+      "name": "regex",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/regex@2025.11.3",
+      "type": "library",
+      "version": "2025.11.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/requests@2.32.5",
+      "description": "Python HTTP for Humans.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/requests/2.32.5"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/requests/2.32.5"
+        }
+      ],
+      "name": "requests",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/requests@2.32.5",
+      "type": "library",
+      "version": "2.32.5"
+    },
+    {
+      "bom-ref": "pkg:pypi/requirements-parser@0.11.0",
+      "description": "This is a small Python module for parsing Pip requirement files.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "35f36dc969d14830bf459803da84f314dc3d17c802592e9e970f63d0359e5920"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/requirements-parser/0.11.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50379eb50311834386c2568263ae5225d7b9d0867fb55cf4ecc93959de2c2684"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/requirements-parser/0.11.0"
+        }
+      ],
+      "name": "requirements-parser",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/requirements-parser@0.11.0",
+      "type": "library",
+      "version": "0.11.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/rpds-py@0.30.0",
+      "description": "Python bindings to Rust's persistent data structures (rpds)",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "07ae8a593e1c3c6b82ca3292efbe73c30b61332fd612e05abee07c79359f292f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0a59119fc6e3f460315fe9d08149f8102aa322299deaa5cab5b40092345c2136"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0c0e95f6819a19965ff420f65578bacb0b00f251fefe2c8b23347c37174271f3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0d08f00679177226c4cb8c5265012eea897c8ca3b93f429e546600c971bcbae7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0ed177ed9bded28f8deb6ab40c183cd1192aa0de40c12f38be4d59cd33cb5c65"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "12f90dd7557b6bd57f40abe7747e81e0c0b119bef015ea7726e69fe550e394a4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1726859cd0de969f88dc8673bdd954185b9104e05806be64bcd87badbe313169"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1ab5b83dbcf55acc8b08fc62b796ef672c457b17dbd7820a11d6c52c06839bdf"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1b151685b23929ab7beec71080a8889d4d6d9fa9a983d213f07121205d48e2c4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1f3587eb9b17f3789ad50824084fa6f81921bbf9a795826570bda82cb3ed91f2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "250fa00e9543ac9b97ac258bd37367ff5256666122c2d0f2bc97577c60a1818c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2771c6c15973347f50fece41fc447c054b7ac2ae0502388ce3b6738cd366e3d4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "27f4b0e92de5bfbc6f86e43959e6edd1425c33b5e69aab0984a72047f2bcf1e3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2e6ecb5a5bcacf59c3f912155044479af1d0b6681280048b338b28e364aca1f6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "32c8528634e1bf7121f3de08fa85b138f4e0dc47657866630611b03967f041d7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "33f559f3104504506a44bb666b93a33f5d33133765b0c216a5bf2f1e1503af89"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3896fa1be39912cf0757753826bc8bdc8ca331a28a7c4ae46b7a21280b06bb85"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "389a2d49eded1896c3d48b0136ead37c48e221b391c052fba3f4055c367f60a6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "39c02563fc592411c2c61d26b6c5fe1e51eaa44a75aa2c8735ca88b0d9599daa"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3adbb8179ce342d235c31ab8ec511e66c73faa27a47e076ccc92421add53e2bb"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3d4a69de7a3e50ffc214ae16d79d8fbb0922972da0356dcf4d0fdca2878559c6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3e62880792319dbeb7eb866547f2e35973289e7d5696c6e295476448f5b63c87"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "3e8eeb0544f2eb0d2581774be4c3410356eba189529a6b3e36bbbf9696175856"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "422c3cb9856d80b09d30d2eb255d0754b23e090034e1deb4083f8004bd0761e4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4559c972db3a360808309e06a74628b95eaccbf961c335c8fe0d590cf587456f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "46e83c697b1f1c72b50e5ee5adb4353eef7406fb3f2043d64c33f20ad1c2fc53"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47b0ef6231c58f506ef0b74d44e330405caa8428e770fec25329ed2cb971a229"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47e77dc9822d3ad616c3d5759ea5631a75e5809d5a28707744ef79d7a1bcfcad"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47f236970bccb2233267d89173d3ad2703cd36a0e2a6e92d0560d333871a3d23"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47f9a91efc418b54fb8190a6b4aa7813a23fb79c51f4bb84e418f5476c38b8db"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "495aeca4b93d465efde585977365187149e75383ad2684f81519f504f5c13038"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4c5f36a861bc4b7da6516dbdf302c55313afa09b81931e8280361a4f6c9a2d27"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4cc2206b76b4f576934f0ed374b10d7ca5f457858b157ca52064bdfc26b9fc00"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4e7fc54e0900ab35d041b0601431b0a0eb495f0851a0639b6ef90f7741b39a18"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "51a1234d8febafdfd33a42d97da7a43f5dcb120c1060e352a3fbc0c6d36e2083"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "55f66022632205940f1827effeff17c4fa7ae1953d2b74a8581baaefb7d16f8c"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "58edca431fb9b29950807e301826586e5bbf24163677732429770a697ffe6738"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5965af57d5848192c13534f90f9dd16464f3c37aaf166cc1da1cae1fd5a34898"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5ba103fb455be00f3b1c2076c9d4264bfcb037c976167a6047ed82f23153f02e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5d4c2aa7c50ad4728a094ebd5eb46c452e9cb7edbfdb18f9e1221f597a73e1e7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "61046904275472a76c8c90c9ccee9013d70a6d0f73eecefd38c1ae7c39045a08"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "613aa4771c99f03346e54c3f038e4cc574ac09a3ddfb0e8878487335e96dead6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "626a7433c34566535b6e56a1b39a7b17ba961e97ce3b80ec62e6f1312c025551"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "669b1805bd639dd2989b281be2cfd951c6121b65e729d9b843e9639ef1fd555e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "679ae98e00c0e8d68a7fda324e16b90fd5260945b45d3b824c892cec9eea3288"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "67b02ec25ba7a9e8fa74c63b6ca44cf5707f2fbfadae3ee8e7494297d56aa9df"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "68f19c879420aa08f61203801423f6cd5ac5f0ac4ac82a2368a9fcd6a9a075e0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "692bef75a5525db97318e8cd061542b5a79812d711ea03dbc1f6f8dbb0c5f0d2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6abc8880d9d036ecaafe709079969f56e876fcf107f7a8e9920ba6d5a3878d05"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6bdfdb946967d816e6adf9a3d8201bfad269c67efe6cefd7093ef959683c8de0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6de2a32a1665b93233cde140ff8b3467bdb9e2af2b91079f0333a0974d12d464"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "73c67f2db7bc334e518d097c6d1e6fed021bbc9b7d678d6cc433478365d1d5f5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "74a3243a411126362712ee1524dfc90c650a503502f135d54d1b352bd01f2404"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "76fec018282b4ead0364022e3c54b60bf368b9d926877957a8624b58419169b7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7c64d38fb49b6cdeda16ab49e35fe0da2e1e9b34bc38bd78386530f218b37139"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7cee9c752c0364588353e627da8a7e808a66873672bcb5f52890c33fd965b394"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7e6ecfcb62edfd632e56983964e6884851786443739dbfe3582947e87274f7cb"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "806f36b1b605e2d6a72716f321f20036b9489d29c51c91f4dd29a3e3afb73b15"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "858738e9c32147f78b3ac24dc0edb6610000e56dc0f700fd5f651d0a0f0eb9ff"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "8d6d1cc13664ec13c1b84241204ff3b12f9bb82464b8ad6e7a5d3486975c2eed"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9027da1ce107104c50c81383cae773ef5c24d296dd11c99e2629dbd7967a20c6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "922e10f31f303c7c920da8981051ff6d8c1a56207dbdf330d9047f6d30b70e5e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "945dccface01af02675628334f7cf49c2af4c1c904748efc5cf7bbdf0b579f95"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "946fe926af6e44f3697abbc305ea168c2c31d3e3ef1058cf68f379bf0335a78d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "95f0802447ac2d10bcc69f6dc28fe95fdf17940367b21d34e34c737870758950"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9854cf4f488b3d57b9aaeb105f06d78e5529d3145b1e4a41750167e8c213c6d3"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "993914b8e560023bc0a8bf742c5f303551992dcb85e247b1e5c7f4a7d145bda5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "99b47d6ad9a6da00bec6aabe5a6279ecd3c06a329d4aa4771034a21e335c3a97"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9a4e86e34e9ab6b667c27f3211ca48f73dba7cd3d90f8d5b11be56e5dbc3fb4e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9cf69cdda1f5968a30a359aba2f7f9aa648a9ce4b580d6826437f2b291cfc86e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a090322ca841abd453d43456ac34db46e8b05fd9b3b4ac0c78bcde8b089f959b"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a1010ed9524c73b94d15919ca4d41d8780980e1765babf85f9a2f90d247153dd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a161f20d9a43006833cd7068375a94d035714d73a172b681d8881820600abfad"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a1d0bc22a7cdc173fedebb73ef81e07faef93692b8c1ad3733b67e31e1b6e1b8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a2bffea6a4ca9f01b3f8e548302470306689684e61602aa3d141e34da06cf425"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a452763cc5198f2f98898eb98f7569649fe5da666c2dc6b5ddb10fde5a574221"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a4796a717bf12b9da9d3ad002519a86063dcac8988b030e405704ef7d74d2d9d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a51033ff701fca756439d641c0ad09a41d9242fa69121c7d8769604a0a629825"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a8fa71a2e078c527c3e9dc9fc5a98c9db40bcc8a92b4e8858e36d329f8684b51"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ac37f9f516c51e5753f27dfdef11a88330f04de2d564be3991384b2f3535d02e"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ac98b175585ecf4c0348fd7b29c3864bda53b805c773cbf7bfdaffc8070c976f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "acd7eb3f4471577b9b5a41baf02a978e8bdeb08b4b355273994f8b87032000a8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ad1fa8db769b76ea911cb4e10f049d80bf518c104f15b3edb2371cc65375c46f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b40fb160a2db369a194cb27943582b38f79fc4887291417685f3ad693c5a1d5d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b4dc1a6ff022ff85ecafef7979a2c6eb423430e05f1165d6688234e62ba99a07"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ba3af48635eb83d03f6c9735dfb21785303e73d22ad03d489e88adae6eab8877"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ba81a9203d07805435eb06f536d95a266c21e5b2dfbf6517748ca40c98d19e31"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c2262bdba0ad4fc6fb5545660673925c2d2a5d9e2e0fb603aad545427be0fc58"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c77afbd5f5250bf27bf516c7c4a016813eb2d3e116139aed0096940c5982da94"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ca28829ae5f5d569bb62a79512c842a03a12576375d5ece7d2cadf8abe96ec28"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cdc62c8286ba9bf7f47befdcea13ea0e26bf294bda99758fd90535cbaf408000"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d948b135c4693daff7bc2dcfc4ec57237a29bd37e60c2fabf5aff2bbacf3e2f1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d96c2086587c7c30d44f31f42eae4eac89b60dabbac18c7669be3700f13c3ce1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d9a0ca5da0386dee0655b4ccdf46119df60e0f10da268d04fe7cc87886872ba7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "da279aa314f00acbb803da1e76fa18666778e8a8f83484fba94526da5de2cba7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dbd936cde57abfee19ab3213cf9c26be06d60750e60a8e4dd85d1ab12c8b1f40"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dc4f992dfe1e2bc3ebc7444f6c7051b4bc13cd8e33e43511e8ffd13bf407010d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dc824125c72246d924f7f796b4f63c1e9dc810c7d9e2355864b3c3a73d59ade0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dd8ff7cf90014af0c0f787eea34794ebf6415242ee1d6fa91eaba725cc441e84"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dea5b552272a944763b34394d04577cf0f9bd013207bc32323b5a89a53cf9c2f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "dff13836529b921e22f15cb099751209a60009731a68519630a24d61f0b1b30a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e0b65193a413ccc930671c55153a03ee57cecb49e6227204b04fae512eb657a7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e5d3e6b26f2c785d65cc25ef1e5267ccbe1b069c5c21b8cc724efee290554419"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e7536cd91353c5273434b4e003cbda89034d67e7710eab8761fd918ec6c69cf8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eb0b93f2e5c2189ee831ee43f156ed34e2a89a78a66b98cadad955972548be5a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eb2c4071ab598733724c08221091e8d80e89064cd472819285a9ab0f24bcedb9"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ec7c4490c672c1a0389d319b3a9cfcd098dcdc4783991553c332a15acf7249be"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ee454b2a007d57363c2dfd5b6ca4a5d7e2c518938f8ed3b706e37e5d470801ed"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ee6af14263f25eedc3bb918a3c04245106a42dfd4f5c2285ea6f997b1fc3f89a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f14fc5df50a716f7ece6a80b6c78bb35ea2ca47c499e422aa4463455dd96d56d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f207f69853edd6f6700b86efb84999651baf3789e78a466431df1331608e5324"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f251c812357a3fed308d684a5079ddfb9d933860fc6de89f2b7ab00da481e65f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f83424d738204d9770830d35290ff3273fbb02b41f919870479fab14b9d303b2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f8d1736cfb49381ba528cd5baa46f82fdc65c06e843dab24dd70b63d09121b3f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fe5fa731a1fa8a0a56b0977413f8cacac1768dad38d16b3a296712709476fbd5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/rpds-py/0.30.0"
+        }
+      ],
+      "name": "rpds-py",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/rpds-py@0.30.0",
+      "type": "library",
+      "version": "0.30.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/semver@3.0.2",
+      "description": "Python helper for Semantic Versioning (https://semver.org)",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6253adb39c70f6e51afed2fa7152bcd414c411286088fb4b9effb133885ab4cc"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/semver/3.0.2"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b1ea4686fe70b981f85359eda33199d60c53964284e0cfb4977d243e37cf4bf4"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/semver/3.0.2"
+        }
+      ],
+      "name": "semver",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/semver@3.0.2",
+      "type": "library",
+      "version": "3.0.2"
+    },
+    {
+      "bom-ref": "pkg:pypi/six@1.17.0",
+      "description": "Python 2 and 3 compatibility utilities",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/six/1.17.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/six/1.17.0"
+        }
+      ],
+      "name": "six",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/six@1.17.0",
+      "type": "library",
+      "version": "1.17.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/sortedcontainers@2.4.0",
+      "description": "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/sortedcontainers/2.4.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/sortedcontainers/2.4.0"
+        }
+      ],
+      "name": "sortedcontainers",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/sortedcontainers@2.4.0",
+      "type": "library",
+      "version": "2.4.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/soupsieve@2.8.1",
+      "description": "A modern CSS selector implementation for Beautiful Soup.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4cf733bc50fa805f5df4b8ef4740fc0e0fa6218cf3006269afd3f9d6d80fd350"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/soupsieve/2.8.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a11fe2a6f3d76ab3cf2de04eb339c1be5b506a8a47f2ceb6d139803177f85434"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/soupsieve/2.8.1"
+        }
+      ],
+      "name": "soupsieve",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/soupsieve@2.8.1",
+      "type": "library",
+      "version": "2.8.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/spinners@0.0.24",
+      "description": "Spinners for terminals",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1eb6aeb4781d72ab42ed8a01dcf20f3002bf50740d7154d12fb8c9769bf9e27f"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/spinners/0.0.24"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "2fa30d0b72c9650ad12bbe031c9943b8d441e41b4f5602b0ec977a19f3290e98"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/spinners/0.0.24"
+        }
+      ],
+      "name": "spinners",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/spinners@0.0.24",
+      "type": "library",
+      "version": "0.0.24"
+    },
+    {
+      "bom-ref": "pkg:pypi/sw360@1.10.1",
+      "description": "Python interface to the SW360 software component catalogue",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "97c2f9a7513fcaf9caaf294e46ab11da4bf45e9c00c855e3fa4532a2a6cdeb41"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/sw360/1.10.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ea8206f667968faf61e324bda5b365a578f5a2dc00f2ed6e752661ee4d6d3411"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/sw360/1.10.1"
+        }
+      ],
+      "name": "sw360",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/sw360@1.10.1",
+      "type": "library",
+      "version": "1.10.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/termcolor@3.3.0",
+      "description": "ANSI color formatting for output in terminal",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "348871ca648ec6a9a983a13ab626c0acce02f515b9e1983332b17af7979521c5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/termcolor/3.3.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cf642efadaf0a8ebbbf4bc7a31cec2f9b5f21a9f726f4ccbb08192c9c26f43a5"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/termcolor/3.3.0"
+        }
+      ],
+      "name": "termcolor",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/termcolor@3.3.0",
+      "type": "library",
+      "version": "3.3.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/types-setuptools@80.9.0.20251223",
+      "description": "Typing stubs for setuptools",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1b36db79d724c2287d83dc052cf887b47c0da6a2fff044378be0b019545f56e6"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/types-setuptools/80.9.0.20251223"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "d3411059ae2f5f03985217d86ac6084efea2c9e9cacd5f0869ef950f308169b2"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/types-setuptools/80.9.0.20251223"
+        }
+      ],
+      "name": "types-setuptools",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/types-setuptools@80.9.0.20251223",
+      "type": "library",
+      "version": "80.9.0.20251223"
+    },
+    {
+      "bom-ref": "pkg:pypi/typing-extensions@4.15.0",
+      "description": "Backported and Experimental Type Hints for Python 3.9+",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/typing-extensions/4.15.0"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/typing-extensions/4.15.0"
+        }
+      ],
+      "name": "typing-extensions",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/typing-extensions@4.15.0",
+      "type": "library",
+      "version": "4.15.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/tzdata@2025.3",
+      "description": "Provider of IANA time zone data",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "06a47e5700f3081aab02b2e513160914ff0694bce9947d6b76ebd6bf57cfc5d1"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/tzdata/2025.3"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "de39c2ca5dc7b0344f2eba86f49d614019d29f060fc4ebc8a417896a620b56a7"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/tzdata/2025.3"
+        }
+      ],
+      "name": "tzdata",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/tzdata@2025.3",
+      "type": "library",
+      "version": "2025.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/tzlocal@5.3.1",
+      "description": "tzinfo object for the local timezone",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "cceffc7edecefea1f595541dbd6e990cb1ea3d19bf01b2809f362a03dd7921fd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/tzlocal/5.3.1"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "eb1a66c3ef5847adf7a834f1be0800581b683b5608e74f86ecbcef8ab91bb85d"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/tzlocal/5.3.1"
+        }
+      ],
+      "name": "tzlocal",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/tzlocal@5.3.1",
+      "type": "library",
+      "version": "5.3.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/urllib3@2.6.2",
+      "description": "HTTP library with thread-safe connection pooling, file post, and more.",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "016f9c98bb7e98085cb2b4b17b87d2c702975664e4f060c6532e64d1c1a5e797"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/urllib3/2.6.2"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "ec21cddfe7724fc7cb4ba4bea7aa8e2ef36f607a4bab81aa6ce42a13dc3f03dd"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/urllib3/2.6.2"
+        }
+      ],
+      "name": "urllib3",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/urllib3@2.6.2",
+      "type": "library",
+      "version": "2.6.2"
+    },
+    {
+      "bom-ref": "pkg:pypi/validation@0.8.3",
+      "description": "A library for runtime type checking and validation of python values",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c4aed7dd548b5ad3ba12306cda7322658490e22dedef29295fdb8692b1b4fe3a"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/validation/0.8.3"
+        }
+      ],
+      "name": "validation",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/validation@0.8.3",
+      "type": "library",
+      "version": "0.8.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/wheel@0.38.4",
+      "description": "A built-package format for Python",
+      "externalReferences": [
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/wheel/0.38.4"
+        },
+        {
+          "comment": "binary (download location)",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b60533f3f5d530e971d6737ca6d58681ee434818fab630c83a734bb10c083ce8"
+            }
+          ],
+          "type": "distribution",
+          "url": "https://pypi.org/project/wheel/0.38.4"
+        }
+      ],
+      "name": "wheel",
+      "properties": [
+        {
+          "name": "siemens:primaryLanguage",
+          "value": "Python"
+        }
+      ],
+      "purl": "pkg:pypi/wheel@0.38.4",
+      "type": "library",
+      "version": "0.38.4"
+    }
+  ],
+  "definitions": {
+    "standards": [
+      {
+        "bom-ref": "standard-bom",
+        "description": "The Standard for Software Bills of Materials in Siemens",
+        "externalReferences": [
+          {
+            "type": "website",
+            "url": "https://sbom.siemens.io/"
+          }
+        ],
+        "name": "Standard BOM",
+        "owner": "Siemens AG",
+        "version": "3.0.0"
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/attrs@25.4.0"
+    },
+    {
+      "ref": "pkg:pypi/beautifulsoup4@4.14.3"
+    },
+    {
+      "ref": "pkg:pypi/boolean-py@5.0"
+    },
+    {
+      "ref": "pkg:pypi/certifi@2025.11.12"
+    },
+    {
+      "ref": "pkg:pypi/chardet@5.2.0"
+    },
+    {
+      "ref": "pkg:pypi/charset-normalizer@3.4.4"
+    },
+    {
+      "ref": "pkg:pypi/cli-support@2.0.1"
+    },
+    {
+      "ref": "pkg:pypi/colorama@0.4.6"
+    },
+    {
+      "ref": "pkg:pypi/cyclonedx-python-lib@11.6.0"
+    },
+    {
+      "ref": "pkg:pypi/dateparser@1.2.2"
+    },
+    {
+      "ref": "pkg:pypi/defusedxml@0.7.1"
+    },
+    {
+      "ref": "pkg:pypi/et-xmlfile@2.0.0"
+    },
+    {
+      "ref": "pkg:pypi/halo@0.0.31"
+    },
+    {
+      "ref": "pkg:pypi/idna@3.11"
+    },
+    {
+      "ref": "pkg:pypi/importlib-resources@5.13.0"
+    },
+    {
+      "ref": "pkg:pypi/jsonschema-specifications@2025.9.1"
+    },
+    {
+      "ref": "pkg:pypi/jsonschema@4.25.1"
+    },
+    {
+      "ref": "pkg:pypi/license-expression@30.4.4"
+    },
+    {
+      "ref": "pkg:pypi/log-symbols@0.0.14"
+    },
+    {
+      "ref": "pkg:pypi/openpyxl@3.1.5"
+    },
+    {
+      "ref": "pkg:pypi/packageurl-python@0.15.6"
+    },
+    {
+      "ref": "pkg:pypi/packaging@25.0"
+    },
+    {
+      "ref": "pkg:pypi/py-serializable@2.1.0"
+    },
+    {
+      "ref": "pkg:pypi/pyjwt@2.10.1"
+    },
+    {
+      "ref": "pkg:pypi/python-dateutil@2.9.0.post0"
+    },
+    {
+      "ref": "pkg:pypi/pytz@2025.2"
+    },
+    {
+      "ref": "pkg:pypi/referencing@0.37.0"
+    },
+    {
+      "ref": "pkg:pypi/regex@2025.11.3"
+    },
+    {
+      "ref": "pkg:pypi/requests@2.32.5"
+    },
+    {
+      "ref": "pkg:pypi/requirements-parser@0.11.0"
+    },
+    {
+      "ref": "pkg:pypi/rpds-py@0.30.0"
+    },
+    {
+      "ref": "pkg:pypi/semver@3.0.2"
+    },
+    {
+      "ref": "pkg:pypi/six@1.17.0"
+    },
+    {
+      "ref": "pkg:pypi/sortedcontainers@2.4.0"
+    },
+    {
+      "ref": "pkg:pypi/soupsieve@2.8.1"
+    },
+    {
+      "ref": "pkg:pypi/spinners@0.0.24"
+    },
+    {
+      "ref": "pkg:pypi/sw360@1.10.1"
+    },
+    {
+      "ref": "pkg:pypi/termcolor@3.3.0"
+    },
+    {
+      "ref": "pkg:pypi/types-setuptools@80.9.0.20251223"
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.15.0"
+    },
+    {
+      "ref": "pkg:pypi/tzdata@2025.3"
+    },
+    {
+      "ref": "pkg:pypi/tzlocal@5.3.1"
+    },
+    {
+      "ref": "pkg:pypi/urllib3@2.6.2"
+    },
+    {
+      "ref": "pkg:pypi/validation@0.8.3"
+    },
+    {
+      "ref": "pkg:pypi/wheel@0.38.4"
+    }
+  ],
+  "metadata": {
+    "licenses": [
+      {
+        "license": {
+          "id": "CC0-1.0"
+        }
+      }
+    ],
+    "properties": [
+      {
+        "name": "siemens:profile",
+        "value": "clearing"
+      }
+    ],
+    "timestamp": "2025-12-30T08:44:56.941306+00:00",
+    "tools": {
+      "components": [
+        {
+          "externalReferences": [
+            {
+              "type": "website",
+              "url": "https://github.com/sw360/capycli"
+            }
+          ],
+          "name": "CaPyCLI",
+          "supplier": {
+            "name": "Siemens AG"
+          },
+          "type": "application",
+          "version": "2.10.0.dev1"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:1e5f9a27-074b-457c-9db0-a55151346fee",
+  "version": 1,
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6"
+}

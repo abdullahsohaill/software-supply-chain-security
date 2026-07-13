@@ -1,0 +1,4247 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:832d6a06-604e-4ca3-b361-9128cc861a21",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2025-12-30T18:19:25Z",
+    "tools": [
+      {
+        "name": "nbu-cbom-gen",
+        "version": "1.0.0",
+        "vendor": "Denis Gerolini",
+        "email": "denis.gerolini@gmail.com",
+        "description": "NetBackup CBOM Generator - Tool for generating Cryptographic Bill of Materials for NetBackup domains on Red Hat Enterprise Linux systems"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "primary.home.lab - NetBackup Infrastructure",
+      "version": "HARDWARE LINUX_RH_X86"
+    },
+    "properties": [
+      {
+        "name": "eqrr:hostType",
+        "value": "primary-server"
+      },
+      {
+        "name": "eqrr:osName",
+        "value": "Red Hat Enterprise Linux"
+      },
+      {
+        "name": "eqrr:osVersion",
+        "value": "10.1 (Coughlan)"
+      },
+      {
+        "name": "eqrr:kernelVersion",
+        "value": "6.12.0-124.20.1.el10_1.x86_64"
+      },
+      {
+        "name": "eqrr:hostname",
+        "value": "primary.home.lab"
+      },
+      {
+        "name": "eqrr:primaryServer",
+        "value": "primary.home.lab"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "nbu-rootca-fe938cd9-a006-4027-ba2a-79fd44e273a5",
+      "name": "NetBackup Root CA Certificate",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA",
+          "parameterSetIdentifier": "2048",
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "nbu-rootca-2ce3ed946f44f098"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab - primary-server"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "NetBackup PKI Root CA - Trust anchor"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "RSA-2048"
+        },
+        {
+          "name": "eqrr:securityParameters",
+          "value": "Key Length: 2048 bits"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "Certificate signing for NetBackup domain"
+        },
+        {
+          "name": "eqrr:cryptoProvider",
+          "value": "NetBackup Embedded PKI"
+        },
+        {
+          "name": "eqrr:expiryDate",
+          "value": "2045-12-10"
+        },
+        {
+          "name": "eqrr:dataRetentionYears",
+          "value": "20"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Root CA NetBackup - trust anchor per l'intero dominio"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "critical"
+        },
+        {
+          "name": "eqrr:migrationPriority",
+          "value": "IMMEDIATE"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "nbcertcmd -listCACertDetails"
+        },
+        {
+          "name": "eqrr:subject",
+          "value": "/CN=nbatd/OU=root@primary.home.lab/O=vx"
+        },
+        {
+          "name": "eqrr:fingerprint",
+          "value": "07:34:AA:CC:FF:0E:0B:91:4C:3A:A7:A9:B7:6E:1A:4F:AB:4D:F8:DD:76:BE:92:94:08:65:96:51:64:15:5E:6C"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "nbu-hostcert-bc5acf1c-a321-4340-ba6e-a2550fe1b2b9",
+      "name": "NetBackup Host Certificate",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA",
+          "parameterSetIdentifier": "2048",
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "nbu-hostcert-7aeda1d839ac7824"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab - primary-server"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "NetBackup Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "RSA-2048"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "Host certificate for NetBackup authentication"
+        },
+        {
+          "name": "eqrr:cryptoProvider",
+          "value": "NetBackup PKI"
+        },
+        {
+          "name": "eqrr:expiryDate",
+          "value": "2026-12-15"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Primary Server - infrastruttura crittografica critica"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "critical"
+        },
+        {
+          "name": "eqrr:migrationPriority",
+          "value": "IMMEDIATE"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "nbcertcmd -listCertDetails"
+        },
+        {
+          "name": "eqrr:hostId",
+          "value": "95e228d2-a834-4fa7-a8c9-83e73e1edbd0"
+        },
+        {
+          "name": "eqrr:masterServer",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:san",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:certPath",
+          "value": "/usr/openv/var/vxss/credentials/95e228d2-a834-4fa7-a8c9-83e73e1edbd0"
+        },
+        {
+          "name": "eqrr:privateKeyPath",
+          "value": "/usr/openv/var/vxss/credentials/keystore/95e228d2-a834-4fa7-a8c9-83e73e1edbd0-key.pem"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "nbu-tls-9023c12a-b8ea-4ea8-a1dc-e57d651d2244",
+      "name": "NetBackup TLS Configuration - Port 1556",
+      "cryptoProperties": {
+        "assetType": "protocol",
+        "protocolProperties": {
+          "type": "tls",
+          "version": "TLSv1.3",
+          "cipherSuites": [
+            "TLS_AES_128_GCM_SHA256"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "nbu-tls-80bd1013f4505db1"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab -> primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "NetBackup Primary-Media/Client communication"
+        },
+        {
+          "name": "eqrr:port",
+          "value": "1556"
+        },
+        {
+          "name": "eqrr:tlsVersion",
+          "value": "TLSv1.3"
+        },
+        {
+          "name": "eqrr:cipherSuite",
+          "value": "TLS_AES_128_GCM_SHA256"
+        },
+        {
+          "name": "eqrr:keyExchangeAlgorithm",
+          "value": "X25519"
+        },
+        {
+          "name": "eqrr:keyExchangePQC",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:encryptionAlgorithm",
+          "value": "AES-256-GCM"
+        },
+        {
+          "name": "eqrr:hashAlgorithm",
+          "value": "SHA-256"
+        },
+        {
+          "name": "eqrr:quantumSafetyScore",
+          "value": "0.2"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "quantum-vulnerable"
+        },
+        {
+          "name": "eqrr:gapDescription",
+          "value": "Né KEX né authentication sono protetti contro quantum computing"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Configurazione TLS Primary Server - comunicazione critica"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "Active TLS probe to primary.home.lab:1556"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "nbu-kms-ecd617a3-d129-4f60-867e-1a6c5afd4a55",
+      "name": "NetBackup Key Management Service (KMS)",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "nbu-kms-4b9d18555d840bf8"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab - primary-server"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "NetBackup Key Management Service"
+        },
+        {
+          "name": "eqrr:kmsConfigured",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:kmsMessage",
+          "value": "NetBackup key management service is not configured"
+        },
+        {
+          "name": "eqrr:securityMeasure",
+          "value": "Additional security layer for encryption key management"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "nbkmscmd -discoverNBKMS"
+        },
+        {
+          "name": "eqrr:note",
+          "value": "KMS provides additional security for encryption but is not classified as a Tier"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "nbu-fips-7a90cbc7-ed37-4135-aa44-bfb2aaf6d2a4",
+      "name": "NetBackup FIPS Mode",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "nbu-fips-5948c2c8c37c4a72"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab - primary-server"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "NetBackup FIPS 140-2 Compliance Mode"
+        },
+        {
+          "name": "eqrr:fipsEnabled",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:fipsValue",
+          "value": "DISABLE"
+        },
+        {
+          "name": "eqrr:securityMeasure",
+          "value": "FIPS 140-2 validated cryptographic modules"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "nbgetconfig NB_FIPS_MODE"
+        },
+        {
+          "name": "eqrr:note",
+          "value": "FIPS mode ensures usage of FIPS 140-2 validated cryptographic libraries"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkey-0284f88b-46f8-48f3-b249-0780c45e3b32",
+      "name": "SSH Host Key RSA",
+      "cryptoProperties": {
+        "assetType": "key",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA",
+          "parameterSetIdentifier": "3072"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkey-0ab93fde9f105316"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH server host authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "RSA-3072"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH host key authentication"
+        },
+        {
+          "name": "eqrr:privateKeyLocation",
+          "value": "/etc/ssh/ssh_host_rsa_key"
+        },
+        {
+          "name": "eqrr:publicKeyLocation",
+          "value": "/etc/ssh/ssh_host_rsa_key.pub"
+        },
+        {
+          "name": "eqrr:fingerprint",
+          "value": "SHA256:Pt9RY4KBQ/IQA1r6CwNf9Lsq9QA85YdeUQITa1rcSgQ"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "SSH host key quantum-vulnerable - richiede migrazione"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "high"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH config parsing + ssh-keygen"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkey-e06064a5-aaef-4b9a-bb8e-5c15e56961b8",
+      "name": "SSH Host Key ECDSA",
+      "cryptoProperties": {
+        "assetType": "key",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA",
+          "parameterSetIdentifier": "256"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkey-00e085ded26388a9"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH server host authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "ECDSA-256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH host key authentication"
+        },
+        {
+          "name": "eqrr:privateKeyLocation",
+          "value": "/etc/ssh/ssh_host_ecdsa_key"
+        },
+        {
+          "name": "eqrr:publicKeyLocation",
+          "value": "/etc/ssh/ssh_host_ecdsa_key.pub"
+        },
+        {
+          "name": "eqrr:fingerprint",
+          "value": "SHA256:wdlz/1uCZ6Zj5q0JktY5WEUyGJ/yF4DP1he4A+PWwY8"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "SSH host key quantum-vulnerable - richiede migrazione"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "high"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH config parsing + ssh-keygen"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkey-bfa5ba88-5a41-4a3c-91eb-cad16807b3e1",
+      "name": "SSH Host Key ED25519",
+      "cryptoProperties": {
+        "assetType": "key",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ED25519",
+          "parameterSetIdentifier": "256"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkey-2be40834661d288a"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH server host authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "ED25519-256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH host key authentication"
+        },
+        {
+          "name": "eqrr:privateKeyLocation",
+          "value": "/etc/ssh/ssh_host_ed25519_key"
+        },
+        {
+          "name": "eqrr:publicKeyLocation",
+          "value": "/etc/ssh/ssh_host_ed25519_key.pub"
+        },
+        {
+          "name": "eqrr:fingerprint",
+          "value": "SHA256:ZeZ5m/6MP06hpeAIoVVHD1BOIJKupmMsGCQRRXYvKWk"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "SSH host key quantum-vulnerable - richiede migrazione"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "medium"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH config parsing + ssh-keygen"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-0aca6633-467b-4671-9639-e6fd39ed1cf4",
+      "name": "SSH Key Exchange: mlkem768x25519-sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-7bc51ecc9f9f7495"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "mlkem768x25519-sha256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "POST-QUANTUM-HYBRID"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-a99d8047-38b9-4401-8253-e586ca14c19d",
+      "name": "SSH Key Exchange: curve25519-sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-e92b8238fbe96ba4"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "curve25519-sha256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-1ac862d2-2034-44fb-a4cc-961139c242b0",
+      "name": "SSH Key Exchange: curve25519-sha256@libssh.org",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-d6615bb009868b2e"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "curve25519-sha256@libssh.org"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-29c526dc-e7f3-4f2d-82c8-745e44ee369d",
+      "name": "SSH Key Exchange: ecdh-sha2-nistp256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-e2744a57ccc9ddc5"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdh-sha2-nistp256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-4891f9ec-d3c7-4281-ba5b-7a1541c931f8",
+      "name": "SSH Key Exchange: ecdh-sha2-nistp384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-af78f703f4d02d39"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdh-sha2-nistp384"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "4"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-8b7d5bef-bacc-416f-8a4c-f527a42d939b",
+      "name": "SSH Key Exchange: ecdh-sha2-nistp521",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-ba6a25a210f6fa51"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdh-sha2-nistp521"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-80d8f696-495f-4bd5-91cd-f7715d34a375",
+      "name": "SSH Key Exchange: diffie-hellman-group-exchange-sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-5b6ea272866a9de7"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "diffie-hellman-group-exchange-sha256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-bc9e0429-2b53-41d0-a8f9-000648a5a8c8",
+      "name": "SSH Key Exchange: diffie-hellman-group14-sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-7dbc2121f1f9ebcc"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "diffie-hellman-group14-sha256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-7a97e32d-9f2b-4f43-8e59-c0be4241e751",
+      "name": "SSH Key Exchange: diffie-hellman-group16-sha512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-626071bd1dc19920"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "diffie-hellman-group16-sha512"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "4"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-kex-f92de1a9-ceab-4fcf-a9fb-1639a6f359ac",
+      "name": "SSH Key Exchange: diffie-hellman-group18-sha512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agreement",
+          "algorithmFamily": "KEX"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-kex-dc3f928218f6f8bc"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Key Exchange"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Key Exchange"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "diffie-hellman-group18-sha512"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server key agreement"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:postQuantumCrypto",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-cipher-8d11b5d1-f585-40cc-8529-e4ee1c82cb97",
+      "name": "SSH Cipher: aes256-gcm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "algorithmFamily": "AES"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-cipher-fae6e8691a2bea71"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Symmetric Encryption"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Symmetric Cipher"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "aes256-gcm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH session encryption"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-cipher-5d47bfba-3689-44a0-837c-e59b62262e98",
+      "name": "SSH Cipher: chacha20-poly1305@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "algorithmFamily": "ChaCha20"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-cipher-16b1df7583a1e064"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Symmetric Encryption"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Symmetric Cipher"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "chacha20-poly1305@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH session encryption"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-cipher-91b18f07-cb5e-4bf7-8989-6416145c4c30",
+      "name": "SSH Cipher: aes256-ctr",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "algorithmFamily": "AES"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-cipher-cf3df9d34296d788"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Symmetric Encryption"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Symmetric Cipher"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "aes256-ctr"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH session encryption"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-cipher-de10ef66-d71b-4dfa-8427-22724d1ce6a1",
+      "name": "SSH Cipher: aes128-gcm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "algorithmFamily": "AES"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-cipher-c449d403d07962af"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Symmetric Encryption"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Symmetric Cipher"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "aes128-gcm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH session encryption"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-cipher-65e1a946-cf58-4da4-a47d-feba3d491793",
+      "name": "SSH Cipher: aes128-ctr",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "algorithmFamily": "AES"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-cipher-77a91c9916bb4a06"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Symmetric Encryption"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Symmetric Cipher"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "aes128-ctr"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH session encryption"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-a8e4141b-f7f4-41cb-ab78-7ba47dcc203b",
+      "name": "SSH MAC: hmac-sha2-256-etm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-cfe7293119bac020"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha2-256-etm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-7e6c5885-7f57-4a75-9cfb-455bbed93cb9",
+      "name": "SSH MAC: hmac-sha1-etm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-003d40b5e1c38c1b"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha1-etm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "DEPRECATED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-fefb0be6-2d4c-42b2-9e25-0d2ad30cdb64",
+      "name": "SSH MAC: umac-128-etm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "UMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-d66699f1e2870bd4"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "umac-128-etm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-0651cfb4-f17e-4b91-9eb0-124b58161afa",
+      "name": "SSH MAC: hmac-sha2-512-etm@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-1ed0487a4b8b3a6e"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha2-512-etm@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-10e8857a-68b7-4828-a241-11dac415689a",
+      "name": "SSH MAC: hmac-sha2-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-0ac41b8e54dd120f"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha2-256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-131c5006-6cad-47fc-9f8b-9852977dfa9d",
+      "name": "SSH MAC: hmac-sha1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-93f4ef145350cbba"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha1"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "DEPRECATED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-4bf23d1c-c01b-4ad4-abbe-cf759952ea84",
+      "name": "SSH MAC: umac-128@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "UMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-6370bd0914866561"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "umac-128@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-mac-d3d1f52b-c61e-4054-80bb-b59d8433c5c7",
+      "name": "SSH MAC: hmac-sha2-512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "algorithmFamily": "HMAC"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-mac-beb84cf4051754f0"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Message Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Message Authentication Code"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "hmac-sha2-512"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH message integrity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Componente configurazione SSH - priorità standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-fae2fe33-9f48-4971-b379-e1200bf6a3f9",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-e98153ba785735cb"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-8c8ea80d-5f60-432b-9f17-3be605a5fe46",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp256-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-c579cb1cb52230ab"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp256-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-e700faf9-8df0-4655-ba6c-3f59c16a2afe",
+      "name": "SSH Host Key Algorithm: sk-ecdsa-sha2-nistp256@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-81f98579815bcac3"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "sk-ecdsa-sha2-nistp256@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-60292805-a56c-447d-94e2-022fbab3bd75",
+      "name": "SSH Host Key Algorithm: sk-ecdsa-sha2-nistp256-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-bde9f4e7acfca4e7"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "sk-ecdsa-sha2-nistp256-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-2b26a04b-78c3-4ddb-9393-38feb14e697b",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-bbb557ce799e5a76"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp384"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "4"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-e90a553b-6ea9-417b-a047-61a518792bde",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp384-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-ddbc545c2a29e170"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp384-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-d30f2dd9-02ec-427d-8981-494c7cd9e56e",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp521",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-975b6ef02a648856"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp521"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "5"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-b7e26c35-530e-44ed-971d-cd12b1315e5c",
+      "name": "SSH Host Key Algorithm: ecdsa-sha2-nistp521-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "ECDSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-b4678640853d310b"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ecdsa-sha2-nistp521-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "UNKNOWN"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-0a09ebd0-70c0-44f3-84e2-9dc8da8d7c93",
+      "name": "SSH Host Key Algorithm: ssh-ed25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "Ed25519"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-9a51a43a8858d62d"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ssh-ed25519"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-46583dd8-8d7f-451d-99a6-14b794d23a06",
+      "name": "SSH Host Key Algorithm: ssh-ed25519-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "Ed25519"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-8126abf68ac99c8a"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "ssh-ed25519-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-2ea1f1e6-8653-4590-978b-38c6bea424aa",
+      "name": "SSH Host Key Algorithm: sk-ssh-ed25519@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "Ed25519"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-c3fcc820cbec3a5c"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "sk-ssh-ed25519@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-e79b3f9b-f54f-438f-9979-662030d3ac46",
+      "name": "SSH Host Key Algorithm: sk-ssh-ed25519-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "Ed25519"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-256b8942ebac4986"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "sk-ssh-ed25519-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-da0ebc23-816c-447e-9bbd-1ae4fe66705a",
+      "name": "SSH Host Key Algorithm: rsa-sha2-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-780ec9223036c2fe"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "rsa-sha2-256"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-992a501b-2a15-4fe0-8b78-32c553094d54",
+      "name": "SSH Host Key Algorithm: rsa-sha2-256-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-114cf3642a5e7bc4"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "rsa-sha2-256-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-aa8355d8-269f-4eb8-9862-d24170adf38c",
+      "name": "SSH Host Key Algorithm: rsa-sha2-512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-76cf4c3bd703006f"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "rsa-sha2-512"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "ssh-hostkeyalgo-8183cd37-c594-48d4-8160-161e82b73422",
+      "name": "SSH Host Key Algorithm: rsa-sha2-512-cert-v01@openssh.com",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "ssh-hostkeyalgo-06cb8c98df62a835"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "SSH Host Authentication"
+        },
+        {
+          "name": "eqrr:cryptoPrimitive",
+          "value": "Digital Signature"
+        },
+        {
+          "name": "eqrr:algorithmName",
+          "value": "rsa-sha2-512-cert-v01@openssh.com"
+        },
+        {
+          "name": "eqrr:usageContext",
+          "value": "SSH server identity verification"
+        },
+        {
+          "name": "eqrr:sshVersion",
+          "value": "OpenSSH_9.9p1, OpenSSL 3.5.1 1 Jul 2025"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "2"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "ACCEPTABLE"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Asset crittografico standard"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:hndlRiskLevel",
+          "value": "low"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "SSH server configuration analysis"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-a26c5614-a6de-48ae-9ec5-4af0be4f4be8",
+      "name": "OpenSSL",
+      "version": "3.5.1",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-678c2d8a2bbddb65"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "system"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "/etc/pki/tls"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-62282ac0-1d32-426c-bbb1-8e749e2776de",
+      "name": "jansson",
+      "version": "2.14-3.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-fdf58db2e68d53f5"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-388d81c9-d152-40f1-a904-a2a23d81cf44",
+      "name": "crypto-policies",
+      "version": "20250905-2.gitc7eb7b2.el10_1.noarch",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-5dff5ef954b5263a"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-f274daec-2547-4ed6-a8e8-b80bee13d48d",
+      "name": "gnutls",
+      "version": "3.8.10-2.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-1299e35a7586a908"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-45987831-4599-4317-b088-bdf2a5b02004",
+      "name": "openssl-fips-provider-so",
+      "version": "3.0.7-8.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-6b5d2e91e786d7da"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-b41b1d5f-5288-4fd5-872a-a3f1ec189811",
+      "name": "openssl-fips-provider",
+      "version": "3.0.7-8.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-84c546114e87094b"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-be64c7a1-0864-4877-bd5f-13ebf594af4b",
+      "name": "openssl-libs",
+      "version": "3.5.1-4.el10_1.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-ec184bfda5898be2"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-360db801-7b76-46c3-ac3b-5fb73ddebe95",
+      "name": "openssl",
+      "version": "3.5.1-4.el10_1.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-6d7ae96b242b79bd"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-a89174bb-d846-463c-877a-28651c51dab2",
+      "name": "libsss_nss_idmap",
+      "version": "2.11.1-2.el10_1.1.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-935c6576a6217fac"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-0872004a-ada0-4cfe-b37e-c18570343247",
+      "name": "openssh",
+      "version": "9.9p1-11.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-a9b5455e94623265"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-39c81ae2-079d-41cb-98ba-54721dba911b",
+      "name": "crypto-policies-scripts",
+      "version": "20250905-2.gitc7eb7b2.el10_1.noarch",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-1bdb2e5c3608645d"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-cef8675b-c536-458a-84a1-528343026e31",
+      "name": "rsyslog-gnutls",
+      "version": "8.2506.0-2.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-8fd67948c2a27785"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-a1f15416-d162-4213-ab02-1fab48d1f110",
+      "name": "openssh-server",
+      "version": "9.9p1-11.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-2ca39f0cf669f4db"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "tls-lib-0082165f-eb04-4c0d-ab9a-7d304471eba5",
+      "name": "openssh-clients",
+      "version": "9.9p1-11.el10.x86_64",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material"
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "tls-lib-18a42e3f75ee5dff"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System TLS/SSL cryptographic library"
+        },
+        {
+          "name": "eqrr:libraryType",
+          "value": "rpm_package"
+        },
+        {
+          "name": "eqrr:path",
+          "value": "N/A"
+        },
+        {
+          "name": "eqrr:fipsMode",
+          "value": "false"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Libreria TLS/SSL di sistema - aggiornamento standard"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System package manager + ldconfig"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "syscert-df479790-1146-4453-a278-24c50f955b15",
+      "name": "System Certificate",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA",
+          "parameterSetIdentifier": "4096"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "syscert-ee0800e86472243c"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System trust store certificate"
+        },
+        {
+          "name": "eqrr:subject",
+          "value": "CN=17274219-df53-4c13-a07e-6429ca8932f4,O=16486389"
+        },
+        {
+          "name": "eqrr:issuer",
+          "value": "1.2.840.113549.1.9.1=ca-support@redhat.com,CN=Red Hat Candlepin Authority,OU=Red Hat Network,O=Red Hat\\, Inc.,ST=North Carolina,C=US"
+        },
+        {
+          "name": "eqrr:serialNumber",
+          "value": "0x353a250f4f5dffab"
+        },
+        {
+          "name": "eqrr:notValidBefore",
+          "value": "2025-11-04"
+        },
+        {
+          "name": "eqrr:notValidAfter",
+          "value": "2026-11-04"
+        },
+        {
+          "name": "eqrr:filePath",
+          "value": "/etc/pki/consumer/cert.pem"
+        },
+        {
+          "name": "eqrr:publicKeyAlgorithm",
+          "value": "RSA"
+        },
+        {
+          "name": "eqrr:keySize",
+          "value": "4096"
+        },
+        {
+          "name": "eqrr:signatureAlgorithm",
+          "value": "sha256WithRSAEncryption"
+        },
+        {
+          "name": "eqrr:dataRetentionYears",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Retention a breve termine (1 anni)"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System certificate store scan"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "syscert-4d6baf7b-dcd7-4765-b24c-b19dfedee2f9",
+      "name": "System Certificate",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "algorithmFamily": "RSA",
+          "parameterSetIdentifier": "4096"
+        }
+      },
+      "properties": [
+        {
+          "name": "eqrr:assetId",
+          "value": "syscert-c6e4c9f2505c0a74"
+        },
+        {
+          "name": "eqrr:systemIdentifier",
+          "value": "primary.home.lab"
+        },
+        {
+          "name": "eqrr:serviceUsage",
+          "value": "System trust store certificate"
+        },
+        {
+          "name": "eqrr:subject",
+          "value": "CN=17274219-df53-4c13-a07e-6429ca8932f4,O=16486389"
+        },
+        {
+          "name": "eqrr:issuer",
+          "value": "1.2.840.113549.1.9.1=ca-support@redhat.com,CN=Red Hat Candlepin Authority,OU=Red Hat Network,O=Red Hat\\, Inc.,ST=North Carolina,C=US"
+        },
+        {
+          "name": "eqrr:serialNumber",
+          "value": "0x2ce3a77e7f9c7e7b"
+        },
+        {
+          "name": "eqrr:notValidBefore",
+          "value": "2025-11-04"
+        },
+        {
+          "name": "eqrr:notValidAfter",
+          "value": "2026-11-04"
+        },
+        {
+          "name": "eqrr:filePath",
+          "value": "/etc/pki/entitlement/3234613119130828411.pem"
+        },
+        {
+          "name": "eqrr:publicKeyAlgorithm",
+          "value": "RSA"
+        },
+        {
+          "name": "eqrr:keySize",
+          "value": "4096"
+        },
+        {
+          "name": "eqrr:signatureAlgorithm",
+          "value": "sha256WithRSAEncryption"
+        },
+        {
+          "name": "eqrr:dataRetentionYears",
+          "value": "1"
+        },
+        {
+          "name": "eqrr:strengthLevel",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:strengthStatus",
+          "value": "RECOMMENDED"
+        },
+        {
+          "name": "eqrr:tier",
+          "value": "3"
+        },
+        {
+          "name": "eqrr:tierJustification",
+          "value": "Retention a breve termine (1 anni)"
+        },
+        {
+          "name": "eqrr:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "eqrr:discoveryMethod",
+          "value": "System certificate store scan"
+        }
+      ]
+    }
+  ]
+}
