@@ -1,0 +1,22 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{SBOM Inconsistency as an Interface Problem}
+The main lesson from our analysis is that SBOM inconsistency is an interface problem. Optionality is not itself a defect: multi-use specifications legitimately support different disclosure constraints, ecosystems, and maturity levels. Consumer-facing ambiguity arises when the resulting artifact declares neither its use-case profile nor whether missing data is inapplicable, unknown, unsupported, filtered, intentionally omitted, or not required. A missing dependency graph or supplier field can reflect any of these states. Our study documents this ambiguity in specifications and generated artifacts; it does not observe how particular consumers interpret it.
+
+Prior work establishes output inconsistency; our contribution maps selected differences that coexist with validation to open population rules and concrete generator decision points.
+
+The SPDX schema-gap result also bounds this claim. The evaluated outputs passed every selected rule exercised by an emitted construct. N/A marks optional constructs that were not exercised and provides no evidence about their correctness. Thus our evidence distinguishes an observed applicable-rule violation from a feature that was simply not activated.
+
+Because generators also depend on metadata conventions, package managers, build/runtime environments, and configuration, the result is an engineering interface assessment rather than sole-cause attribution. It identifies which evidence, filtering, and coverage claims require structural, profile-level, or external checks.
+
+\subsection{Threats to Validity}
+\textbf{Interpretation and coding.} Extraction and thematic coding require judgment. Pilot agreement, reconciliation, documented rules, and the independent check support reproducible subtheme assignment; the higher-level taxonomies remain auditable study artifacts, with community validation left to future work.
+
+\textbf{Corpus coverage.} Pilot agreement established consistency under the refined extraction protocol. A random page-based audit outside the pilot measures human-to-NotebookLM agreement on unseen source material using the same binary primary-unit decision. The subsequent analyst review shows that disagreements can reflect either missed prescriptive directives or overly inclusive human labels; neither the kappa score nor the review establishes exhaustive extraction coverage. The central findings rest on mapped clauses, schemas, source paths, and outputs rather than row-count magnitude.
+
+\textbf{Empirical scope.} Static findings concern the named frozen tool snapshots; dynamic checks use selected outputs generated from 40 repositories across PyPI and Maven for each supported tool and format. These popularity-based cases support mechanism-level traces, not tool rankings or population estimates; broader ecosystems and probabilistic sampling remain future validation.
+
+\textbf{Consumer and evidence scope.} We analyze specifications, generators, and artifacts rather than downstream implementations or vulnerability outcomes. Accordingly, downstream statements identify bounded operational risks, while inventory completeness, build provenance, runtime loading, and defensive-task sufficiency require external evidence; graph depth alone is not a completeness measure.
+
+\textbf{SPDX comparability.} Trivy and Syft generate SPDX 2.3 natively. Conversion provides a 3.0.1 representation baseline for selected fields, so cross-version claims are limited to field visibility under the mapping and do not attribute those tools' behavior to SPDX 3.0.1.

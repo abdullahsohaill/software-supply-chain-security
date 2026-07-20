@@ -1,0 +1,98 @@
+\section{Tool Implementation Analysis}
+\label{sec:tool-analysis}
+
+\begin{table*}[t]
+\caption{Representative interface boundaries and mitigation checks.}
+\label{tab:root-causes}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{2.2cm}p{3.1cm}p{3.6cm}p{3.4cm}X@{}}
+\toprule
+\textbf{Inconsistency} & \textbf{Specification source} & \textbf{Inspected source/output evidence} & \textbf{Downstream risk} & \textbf{Mitigation/check} \\
+\midrule
+Missing provenance & Metadata fields exist but are not always baseline-required & Trivy and cdxgen differ on document-level author/metadata-supplier population; Microsoft SBOM Tool constructs creation metadata and package \field{suppliedBy}, using \field{NOASSERTION} when supplier input is unavailable & The artifact may not reliably identify the SBOM author, document-level metadata supplier, or component/package supplier & Require level-specific supplier, author, timestamp, and tool identity in task-specific defensive profiles \\
+\addlinespace
+Shallow dependency graph & Direct/transitive coverage is recommended or conditional, not always mandatory & Inspected snapshots expose different graph-construction and filtering paths & An artifact-only inventory check cannot assess an omitted dependency & Compare declared evidence sources with component-to-graph coverage; use depth only as a diagnostic; require coverage status \\
+\addlinespace
+Ambiguous leaf nodes & Empty dependency entries do not distinguish a true leaf from unsupported graph recovery & Trivy emits empty entries for no dependencies, with implementation ambiguity acknowledged & The artifact does not distinguish unknown coverage from producer-asserted complete coverage & Add a graph-confidence or coverage-status assertion for empty dependency entries \\
+\addlinespace
+Scope disagreement & Scope/runtime relevance is representable but computation is not specified & cdxgen infers scope; Trivy filters development dependencies before output & The same project can yield different required/optional dependency sets & Require generators to declare evidence source and filtering policy \\
+\addlinespace
+Relationship model loss & Internal tool relationships may not map cleanly to an output format & Syft maps only expressible package dependency relationships into CycloneDX dependencies & The artifact may omit evidence or containment relationships used during generation & Report relationship classes that were dropped, converted, or represented outside the dependency graph \\
+\addlinespace
+Producer-consumer asymmetry & Many requirements describe producer-populated fields; fewer define absence meaning & Inspected paths omit or infer fields based on local evidence and options & The artifact does not distinguish inapplicable, unknown, unsupported, filtered, intentionally omitted, or profile-excluded data & Standardize machine-readable absence states for provenance, dependency, vulnerability, and coverage fields \\
+\addlinespace
+Undeclared optional features & Formulation, VEX analysis, and compositions are optional root objects & No evaluated CycloneDX output declared \field{compositions}; cdxgen formulation is opt-in & The artifact may not state whether a feature is irrelevant, unavailable, or outside its intended use & Define use-case profiles plus explicit absence states for provenance, dependency, VEX, and coverage claims \\
+\addlinespace
+Schema/prose mismatch & Schemas may be stricter, looser, or structurally different from prose & Schemas provide machine-executable structural constraints & A schema-valid artifact may still violate an applicable prose obligation & Add versioned schema/prose structural-diff tests; assign evidence checks to profiles or external validation \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+Specification flexibility becomes consequential when generators translate project evidence into concrete SBOM fields. Using the dual methodology described in Section~\ref{sec:methodology}, we inspected frozen snapshots of Microsoft SBOM Tool, cdxgen, Trivy, and Syft. Static claims are limited to those snapshots; CycloneDX and SPDX output counts are limited to 40 selected PyPI and Maven package repositories per tool, and SPDX presence/gap results to the evaluated artifacts. Our objective is not to benchmark or rank tools, but to document where selected implementation choices and output patterns align with the specification boundaries identified in Section~\ref{sec:spec-analysis}. The results cover CISA-derived field presence (\S\ref{subsec:cisa-compliance}), selected schema-gap criteria (\S\ref{subsec:security-gaps}), and static design choices (\S\ref{subsec:static-inspection}).
+
+\subsection{CISA Compliance: Dynamic Validation}
+\label{subsec:cisa-compliance}
+This analysis evaluates whether the selected SPDX and CycloneDX artifacts populate the CISA-derived fields defined in Section~\ref{subsec:implementationinspection}. Both formats provide vocabulary for these fields, but the evaluated artifacts do not populate every criterion consistently.
+
+\subsubsection{SPDX Generators}
+Within the evaluated SPDX artifacts from the three generators, 4 of the 10 valid CISA-derived checks were populated in every output: software identifier, dependency relationship, tool name, and timestamp. The ten-field operationalization is defined in Section~\ref{subsec:implementationinspection}. We exclude the former ``component version'' result because its automated check read \field{CreationInfo.specVersion}, a document-format property, rather than a package-version field.
+
+For the Trivy and Syft artifacts, we compared the ten CISA-derived fields used in Section 5.1.1 between the native SPDX 2.3 output and its converted SPDX 3.0.1 representation. We observed no presence/absence discrepancies for those fields. This scoped check was not a full-document conversion audit and does not establish lossless conversion for unexamined fields, types, or relationships.
+
+SPDX 3.0.1's Lite Profile provides a mechanism for reducing minimum-element ambiguity, but its benefits depend on adoption. The evaluated Microsoft 3.0.1 output did not declare Lite Profile conformance, while Trivy and Syft emitted 2.3 natively, so these outputs do not test the effect of implementing the Lite Profile.
+
+Even among these consistently present fields, the evaluated artifacts used different representations. For instance, the CISA-defined ``Tool Name'' field maps to SPDX's \texttt{createdUsing}, which mandates only an identifier, not a human-readable string. We observed both explicit URIs (e.g., \texttt{http://trivy.dev/}) and opaque hashes, so resolving basic tool identity from the artifact can require graph dereferencing. Tool identity is a core element of SBOM provenance, but the identifier alone does not directly communicate whether a generator is trusted or audited. We did not test whether or how downstream consumers perform this resolution.
+
+\subsubsection{CycloneDX Generators}
+Table~\ref{tab:cdx-schema-gap} (Appendix~\ref{app:prompts}) aggregates outputs from the 40 selected PyPI and Maven package repositories per tool. A tool-level criterion is \emph{Met} only when every applicable study output meets it, \emph{Unmet} when at least one applicable output does not, and \emph{N/A} only when no output exercises the construct. For all-component rules, one component lacking the field makes that output Unmet.
+
+The four tool-level Unmet patterns have different force. First, cdxgen omitted required empty graph entries in 13 outputs with a dependency graph (five had no graph and were N/A); Syft did so in 3 applicable outputs (15 N/A), while all 18 Trivy outputs met this prose rule. Second, the CISA-derived document-level \field{metadata.supplier} criterion was Unmet for every output from all three tools; this says nothing about component-level supplier population. A source repository may also lack authoritative product-supplier evidence, so the result establishes field absence in the artifacts, not a generator defect. Third, the all-component version criterion was Unmet in 2 of 18 cdxgen outputs, all 18 Syft outputs, and 5 of the 6 Trivy outputs containing components (12 Trivy outputs had no components and were N/A). This means at least one component lacked a version, not that every component did. Fourth, no output used the optional \field{compositions} element to declare coverage status. The supplier and version rows are CISA-derived checks and compositions is advisory; their Unmet status is not a schema-validity judgment. Only the empty-entry result tests an applicable mandatory CycloneDX prose rule omitted from schema enforcement.
+
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, arc=5pt, left=2pt, right=2pt, top=1pt, bottom=1pt]
+\textbf{Key Takeaway:} In the selected CycloneDX outputs, no tool populated document-level supplier or declared compositions, and every tool had outputs with at least one missing component version. Representing a field does not ensure that generators populate it.
+\end{tcolorbox}
+
+\subsection{Security-Relevant Schema Gaps: Prose Beyond Validation}
+\label{subsec:security-gaps}
+We test whether executable schemas enforce selected prose obligations whose data supports provenance and dependency-aware security analysis. These are structural checks, not vulnerability tests: a schema can validate shape while leaving graph coverage or field population unenforced.
+
+\subsubsection{SPDX 3.0.1}
+All selected rules exercised by the three SPDX outputs passed, as detailed in Table~\ref{tab:spdx-schema-gap} (Appendix~\ref{app:prompts}). N/A rows mark constructs that were not emitted; they are not failures or evidence about how those constructs would behave. This control result supports only the checked emitted constructs, not broader SPDX conformance.
+
+
+\subsubsection{CycloneDX 1.6}
+CycloneDX shows the consequential gap. Once a dependency graph is emitted, \texttt{CDX-0925} requires an entry for every component, including an empty \field{dependsOn} list for leaves; the schema does not enforce that coverage. Thirteen applicable cdxgen outputs and three Syft outputs omitted at least one required empty entry. These artifacts can remain schema-valid, yet schema validation alone cannot tell a dependency-aware consumer whether a component is an asserted leaf or its graph status was not reported. We did not test downstream vulnerability decisions.
+
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, arc=5pt, left=2pt, right=2pt, top=1pt, bottom=1pt]
+\textbf{Key Takeaway:} The selected checks passed for every exercised SPDX construct. In CycloneDX, 13 cdxgen and 3 Syft outputs omitted required empty dependency entries that the schema does not enforce, leaving graph-coverage status ambiguous for dependency-aware security analysis.
+\end{tcolorbox}
+
+\subsection{Static Inspection: Generator Design Choices}
+\label{subsec:static-inspection}
+Static inspection traces how the frozen generator snapshots implement filtering, provenance, graph construction, and relationship translation within the boundaries identified by the specification analysis.
+
+\textbf{Evidence chain 1: filtered dependency coverage.} CycloneDX \texttt{CDX-0008} and \texttt{CDX-0009} recommend rather than require direct and transitive coverage, while \texttt{CDX-0927} recommends a composition assertion when graph coverage is unknown. Trivy makes \field{--include-dev-deps} opt-in and filters development packages and edges before graph encoding (Table~\ref{tab:tool-evidence}). All 18 evaluated outputs satisfied the applicable empty-entry rule, but none declared \field{compositions}. An artifact-only check can therefore observe the emitted graph but cannot determine whether omitted development dependencies were filtered, undiscovered, or absent. This bounded ambiguity does not establish inventory inaccuracy, consumer effects, or a sole cause; product priorities, package metadata, configuration, and defects remain possible explanations.
+
+Trivy also records tool identity and timestamps and can populate component-level \field{components[].supplier} from package metadata, but the inspected path does not populate a document-level author or \field{metadata.supplier}. This distinction matters because CISA-style provenance separates the emitting tool, SBOM author, document-level metadata supplier, and component suppliers.
+
+\textbf{Evidence chain 2: mandatory prose beyond schema enforcement.} Once a CycloneDX graph is emitted, \texttt{CDX-0925} requires an empty \field{dependsOn} entry for components with no known dependencies, but the JSON schema does not enforce component-to-entry coverage. cdxgen constructs dependency entries and can rebuild them under optional filtering (Table~\ref{tab:tool-evidence}); required-only filtering was not enabled in the study. Nevertheless, 13 applicable outputs lacked at least one required empty entry, while five outputs without a graph were N/A. These artifacts can remain schema-valid while violating the applicable prose rule. A missing entry does not prove that a dependency itself was omitted, and consumer interpretation was not tested.
+
+cdxgen separately exposes specification-permitted policy controls: it can propagate required scope, retain required components, and add an incomplete \field{compositions} assertion when filtering occurs. Component scope is optional under \texttt{CDX-0276}, and the 18 default study outputs contained no composition assertions. Formulation data under \texttt{CDX-1256} is likewise opt-in. These observations show that cdxgen can represent filtering policy under particular options; they do not establish that the standard caused the default-output pattern.
+
+\textbf{Syft} provides a shorter translation trace. Its CycloneDX conversion admits package dependency relationships but not other internal relationship classes into the dependency graph (Table~\ref{tab:tool-evidence}), so the output can be narrower than the internal evidence model. Three applicable outputs lacked required empty entries, while 15 were N/A; this does not establish that relationship translation caused those failures. Component-supplier population is conditional on source metadata and does not populate the document-level \field{metadata.supplier} evaluated above.
+
+\textbf{Microsoft SBOM Tool} is a scoped contrast, not a generally stronger tool. Its inspected path constructs \field{CreationInfo.createdBy}, \field{createdUsing}, package \field{suppliedBy}, and typed SPDX relationships (Table~\ref{tab:tool-evidence}). However, absent supplier input becomes \field{NOASSERTION}, not a verified identity, and the evaluated SPDX 3.0.1 document declared Core, Software, and Simple Licensing profiles but not Lite. The aggregate 4-of-10 result across three SPDX generators does not show that this Microsoft output populated every remaining field, so we make no overall conformance, evidence-coverage, or superiority claim.
+
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, arc=5pt, left=2pt, right=2pt, top=1pt, bottom=1pt]
+\textbf{Key Takeaway:} The inspected generators make different choices about dependency filtering, graph construction, provenance, and relationship translation. Their outputs do not consistently declare those policies, so consumers cannot reconstruct them from the artifact alone.
+\end{tcolorbox}
+
+\subsection{Synthesis: Valid Choices, Invisible Decisions}
+Outputs reflect interacting specification latitude, ecosystem evidence, configuration, priorities, and defects. Our narrower finding is that some decisions are not declared: a missing supplier may be inapplicable, unknown, unsupported, filtered, intentionally omitted, unpopulated, or outside the declared profile. This is an artifact-information limit, not observed consumer behavior.
+
+\textbf{RQ3 synthesis.} In the selected snapshots and artifacts, open boundaries appear as different provenance defaults, dependency filtering and graph construction, relationship translation, and coverage-status signaling. The source traces and focused output checks show choices the formats can represent or do not prevent; they neither apportion causality among standards, defects, priorities, evidence, and configuration nor estimate prevalence across the wider tool ecosystem.
+
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, arc=5pt, left=2pt, right=2pt, top=1pt, bottom=1pt]
+\textbf{Key Takeaway:} Schema validity confirms structure, not evidence coverage or fitness for a defensive task. Declared evidence sources, filters, coverage, and absence reasons let consumers assess those properties.
+\end{tcolorbox}

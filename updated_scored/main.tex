@@ -1,0 +1,97 @@
+% scored_main.tex
+
+%%
+%% Double-anonymous review with line numbers
+%%
+\documentclass[sigconf, review, anonymous]{acmart}
+
+%% Additional packages (some are already loaded by acmart)
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[most]{tcolorbox}
+% \usepackage{times}
+
+%% Custom commands from the original IEEE paper
+\newcommand{\tool}[1]{\textsc{#1}}
+\newcommand{\field}[1]{\texttt{#1}}
+
+%% Rights and publication information for SCORED 2026
+\setcopyright{acmlicensed}
+\copyrightyear{2026}
+\acmYear{2026}
+% Review submission: ACM supplies publication identifiers after acceptance/eRights.
+% Empty values override acmart's built-in placeholder DOI and ISBN.
+\acmDOI{}
+\acmConference[SCORED '26]{ACM Conference on Software Supply Chain Offensive Research and Ecosystem Defenses}{October 6, 2026}{Prague, Czechia}
+\acmISBN{}
+
+% If you have a submission ID, uncomment and set it:
+% \acmSubmissionID{123-A56-BU3}
+
+%% For anonymous review, the author list is suppressed by the anonymous class option.
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10003015</concept_id>
+  <concept_desc>Security and privacy~Software and application security</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Software and application security}
+
+\keywords{Software Bill of Materials, SBOM, software supply chain security, software engineering, specifications, CycloneDX, SPDX}
+
+%% ----------------------------------------------------------------------
+\begin{document}
+
+\title{Schema-Valid but Semantically Divergent: How SBOM Specifications Underdetermine Generator Behavior}
+
+\begin{abstract}
+Software Bills of Materials (SBOMs) mediate between software producers, security tools, and consumers, yet generators can report different inventories, dependency graphs, and vulnerability results for the same artifact. Prior work often treats this as a tool-implementation problem. We examine a specification-interface boundary: schemas can accept artifacts whose omitted or differently populated fields leave generator choices unclear to consumers. Our analysis of CycloneDX 1.6, SPDX 3.0.1, and CISA minimum-element guidance combines a 2,286-row requirement corpus, thematic coding, schema and conditionality comparison, and source/output inspection. We study frozen snapshots of Trivy, Syft, cdxgen, and Microsoft SBOM Tool, with CycloneDX and SPDX checks on 40 selected repositories across PyPI and Maven per tool. CycloneDX requires empty dependency entries once a graph is emitted, but its schema does not enforce component-to-entry coverage; 13 applicable cdxgen outputs and 3 Syft outputs violated this rule. None of the evaluated CycloneDX outputs populated document-level supplier metadata or declared composition-based coverage. SPDX requires Core while leaving its use-case profiles optional, limiting what baseline conformance guarantees. Across both formats, rich provenance and coverage constructs lack a uniform cross-field vocabulary for distinguishing unknown, inapplicable, filtered, unsupported, and intentionally omitted data. We contribute auditable clause-to-source-to-output evidence chains and a three-level conformance suite for defensive tasks spanning vulnerability management, compliance assessment, and incident triage. The generated SBOMs and frozen source snapshots trace interface mechanisms rather than estimate their prevalence across ecosystems.
+\end{abstract}
+
+\maketitle
+
+\sloppy
+
+\input{sections/01-introduction} % all [7/3]
+\input{sections/02-background} % - [7/3]
+\input{sections/03-methodology} % - [merging 7/2]
+\input{sections/04-specification-analysis} % 3 [inter spec b/w c and s - 7/1]
+\input{sections/05-tool-implementation} % 4 [merging results + analysis, 7/2]
+\input{sections/06-root-causes} % 4, 5 [7/2]
+\input{sections/07-discussion} % all [7/3]
+\input{sections/08-conclusion} % all [7/3]
+\input{sections/07-availability}
+
+%%
+%% Ethics and Privacy Statement
+%%
+\section*{Ethics and Privacy Statement}
+This study analyzes public specifications and open-source tools; it involves no human subjects or personal data.
+
+%%
+%% Bibliography -- using ACM Reference Format
+%%
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%%
+%% Appendices
+%%
+\appendix
+\input{sections/appendix1}
+
+\end{document}
+\endinput

@@ -1,0 +1,27 @@
+\section{Background}
+
+\label{sec:background}
+
+\subsection{Motivation and Scope}
+Consider a constructed scenario: two generators analyze one codebase, but one records a shallower graph and less provenance. A scanner limited to that artifact may lack a component record for a transitive vulnerability such as Log4Shell~\cite{CVE202144228}; the artifact does not show whether the cause is discovery, filtering, or non-use. This motivates, but is not an outcome of, our study; prior work measured generator-dependent vulnerability reports~\cite{odonoghuescored2024,benedettipython2024}.
+
+Our \emph{operational}, not adversarial, model assumes benign producers and consumers. Risk arises when missing data is not labeled inapplicable, unknown, unsupported, filtered, intentionally omitted, or outside the declared profile. We do not execute or evaluate downstream SBOM-consuming tools, measure vulnerability outcomes, or model adversarial tampering; we map indeterminate provenance and evidence coverage.
+
+\subsection{SBOM Specifications and Workflows}
+SBOM generators (e.g., Syft and Trivy) feed downstream scanners (e.g., Grype and Trivy) \cite{syftgithub,trivygithub,grypegithub}. An omitted dependency leaves no artifact record to evaluate, while an incorrect inclusion creates a potential false-alert risk. Both are artifact-level risks.
+
+SPDX 3.0.1 uses a modular graph model with Core, Software, Security, Licensing, Build, and Lite profiles~\cite{spdx301}. CycloneDX 1.6 supports inventories, dependency graphs, services, vulnerabilities, compositions, formulations, and specialized BOM types. The \textit{CISA ME-SBOM}~\cite{cisaframing2024} provides a policy baseline for supplier, author, component identity, version, dependency relationship, and timestamp.
+
+For clarity, we distinguish CycloneDX's document-level \texttt{metadata.supplier} field, which identifies the supplier of the product or component described by the BOM metadata, from each inventory component's \field{components[].supplier} field. We refer to these as the \emph{document-level metadata supplier} and \emph{component-level supplier}, respectively; absence at one level does not imply absence at the other.
+
+\subsection{Known SBOM Generation Problems}
+Prior work finds that generators parse different files, omit or duplicate dependencies, and fail on complex metadata~\cite{differentialanalysisyu}; inconsistent dependency resolution changes Python vulnerability assessments~\cite{benedettipython2024,odonoghuescored2024}; and \tool{JBomAudit} reports Java dependency omissions and incorrect inclusions~\cite{jbomaudit}.
+
+Most closely related, Wang et al.~\cite{wangadherencegap2026} analyze 55,444 SBOMs from six tools and 3,287 repositories, measuring compliance, consistency, and field accuracy. We complement that population-scale view by mapping normative conditionality and schema/prose boundaries to decision points in four frozen snapshots and their artifacts.
+
+The SEI plugfest reports cross-tool differences in minimum elements and graphs~\cite{cmuplugfest}; stakeholder research situates SBOMs in socio-technical workflows~\cite{bomsaway}; and reproducible-build/runtime work shows that static artifacts need external evidence~\cite{reproduciblebuildsforne,nodeshieldcornelissen}.
+
+\subsection{Quality Assurance Gap}
+Quality tools mainly validate schemas or selected fields. For example, \tool{sbomqs}~\cite{sbomqs} checks uniqueness, licenses, and NTIA\footnote{National Telecommunications and Information Administration} minimum elements~\cite{ntia2021sbom}. JSON Schema can validate structure and some cross-field constraints, but discovery evidence and task adequacy require profiles, producer declarations, or external checks.
+
+We distinguish \textit{specification completeness} (required constructs for the declared format/profile), \textit{generator-evidence completeness} (coverage of declared inputs), and \textit{security-use-case sufficiency} (evidence needed for a defensive task). None establishes repository, build, or runtime ground truth; graph depth alone is not completeness. The interface gap arises when a structurally valid artifact lacks evidence and absence declarations needed to assess the latter two.

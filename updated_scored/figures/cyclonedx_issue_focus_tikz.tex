@@ -1,0 +1,29 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\scriptsize
+\node[anchor=east] at (0,0.00) {inventory/provenance};
+\fill[blue!35] (0.10,-0.13) rectangle (4.30,0.13);
+\node[anchor=west] at (4.40,0.00) {922 (53.5\%)};
+\node[anchor=east] at (0,-0.55) {provenance};
+\fill[blue!35] (0.10,-0.68) rectangle (2.01,-0.42);
+\node[anchor=west] at (2.11,-0.55) {420 (24.4\%)};
+\node[anchor=east] at (0,-1.10) {completeness/evidence};
+\fill[blue!35] (0.10,-1.23) rectangle (1.04,-0.97);
+\node[anchor=west] at (1.14,-1.10) {207 (12.0\%)};
+\node[anchor=east] at (0,-1.65) {vulnerabilities};
+\fill[blue!35] (0.10,-1.78) rectangle (0.67,-1.52);
+\node[anchor=west] at (0.77,-1.65) {125 (7.3\%)};
+\node[anchor=east] at (0,-2.20) {dependencies};
+\fill[blue!35] (0.10,-2.33) rectangle (0.22,-2.07);
+\node[anchor=west] at (0.32,-2.20) {27 (1.6\%)};
+\node[anchor=east] at (0,-2.75) {dependencies; completeness/evidence};
+\fill[blue!35] (0.10,-2.88) rectangle (0.17,-2.62);
+\node[anchor=west] at (0.27,-2.75) {16 (0.9\%)};
+\node[anchor=east] at (0,-3.30) {downstream-use};
+\fill[blue!35] (0.10,-3.43) rectangle (0.13,-3.17);
+\node[anchor=west] at (0.23,-3.30) {7 (0.4\%)};
+\end{tikzpicture}
+\caption{Secondary analysis-focus distribution for CycloneDX requirements.}
+\label{fig:cdx-issue-focus}
+\end{figure}

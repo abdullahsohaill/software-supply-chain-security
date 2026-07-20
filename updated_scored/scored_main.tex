@@ -1,0 +1,121 @@
+
+
+
+
+%%
+%% Double-anonymous review with line numbers
+%%
+\documentclass[sigconf, review, anonymous]{acmart}
+
+%% Additional packages (some are already loaded by acmart)
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[most]{tcolorbox}
+
+%% Custom commands from the original IEEE paper
+\newcommand{\tool}[1]{\textsc{#1}}
+\newcommand{\field}[1]{\texttt{#1}}
+
+%% Rights and publication information for SCORED 2026
+\setcopyright{acmlicensed}
+\copyrightyear{2026}
+\acmYear{2026}
+\acmDOI{XXXXXXX.XXXXXXX}
+\acmConference[SCORED '26]{ACM Conference on Software Supply Chain Offensive Research and Ecosystem Defenses}{October 6, 2026}{Prague, Czechia}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+% If you have a submission ID, uncomment and set it:
+% \acmSubmissionID{123-A56-BU3}
+
+%% For anonymous review, we keep the author list anonymous.
+\title{A Specification-Driven Study of SBOM Inconsistencies}
+
+\author{Anonymous Authors}
+\affiliation{%
+  \institution{Anonymous Institution}
+  \city{Anonymous City}
+  \country{Anonymous Country}
+}
+\renewcommand{\shortauthors}{Anonymous Authors}
+
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10002978</concept_id>
+  <concept_desc>Security and privacy</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003015</concept_id>
+  <concept_desc>Security and privacy~Software and application security</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003016</concept_id>
+  <concept_desc>Security and privacy~Software and application security~Software security engineering</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy}
+\ccsdesc[300]{Security and privacy~Software and application security}
+\ccsdesc[100]{Security and privacy~Software and application security~Software security engineering}
+
+\keywords{Software Bill of Materials, SBOM, software supply chain security, software engineering, specifications, CycloneDX, SPDX}
+
+%% ----------------------------------------------------------------------
+\begin{document}
+
+\title{A Specification-Driven Study of SBOM Inconsistencies}
+
+
+\begin{abstract}
+Software Bills of Materials (SBOMs) are increasingly used as the interface between software producers, security tools, and downstream consumers. Yet prior work repeatedly shows that different SBOM generators can produce different component inventories, dependency graphs, and vulnerability reports for the same artifact. Most explanations frame this as a tool implementation problem. This paper studies a complementary cause: the gap between what SBOM specifications make representable and what they require generators to populate or consumers to infer. We analyze CycloneDX 1.6, SPDX 3.0.1, and CISA minimum-element guidance through a reproducible extraction of 2,286 normative requirements, thematic coding, schema comparison, conditionality analysis, dependency-representation analysis, and source-level inspection of representative generators. We find that the specifications are expressive but uneven as baseline controls: many security-relevant fields are optional, schema validation often checks structure rather than semantic completeness, and population rules for dependencies, provenance, scope, vulnerability context, and completeness are left to tools. Our inspection of Trivy, cdxgen, Syft, and Microsoft SBOM Tool shows how real generators make different implementation choices at exactly these boundaries. We argue that SBOM inconsistency is not simply a matter of broken tools or weak standards, but an interface problem between specifications, generators, and consumers. We conclude with a root-cause table and concrete recommendations for specification-driven conformance checks.
+\end{abstract}
+
+\maketitle
+
+\input{sections/01-introduction} % all [7/3]
+\input{sections/02-background} % - [7/3]
+\input{sections/03-methodology} % - [merging 7/2]
+\input{sections/04-specification-analysis} % 3 [inter spec b/w c and s - 7/1]
+\input{sections/05-tool-implementation} % 4 [merging results + analysis, 7/2]
+\input{sections/06-root-causes} % 4, 5 [7/2]
+\input{sections/07-discussion} % all [7/3]
+\input{sections/08-conclusion} % all [7/3]
+
+%%
+%% Acknowledgments (optional)
+%%
+\begin{acks}
+The authors thank the anonymous reviewers for their constructive feedback.
+\end{acks}
+
+%%
+%% Ethics and Privacy Statement
+%%
+\section*{Ethics and Privacy Statement}
+This work does not involve human subjects or personal data. The analysis is based entirely on publicly available specifications (CycloneDX, SPDX, CISA guidance) and open‑source SBOM generation tools. We do not foresee any direct societal risks beyond those inherent in software supply chain security research.
+
+%%
+%% Bibliography – using ACM Reference Format
+%%
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%%
+%% Appendices
+%%
+\appendix
+\input{sections/appendix1}
+
+\end{document}
+\endinput

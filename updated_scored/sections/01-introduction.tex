@@ -1,0 +1,13 @@
+\section{Introduction}
+\label{sec:intro}
+
+SBOMs support software-supply-chain response by recording components, versions, relationships, and provenance for downstream tools. This workflow assumes that artifacts are adequate for automated decisions, yet generators report different packages, transitive dependencies, fields, and vulnerability results for the same target~\cite{xiaempirical2023,bomsaway,balliujava2023,differentialanalysisyu,odonoghuescored2024,benedettipython2024,jbomaudit,cmuplugfest}. Prior work largely quantifies missed dependencies~\cite{balliujava2023,halbritterares2024}, vulnerability results~\cite{odonoghuescored2024,benedettipython2024}, or absent minimum fields~\cite{wangadherencegap2026,halbritterares2024}. We ask a complementary question: \textbf{where do specifications permit multiple schema-valid producer choices, and how do selected generators occupy those choices?}
+
+We treat specifications as producer-consumer interfaces. Although CycloneDX 1.6~\cite{ecma424} and SPDX 3.0.1~\cite{spdx301} define rich models, generators decide which evidence and dependencies to include, how to infer scope, whether to assert coverage, and how to populate provenance. Two tools can therefore emit schema-valid artifacts that encode different claims. We map these boundaries and the provenance, evidence-source, filtering, and coverage declarations available for vulnerability response, compliance, or incident triage; downstream consumer outcomes remain outside this study.
+
+We pair systematic extraction from three SBOM standards with focused implementation evidence from selected generators. The paper makes three contributions:
+\begin{itemize}
+    \item \textbf{Specification analysis.} A 2,286-row dataset from CycloneDX 1.6, SPDX 3.0.1, and the CISA\footnote{Cybersecurity and Infrastructure Security Agency} Minimum Elements for a Software Bill of Materials maps normative force, conditionality, schema/prose boundaries, and population requirements.
+    \item \textbf{Implementation traceability.} Four frozen generator snapshots and CycloneDX and SPDX checks on 40 selected repositories across PyPI and Maven per tool connect provenance, dependency, and coverage observations to clauses and source-level decisions.
+    \item \textbf{Defensive evidence framework.} Clause-to-source-to-output evidence chains support a three-level conformance suite for identity and provenance, evidence and coverage, and security-task sufficiency.
+\end{itemize}

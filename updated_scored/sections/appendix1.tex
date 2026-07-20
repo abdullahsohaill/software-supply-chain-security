@@ -1,0 +1,199 @@
+\section{Supplementary Material}
+\label{app:prompts}
+
+This appendix provides supplementary materials that support the core analysis of the paper. First, it details the methodologies and prompts supplied to the NotebookLM assistant for the systematic extraction of normative requirements from the CISA, CycloneDX, and SPDX specifications. The main paper uses these prompts as provenance for the requirement corpus. Second, it presents the complete, tabulated results of our schema-gap tests, which compare generator outputs against the structural constraints defined by the specifications.
+ 
+\subsection{Methodology for CISA Extraction}
+
+The following text was provided to the LM as a source document named \texttt{SBOM\_Extraction\_Methodology.txt} to define the extraction rules.
+
+\begin{tcolorbox}[breakable, colback=gray!4!white, colframe=black!80, fonttitle=\footnotesize, title=System Prompt: CISA Extraction Methodology, left=3pt, right=3pt, top=2pt, bottom=2pt, boxrule=0.5pt, arc=2pt]
+\tiny
+\vspace{-1em}
+You are an expert assistant trained in the analysis of cybersecurity and software documentation, with a focus on Software Bills of Materials (SBOMs) and federal software supply chain policy.
+
+You will be given sections of the CISA document titled \emph{“Framing Software Component Transparency: Establishing a Common Software Bill of Materials (Third Edition)”}. Your task is to analyze the content and extract \textbf{actionable directives} that relate to how SBOMs should be structured, formatted, or composed.
+
+\textbf{Methodology:}
+\begin{enumerate}
+\item Read the document text carefully.
+\item Extract statements that:
+  \begin{itemize}
+    \item Express explicit or strongly implied \textbf{requirements, recommendations, or aspirational goals}.
+    \item Prescribe or suggest \textbf{what SBOMs should contain}, how they should be formatted, or how their elements should be related.
+    \item Reflect \textbf{normative guidance}, even if phrased softly (e.g., “it is best to...”).
+  \end{itemize}
+\item Break compound statements into separate rows if each part contains a different actionable point.
+\item Assign a Normative Keyword:
+  \begin{itemize}
+    \item Use the keyword verbatim if present.
+    \item If not, infer:
+      \begin{itemize}
+        \item Minimum Expected → \texttt{MUST} or \texttt{REQUIRED}
+        \item Recommended Practice → \texttt{SHOULD} or \texttt{RECOMMENDED}
+        \item Aspirational Goal → \texttt{MAY} or \texttt{OPTIONAL}
+      \end{itemize}
+  \end{itemize}
+\item Exclude purely descriptive statements, definitions, and examples.
+\end{enumerate}
+
+\textbf{Output Format:}  
+A structured table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+Use exact text where possible.
+\vspace{-1em}
+\end{tcolorbox}
+
+\noindent\textbf{Example CISA Prompt:}
+\vspace{-0.4em}
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, left=3pt, right=3pt, top=2pt, bottom=2pt, arc=2pt]
+\tiny
+\vspace{-0.8em}
+\texttt{Using the system methodology in the source "SBOM\_Extraction\_Methodology", extract recommendations from the source "SBOM Framing... 2024" only from sections 'X' and 'Y'. Output a table: Section ID | Statement | Normative Keyword.}
+\vspace{-0.8em}
+\end{tcolorbox}
+
+\subsection{Methodology for CycloneDX Extraction}
+
+\begin{tcolorbox}[breakable, colback=gray!4!white, colframe=black!80, fonttitle=\footnotesize, title=System Prompt: CycloneDX Extraction Methodology, left=3pt, right=3pt, top=2pt, bottom=2pt, boxrule=0.5pt, arc=2pt]
+\tiny
+\vspace{-1em}
+You are an expert research assistant specializing in the formal analysis of technical standards. Your task is to analyze the provided ECMA-424 source document and extract all \textbf{actionable directives} according to the following strict methodology.
+
+\textbf{Core Methodology:}
+\begin{enumerate}
+\item Identify Actionable Directives: Any statement defining a rule (obligation, recommendation, or permission), including keywords like \texttt{MUST}, \texttt{SHOULD}, \texttt{MAY}, \texttt{Required}, or \texttt{Optional}. Treat \texttt{Optional} as actionable.
+\item Synthesize Directives from Tables: For each table row, combine Property Name, Requirement Status, and Description to form a full directive.
+\item Construct Requirement Text:
+  \begin{itemize}
+  \item GOOD: “The ‘metadata’ property is Optional.”
+  \item BAD: “Property: metadata (Optional)”
+  \end{itemize}
+\item Extract Raw Keyword: Report the exact, verbatim keyword.
+\item Exclude purely descriptive text, historical notes, or non-actionable examples.
+\end{enumerate}
+
+\textbf{Output Format (Mandatory):}  
+A single Markdown table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+\vspace{-1em}
+\end{tcolorbox}
+
+\noindent\textbf{Example CycloneDX Prompt:}
+\vspace{-0.4em}
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, left=3pt, right=3pt, top=2pt, bottom=2pt, arc=2pt]
+\tiny
+\vspace{-0.8em}
+\texttt{Using the methodology from the provided text, extract all actionable directives from ECMA-424.pdf. Analyze only content from Section X through Section Y. Provide the output as a Markdown table.}
+\vspace{-0.8em}
+\end{tcolorbox}
+
+\subsection{Methodology for SPDX Extraction}
+
+\begin{tcolorbox}[breakable, colback=gray!4!white, colframe=black!80, fonttitle=\footnotesize, title=System Prompt: SPDX Extraction Methodology, left=3pt, right=3pt, top=2pt, bottom=2pt, boxrule=0.5pt, arc=2pt]
+\tiny
+\vspace{-1em}
+You are an expert research assistant specializing in the formal analysis of technical standards and software supply chain documentation.
+
+You will be given sections of the SPDX 3.0.1 specification. Your task is to extract all actionable directives that constrain SPDX documents, classes, profiles, properties, relationships, or serialization behavior.
+
+\textbf{Core Methodology:}
+\begin{enumerate}
+\item Extract statements containing explicit normative language such as \texttt{MUST}, \texttt{SHOULD}, \texttt{MAY}, \texttt{required}, \texttt{optional}, cardinality constraints, or profile conformance requirements.
+\item Treat tables, class definitions, property cardinalities, and profile-specific constraints as normative when they define required or optional structure.
+\item Break compound requirements into separate rows when they constrain different classes, profiles, relationships, or properties.
+\item Preserve enough context to identify the relevant SPDX class, property, relationship type, profile, or serialization rule.
+\item Exclude purely descriptive examples unless the example introduces a constraint not stated elsewhere.
+\end{enumerate}
+
+\textbf{Output Format (Mandatory):}
+A table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+\vspace{-1em}
+\end{tcolorbox}
+
+\noindent\textbf{Example SPDX Prompt:}
+\vspace{-0.4em}
+\begin{tcolorbox}[colback=gray!4!white, colframe=black!80, boxrule=0.5pt, left=3pt, right=3pt, top=2pt, bottom=2pt, arc=2pt]
+\tiny
+\vspace{-0.8em}
+\texttt{Using the extraction methodology, analyze only the SPDX 3.0.1 sections for the Software, Core, Security, and Lite profiles. Extract each actionable directive as a separate row with section context, requirement text, and normative keyword.}
+\vspace{-0.8em}
+\end{tcolorbox}
+
+\subsection{Schema-Gap Test Results}
+
+\vspace{-1.4em}
+\begin{table}[ht]
+\centering
+\tiny
+\caption{Selected Schema-Gap Criteria Across Three SPDX SBOMs}
+\vspace{-1.4em}
+\label{tab:spdx-schema-gap}
+\begin{tabular}{llccc}
+\toprule
+Sec. & Rule & Microsoft & Syft & Trivy \\
+\midrule
+6.1.7  & DictionaryEntry keys unique          & N/A  & N/A  & N/A  \\
+6.1.9  & Collection satisfies Core implicitly & Met & Met & Met \\
+6.1.9  & element $\geq$1 implies rootElement  & Met & Met & Met \\
+6.1.9  & element not of type SpdxDocument      & Met & Met & Met \\
+6.1.9  & rootElement not of type SpdxDocument  & Met & Met & Met \\
+6.1.21 & beginRange $\leq$ endRange            & N/A  & N/A  & N/A  \\
+6.1.22 & NoneElement exclusive in ``to''       & N/A  & N/A  & N/A  \\
+6.1.22 & NoAssertionElement usage in ``to''    & N/A  & N/A  & N/A  \\
+6.4.1  & NoAssertionElement intent match       & N/A  & N/A  & N/A  \\
+6.4.2  & NoneElement intent match              & N/A  & N/A  & N/A  \\
+7.1.2  & File.name present                     & Met & Met & N/A  \\
+7.1.3  & Package.name present                  & Met & Met & Met \\
+\midrule
+\multicolumn{2}{r}{Totals (Met/Unmet/N/A)} & 6/0/6 & 6/0/6 & 5/0/7 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\scriptsize Met/Unmet denotes whether the study rule held; N/A denotes an absent, unexercised construct.}
+\end{table}
+
+\FloatBarrier
+
+\vspace{-1.4em}
+
+\begin{table}[H]
+\centering
+\tiny
+\caption{Selected Criteria Across CycloneDX Generator Outputs}
+\vspace{-1.4em}
+\label{tab:cdx-schema-gap}
+\begin{tabular}{llccc}
+\toprule
+Sec. & Rule & cdxgen & Syft & Trivy \\
+\midrule
+Dependencies & Empty graph entries                 & Unmet & Unmet & Met \\
+Identity     & PURLs structurally valid            & Met & Met & Met \\
+Provenance   & Document metadata supplier (CISA)   & Unmet & Unmet & Unmet \\
+Provenance   & Metadata timestamp (CISA)           & Met & Met & Met \\
+Provenance   & Metadata tools (CISA)               & Met & Met & Met \\
+Inventory    & Component names (CISA)              & Met & Met & Met \\
+Inventory    & Component versions (CISA)           & Unmet & Unmet & Unmet \\
+Inventory    & Component bom-refs                  & Met & Met & Met \\
+Vulnerabilities & VEX analysis if vulns present  & N/A  & N/A  & N/A  \\
+Completeness & Compositions assertion present      & Unmet & Unmet & Unmet \\
+\midrule
+\multicolumn{2}{r}{Totals (Met/Unmet/N/A)} & 5/4/1 & 5/4/1 & 6/3/1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\scriptsize Cells aggregate 18 outputs/tool: Met requires every applicable output; one unmet applicable output yields Unmet; N/A requires no output to exercise the construct. These are study criteria, not schema-validity judgments.}
+\end{table}

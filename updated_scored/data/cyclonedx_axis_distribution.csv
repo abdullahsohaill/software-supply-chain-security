@@ -1,0 +1,7 @@
+generator_consumer_axis,count,percent
+generator-population,1445,83.8
+shared-validation,157,9.1
+downstream-use,61,3.5
+generator-obligation; generator-population,35,2.0
+generator-obligation,19,1.1
+consumer-interpretation; shared-validation,7,0.4

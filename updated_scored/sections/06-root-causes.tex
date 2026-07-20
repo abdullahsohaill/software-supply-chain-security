@@ -1,0 +1,14 @@
+\section{Interface Boundaries and Recommendations}
+\label{sec:root-causes}
+
+Table~\ref{tab:root-causes} presents representative, not exhaustive, evidence chains linking a corpus clause or requirement identifier to a source/output observation and artifact-level interface mismatch. It does not assign blame or map every behavior to one permissive clause; defects, priorities, package-manager evidence, and configuration remain competing or interacting explanations.
+
+To make these recommendations implementable, we propose a cumulative three-level defensive conformance-check suite. This remains a design proposal derived from our findings; implementation and evaluation are future work.
+
+\noindent\textbf{Level 1: Identity and provenance.} Profile-specific schema and field-presence rules can check machine-readable supplier/author, component name and version, identifier, timestamp, and tool identity. Anchors include CycloneDX \field{metadata.supplier}, \field{metadata.timestamp}, \field{metadata.tools}, and component identity fields, and SPDX \field{CreationInfo.createdBy}, \field{createdUsing}, \field{packageVersion}, and \field{suppliedBy}.
+
+\noindent\textbf{Level 2: Evidence and coverage.} Profile rules can combine producer declarations with checks for evidence sources, filtering policy, dependency relationships, coverage status, and absence reasons. CycloneDX \field{dependencies}, \field{scope}, and \field{compositions}, together with SPDX relationships and declared profiles, provide machine-readable anchors; evidence-source, filtering, and absence declarations require profile rules or extensions where no standard field exists.
+
+\noindent\textbf{Level 3: Defensive-task sufficiency.} Task-specific checks can evaluate vulnerability/VEX context and build/formulation evidence through CycloneDX \field{vulnerabilities[].analysis} and \field{formulation} or SPDX Security and Build profiles. They then compare the artifact's claims with external manifests, lockfiles, builds, containers, or runtime evidence for vulnerability response, compliance, or incident triage.
+
+Schemas can check the machine-expressible structure at each level, but they cannot establish the truth of producer declarations. The levels therefore keep specification completeness, generator-evidence completeness, and security-use-case sufficiency separate. Passing a lower level does not establish a higher one, and graph depth remains a diagnostic rather than a stand-alone completeness measure.

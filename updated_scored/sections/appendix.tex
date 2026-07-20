@@ -1,0 +1,119 @@
+\section{LLM Extraction Methodology and Prompts}
+\label{app:prompts}
+
+This appendix provides the methodologies and prompts supplied to the NotebookLM research assistant for the systematic extraction of normative requirements from the CISA, CycloneDX, and SPDX specifications. The main paper uses these prompts as provenance for the requirement corpus.
+
+\subsection{Methodology for CISA Extraction}
+
+The following text was provided to the LM as a source document named \texttt{SBOM\_Extraction\_Methodology.txt} to define the extraction rules.
+
+\begin{tcolorbox}[breakable, colback=blue!3!white, colframe=blue!40!black, title=System Prompt: CISA Extraction Methodology]
+\scriptsize
+You are an expert assistant trained in the analysis of cybersecurity and software documentation, with a focus on Software Bills of Materials (SBOMs) and federal software supply chain policy.
+
+You will be given sections of the CISA document titled \emph{“Framing Software Component Transparency: Establishing a Common Software Bill of Materials (Third Edition)”}. Your task is to analyze the content and extract \textbf{actionable directives} that relate to how SBOMs should be structured, formatted, or composed.
+
+\textbf{Methodology:}
+\begin{enumerate}
+\item Read the document text carefully.
+\item Extract statements that:
+  \begin{itemize}
+    \item Express explicit or strongly implied \textbf{requirements, recommendations, or aspirational goals}.
+    \item Prescribe or suggest \textbf{what SBOMs should contain}, how they should be formatted, or how their elements should be related.
+    \item Reflect \textbf{normative guidance}, even if phrased softly (e.g., “it is best to...”).
+  \end{itemize}
+\item Break compound statements into separate rows if each part contains a different actionable point.
+\item Assign a Normative Keyword:
+  \begin{itemize}
+    \item Use the keyword verbatim if present.
+    \item If not, infer:
+      \begin{itemize}
+        \item Minimum Expected → \texttt{MUST} or \texttt{REQUIRED}
+        \item Recommended Practice → \texttt{SHOULD} or \texttt{RECOMMENDED}
+        \item Aspirational Goal → \texttt{MAY} or \texttt{OPTIONAL}
+      \end{itemize}
+  \end{itemize}
+\item Exclude purely descriptive statements, definitions, and examples.
+\end{enumerate}
+
+\textbf{Output Format:}  
+A structured table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+Use exact text where possible.
+\end{tcolorbox}
+
+\noindent\textbf{Example CISA Prompt:}
+\begin{tcolorbox}[colback=gray!5!white, colframe=gray!50!black, boxrule=0.2pt]
+\scriptsize
+\texttt{Using the system methodology in the source "SBOM\_Extraction\_Methodology", extract recommendations from the source "SBOM Framing... 2024" only from sections 'X' and 'Y'. Output a table: Section ID | Statement | Normative Keyword.}
+\end{tcolorbox}
+
+\subsection{Methodology for CycloneDX Extraction}
+
+\begin{tcolorbox}[breakable, colback=blue!3!white, colframe=blue!40!black, title=System Prompt: CycloneDX Extraction Methodology]
+\scriptsize
+You are an expert research assistant specializing in the formal analysis of technical standards. Your task is to analyze the provided ECMA-424 source document and extract all \textbf{actionable directives} according to the following strict methodology.
+
+\textbf{Core Methodology:}
+\begin{enumerate}
+\item Identify Actionable Directives: Any statement defining a rule (obligation, recommendation, or permission), including keywords like \texttt{MUST}, \texttt{SHOULD}, \texttt{MAY}, \texttt{Required}, or \texttt{Optional}. Treat \texttt{Optional} as actionable.
+\item Synthesize Directives from Tables: For each table row, combine Property Name, Requirement Status, and Description to form a full directive.
+\item Construct Requirement Text:
+  \begin{itemize}
+  \item GOOD: “The ‘metadata’ property is Optional.”
+  \item BAD: “Property: metadata (Optional)”
+  \end{itemize}
+\item Extract Raw Keyword: Report the exact, verbatim keyword.
+\item Exclude purely descriptive text, historical notes, or non-actionable examples.
+\end{enumerate}
+
+\textbf{Output Format (Mandatory):}  
+A single Markdown table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+\end{tcolorbox}
+
+\noindent\textbf{Example CycloneDX Prompt:}
+\begin{tcolorbox}[colback=gray!5!white, colframe=gray!50!black, boxrule=0.2pt]
+\scriptsize
+\texttt{Using the methodology from the provided text, extract all actionable directives from ECMA-424.pdf. Analyze only content from Section X through Section Y. Provide the output as a Markdown table.}
+\end{tcolorbox}
+
+\subsection{Methodology for SPDX Extraction}
+
+\begin{tcolorbox}[breakable, colback=blue!3!white, colframe=blue!40!black, title=System Prompt: SPDX Extraction Methodology]
+\scriptsize
+You are an expert research assistant specializing in the formal analysis of technical standards and software supply chain documentation.
+
+You will be given sections of the SPDX 3.0.1 specification. Your task is to extract all actionable directives that constrain SPDX documents, classes, profiles, properties, relationships, or serialization behavior.
+
+\textbf{Core Methodology:}
+\begin{enumerate}
+\item Extract statements containing explicit normative language such as \texttt{MUST}, \texttt{SHOULD}, \texttt{MAY}, \texttt{required}, \texttt{optional}, cardinality constraints, or profile conformance requirements.
+\item Treat tables, class definitions, property cardinalities, and profile-specific constraints as normative when they define required or optional structure.
+\item Break compound requirements into separate rows when they constrain different classes, profiles, relationships, or properties.
+\item Preserve enough context to identify the relevant SPDX class, property, relationship type, profile, or serialization rule.
+\item Exclude purely descriptive examples unless the example introduces a constraint not stated elsewhere.
+\end{enumerate}
+
+\textbf{Output Format (Mandatory):}
+A table with columns:
+\begin{itemize}
+  \item Section ID \& Heading
+  \item Recommendation / Requirement
+  \item Normative Keyword
+\end{itemize}
+\end{tcolorbox}
+
+\noindent\textbf{Example SPDX Prompt:}
+\begin{tcolorbox}[colback=gray!5!white, colframe=gray!50!black, boxrule=0.2pt]
+\scriptsize
+\texttt{Using the extraction methodology, analyze only the SPDX 3.0.1 sections for the Software, Core, Security, and Lite profiles. Extract each actionable directive as a separate row with section context, requirement text, and normative keyword.}
+\end{tcolorbox}
